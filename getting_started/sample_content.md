@@ -17,7 +17,7 @@ All included game assets are **CC0**. You'll find a license file inside each ass
 
 * **It’s all yours:** This isn't a separate or "protected" package. It’s just starter content inside **your** engine directory.
 * **Clean separation:** Everything game-related lives under `content/`. The engine's low-level internals stay tucked away under `engine/`.
-* **Focus on structure here:** We'll dive into the deeper API and scripting mechanics in later guides.
+* **Focus on structure here:** Scripting kinds and lifecycle are covered in [Script overview](../manuals/script_overview.md).
 
 ## Sample Lua Scripts
 
@@ -25,7 +25,7 @@ Gameplay in Detis is driven by **Lua**. The project includes a lean, working cod
 
 | Path | Purpose |
 |------|---------|
-| `content/scripts/_templates/` | Starter templates to copy whenever you create a new world, entity, or module script. |
+| `content/scripts/_templates/` | Optional starters you can copy when creating a world, entity, or module script. |
 | `content/scripts/worlds/demos/` | World scripts powering the demo maps (handling visuals, physics, UI, and navigation). |
 | `content/scripts/player/` | A fully functional first person player controller, camera, HUD, and interaction setup. |
 | `content/scripts/shared/` | Shared utility scripts and UI widgets used across the demos. |

@@ -63,7 +63,7 @@ Read these in sequence. Each page links only to the next step at the bottom.
 2. **[Your first prefab](../tutorials/your_first_prefab.md)**
 3. **[Kick the ball](../tutorials/kick_the_ball.md)**
 
-More guides will be added as we write them.
+More guides will be added over time.
 
 > **System Requirement Note:** Detis Engine is optimized for modern 64-bit PC setups with a dedicated discrete GPU.
 

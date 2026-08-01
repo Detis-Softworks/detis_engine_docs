@@ -12,3 +12,9 @@
   * [Your first world](tutorials/your_first_world.md)
   * [Your first prefab](tutorials/your_first_prefab.md)
   * [Kick the ball](tutorials/kick_the_ball.md)
+
+* **Manuals**
+  * [Script overview](manuals/script_overview.md)
+
+* **Reference**
+  * [Script API](reference/README.md)

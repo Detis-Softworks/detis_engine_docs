@@ -196,6 +196,8 @@ Otherwise leave these changes on this world instance only. The shipped primitive
 
 ## Next
 
-You have finished the guided path through Kick the ball. More tutorials will land here as we write them.
+You have finished the guided path through Kick the ball.
+
+For a map of scripting kinds, lifecycle, parameters, and reload, see [Script overview](../manuals/script_overview.md). More tutorials will land here over time.
 
 If you want to revisit something, use the sidebar.

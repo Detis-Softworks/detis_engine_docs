@@ -6,7 +6,7 @@ Read the guides in order. Each page ends with a single **Next** link. The sideba
 
 ## Start here
 
-**[Introduction](getting_started/introduction.md)** — what Detis is, and whether it fits your project.
+**[Introduction](getting_started/introduction.md)**: what Detis is, and whether it fits your project.
 
 Then continue through Installation, Quick start, Project layout, Sample content, Editor overview, and the first tutorials.
 
@@ -26,3 +26,8 @@ Then continue through Installation, Quick start, Project layout, Sample content,
 1. [Your first world](tutorials/your_first_world.md)
 2. [Your first prefab](tutorials/your_first_prefab.md)
 3. [Kick the ball](tutorials/kick_the_ball.md)
+
+### Manuals
+
+- [Script overview](manuals/script_overview.md): How entity, world, and module scripts fit together.
+- [Script API reference](reference/README.md): Generated function list from engine stubs.

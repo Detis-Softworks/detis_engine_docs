@@ -66,7 +66,7 @@ Under `content/scripts/` you will commonly see:
 | `worlds/` | World scripts (one world, map-specific logic) |
 | `modules/` | Shared gameplay modules |
 | `shared/` | Reusable helpers |
-| `_templates/` | Script templates to copy from |
+| `_templates/` | Optional script starters to copy from |
 | `entities/`, `player/`, … | Entity and player-facing scripts as your project grows |
 
 Exact folders can grow with your game. The important rule: gameplay and content scripts live under `content/scripts/`, not under `engine/`.
