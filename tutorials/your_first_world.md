@@ -29,11 +29,14 @@ You create entities in the World Inspector and edit them in the Entity Inspector
 ## 4. Add a ground plane
 
 1. In the World Inspector, click **Add New Entity**.
-2. With that entity selected, open the **Prefab** section in the Entity Inspector.
-3. Click **Load**.
-4. Open `entities/primitive/plane.entity`.
-5. Right-click the entity in the World Inspector and choose **Rename**. Name it `ground`.
-6. With the entity still selected, open the **Transform** component section in the Entity Inspector and set:
+2. Name it `ground` when prompted (or rename it before you load a prefab).
+3. With that entity selected, open the **Prefab** section in the Entity Inspector.
+4. Click **Load**.
+5. Open `entities/primitive/plane.entity`.
+
+Loading a prefab fills in components and children. It keeps the name you already set on this entity.
+
+6. With the entity still selected, open the **Transform** section in the Entity Inspector and set:
 
    - Position: `0`, `0`, `0`
    - Rotation: `0`, `0`, `0`
@@ -50,12 +53,12 @@ You now have a ground mesh. It will look dark until you add a light.
 Add a point light so you can see the scene.
 
 1. In the World Inspector, click **Add New Entity**.
-2. Prefab → **Load** → `entities/lights/light_point.entity`.
-3. The prefab arrives named `light_point`. Rename it to `light` if you want a shorter label.
-4. Open the transfrom **Transform** component and place it above the ground, for example:
+2. Name it `light`.
+3. Prefab → **Load** → `entities/lights/light_point.entity`.
+4. Open **Transform** and place it above the ground, for example:
 
    - Position: `0.0`, `2.5`, `0.0`
-   
+
    Use the translate gizmo (**W**) if you prefer to drag it into place.
 
 ![Let there be light](../images/editor/tutorial_light.jpg)
@@ -64,9 +67,9 @@ Add a point light so you can see the scene.
 
 ## 6. Add a cube
 
-1. **Add New Entity** again.
+1. **Add New Entity** again. Name it `cube`.
 2. Prefab → **Load** → `entities/primitive/cube.entity`.
-3. Open **Transform** compoenent and set Position to `0`, `0.5`, `0` so the cube sits on the plane.
+3. Open **Transform** and set Position to `0`, `0.5`, `0` so the cube sits on the plane.
 
 ![Cube](../images/editor/tutorial_cube.jpg)
 
@@ -86,7 +89,7 @@ The ground and cube should now read clearly under the point light.
 
 ## 8. Enable point light shadows
 
-1. Select `light` (or `light_point`).
+1. Select `light`.
 2. In the Entity Inspector, open the **Light** section.
 3. Enable **Cast Shadows**.
 4. Nudge the light horizontally in **Transform** (or with the translate gizmo after selecting it in the World Inspector) so it is not sitting directly above the cube. A bit of X or Z offset is enough.
@@ -113,8 +116,9 @@ Point lights alone leave the scene looking harsh. Image-based lighting (IBL) fil
 ## 10. Add the demo player prefab
 
 1. In the World Inspector, click **Add New Entity**.
-2. Prefab → **Load** → `entities/demo_content/characters/player_character.entity`.
-3. Select `player` and move it onto the ground in front of the cube, for example Position `-0.9`, `0`, `2.9`.
+2. Name it `player`.
+3. Prefab → **Load** → `entities/demo_content/characters/player_character.entity`.
+4. Move it onto the ground in front of the cube, for example Position `-0.9`, `0`, `2.9`.
 
 ![Materials](../images/editor/tutorial_player.jpg)
 
@@ -141,4 +145,4 @@ Restart the executable. The editor should open with this world loaded.
 
 ## Next
 
-**[Your first world script](your_first_world_script.md).** Attach Lua to this world and see it run.
+**[Your first prefab](your_first_prefab.md).** Build a sphere from components, save it, and load it again.

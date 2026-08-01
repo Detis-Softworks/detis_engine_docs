@@ -2,7 +2,7 @@
 
 In [Your first world](your_first_world.md) you loaded ready-made `.entity` files. Now build one from components, save it as a prefab, and place it again from disk.
 
-The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap you will fill. Giving it collision now also sets you up to reuse this prefab as a ball in a later tutorial.
+The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap you will fill. Giving it collision now also sets you up to reuse this prefab as a ball in the next tutorial.
 
 You should already have a saved tutorial world open. If not, do [Your first world](your_first_world.md) first.
 
@@ -10,11 +10,13 @@ You should already have a saved tutorial world open. If not, do [Your first worl
 
 A prefab is an `.entity` file: an entity (and optionally children) saved to disk. **Prefab → Load** instances it into the world. **Prefab → Save As** writes the selected entity out as a reusable asset.
 
+Loading a prefab keeps the name already on that entity. Name first, then Load.
+
 ## 1. Add an empty entity
 
 1. Open your tutorial world if it is not already loaded.
 2. In the **World Inspector**, click **Add New Entity**.
-3. Name it `sphere` when prompted (or rename it after).
+3. Name it `sphere` when prompted (or rename it before you load anything).
 
 New entities come with a **Transform**. That is enough to start.
 
@@ -28,21 +30,27 @@ New entities come with a **Transform**. That is enough to start.
 
 1. Open the **Mesh** section.
 2. On the mesh file field, browse to `meshes/primitive/sphere.glb`.
-3. On **Material 0**, pick something visible, for example `materials/primitive/primitive_triplanar_dark_blue.mat`.
+3. On **Material 0**, pick `materials/primitive/primitive_triplanar_yellow.mat` so it feels consistent with the other primitive prefabs.
 
-You should see a sphere in the viewport. The mesh is about `1` unit across (radius `0.5`). Move it beside your cube with **Transform** or the translate gizmo (**W**), and set Position Y to `0.5` so it sits on the ground.
+   The screenshots on this page use `materials/primitive/primitive_triplanar_dark_blue.mat` instead, so the sphere reads clearly against the yellow cube. Either is fine. Prefer yellow when you want the primitive set to match.
+
+![Sphere](../images/editor/tutorial_sphere.jpg)
+
+You should see a sphere in the viewport. The mesh is about `1` unit across (radius `0.5`). Move it beside your cube with **Transform** or the translate gizmo (**W**), and set Position Y to `1.5` so it sits on the cube.
 
 ## 4. Add collision
+
+Keep this prefab **Static** for now. It is a solid prop. You will switch it to **Dynamic** when you script the kick in the next tutorial.
 
 1. With `sphere` still selected, click **Add Component** again.
 2. Choose **PhysicsBody**.
 3. Open the **Physics Body** section.
-4. Set **Body Type** to **Dynamic**. Static would be fine for a prop, but Dynamic is what you want for a ball later.
+4. Leave **Body Type** on **Static** (the default).
 5. Open **Shape 0** (a default box shape is already there).
 6. Set **Type** to **Sphere**.
 7. Set **Radius** to `0.5` so it matches the mesh.
 
-Leave mass and friction on the defaults for now. You can tune bounce and rolling when you build the ball tutorial.
+Leave mass and friction on the defaults. Dynamic mass and bounce matter more once the body can move.
 
 ## 5. Preview the collision shape
 
@@ -57,6 +65,8 @@ You want the wireframe sphere to line up with the mesh before you save the prefa
 
 1. **Debug → Show Collision** (`Shift+C`), or press `Shift+C` in the viewport when you are not typing in a field.
 2. That toggles collision debug for every physics body in the world (ground, cube, spheres, and so on).
+
+![Sphere](../images/editor/tutorial_collision.jpg)
 
 Use whichever is handy. Per-entity debug is good while editing one shape. Scene-wide debug is good when you want to compare several bodies at once. Press `Shift+C` again (or **Debug → Hide Collision**) when you are done looking.
 
@@ -73,9 +83,12 @@ That file is now a reusable asset next to `cube.entity`, `plane.entity`, and the
 
 ## 7. Prove Load works
 
-1. In the World Inspector, click **Add New Entity**. Name it `sphere_2` (or leave the default).
-2. Prefab → **Load** → `entities/primitive/sphere.entity`.
-3. Move the new instance so it is not sitting on top of the first one. Keep Y at `0.5` if you place it on the ground.
+1. In the World Inspector, click **Add New Entity**.
+2. Name it `sphere_2` before you load.
+3. Prefab → **Load** → `entities/primitive/sphere.entity`.
+4. Move the new instance so it is not sitting on top of the first one.
+
+The entity should still be named `sphere_2`. Loading the prefab does not rename the root to the prefab’s default name.
 
 You now have two spheres from one prefab file. Edits to an unlocked instance stay local until you save the prefab again. Lock, Unlock, Reset, and Break are covered in a later guide. For now, Load and Save As are the day-one loop.
 
@@ -86,17 +99,11 @@ You now have two spheres from one prefab file. Edits to an unlocked instance sta
 ## 9. Play and check collision
 
 1. **Game → Play Game** (`Ctrl+P` / `Alt+P`).
-2. Walk into a sphere with the demo player. It should block you.
-3. If you lift a sphere in the editor (Y above `0.5`) and play again, a Dynamic body should fall onto the ground.
+2. Walk into a sphere with the demo player. It should block you like a solid prop.
+3. Static bodies stay put. They will not fall or roll yet.
 
 Toggle back to the editor with the same play shortcut when you are done.
 
-## What you did not do yet
-
-Prefab lock / break, nested prefabs, scripted forces on the ball, and world scripts are separate topics.
-
 ## Next
 
-You have finished the guided path through your first prefab. More tutorials will land here as we write them.
-
-If you want to revisit something, use the sidebar.
+**[Kick the ball](kick_the_ball.md).** Make it Dynamic, attach an entity script, Interact, then edit and reload Lua.

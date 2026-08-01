@@ -49,13 +49,19 @@ These "rough edges" are intentional trade-offs for raw speed, a minimal footprin
 
 Read these in sequence. Each page links only to the next step at the bottom.
 
+### Getting started
+
 1. **[Installation](installation.md)**
 2. **[Quick start](quick_start.md)**
 3. **[Project layout](project_layout.md)**
 4. **[Sample content](sample_content.md)**
 5. **[Editor overview](editor_overview.md)**
-6. **[Your first world](../tutorials/your_first_world.md)**
-7. **[Your first prefab](../tutorials/your_first_prefab.md)**
+
+### Tutorials
+
+1. **[Your first world](../tutorials/your_first_world.md)**
+2. **[Your first prefab](../tutorials/your_first_prefab.md)**
+3. **[Kick the ball](../tutorials/kick_the_ball.md)**
 
 More guides will be added as we write them.
 

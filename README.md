@@ -12,11 +12,17 @@ Then continue through Installation, Quick start, Project layout, Sample content,
 
 ## Full path
 
+### Getting started
+
 1. [Introduction](getting_started/introduction.md)
 2. [Installation](getting_started/installation.md)
 3. [Quick start](getting_started/quick_start.md)
 4. [Project layout](getting_started/project_layout.md)
 5. [Sample content](getting_started/sample_content.md)
 6. [Editor overview](getting_started/editor_overview.md)
-7. [Your first world](tutorials/your_first_world.md)
-8. [Your first prefab](tutorials/your_first_prefab.md)
+
+### Tutorials
+
+1. [Your first world](tutorials/your_first_world.md)
+2. [Your first prefab](tutorials/your_first_prefab.md)
+3. [Kick the ball](tutorials/kick_the_ball.md)
