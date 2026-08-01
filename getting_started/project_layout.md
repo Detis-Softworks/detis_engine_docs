@@ -34,6 +34,8 @@ Typical folders you will use:
 
 You can organize subfolders however you like under `content/` (for example `worlds/demo_content/`). Extension filters in the editor still apply when browsing.
 
+The download also ships demo worlds, sample Lua, and example assets. See [Sample content](sample_content.md).
+
 ### Config you will touch early
 
 Files under `content/config/` and `engine/config/` are mostly **defaults** (seeds for a fresh copy). They ship with the package so a new download boots correctly.
@@ -116,6 +118,4 @@ Reset engine prefs by deleting `user_engine.ini` and relaunching (it is recopied
 
 ## Next
 
-- [Editor overview](editor_overview.md). Panels and day-to-day tools.
-- [Quick start](quick_start.md). Play a demo and make a first edit.
-- [Installation](installation.md). Download and run a fresh copy.
+**[Sample content](sample_content.md).** Shipped Lua, demos, and example assets.

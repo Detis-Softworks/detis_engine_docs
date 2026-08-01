@@ -1,17 +1,22 @@
 # Detis Engine Documentation
 
-Welcome. This site is the user manual for Detis Engine.
+This is the user manual for Detis Engine.
 
-If you are new, start with **Getting started**. More guides will land here as we write them.
+Read the guides in order. Each page ends with a single **Next** link. The sidebar follows the same sequence.
 
-## Getting started
+## Start here
 
-1. [Introduction](getting_started/introduction.md). What Detis Engine is, and who it is for.
-2. [Installation](getting_started/installation.md). Install and run the editor / player.
-3. [Quick start](getting_started/quick_start.md). Your first small project in one sitting.
-4. [Project layout](getting_started/project_layout.md). Folders, content paths, and `game/bin`.
-5. [Editor overview](getting_started/editor_overview.md). A first look at the tools.
+**[Introduction](getting_started/introduction.md)** — what Detis is, and whether it fits your project.
 
-## Screenshots
+Then continue through Installation, Quick start, Project layout, Sample content, Editor overview, and the first tutorials.
 
-Place images under `images/`. See [images/README.md](images/README.md).
+## Full path
+
+1. [Introduction](getting_started/introduction.md)
+2. [Installation](getting_started/installation.md)
+3. [Quick start](getting_started/quick_start.md)
+4. [Project layout](getting_started/project_layout.md)
+5. [Sample content](getting_started/sample_content.md)
+6. [Editor overview](getting_started/editor_overview.md)
+7. [Your first world](tutorials/your_first_world.md)
+8. [Your first prefab](tutorials/your_first_prefab.md)

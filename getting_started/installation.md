@@ -42,5 +42,4 @@ Desktop PC: **Windows** and **Linux** (64-bit). Use the build that matches your 
 
 ## Next
 
-- [Quick start](quick_start.md). Load a demo, play, then edit something.
-- [Project layout](project_layout.md). What belongs under `content/` vs `engine/`.
+**[Quick start](quick_start.md).** Load a demo, play, then edit something.

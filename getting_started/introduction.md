@@ -45,12 +45,22 @@ These "rough edges" are intentional trade-offs for raw speed, a minimal footprin
 * **Native C++ Engine Source:** The indie tier is binary and Lua-focused. Engine source code is not currently available. 
 * **Visual Scripting Focus:** If you don't want to write code or rely entirely on drag-and-drop visual scripting, you will be much better off starting with a mainstream, general-purpose engine.
 
-## Quick Navigation
+## Recommended order
 
-1. **[Installation](installation.md):** Download and get up and running in minutes.
-2. **[Quick Start](quick_start.md):** Load the demo scene, playtest, and make your first edit.
-3. **[Editor Overview](editor_overview.md) & [Project Layout](project_layout.md):** Learn the workspace layout.
+Read these in sequence. Each page links only to the next step at the bottom.
 
-More tutorials and manuals will be added as we write them.
+1. **[Installation](installation.md)**
+2. **[Quick start](quick_start.md)**
+3. **[Project layout](project_layout.md)**
+4. **[Sample content](sample_content.md)**
+5. **[Editor overview](editor_overview.md)**
+6. **[Your first world](../tutorials/your_first_world.md)**
+7. **[Your first prefab](../tutorials/your_first_prefab.md)**
+
+More guides will be added as we write them.
 
 > **System Requirement Note:** Detis Engine is optimized for modern 64-bit PC setups with a dedicated discrete GPU.
+
+## Next
+
+**[Installation](installation.md).** Download and get up and running.

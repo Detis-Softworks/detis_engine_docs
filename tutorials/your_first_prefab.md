@@ -1,0 +1,102 @@
+# Your first prefab
+
+In [Your first world](your_first_world.md) you loaded ready-made `.entity` files. Now build one from components, save it as a prefab, and place it again from disk.
+
+The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap you will fill. Giving it collision now also sets you up to reuse this prefab as a ball in a later tutorial.
+
+You should already have a saved tutorial world open. If not, do [Your first world](your_first_world.md) first.
+
+## What a prefab is
+
+A prefab is an `.entity` file: an entity (and optionally children) saved to disk. **Prefab → Load** instances it into the world. **Prefab → Save As** writes the selected entity out as a reusable asset.
+
+## 1. Add an empty entity
+
+1. Open your tutorial world if it is not already loaded.
+2. In the **World Inspector**, click **Add New Entity**.
+3. Name it `sphere` when prompted (or rename it after).
+
+New entities come with a **Transform**. That is enough to start.
+
+## 2. Add a Mesh component
+
+1. Select `sphere` in the World Inspector.
+2. In the **Entity Inspector**, click **Add Component**.
+3. Choose **Mesh**.
+
+## 3. Point the mesh at the sphere
+
+1. Open the **Mesh** section.
+2. On the mesh file field, browse to `meshes/primitive/sphere.glb`.
+3. On **Material 0**, pick something visible, for example `materials/primitive/primitive_triplanar_dark_blue.mat`.
+
+You should see a sphere in the viewport. The mesh is about `1` unit across (radius `0.5`). Move it beside your cube with **Transform** or the translate gizmo (**W**), and set Position Y to `0.5` so it sits on the ground.
+
+## 4. Add collision
+
+1. With `sphere` still selected, click **Add Component** again.
+2. Choose **PhysicsBody**.
+3. Open the **Physics Body** section.
+4. Set **Body Type** to **Dynamic**. Static would be fine for a prop, but Dynamic is what you want for a ball later.
+5. Open **Shape 0** (a default box shape is already there).
+6. Set **Type** to **Sphere**.
+7. Set **Radius** to `0.5` so it matches the mesh.
+
+Leave mass and friction on the defaults for now. You can tune bounce and rolling when you build the ball tutorial.
+
+## 5. Preview the collision shape
+
+You want the wireframe sphere to line up with the mesh before you save the prefab.
+
+**This entity only**
+
+1. Still in **Physics Body**, enable **Debug Visualization**.
+2. You should see this body's collision shape drawn in the viewport.
+
+**Whole scene**
+
+1. **Debug → Show Collision** (`Shift+C`), or press `Shift+C` in the viewport when you are not typing in a field.
+2. That toggles collision debug for every physics body in the world (ground, cube, spheres, and so on).
+
+Use whichever is handy. Per-entity debug is good while editing one shape. Scene-wide debug is good when you want to compare several bodies at once. Press `Shift+C` again (or **Debug → Hide Collision**) when you are done looking.
+
+If the debug sphere does not match the mesh, fix **Radius** (and **Offset** if needed) before you save.
+
+## 6. Save it as a prefab
+
+1. With `sphere` still selected, open the **Prefab** section in the Entity Inspector.
+2. Click **Save As**.
+3. Browse to `entities/primitive/`.
+4. Save as `sphere.entity`.
+
+That file is now a reusable asset next to `cube.entity`, `plane.entity`, and the other primitives. Mesh, material, and collision travel with it.
+
+## 7. Prove Load works
+
+1. In the World Inspector, click **Add New Entity**. Name it `sphere_2` (or leave the default).
+2. Prefab → **Load** → `entities/primitive/sphere.entity`.
+3. Move the new instance so it is not sitting on top of the first one. Keep Y at `0.5` if you place it on the ground.
+
+You now have two spheres from one prefab file. Edits to an unlocked instance stay local until you save the prefab again. Lock, Unlock, Reset, and Break are covered in a later guide. For now, Load and Save As are the day-one loop.
+
+## 8. Save the world
+
+**File → Save World** (`Ctrl+S`) so the new entities stay in your map.
+
+## 9. Play and check collision
+
+1. **Game → Play Game** (`Ctrl+P` / `Alt+P`).
+2. Walk into a sphere with the demo player. It should block you.
+3. If you lift a sphere in the editor (Y above `0.5`) and play again, a Dynamic body should fall onto the ground.
+
+Toggle back to the editor with the same play shortcut when you are done.
+
+## What you did not do yet
+
+Prefab lock / break, nested prefabs, scripted forces on the ball, and world scripts are separate topics.
+
+## Next
+
+You have finished the guided path through your first prefab. More tutorials will land here as we write them.
+
+If you want to revisit something, use the sidebar.

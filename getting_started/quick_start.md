@@ -68,5 +68,4 @@ Restart the executable after you save the file. On the next launch the editor sh
 
 ## Next
 
-- [Editor overview](editor_overview.md). Panels and common tools.
-- [Project layout](project_layout.md). Deeper folder rules.
+**[Project layout](project_layout.md).** Where your work lives on disk.

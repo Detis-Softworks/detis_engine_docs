@@ -32,7 +32,7 @@ The UI is meant to be functional and minimal. Prefer the **menu bar** when you a
 | Back to editor | Same play toggle again |
 | See all shortcuts | **Help → Shortcuts** |
 
-> **Alpha:** Undo and redo do not cover the Entity Inspector or most tool panels yet. They apply to viewport actions and the related shortcuts. Full inspector / panel undo is priority number one after release.
+> **Early Alpha Notice:** Undo and redo do not cover the Entity Inspector or most tool panels yet. They apply to viewport actions and the related shortcuts. Full inspector / panel undo is priority number one after release.
 
 ## Camera
 
@@ -146,7 +146,7 @@ Use the **Debug** menu. Shortcuts are shown next to the items.
 
 **Debug → Debug View** switches render debug modes (buffer / channel views for diagnosing lighting and materials). Pick a mode from the submenu when you need to inspect why a surface looks wrong. Leave it on the normal view while authoring.
 
-> **Alpha:** Reload assets currently works for **shaders** and **scripts** only. Reloading 3D assets and configs is planned, but not available yet.
+> **Early Alpha Notice:** Reload assets currently works for **shaders** and **scripts** only. Reloading 3D assets and configs is planned, but not available yet.
 
 ## Help
 
@@ -168,5 +168,4 @@ Everything here is menu-only (no required hotkeys). Open **Help** when you need 
 
 ## Next
 
-- [Project layout](project_layout.md). Where files live on disk.
-- [Quick start](quick_start.md). Play the visuals demo again if you skipped it.
+**[Your first world](../tutorials/your_first_world.md).** Build a small level from scratch.
