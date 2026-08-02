@@ -6,6 +6,8 @@ A finished example ships at `content/worlds/tutorials/your_first_world.world` if
 
 You should already know how to run the engine and move in the editor. If not, do [Quick start](../getting_started/quick_start.md) and [Editor overview](../getting_started/editor_overview.md) first.
 
+> **Early Alpha Notice:** Detis began as an internal tool and is still early alpha, so there is no built-in content browser. You use the engine file dialog and your own OS file manager. That is total control over how your project is laid out, but also the responsibility to know where things live under `content/`. As the engine moves forward, especially if more developers pick it up, more advanced tools may appear. Until then, keep [Project layout](../getting_started/project_layout.md) handy.
+
 ## 1. New world
 
 1. **File → New** (`Ctrl+N`).
