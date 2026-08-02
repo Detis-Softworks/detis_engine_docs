@@ -4,7 +4,7 @@ Script API functions in the `quat` group.
 
 ### `quat`
 
-`quat(t_w, t_x, t_y, t_z, ...)`
+`quat(t_w, t_x, t_y, t_z)`
 
 ```lua
 ---@param t_w number
@@ -12,26 +12,28 @@ Script API functions in the `quat` group.
 ---@param t_y number
 ---@param t_z number
 ---@return quat
-function quat(t_w, t_x, t_y, t_z, ...) end
+function quat(t_w, t_x, t_y, t_z) end
 ```
 
-### `quat_identity`
+### `quat_conjugate`
 
-`quat_identity()`
+`quat_conjugate(t_quat)`
 
 ```lua
+---@param t_quat quat
 ---@return quat
-function quat_identity() end
+function quat_conjugate(t_quat) end
 ```
 
-### `quat_from_euler`
+### `quat_dot`
 
-`quat_from_euler(t_euler)`
+`quat_dot(t_a, t_b)`
 
 ```lua
----@param t_euler vec3
----@return quat
-function quat_from_euler(t_euler) end
+---@param t_a quat
+---@param t_b quat
+---@return number
+function quat_dot(t_a, t_b) end
 ```
 
 ### `quat_from_axis_angle`
@@ -45,6 +47,16 @@ function quat_from_euler(t_euler) end
 function quat_from_axis_angle(t_axis, t_angle) end
 ```
 
+### `quat_from_euler`
+
+`quat_from_euler(t_euler)`
+
+```lua
+---@param t_euler vec3
+---@return quat
+function quat_from_euler(t_euler) end
+```
+
 ### `quat_from_look_at`
 
 `quat_from_look_at(t_direction, t_up)`
@@ -54,6 +66,35 @@ function quat_from_axis_angle(t_axis, t_angle) end
 ---@param t_up vec3
 ---@return quat
 function quat_from_look_at(t_direction, t_up) end
+```
+
+### `quat_identity`
+
+`quat_identity()`
+
+```lua
+---@return quat
+function quat_identity() end
+```
+
+### `quat_inverse`
+
+`quat_inverse(t_quat)`
+
+```lua
+---@param t_quat quat
+---@return quat
+function quat_inverse(t_quat) end
+```
+
+### `quat_length`
+
+`quat_length(t_quat)`
+
+```lua
+---@param t_quat quat
+---@return number
+function quat_length(t_quat) end
 ```
 
 ### `quat_mul`
@@ -67,26 +108,6 @@ function quat_from_look_at(t_direction, t_up) end
 function quat_mul(t_a, t_b) end
 ```
 
-### `quat_conjugate`
-
-`quat_conjugate(t_quat)`
-
-```lua
----@param t_quat quat
----@return quat
-function quat_conjugate(t_quat) end
-```
-
-### `quat_inverse`
-
-`quat_inverse(t_quat)`
-
-```lua
----@param t_quat quat
----@return quat
-function quat_inverse(t_quat) end
-```
-
 ### `quat_normalize`
 
 `quat_normalize(t_quat)`
@@ -97,25 +118,15 @@ function quat_inverse(t_quat) end
 function quat_normalize(t_quat) end
 ```
 
-### `quat_length`
+### `quat_rotate_vec3`
 
-`quat_length(t_quat)`
+`quat_rotate_vec3(t_quat, t_vec)`
 
 ```lua
 ---@param t_quat quat
----@return number
-function quat_length(t_quat) end
-```
-
-### `quat_dot`
-
-`quat_dot(t_a, t_b)`
-
-```lua
----@param t_a quat
----@param t_b quat
----@return number
-function quat_dot(t_a, t_b) end
+---@param t_vec vec3
+---@return vec3
+function quat_rotate_vec3(t_quat, t_vec) end
 ```
 
 ### `quat_slerp`
@@ -130,6 +141,16 @@ function quat_dot(t_a, t_b) end
 function quat_slerp(t_a, t_b, t_t) end
 ```
 
+### `quat_to_axis_angle`
+
+`quat_to_axis_angle(t_quat)`
+
+```lua
+---@param t_quat quat
+---@return table
+function quat_to_axis_angle(t_quat) end
+```
+
 ### `quat_to_euler`
 
 `quat_to_euler(t_quat)`
@@ -138,16 +159,6 @@ function quat_slerp(t_a, t_b, t_t) end
 ---@param t_quat quat
 ---@return vec3
 function quat_to_euler(t_quat) end
-```
-
-### `quat_to_axis_angle`
-
-`quat_to_axis_angle(t_quat)`
-
-```lua
----@param t_quat quat
----@return vec3
-function quat_to_axis_angle(t_quat) end
 ```
 
 ### `quat_to_mat3`
@@ -168,15 +179,4 @@ function quat_to_mat3(t_quat) end
 ---@param t_quat quat
 ---@return mat4
 function quat_to_mat4(t_quat) end
-```
-
-### `quat_rotate_vec3`
-
-`quat_rotate_vec3(t_quat, t_vec)`
-
-```lua
----@param t_quat quat
----@param t_vec vec3
----@return vec3
-function quat_rotate_vec3(t_quat, t_vec) end
 ```

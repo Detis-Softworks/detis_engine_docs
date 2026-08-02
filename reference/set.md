@@ -8,6 +8,6 @@ Script API functions in the `set` group.
 
 ```lua
 ---@param t_name string
----@param t_value boolean|string
+---@param t_value boolean|string|number
 function set_global(t_name, t_value) end
 ```

@@ -1,6 +1,6 @@
-# Skeletal
+# Skeletal_mesh
 
-Script API functions in the `skeletal` group.
+Script API functions in the `skeletal_mesh` group.
 
 ### `skeletal_get_socket_names`
 
@@ -8,7 +8,7 @@ Script API functions in the `skeletal` group.
 
 ```lua
 ---@param t_entity_id integer
----@return integer
+---@return table
 function skeletal_get_socket_names(t_entity_id) end
 ```
 
