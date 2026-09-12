@@ -1,18 +1,18 @@
 # FAQ
 
-Quick answers about Detis Engine scope and release expectations.
+Quick answers about Detis Engine scope.
 
 ## What is Detis Engine?
 
-Detis is a lightweight, focused 3D C++ engine for single-player PC games with hand-authored, level-based worlds.
+Detis is a lightweight, focused 3D C++ engine for single-player PC games built around hand-authored, level-based worlds.
 
 ## Why choose Detis over a general-purpose engine?
 
-Detis is designed for solo developers and small teams who value iteration speed and reliable workflows over broad feature bloat.
+Detis is built for solo developers and small teams who want fast iteration and reliable workflows without general-purpose engine bloat.
 
-General-purpose engines target many platforms, genres, and workflows. That flexibility often comes with heavier pipelines and more setup overhead.
+General-purpose engines are designed to cover many platforms, genres, and workflows. That flexibility often adds heavier pipelines, longer iteration loops, and more setup overhead.
 
-Detis keeps things direct: integrated editor, Lua scripting, raw-asset workflow, and plain-text project files.
+Detis keeps the workflow direct: integrated editor, Lua gameplay scripting, raw-asset pipeline, and plain-text project files.
 
 ## Does it include an editor?
 
@@ -26,9 +26,9 @@ Gameplay logic is Lua. Engine core is C++.
 
 Keyboard, mouse, and standard gamepads.
 
-## Is it AI-friendly?
+## Is Detis AI-friendly?
 
-Yes. Most files are plain text, so AI tools can inspect APIs and existing project files and generate scripts/config safely in-tree.
+Yes. Most project files, scripts, and configs are plain text, so AI tools can inspect existing code and generate changes directly in the project.
 
 ## Which platforms are supported?
 
@@ -38,29 +38,21 @@ Windows and Linux desktop.
 
 No. Mobile is not in scope.
 
-> Alpha note: mobile support is not part of alpha scope.
-
 ## What is the asset pipeline?
 
-Zero-import workflow with raw assets, including `.glb` / `.gltf` and DDS/KTX textures, plus hot reload for fast iteration.
+Detis uses a zero-import pipeline. It reads raw `.glb` / `.gltf` assets and DDS/KTX textures directly, with hot reload for fast iteration.
 
 ## Does it support big seamless open worlds?
 
 Not as a built-in seamless streaming model. Larger games are built by linking smaller worlds.
 
-> Alpha note: seamless open-world streaming is not part of alpha scope.
-
 ## Does it support multiplayer?
 
 No. Detis targets single-player PC games.
 
-> Alpha note: networking is not part of alpha scope.
-
 ## Does it include GI?
 
-Not in the initial alpha scope as a dedicated built-in system. Current lighting uses artist-controlled bounce.
-
-> Alpha note: a dedicated GI solution is planned after alpha.
+Not as a dedicated built-in system in alpha. Current lighting is based on artist-controlled bounce.
 
 ## Which physics engine is used?
 
@@ -72,7 +64,7 @@ No. Detis is proprietary.
 
 ## Is it free?
 
-Planned model is a one-time purchase with no subscription and no royalties.
+Detis uses a one-time purchase model with no subscription and no royalties.
 
 ## Can bundled assets be used commercially?
 
