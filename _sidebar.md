@@ -14,7 +14,8 @@
   * [Your first prefab](tutorials/your_first_prefab.md)
   * [Kick the ball](tutorials/kick_the_ball.md)
 
-* **Manuals**
+* **Manual**
+  * [Manual](manuals/index.md)
   * **Lighting**
     * [Lighting overview](manuals/lighting.md)
     * [World sun](manuals/lighting_sun.md)

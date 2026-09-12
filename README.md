@@ -2,7 +2,7 @@
 
 This is the user manual for Detis Engine.
 
-Read the guides in order. Each page ends with a single **Next** link. The sidebar follows the same sequence.
+**[Detis Engine Manual](manuals/index.md)** is the hub for editor guides, topic manuals, and the script API. Read the getting-started path in order if you are new. Each of those pages ends with a single **Next** link.
 
 ## Start here
 
@@ -28,9 +28,10 @@ Then continue through FAQ, Installation, Quick start, Project layout, Sample con
 2. [Your first prefab](tutorials/your_first_prefab.md)
 3. [Kick the ball](tutorials/kick_the_ball.md)
 
-### Manuals
+### Manual
 
-- [Lighting overview](manuals/lighting.md): Sun, local lights, shadows, and exposure.
-- [Audio overview](manuals/audio.md): Sound components, soundscapes, zones, and music.
-- [Script overview](manuals/script_overview.md): How entity, world, and module scripts fit together.
-- [Script API reference](reference/README.md): Generated function list from engine stubs.
+- [Manual](manuals/index.md)
+- [Lighting](manuals/lighting.md)
+- [Audio](manuals/audio.md)
+- [Scripting](manuals/script_overview.md)
+- [Script API reference](reference/README.md)
