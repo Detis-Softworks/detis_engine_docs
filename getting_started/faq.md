@@ -86,6 +86,10 @@ Not in the initial alpha release. Lighting today is built around artist-controll
 
 A dedicated GI solution is planned after alpha. The current renderer is already capable for the look Detis is going for without waiting on that system.
 
+## Does it support custom shaders?
+
+Today you can write custom post-processing effects as GLSL fragment shaders drive them from Lua. Custom material and surface shaders are an upcoming feature. They are not part of the initial alpha version.
+
 ## Which physics engine is used?
 
 Jolt Physics.

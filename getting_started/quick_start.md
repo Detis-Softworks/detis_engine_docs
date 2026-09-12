@@ -12,28 +12,12 @@ Open `game/bin` and run `detis_engine`.
 
 The app starts in the **editor**. Editor and game are the same executable. The world from `content/config/default_game.ini` is already loaded (shipped default: `worlds/default.world`).
 
-## 2. Know where your work lives
-
-| Path | What you change |
-|------|-----------------|
-| `game/content/` | Worlds, scripts, meshes, prefabs, game config. **Your game.** |
-| `game/engine/` | Engine builtins. Leave alone unless you know why. |
-| `game/bin/` | Executable. Run from here. |
-
-File dialogs open under `content/` by default. Prefabs also show up in **View → Entity Browser** (`Shift+Space`).
-
-## 3. Play a demo
-
 1. **File → Load World** (`Ctrl+L`).
 2. Open `worlds/demo_content/visuals_exterior_demo.world`.
 3. Press **`Ctrl+P`** or **`Alt+P`** (or the green **Play** button) to enter **game** mode.
-4. Press `Ctrl+P` / `Alt+P` again to return to the **editor**.
+4. Press `Ctrl+P` / `Alt+P` again or Escape to return to the **editor**.
 
-**Debug → Play Game** is the same enter-game action as the Play button.
-
-Other shipped demos live under `worlds/demo_content/`. See [Sample content](sample_content.md).
-
-## 4. Edit, save, undo
+## 2. Edit, save, undo
 
 Back in the editor:
 
@@ -46,7 +30,7 @@ Redo is `Ctrl+Y` or `Ctrl+Shift+Z`.
 
 Press `Ctrl+P` / `Alt+P` again to check the change in game mode.
 
-## 5. Optional: open that demo on startup
+## 3. Optional: open that demo on startup
 
 The world loaded at launch is set in `game/content/config/default_game.ini`:
 

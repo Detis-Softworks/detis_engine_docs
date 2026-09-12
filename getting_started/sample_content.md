@@ -2,16 +2,7 @@
 
 The package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one.
 
-All included game assets are **CC0**. There is a license file inside each asset folder. Modify, rewrite, or delete sample content as you build your game.
-
-## How to use it
-
-- Load a demo from **File → Load World**.
-- Drag prefabs from **View → Entity Browser** (`Shift+Space`).
-- Copy scripts and entity setups into your own work.
-- Grow the game inside this `game/content/` tree. Nothing is a protected package.
-
-Lighting and mix: [Lighting](../manuals/lighting.md), [Audio](../manuals/audio.md). Script kinds: [Script overview](../manuals/script_overview.md).
+All included third party assets are **CC0**, meaning they are free to use in your games. There is a license file inside each of those third party folders. Feel free to move, modify, rewrite, or delete sample content as you build your game.
 
 ## Demo worlds
 

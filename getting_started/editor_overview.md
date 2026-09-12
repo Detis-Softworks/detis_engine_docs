@@ -1,18 +1,18 @@
 # Editor overview
 
-This is a first look at the editor, not a manual for every tool. After [Quick start](quick_start.md) you already know Load World, Play, save, and undo.
+After [Quick start](quick_start.md) you already know Load World, Play, save, and undo.
 
-The editor and the game are the same executable. You are always in **editor** or **game**. From the editor, the green **Play** button or **Debug → Play Game** enters game mode. `Ctrl+P` / `Alt+P` toggles both ways.
+Daily work lives on the two toolbars around the viewport. You do not need the main menu to open inspectors, asset editors, or viewport tools.
 
 ## What you are looking at
 
-1. **Menu bar:** **File**, **Edit**, **View**, **Debug**, **Help**. There is no Tools menu and no Game menu.
-2. **Viewport toolbar** (above the 3D view): panel toggles, viewport tools, **Play**, reload, collision debug, mute, and **Spectator Speed**.
-3. **Transform rail** (left of the 3D view): gizmo mode, snap, local space, translucent selection, flat light.
-4. **Viewport:** fly the camera, select entities, drag gizmos, drop prefabs from the Entity Browser.
-5. **Docked panels:** World Inspector, Entity Inspector, World Settings, Entity Browser, and the rest. Open them from **View**, **Debug**, the toolbar, or the Shift shortcuts.
+1. **Viewport toolbar** (above the 3D view): inspectors, Entity Browser, viewport tools, Material Editor, Texture Packer, Log, **Play**, reload, collision debug, mute, and **Spectator Speed**.
+2. **Transform rail** (left of the 3D view): gizmo mode, snap, local space, translucent selection, flat light.
+3. **Viewport:** fly the camera, select entities, drag gizmos, drop prefabs from the Entity Browser.
+4. **Docked panels:** World Inspector, Entity Inspector, World Settings, Entity Browser, and the rest. Open them from the viewport toolbar. Shortcuts still work.
+5. **Menu bar:** **File**, **Edit**, **View**, **Debug**, **Help**. Use it for new / load / save, Settings, and a few extras that are not on the toolbar (Module Manager, Debug View, Performance Metrics).
 
-**Help → Shortcuts** is the in-engine cheat sheet. Bindings live in `engine/config/editor_input_bindings.ini`.
+Hover a toolbar button for its name and shortcut. **Help → Shortcuts** is the full cheat sheet. Bindings live in `engine/config/editor_input_bindings.ini`.
 
 ## Day-one loop
 
@@ -23,14 +23,16 @@ The editor and the game are the same executable. You are always in **editor** or
 | Save | **File → Save World** (`Ctrl+S`) |
 | Save as | **File → Save World As...** (`Ctrl+Shift+S`) |
 | Undo / redo | **Edit → Undo** (`Ctrl+Z`) / **Edit → Redo** (`Ctrl+Y` or `Ctrl+Shift+Z`) |
-| Play / back to editor | **Play** on the viewport toolbar or **Debug → Play Game** to enter game. `Ctrl+P` / `Alt+P` toggles both ways |
-| Place a prefab | **View → Entity Browser** (`Shift+Space`), drag an `.entity` into the viewport |
+| Play / back to editor | Green **Play** on the viewport toolbar. `Ctrl+P` / `Alt+P` toggles both ways |
+| Place a prefab | Entity Browser button on the viewport toolbar (`Shift+Space`), drag an `.entity` into the viewport |
 | Settings / theme | **File → Settings** |
 | See all shortcuts | **Help → Shortcuts** |
 
 > **Early Alpha Notice:** Undo and redo cover viewport transforms, spawn, hierarchy, and similar commands. They do not cover every inspector field yet.
 
 ## Viewport toolbar
+
+This is how you open editors. Click a button to show that panel. Click it again to hide it.
 
 Left group, panels:
 
@@ -39,7 +41,7 @@ Left group, panels:
 - World Settings (`Shift+3`)
 - Entity Browser (`Shift+Space`)
 
-Then exclusive viewport tools (only one at a time, same as **View → Viewport Tool**):
+Then exclusive viewport tools (only one at a time):
 
 - Terrain Patch (`Shift+8`)
 - Decorator (`Shift+7`)
@@ -128,6 +130,8 @@ Frame All is under **View → Viewport Camera**, not Edit.
 
 ## View
 
+Same panels and editors are on the viewport toolbar. You do not need this menu for daily work.
+
 | Menu | Shortcut | What it is |
 |------|----------|------------|
 | **World Inspector** | `Shift+1` | Entity tree. **Add New Entity**, search, **Show Decorations**. Right-click: **Rename Entity**, **Group Selected Entities**, **Add Child Entity**, **Copy Entity Path**, **Move Up** / **Move Down** (`Shift+Up` / `Shift+Down`). |
@@ -147,7 +151,7 @@ Brush tools often use **Shift+LMB**. See **Help → Shortcuts** → Tool Brushes
 
 The default way to put content in a world is the **Entity Browser**, not **Add New Entity**.
 
-1. Open **View → Entity Browser** (`Shift+Space`), or the archive-box button on the toolbar.
+1. Click the Entity Browser button on the viewport toolbar (`Shift+Space`).
 2. Search, or walk the tree (prefabs live under `content/entities/`).
 3. Drag an `.entity` into the **viewport**. It spawns where you drop.
 4. Drop onto an entity in the World Inspector to spawn it as a child.
@@ -159,9 +163,11 @@ Use **Add New Entity** when you are authoring a new prefab from components. That
 
 ## Debug
 
+**Play**, **Reload Assets**, **Collision Debug**, and **Mute Sounds** are on the viewport toolbar. **Flat Light** is on the transform rail.
+
 | Menu | Shortcut | What it does |
 |------|----------|----------------|
-| **Play Game** | `Ctrl+P` / `Alt+P` | Enter game from the editor (same as the Play button). `Ctrl+P` / `Alt+P` also return to the editor |
+| **Play Game** | `Ctrl+P` / `Alt+P` | Same as the green **Play** button. Also returns to the editor |
 | **Log** | `Shift+-` | Log panel |
 | **Reload Assets** | `Shift+R` | Shaders, textures, materials, flipbooks, sounds, animations, scripts/modules, themes, property defaults, surface types, and editor input bindings. Does **not** run on file save. |
 | **Toggle Collision Debug** | `Shift+C` | Off / Selected / All |

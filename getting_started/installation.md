@@ -2,24 +2,14 @@
 
 Detis Engine does not use a launcher or a multi-project workspace. **One engine copy is one game.**
 
-## What you get
-
-Download and extract the engine package. Inside you will find a `game` folder. That folder is your project: binary, engine data, and your content together.
-
-```
-game/
-  bin/        executable and runtime files
-  content/    your worlds, scripts, assets, game config
-  engine/     engine builtins (shaders, editor data, defaults)
-```
-
-There is nothing else to create. You are not asked to make a “new project.”
+Download and extract the engine package. That data is your project: binary, required engine data, and your content together.
 
 ## Editor and game
 
 The editor is built into the game. You run one executable: `detis_engine`.
 
-By default it starts in **editor** mode (`editor_active_on_startup` in `content/config/default_game.ini`). Enter **game** with the green **Play** button on the viewport toolbar, **Debug → Play Game**, or `Ctrl+P` / `Alt+P`. The same play shortcut returns you to the editor. Starting in game mode on launch is a packaging choice, not something you need on day one.
+By default it starts in **editor** mode (`editor_active_on_startup` in `content/config/default_game.ini`). Enter **game** with the green **Play** button on the viewport toolbar, **Debug → Play Game**, or `Ctrl+P` / `Alt+P`. The same play shortcut returns you to the editor. 
+Starting in game mode on launch is a packaging choice, not something you need on day one.
 
 ## Run it
 
@@ -32,7 +22,7 @@ Paths are resolved from that executable. Keep `bin`, `content`, and `engine` tog
 
 Want a second game? Copy a **fresh** engine package and work in that `game` folder.
 
-Do not put several unrelated games inside one copy.
+Do not put several unrelated games inside one copy unless you intend to. 
 
 ## Platforms
 
