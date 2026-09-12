@@ -16,10 +16,10 @@ Defaults: Point **Shadow Bias** 0.1, Spot **0.03**, **Shadow Normal Bias** 1.0, 
 - Nearest eligible lights to the camera win.
 - Lights that lose the budget still illuminate. They just drop shadows.
 
-Both of these must be on:
+Two AND gates must both be on:
 
 1. Per-light **Cast Shadows**.
-2. Engine Settings **Local Light Shadows**.
+2. Engine Settings **Local Light Shadows** (global runtime gate).
 
 ## Engine Settings
 

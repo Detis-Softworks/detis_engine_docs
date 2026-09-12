@@ -24,7 +24,7 @@ Routing only runs when **Affected By Zones** is on (Sound component or soundscap
 
 | Case | Result |
 |------|--------|
-| Gate off | Dry. No zone gain, no reverb send. Not the world default. |
+| Gate off | Dry identity. No zone gain, no reverb send. Not the world default. |
 | No entity zone | World **Default Sound Zone**. |
 | Listener inside an entity zone, non-spatial / soundscape | **Internal**. |
 | Listener inside, spatial source inside the box | **Internal**. |
@@ -45,7 +45,7 @@ Underwater-style muffling is a low **Low Pass Cutoff** plus **Gain** below 1 (fo
 
 ## Reverb
 
-One shared reverb on the mix. **Character** (room size, damping, width, predelay, feed filters) follows the listener **Internal** profile, or the world Default Sound Zone.
+One shared Freeverb on the mix. **Character** (room size, damping, width, predelay, feed filters) follows the listener **Internal** profile, or the world Default Sound Zone.
 
 Per-source **send** is `reverb_level × category_send`.
 
@@ -61,7 +61,7 @@ Per-source **send** is `reverb_level × category_send`.
 
 External **Room Size**, **Damping**, **Width**, **Predelay**, and feed filters still appear in the inspector. They do **not** drive the shared wet bus. External still uses **Gain**, **Low Pass Cutoff**, **Level**, and the category sends.
 
-There is no Lua API for category send.
+GUI send exists on the data (default 0) and is not shown in the inspector. There is no Lua API for category send.
 
 ## World Default Sound Zone
 

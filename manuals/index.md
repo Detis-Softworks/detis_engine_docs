@@ -1,31 +1,35 @@
 # Detis Engine Manual
 
-Topic manuals for the editor and Lua API. Full table of contents is on the [documentation home](../README.md).
+Detis is a lightweight engine for 3D single-player PC games on Windows and Linux. Drop in assets, edit worlds, script in Lua, hit Play. Editor and runtime are the same executable.
 
-## Getting started
+---
 
-[Introduction](../getting_started/introduction.md) through install, project layout, sample content, and the first tutorials.
+## Sections
 
-## Editor
+### [Getting started](../getting_started/introduction.md)
 
-[Editor overview](../getting_started/editor_overview.md). Menus, viewport toolbar, transform rail, Entity Browser, inspectors, and the day-one edit loop.
+Install the engine, learn the project layout, load demo content, and take the first guided tutorials.
 
-## Tutorials
+### [Editor](../getting_started/editor_overview.md)
 
-[Your first world](../tutorials/your_first_world.md), [your first prefab](../tutorials/your_first_prefab.md), and [kick the ball](../tutorials/kick_the_ball.md).
+Menus, viewport toolbar, transform rail, Entity Browser, inspectors, and the day-one edit loop.
 
-## Lighting
+### [Tutorials](../tutorials/your_first_world.md)
 
-[Lighting overview](lighting.md). World sun, local Point and Spot lights, shadow settings, and EV100 exposure.
+Build a small level, author a prefab from components, and script interactable gameplay in Lua.
 
-## Audio
+### [Lighting](lighting.md)
 
-[Audio overview](audio.md). Sound components, soundscapes, sound zones, music, and the Game / GUI / Ambient / Voice mix.
+World sun, local Point and Spot lights, shadow settings, and EV100 exposure. Physical units and World Settings workflow.
 
-## Scripting
+### [Audio](audio.md)
 
-[Script overview](script_overview.md). Entity, world, and module scripts. Lifecycle callbacks, `@PARAMETER` fields, and reloading from the editor.
+Sound components, soundscapes, sound zones, music, and the Game / GUI / Ambient / Voice mix.
 
-## Script API
+### [Scripting](script_overview.md)
 
-[Script API reference](../reference/README.md). Generated Lua function list. Pair with `engine/stubs/engine_stubs.lua` for IDE autocomplete.
+Entity, world, and module scripts. Lifecycle callbacks, `@PARAMETER` fields, and reloading from the editor.
+
+### [Script API reference](../reference/README.md)
+
+Generated Lua function list grouped by engine API. Pair with `engine/stubs/engine_stubs.lua` for IDE autocomplete.

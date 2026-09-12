@@ -6,7 +6,7 @@ There is no finished tutorial world in the package. You save this one yourself.
 
 You should already know how to run the engine and move in the editor. If not, do [Quick start](../getting_started/quick_start.md) and [Editor overview](../getting_started/editor_overview.md) first.
 
-Prefabs live in the **Entity Browser**. Meshes, materials, and worlds still use the engine file dialog and your OS file manager. Keep [Project layout](../getting_started/project_layout.md) handy.
+> **Early Alpha Notice:** Detis began as an internal tool and is still early alpha. Prefabs live in the **Entity Browser**. Meshes, materials, and worlds still use the engine file dialog and your OS file manager. Keep [Project layout](../getting_started/project_layout.md) handy.
 
 ## 1. New world
 
@@ -57,7 +57,9 @@ Add a point light.
 
    - Position: `0.0`, `2.5`, `0.0`
 
-   Use the translate gizmo (**W**) if you prefer to drag it into place. Lights and other invisible entities are not pickable in the viewport yet. Select them in the **World Inspector**, then use the gizmo or edit **Transform** in the Entity Inspector.
+   Use the translate gizmo (**W**) if you prefer to drag it into place. Lights are not pickable in the viewport yet, so select `light` in the World Inspector first.
+
+> **Early Alpha Notice:** You cannot pick invisible entities in the viewport yet (lights, empty parents, and similar). Select them in the **World Inspector** first, then use the gizmo, or edit **Transform** in the Entity Inspector directly.
 
 ## 6. Add a cube
 
