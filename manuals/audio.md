@@ -1,8 +1,8 @@
 # Audio
 
-Play sounds from entities, layer ambient soundscapes, shape them with Sound Zones, and stream music.
+Play sounds on entities, layer ambient beds, shape them with Sound Zones, and stream one music track.
 
-## In this section
+## Pages
 
 - [Sound component](audio_sound_component.md) — Playback on an entity.
 - [Soundscape](audio_soundscape.md) — Loops and scattered one-shots.
@@ -11,7 +11,7 @@ Play sounds from entities, layer ambient soundscapes, shape them with Sound Zone
 
 ## Categories
 
-`SoundCategory` is four integers. Music is **not** a category.
+Four volume groups. Music is not a category.
 
 | Category | Integer | Engine Settings slider | Use |
 |----------|---------|------------------------|-----|
@@ -20,25 +20,17 @@ Play sounds from entities, layer ambient soundscapes, shape them with Sound Zone
 | **Ambient** | 2 | **Ambient Volume** | Soundscapes and environment beds. |
 | **Voice** | 3 | **Voice Volume** | Dialogue. |
 
-Each slider is shown in dB and stored as linear gain on sources. Pause stops Game, Ambient, and Voice. GUI keeps playing.
-
-## Pause behavior
-
-- Game, Ambient, Voice: paused by game pause.
-- GUI: continues during game pause.
-- Music: continues until explicitly paused with music API.
-
-These are volume / pause / reverb-send groups. They are not separate miniaudio mix buses.
+Sliders show dB and store linear gain. Game pause stops Game, Ambient, and Voice. GUI keeps playing. Pause music yourself with the music API if a pause menu should silence it.
 
 ## Signal flow
 
 ![Audio signal flow](../images/audio_signal_flow.svg)
 
-Left lane: Sound component or soundscape → category volume → optional Sound Zone (dry LPF, gain, reverb send) → **Master volume**.
+Sounds and soundscapes go: source → category volume → optional Sound Zone (dry low-pass, gain, reverb send) → **Master Volume**.
 
-Right lane: Music stream → **Music Volume** → the same **Master volume**.
+Music goes: stream → **Music Volume** → the same **Master Volume**.
 
-Master is `ma_engine` output (Engine Settings **Master Volume**). Speakers come after master. Music is not multiplied by master a second time on the stream. Music never uses a category or a Sound Zone.
+Music never uses a category or a Sound Zone.
 
 ## API reference
 

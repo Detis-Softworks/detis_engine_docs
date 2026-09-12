@@ -15,9 +15,9 @@ Soundtracks, menu themes, and any music that should be heard equally from anywhe
 
 ## Mix path
 
-Music volume → **Master Volume** → speakers.
+Music Volume → **Master Volume** → speakers.
 
-Master is `ma_engine` output (Engine Settings **Master Volume**). `music_get_volume` / `music_set_volume` are the music slider only. Master is not applied a second time on the stream.
+`music_get_volume` / `music_set_volume` are the music slider only. Master is Engine Settings **Master Volume**.
 
 ## Controls
 
@@ -47,7 +47,7 @@ Master is `ma_engine` output (Engine Settings **Master Volume**). `music_get_vol
 ## Notes
 
 - Only one music track plays at a time.
-- Music is not a `SoundCategory`. Do not route it through Game / GUI / Ambient / Voice.
+- Music is not a category. Do not route it through Game / GUI / Ambient / Voice.
 - Pause for Game / Ambient / Voice does not stop music. Pause music yourself if a pause menu should silence it.
 
 ## See also

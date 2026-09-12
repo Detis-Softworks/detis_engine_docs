@@ -145,9 +145,7 @@ Or use **Debug → Reload Assets** (`Shift+R`). That reloads shaders, textures, 
 
 3. Play, look at the ball, press Interact.
 
-You should get a hop instead of a flat shove. If the label still says `Push`, check that the Script File points at `kick_ball.lua` and that **interact_label** is `Kick` in the inspector.
-
-> **Early Alpha Notice:** After you edit a `.lua` file on disk, reload it from the editor (Script File **Reload**, or **Debug → Reload Assets** / `Shift+R`). Automatic script change detection is planned.
+You should get a hop instead of a flat shove. If the label still says `Push`, check that the Script File points at `kick_ball.lua` and that **interact_label** is `Kick` in the inspector. Reloading does not run on file save.
 
 ## 11. Optional: expose kick lift as a parameter
 

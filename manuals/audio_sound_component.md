@@ -61,7 +61,7 @@ High-frequency loss over distance. Only applies when **Spatial** is on.
 |--------|---------|
 | **Affected By Zones** | Let the active listener Sound Zone change dry LPF, gain, and reverb send. Default on. |
 
-GUI category cannot opt in. The checkbox is disabled. With the gate off, the source stays dry identity (no zone gain, no send). It does **not** fall back to the world Default Sound Zone.
+GUI category cannot opt in. The checkbox is disabled. With the gate off, the source stays dry: no zone gain, no reverb send. It does **not** fall back to the world Default Sound Zone.
 
 ## See also
 

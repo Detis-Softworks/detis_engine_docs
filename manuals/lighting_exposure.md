@@ -21,8 +21,6 @@ Point / Spot use **Lumens**. Sun and sky fill use lux (**Lux**, **Ambient Lux**)
 | Sky fill | **Ambient Lux** 2 |
 | Physical sun (optional) | ~100,000 lux |
 
-There is no widget named "Sky ambient". Use **Ambient Lux**.
-
 ## EV100
 
 Exposure scale is `exp2(-ev100)`.
