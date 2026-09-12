@@ -167,3 +167,12 @@ Sample scripts often use:
 
 - Prefer `0`, `-1`, or `0.0` for numeric / ID state instead of `nil`.
 - Check entity IDs with `entity_get_is_valid(id)` only. That already covers missing and zero IDs.
+
+## API reference
+
+- [Script API index](../reference/README.md)
+- [Script](../reference/script.md)
+- [Entity](../reference/entity.md)
+- [World](../reference/world.md)
+- [Module](../reference/module.md)
+- [Game](../reference/game.md)

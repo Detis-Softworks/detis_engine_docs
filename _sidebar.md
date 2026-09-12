@@ -20,14 +20,12 @@
     * [Light component](manuals/lighting_component.md)
     * [Local shadows](manuals/lighting_local_shadows.md)
     * [Exposure & EV100](manuals/lighting_exposure.md)
-    * [Lighting best practices](manuals/lighting_guide.md)
   * **Audio**
     * [Audio overview](manuals/audio.md)
     * [Sound component](manuals/audio_sound_component.md)
     * [Soundscape](manuals/audio_soundscape.md)
     * [Sound zone](manuals/audio_sound_zone.md)
     * [Music](manuals/audio_music.md)
-    * [Sound design handbook](manuals/sound_guide.md)
   * [Script overview](manuals/script_overview.md)
 
 * **Reference**

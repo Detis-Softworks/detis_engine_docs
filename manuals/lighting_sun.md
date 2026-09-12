@@ -89,4 +89,4 @@ For night, either disable **Active** and light with Point / Spot, or keep the su
 - [Light component](lighting_component.md)
 - [Local shadows](lighting_local_shadows.md)
 - [Exposure & EV100](lighting_exposure.md)
-- [Lighting best practices](lighting_guide.md)
+- [Renderer API](../reference/renderer.md)

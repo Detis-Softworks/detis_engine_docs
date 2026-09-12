@@ -8,7 +8,6 @@ Play sounds from entities, layer ambient soundscapes, shape them with Sound Zone
 - [Soundscape](audio_soundscape.md) — Loops and scattered one-shots.
 - [Sound zone](audio_sound_zone.md) — Listener-based gain, low-pass, and reverb send.
 - [Music](audio_music.md) — One global music stream.
-- [Sound design handbook](sound_guide.md) — Categories, pause, and mix notes.
 
 ## Categories
 
@@ -22,6 +21,12 @@ Play sounds from entities, layer ambient soundscapes, shape them with Sound Zone
 | **Voice** | 3 | **Voice Volume** | Dialogue. |
 
 Each slider is shown in dB and stored as linear gain on sources. Pause stops Game, Ambient, and Voice. GUI keeps playing.
+
+## Pause behavior
+
+- Game, Ambient, Voice: paused by game pause.
+- GUI: continues during game pause.
+- Music: continues until explicitly paused with music API.
 
 These are volume / pause / reverb-send groups. They are not separate miniaudio mix buses.
 

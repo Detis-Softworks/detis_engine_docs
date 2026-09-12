@@ -59,3 +59,5 @@ Under **Local Lights**:
 - [World sun](lighting_sun.md)
 - [Lighting overview](lighting.md)
 - [Exposure & EV100](lighting_exposure.md)
+- [Renderer API](../reference/renderer.md)
+- [Settings API](../reference/settings.md)

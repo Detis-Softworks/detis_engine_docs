@@ -64,5 +64,4 @@ Up to 16 local lights can cast shadows at once. Engine Settings **Local Light Sh
 - [World sun](lighting_sun.md)
 - [Local shadows](lighting_local_shadows.md)
 - [Exposure & EV100](lighting_exposure.md)
-- [Lighting best practices](lighting_guide.md)
 - [Light API](../reference/light.md)

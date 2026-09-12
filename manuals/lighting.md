@@ -8,7 +8,6 @@ Light scenes with the world sun and local Point / Spot lights. Balance brightnes
 - [Light component](lighting_component.md) — Local Point and Spot lights.
 - [Local shadows](lighting_local_shadows.md) — Per-light shadows and Engine Settings limits.
 - [Exposure & EV100](lighting_exposure.md) — Physical units and auto-exposure.
-- [Lighting best practices](lighting_guide.md) — Gameplay baselines.
 
 ## Light system
 
@@ -40,3 +39,5 @@ Local shadows use a budget of 16 lights and two AND gates. See [Local shadows](l
 ## API reference
 
 - [Light](../reference/light.md)
+- [Renderer](../reference/renderer.md)
+- [Settings](../reference/settings.md)

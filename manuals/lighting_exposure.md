@@ -89,4 +89,3 @@ If local lights vanish outdoors, lower sun **Lux** and **Ambient Lux** before ra
 - [World sun](lighting_sun.md)
 - [Light component](lighting_component.md)
 - [Local shadows](lighting_local_shadows.md)
-- [Lighting best practices](lighting_guide.md)

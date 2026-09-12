@@ -31,6 +31,5 @@ Then continue through Installation, Quick start, Project layout, Sample content,
 
 - [Lighting overview](manuals/lighting.md): Sun, local lights, shadows, and exposure.
 - [Audio overview](manuals/audio.md): Sound components, soundscapes, zones, and music.
-- [Sound design handbook](manuals/sound_guide.md): Categories, pause, and mix notes.
 - [Script overview](manuals/script_overview.md): How entity, world, and module scripts fit together.
 - [Script API reference](reference/README.md): Generated function list from engine stubs.
