@@ -2,6 +2,8 @@
 
 A box that changes how opted-in sounds are heard while the **listener** is inside it. Use zones for indoor reverb, muffling, or outdoor-to-indoor contrast.
 
+<img src="../images/editor/ed_sound_zone.png" alt="Sound Zone" style="max-width:600px;height:auto;display:block">
+
 ## Setup
 
 1. Create an entity with a Sound Zone component. The transform scale is the box.

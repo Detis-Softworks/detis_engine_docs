@@ -2,9 +2,15 @@
 
 The package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one.
 
-All included third party assets are **CC0**, meaning they are free to use in your games. There is a license file inside each of those third party folders. Feel free to move, modify, rewrite, or delete sample content as you build your game.
+Shipped content is meant to be used inside Detis only. Use it in games you build with this engine, not as a general asset pack for other tools.
+
+Other than that, any third party assets are **CC0**, meaning they are free to use in your games. There is a license file inside each of those third party folders. 
+
+Feel free to move, modify, rewrite, or delete sample content as you build your game.
 
 ## Demo worlds
+
+<img src="../images/demo/demo_content_overview.png" alt="Demo content overview" style="max-width:600px;height:auto;display:block">
 
 Under `content/worlds/demo_content/`:
 

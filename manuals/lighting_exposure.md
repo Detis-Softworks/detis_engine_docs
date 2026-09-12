@@ -2,6 +2,8 @@
 
 How brightness is measured, and how auto-exposure maps scene light to the image.
 
+<img src="../images/editor/ed_exposure.png" alt="Exposure" style="max-width:600px;height:auto;display:block">
+
 ## Practical workflow
 
 1. Set **Ambient Lux** and sun **Lux** to the gameplay baseline (2 and 6) unless you are in full physical mode.

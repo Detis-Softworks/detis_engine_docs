@@ -2,6 +2,8 @@
 
 Play sounds from an entity. Use this for actions, effects, and anything tied to an object's position.
 
+<img src="../images/editor/ed_sound_component.png" alt="Sound component" style="max-width:600px;height:auto;display:block">
+
 ## Basic setup
 
 1. Select an entity.

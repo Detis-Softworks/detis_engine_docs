@@ -23,6 +23,8 @@ Two AND gates must both be on:
 
 ## Engine Settings
 
+Open **File → Settings**. See [Engine Settings](../getting_started/engine_settings.md).
+
 **Shadow Quality** also writes local-shadow max distance and fade (LOW 10 / 5, MEDIUM 14 / 7, HIGH 16 / 8, ULTRA 24 / 12) when settings load.
 
 Under **Local Lights**:

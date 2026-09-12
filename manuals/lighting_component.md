@@ -2,6 +2,8 @@
 
 Local Point and Spot lights. For the world sun, see [World sun](lighting_sun.md).
 
+<img src="../images/editor/ed_light_component.png" alt="Light component" style="max-width:600px;height:auto;display:block">
+
 ## Setup
 
 1. Create an entity.

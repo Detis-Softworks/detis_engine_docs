@@ -8,7 +8,7 @@ This is the user manual for Detis Engine.
 
 **[Introduction](getting_started/introduction.md)**: what Detis is, and whether it fits your project.
 
-Then continue through FAQ, Installation, Quick start, Project layout, Sample content, Editor overview, and the first tutorials.
+Then continue through FAQ, Installation, Quick start, Engine Settings, Project layout, Sample content, Editor overview, and the first tutorials.
 
 ## Full path
 
@@ -18,9 +18,10 @@ Then continue through FAQ, Installation, Quick start, Project layout, Sample con
 2. [FAQ](getting_started/faq.md)
 3. [Installation](getting_started/installation.md)
 4. [Quick start](getting_started/quick_start.md)
-5. [Project layout](getting_started/project_layout.md)
-6. [Sample content](getting_started/sample_content.md)
-7. [Editor overview](getting_started/editor_overview.md)
+5. [Engine Settings](getting_started/engine_settings.md)
+6. [Project layout](getting_started/project_layout.md)
+7. [Sample content](getting_started/sample_content.md)
+8. [Editor overview](getting_started/editor_overview.md)
 
 ### Tutorials
 

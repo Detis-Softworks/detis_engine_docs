@@ -22,6 +22,8 @@ Play sounds from entities, layer ambient soundscapes, shape them with Sound Zone
 
 Each slider is shown in dB and stored as linear gain on sources. Pause stops Game, Ambient, and Voice. GUI keeps playing.
 
+<img src="../images/editor/ed_engine_settings_sound_mixer.png" alt="Engine Settings mixer" style="max-width:600px;height:auto;display:block">
+
 ## Pause behavior
 
 - Game, Ambient, Voice: paused by game pause.
@@ -32,7 +34,7 @@ These are volume / pause / reverb-send groups. They are not separate miniaudio m
 
 ## Signal flow
 
-![Audio signal flow](../images/audio_signal_flow.svg)
+<img src="../images/audio_signal_flow.svg" alt="Audio signal flow" style="max-width:600px;height:auto;display:block">
 
 Left lane: Sound component or soundscape → category volume → optional Sound Zone (dry LPF, gain, reverb send) → **Master volume**.
 

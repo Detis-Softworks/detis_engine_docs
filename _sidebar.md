@@ -5,6 +5,7 @@
   * [FAQ](getting_started/faq.md)
   * [Installation](getting_started/installation.md)
   * [Quick start](getting_started/quick_start.md)
+  * [Engine Settings](getting_started/engine_settings.md)
   * [Project layout](getting_started/project_layout.md)
   * [Sample content](getting_started/sample_content.md)
   * [Editor overview](getting_started/editor_overview.md)

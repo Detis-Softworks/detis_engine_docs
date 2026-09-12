@@ -6,8 +6,6 @@ There is no finished tutorial world in the package. You save this one yourself.
 
 You should already know how to run the engine and move in the editor. If not, do [Quick start](../getting_started/quick_start.md) and [Editor overview](../getting_started/editor_overview.md) first.
 
-> **Early Alpha Notice:** Detis began as an internal tool and is still early alpha. Prefabs live in the **Entity Browser**. Meshes, materials, and worlds still use the engine file dialog and your OS file manager. Keep [Project layout](../getting_started/project_layout.md) handy.
-
 ## 1. New world
 
 1. **File → New World** (`Ctrl+N`).
@@ -21,15 +19,14 @@ You should already know how to run the engine and move in the editor. If not, do
 
 Keeping the file under `content/worlds/` matches the rest of the package. See [Project layout](../getting_started/project_layout.md).
 
-## 3. Open the panels
+## 3. Required Tools
 
-1. **View → World Inspector** (`Shift+1`) if it is not already open.
-2. **View → Entity Inspector** (`Shift+2`) if it is not already open.
-3. **View → Entity Browser** (`Shift+Space`), or the archive-box button on the viewport toolbar.
-
-You place prefabs from the Entity Browser. You rename and parent in the World Inspector. You edit components in the Entity Inspector.
-
-Drag an `.entity` into the **viewport** to spawn it. Drop onto an entity in the World Inspector to spawn it as a child. Double-click spawns at the origin. Search is the fast path.
+1. **View → World Inspector** (`Shift+1`) if it is not already open. You rename and parent entities here.
+2. **View → Entity Inspector** (`Shift+2`) if it is not already open. You can add, edit, or remove components here. 
+3. **View → Entity Browser** (`Shift+Space`), or the archive-box button on the viewport toolbar. A list of prefabs to spawn. In specific:
+   - Drag an `.entity` prefab into the **viewport** to spawn it. 
+   - Drop onto an entity in the World Inspector to spawn it as a child. 
+   - Double-click spawns at the origin. Search is the fast path.
 
 ## 4. Add a ground plane
 

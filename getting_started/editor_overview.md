@@ -6,6 +6,8 @@ Daily work lives on the two toolbars around the viewport. You do not need the ma
 
 ## What you are looking at
 
+<img src="../images/editor/ed_overview_a.png" alt="Editor overview" style="max-width:600px;height:auto;display:block">
+
 1. **Viewport toolbar** (above the 3D view): inspectors, Entity Browser, viewport tools, Material Editor, Texture Packer, Log, **Play**, reload, collision debug, mute, and **Spectator Speed**.
 2. **Transform rail** (left of the 3D view): gizmo mode, snap, local space, translucent selection, flat light.
 3. **Viewport:** fly the camera, select entities, drag gizmos, drop prefabs from the Entity Browser.
@@ -25,7 +27,7 @@ Hover a toolbar button for its name and shortcut. **Help → Shortcuts** is the 
 | Undo / redo | **Edit → Undo** (`Ctrl+Z`) / **Edit → Redo** (`Ctrl+Y` or `Ctrl+Shift+Z`) |
 | Play / back to editor | Green **Play** on the viewport toolbar. `Ctrl+P` / `Alt+P` toggles both ways |
 | Place a prefab | Entity Browser button on the viewport toolbar (`Shift+Space`), drag an `.entity` into the viewport |
-| Settings / theme | **File → Settings** |
+| Settings / theme | **File → Settings**. See [Engine Settings](engine_settings.md) |
 | See all shortcuts | **Help → Shortcuts** |
 
 > **Early Alpha Notice:** Undo and redo cover viewport transforms, spawn, hierarchy, and similar commands. They do not cover every inspector field yet.
@@ -117,7 +119,7 @@ Lights and other invisible entities are not pickable in the viewport yet. Select
 
 - **New World**, **Load World**, **Save World**, **Save World As...**
 - **Export → World (GLB)** / **Selected Entities (GLB)**
-- **Settings** — appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer (**Master Volume**, **Music Volume**, **SFX Volume**, **UI Volume**, **Ambient Volume**, **Voice Volume**)
+- **Settings** — [Engine Settings](engine_settings.md). Appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer.
 - **Quit** (`Alt+F4`)
 
 ## Edit

@@ -2,6 +2,10 @@
 
 Ambient beds: looping layers plus occasional one-shots. Routed through the **Ambient** category.
 
+World Settings holds the default bed and the Default Sound Zone:
+
+<img src="../images/editor/ed_world_sound.png" alt="World sound" style="max-width:600px;height:auto;display:block">
+
 ## When to use
 
 Wind, rooms, streets, and other environment beds. Use Soundscape Zones when ambience should change by area.

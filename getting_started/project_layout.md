@@ -50,7 +50,7 @@ Edit the shipped defaults when you want every fresh profile of **this** game cop
 
 Shaders, fonts, editor bindings, default engine settings seed, and other builtins the executable expects.
 
-Treat this as part of the engine package. Prefer putting game-specific work under `content/`.
+Treat this as part of the engine package. Unless you know what you are doing leave this directory alone. Put game-specific work under `content/`.
 
 ## Scripts
 
@@ -58,7 +58,7 @@ Put gameplay `.lua` files anywhere under `content/`. For a typical setup use `co
 
 IDE stubs for code completion live under `engine/stubs/engine_stubs.lua` and `content/stubs/game_stubs.lua`. Do not edit those. They are automatically generated. 
 
-## User data (outside the package)
+## User specific data
 
 On first run, Detis creates a folder under the platform user root and **copies the default configs into it**. After that, **File → Settings** and the editor write those user copies. The shipped files in `game/` stay as the template for the next fresh profile.
 

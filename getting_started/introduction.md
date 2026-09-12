@@ -4,6 +4,8 @@ Detis Engine is a focused, lightweight game engine built for rapid iteration. It
 
 There are no heavy import pipelines, no endless menu mazes, and no C++ build plumbing to babysit. You get a full visual 3D editor alongside a deep Lua API. Drop in your assets, author worlds in the built-in live editor, script in Lua, and hit play. All in a single executable.
 
+<img src="../images/editor/ed_overview_b.png" alt="Editor overview" style="max-width:600px;height:auto;display:block">
+
 > **Early Alpha Notice:** Expect API refinements, and additional features as development advances.
 
 ### Getting started
@@ -11,9 +13,10 @@ There are no heavy import pipelines, no endless menu mazes, and no C++ build plu
 1. [FAQ](faq.md)
 2. [Installation](installation.md)
 3. [Quick start](quick_start.md)
-4. [Project layout](project_layout.md)
-5. [Sample content](sample_content.md)
-6. [Editor overview](editor_overview.md)
+4. [Engine Settings](engine_settings.md)
+5. [Project layout](project_layout.md)
+6. [Sample content](sample_content.md)
+7. [Editor overview](editor_overview.md)
 
 ### Manuals
 

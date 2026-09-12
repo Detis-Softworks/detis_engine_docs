@@ -32,7 +32,7 @@ Light scenes with the world sun and local Point / Spot lights. Balance brightnes
 
 ## Shadow maps
 
-Sun shadows are cascaded (CSM). Cascade count and sun shadow distance come from Engine Settings **Shadow Quality**, not World Settings.
+Sun shadows are cascaded (CSM). Cascade count and sun shadow distance come from **File → Settings** → **Shadow Quality**, not World Settings. See [Engine Settings](../getting_started/engine_settings.md).
 
 Local shadows use a budget of 16 lights and two AND gates. See [Local shadows](lighting_local_shadows.md).
 
