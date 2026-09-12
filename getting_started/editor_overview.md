@@ -1,38 +1,79 @@
 # Editor overview
 
-This is a first look at the editor, not a manual for every tool. After [Quick start](quick_start.md) you already know Load World, Play, save, and undo. Here is how the rest of the workspace fits together.
+This is a first look at the editor, not a manual for every tool. After [Quick start](quick_start.md) you already know Load World, Play, save, and undo.
 
-The editor and the game are the same executable. You are always in one of two modes: **editor** (author) or **game** (play). Toggle with `Ctrl+P` / `Alt+P`, or **Game → Play Game**.
-
-![Editor overview](../images/editor/overview.jpg)
+The editor and the game are the same executable. You are always in **editor** or **game**. From the editor, the green **Play** button or **Debug → Play Game** enters game mode. `Ctrl+P` / `Alt+P` toggles both ways.
 
 ## What you are looking at
 
-Think in four layers, top to bottom:
+1. **Menu bar:** **File**, **Edit**, **View**, **Debug**, **Help**. There is no Tools menu and no Game menu.
+2. **Viewport toolbar** (above the 3D view): panel toggles, viewport tools, **Play**, reload, collision debug, mute, and **Spectator Speed**.
+3. **Transform rail** (left of the 3D view): gizmo mode, snap, local space, translucent selection, flat light.
+4. **Viewport:** fly the camera, select entities, drag gizmos, drop prefabs from the Entity Browser.
+5. **Docked panels:** World Inspector, Entity Inspector, World Settings, Entity Browser, and the rest. Open them from **View**, **Debug**, the toolbar, or the Shift shortcuts.
 
-![Main Menu](../images/editor/menu_bar.jpg)
-
-1. **Menu bar** at the top. **File**, **Edit**, **View**, **Tools**, **Game**, **Debug**, and **Help**. Almost everything in this guide is available from these menus. Shortcuts are accelerators for the same items (the menus show the keys next to each entry).
-2. **Transform bar** under the menu. Day-to-day viewport controls: **Play** (dev mode), snap on/off and snap steps, **Local Space**, **Translate** / **Rotate** / **Scale** (same as `W` / `E` / `R`), **Translucent Selection**, and **Orthographic View** (with an ortho size field when that mode is on).
-3. **Viewport** in the middle. This is the world. You fly the camera, select entities, and drag gizmos here.
-4. **Panels** around it (hierarchy, inspector, settings, tools). Open them from **View** / **Tools** / **Debug**, or with the Shift shortcuts listed with those menus below.
-
-The UI is meant to be functional and minimal. Prefer the **menu bar** when you are learning. Use shortcuts once the path is familiar. **Help → Shortcuts** is the full in-engine cheat sheet.
+**Help → Shortcuts** is the in-engine cheat sheet. Bindings live in `engine/config/editor_input_bindings.ini`.
 
 ## Day-one loop
 
-| You want to… | Menu (and shortcut) |
-|--------------|---------------------|
-| New world | **File → New** (`Ctrl+N`) |
+| You want to… | How |
+|--------------|-----|
+| New world | **File → New World** (`Ctrl+N`) |
 | Load a world | **File → Load World** (`Ctrl+L`) |
 | Save | **File → Save World** (`Ctrl+S`) |
 | Save as | **File → Save World As...** (`Ctrl+Shift+S`) |
 | Undo / redo | **Edit → Undo** (`Ctrl+Z`) / **Edit → Redo** (`Ctrl+Y` or `Ctrl+Shift+Z`) |
-| Play the game | **Game → Play Game** (`Ctrl+P` or `Alt+P`), or **Play** on the transform bar |
-| Back to editor | Same play toggle again |
+| Play / back to editor | **Play** on the viewport toolbar or **Debug → Play Game** to enter game. `Ctrl+P` / `Alt+P` toggles both ways |
+| Place a prefab | **View → Entity Browser** (`Shift+Space`), drag an `.entity` into the viewport |
+| Settings / theme | **File → Settings** |
 | See all shortcuts | **Help → Shortcuts** |
 
-> **Early Alpha Notice:** Undo and redo do not cover the Entity Inspector or most tool panels yet. They apply to viewport actions and the related shortcuts. Full inspector / panel undo is priority number one after release.
+> **Early Alpha Notice:** Undo and redo cover viewport transforms, spawn, hierarchy, and similar commands. They do not cover every inspector field yet.
+
+## Viewport toolbar
+
+Left group, panels:
+
+- World Inspector (`Shift+1`)
+- Entity Inspector (`Shift+2`)
+- World Settings (`Shift+3`)
+- Entity Browser (`Shift+Space`)
+
+Then exclusive viewport tools (only one at a time, same as **View → Viewport Tool**):
+
+- Terrain Patch (`Shift+8`)
+- Decorator (`Shift+7`)
+- Vertex Paint (`Shift+6`)
+- Agent Navigation (`Shift+9`)
+
+Then asset editors and log:
+
+- Texture Packer (`Shift+5`)
+- Material Editor (`Shift+4`)
+- Log (`Shift+-`)
+
+Center:
+
+- **Play** (enters game)
+- **Reload Assets** (`Shift+R`)
+- **Collision Debug** (`Shift+C`), cycles Off / Selected / All
+- **Mute Sounds** (`M`). Mutes Game, Ambient, Voice, and music while editing. GUI keeps playing.
+
+Far right: **Spectator Speed**. Mouse wheel while aiming also changes fly speed.
+
+## Transform rail
+
+Left of the 3D view:
+
+| Control | Shortcut | What it does |
+|---------|----------|----------------|
+| Translate / Rotate / Scale | `W` / `E` / `R` | Gizmo mode. `Space` cycles. |
+| Snap | `X` | Toggle. Right-click the magnet for translation / rotation / scale steps. |
+| Local Space | `T` | Local vs world gizmo. |
+| Translucent Selection | | Let picks go through translucent surfaces. |
+| Flat Light | `Alt+2` | Dark-map fill while editing. Toggle off to return to the normal view. |
+
+Orthographic view is **not** on this rail. Use Keypad **5** or **View → Viewport Camera → Toggle Perspective/Orthographic**.
 
 ## Camera
 
@@ -40,131 +81,103 @@ In the viewport (perspective by default):
 
 | Input | Action |
 |-------|--------|
-| Hold **RMB** | Look / fly |
-| Hold **LMB** | Move / yaw |
-| **WASD** / **Q** **E** | Move while holding RMB |
-| **Mouse wheel** | Set fly speed |
+| Hold **RMB** | Look / fly (perspective) or pan (ortho) |
+| Hold **LMB** | Move / yaw (perspective) or rotate view (ortho) |
+| **WASD** / **Q** **E** | Move while aiming |
+| **Mouse wheel** | Zoom, or fly speed while aiming |
 | **F** | Focus selected |
 | **Shift+F** | Frame all |
+| **Alt+F** | Reveal Selection in Hierarchy |
 | **.** (period) | Focus world origin |
-| Keypad **5** | Perspective / orthographic (same idea as **Orthographic View** on the transform bar) |
-| Keypad **1** / **3** / **7** | Snap Front / Right / Top (`Ctrl` for the opposite side) |
+| Keypad **5** | Perspective / orthographic |
+| Keypad **1** / **3** / **7** | Snap Front / Right / Top (`Ctrl` for Back / Left / Bottom) |
 
-**Alt+F** reveals the selection in the hierarchy.
-
-These camera actions are also under **View → Camera** (perspective / ortho, focus origin, frame all, snap to axis). Shortcuts are listed next to the menu items.
+Same actions live under **View → Viewport Camera**.
 
 ## Selection and transforms
 
 | Input | Action |
 |-------|--------|
 | Click in viewport | Select |
-| **W** / **E** / **R** | Translate / Rotate / Scale gizmo |
+| **Ctrl+drag** | Box select (additive) |
+| **W** / **E** / **R** | Translate / Rotate / Scale |
 | **T** | Local / world space |
 | **Space** | Cycle gizmo mode |
+| **X** | Snap |
 | **Ctrl+D** | Duplicate |
 | **Delete** | Delete selection |
 | **Escape** | Deselect |
-| **Ctrl+A** | Select all (**Edit → Select All**) |
+| **Ctrl+A** | Select all |
 
-The **transform bar** mirrors the common ones (mode, local space, snap) and also exposes:
+Lights and other invisible entities are not pickable in the viewport yet. Select them in the World Inspector, then use the gizmo or **Transform** in the Entity Inspector.
 
-- **Translucent Selection.** Let picks go through translucent surfaces when you need to select what is behind them.
-- **Orthographic View.** Flat projection for alignment work. When enabled, set the ortho size on the bar. Keypad **5** and **View → Camera → Toggle Perspective/Orthographic** do the same mode.
+## File
 
-Use the menu, the bar, or the keys. Same actions.
+- **New World**, **Load World**, **Save World**, **Save World As...**
+- **Export → World (GLB)** / **Selected Entities (GLB)**
+- **Settings** — appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer (**Master Volume**, **Music Volume**, **SFX Volume**, **UI Volume**, **Ambient Volume**, **Voice Volume**)
+- **Quit** (`Alt+F4`)
 
-## File extras
+## Edit
 
-Beyond new / load / save:
+- **Undo** / **Redo**
+- **Select All** / **Deselect All** (`Escape`)
+- **Duplicate** / **Delete**
 
-- **File → Export → World (GLB)** / **Selected Entities (GLB).** Dump meshes out for DCC tools.
-- **File → Quit** (`Alt+F4`).
+Frame All is under **View → Viewport Camera**, not Edit.
 
-## Edit extras
+## View
 
-Beyond undo / redo:
+| Menu | Shortcut | What it is |
+|------|----------|------------|
+| **World Inspector** | `Shift+1` | Entity tree. **Add New Entity**, search, **Show Decorations**. Right-click: **Rename Entity**, **Group Selected Entities**, **Add Child Entity**, **Copy Entity Path**, **Move Up** / **Move Down** (`Shift+Up` / `Shift+Down`). |
+| **Entity Inspector** | `Shift+2` | Components on the selection |
+| **World Settings** | `Shift+3` | Sun, sky (**Ambient Lux**, IBL), exposure, soundscape, **Default Sound Zone**, world script |
+| **Material Editor** | `Shift+4` | Materials |
+| **Texture Packer** | `Shift+5` | Texture packing |
+| **Viewport Tool** | | **None**, **Vertex Paint**, **Decorator**, **Terrain Patch**, **Agent Navigation**. Exclusive. |
+| **Module Manager** | `Shift+0` | Lua modules from `modules.ini` |
+| **Entity Browser** | `Shift+Space` | Prefab library. Drag into the viewport or onto the World Inspector |
+| **Viewport Camera** | | Perspective / ortho, focus, frame, snap |
+| **Reset Editor Layout** | | Restore World Inspector, Entity Inspector, and Log. Close other panels |
 
-- **Edit → Select All** (`Ctrl+A`). Same as the selection table.
-- **Edit → Frame All** (`Shift+F`). Frame every entity in the viewport.
+Brush tools often use **Shift+LMB**. See **Help → Shortcuts** → Tool Brushes.
 
-## Core panels (View)
+## Placing prefabs
 
-Open these from the **View** menu. Shortcuts are shown beside each item there.
+The default way to put content in a world is the **Entity Browser**, not **Add New Entity**.
 
-![Tools](../images/editor/panels.jpg)
+1. Open **View → Entity Browser** (`Shift+Space`), or the archive-box button on the toolbar.
+2. Search, or walk the tree (prefabs live under `content/entities/`).
+3. Drag an `.entity` into the **viewport**. It spawns where you drop.
+4. Drop onto an entity in the World Inspector to spawn it as a child.
+5. Double-click spawns a root at the origin.
 
-| Menu | Shortcut | What it is for |
-|------|----------|----------------|
-| **View → Show Engine Settings** | `Shift+1` | Display, renderer, audio, and similar machine/user options |
-| **View → Show World Hierarchy** | `Shift+2` | Entity tree for the loaded world |
-| **View → Show Entity Properties** | `Shift+3` | Components and fields on the selection |
-| **View → Show World Properties** | `Shift+4` | Settings for the current world |
-| **View → Show Module Manager** | `Shift+5` | Lua modules loaded for the game |
+The instance name comes from the file stem, made unique (`plane`, `plane_2`). Right-click in the World Inspector → **Rename Entity** if you want a different name.
 
-**View → Lock Side Inspectors** keeps side panels from being shuffled away while you work.
-
-**View → Camera** and **View → Theme** are covered in the Camera and Themes sections.
-
-## Tools (when you need them)
-
-Open these from the **Tools** menu. You do not need them on day one. Shortcuts are listed next to each entry.
-
-![Tools](../images/editor/tools.jpg)
-
-| Menu | Shortcut | Tool |
-|------|----------|------|
-| **Tools → Show Agent Navigation** | `Shift+6` | Agent Navigation |
-| **Tools → Show Vertex Paint Tool** | `Shift+7` | Vertex Paint |
-| **Tools → Show Decorator Tool** | `Shift+8` | Decorator |
-| **Tools → Show Terrain Patch Tool** | `Shift+9` | Terrain Patch |
-| **Tools → Show Material Editor** | `Shift+0` | Material Editor |
-| **Tools → Show Texture Packer** | `Shift+-` | Texture Packer |
-
-Brush tools often use **Shift+LMB** (and variants). See **Help → Shortcuts** → Tool Brushes when you open one of those panels.
-
-## Game
-
-**Game → Play Game** (`Ctrl+P` / `Alt+P`). Enter game mode. Same toggle as the transform bar **Play** button when dev mode is on.
-
-![Play Game](../images/editor/play_game.jpg)
+Use **Add New Entity** when you are authoring a new prefab from components. That is [Your first prefab](../tutorials/your_first_prefab.md). **Prefab → Load** on an existing entity still works if you already created the entity and want to keep its name.
 
 ## Debug
 
-Use the **Debug** menu. Shortcuts are shown next to the items.
-
-![Debug](../images/editor/debug.jpg)
-
-| Menu | Shortcut | Action |
-|------|----------|--------|
-| **Debug → Reload Assets** | `Shift+R` | Reload assets |
-| **Debug → Show / Hide Collision** | `Shift+C` | Collision / physics debug draw |
-| **Debug → Show / Hide Metrics** | `Shift+=` | Performance metrics panel |
-| **Debug → Mute Sounds** | **M** | Mute / unmute game sounds |
-
-**Debug → Show Metrics** opens the performance metrics panel (FPS, timings, and related counters). Useful when something looks wrong or you dropped new files on disk.
-
-**Debug → Debug View** switches render debug modes (buffer / channel views for diagnosing lighting and materials). Pick a mode from the submenu when you need to inspect why a surface looks wrong. Leave it on the normal view while authoring.
-
-> **Early Alpha Notice:** Reload assets currently works for **shaders** and **scripts** only. Reloading 3D assets and configs is planned, but not available yet.
+| Menu | Shortcut | What it does |
+|------|----------|----------------|
+| **Play Game** | `Ctrl+P` / `Alt+P` | Enter game from the editor (same as the Play button). `Ctrl+P` / `Alt+P` also return to the editor |
+| **Log** | `Shift+-` | Log panel |
+| **Reload Assets** | `Shift+R` | Shaders, textures, materials, flipbooks, sounds, animations, scripts/modules, themes, property defaults, surface types, and editor input bindings. Does **not** run on file save. |
+| **Toggle Collision Debug** | `Shift+C` | Off / Selected / All |
+| **Mute Sounds** | `M` | Mute Game / Ambient / Voice / music in the editor. GUI keeps playing |
+| **Performance Metrics** | `Shift+=` | FPS and timings. Only when `dev_mode` is on in `default_game.ini` |
+| **Debug View** | `Alt+1` … | Buffer / lighting debug modes. **Flat Light** is also on the transform rail |
 
 ## Help
 
-Everything here is menu-only (no required hotkeys). Open **Help** when you need them.
-
-![Shortcuts](../images/editor/shortcuts.jpg)
-
 | Menu | What it is |
 |------|------------|
-| **Help → Shortcuts** | In-engine shortcut cheat sheet (bindings and tool brushes). Prefer this when you forget a key. |
-| **Help → About** | Build / version info |
-| **Help → Credits** | Credits |
-
-## Themes
-
-**View → Theme** switches editor chrome. Pick what you can stare at for hours. It does not change your game’s look.
-
-![Shortcuts](../images/editor/themes.jpg)
+| **Shortcuts** | In-engine cheat sheet |
+| **Documentation** | Opens the docs URL if `help.documentation_url` is set in the editor ini |
+| **End-User License Agreement** | EULA |
+| **About** | Version |
+| **Credits** | Credits |
 
 ## Next
 

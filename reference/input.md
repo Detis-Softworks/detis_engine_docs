@@ -1,4 +1,4 @@
-# Input
+﻿# Input
 
 Script API functions in the `input` group.
 

@@ -1,4 +1,4 @@
-# Debug_overlay
+﻿# Debug_overlay
 
 Script API functions in the `debug_overlay` group.
 

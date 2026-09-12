@@ -62,7 +62,7 @@ For a step-by-step example, see [Kick the ball](../tutorials/kick_the_ball.md).
 
 World scripts hold logic specific to a single map: puzzle mechanics, level progression, map UI, and scene events. Map-specific code belongs here, rather than in shared entity scripts.
 
-Each loaded world can have one optional world script. Attach it under **View → Show World Properties → Script**.
+Each loaded world can have one optional world script. Attach it under **View → World Settings → Script**.
 
 ## Module Scripts
 
@@ -92,7 +92,8 @@ Files in `content/scripts/shared/` are utility files that other scripts load usi
 | `content/scripts/player/` | Demo player controller scripts |
 | `content/scripts/shared/` | Shared helper scripts |
 | `content/scripts/_templates/` | Starter templates |
-| `engine/scripts/` | IDE / API stubs (not gameplay code) |
+| `engine/stubs/engine_stubs.lua` | Engine API stubs (not gameplay code) |
+| `content/stubs/game_stubs.lua` | Built-in script globals and `@PARAMETER` stubs |
 
 All gameplay scripts live under `content/scripts/`. For a complete folder breakdown, see [Sample content](../getting_started/sample_content.md) and [Project layout](../getting_started/project_layout.md).
 
@@ -100,7 +101,7 @@ All gameplay scripts live under `content/scripts/`. For a complete folder breakd
 
 Gameplay APIs are exposed as global Lua functions (`entity_*`, `transform_*`, `physics_*`, `input_*`, `print_info`, etc.).
 
-Stubs under `engine/scripts/` (`engine_stubs.lua`, `game_stubs.lua`) are for IDE autocomplete. They are generated from ScriptAPI bindings.
+Stubs under `engine/stubs/engine_stubs.lua` and `content/stubs/game_stubs.lua` are for IDE autocomplete. They are generated from ScriptAPI bindings. Do not edit them.
 
 For a browsable list of functions by group, see [Script API reference](../reference/README.md).
 
@@ -113,7 +114,7 @@ When you edit a `.lua` file on disk while a world is running, you can reload it 
 - Clicking **Reload** on the Script component in the Inspector  
 - Pressing **`Shift` + `R`** (or selecting **Debug → Reload Assets**)
 
-> **Early Alpha Notice:** Scripts do not hot-reload automatically on file save yet. Automatic reload on save is planned. Currently, manual asset reload covers **scripts** and **shaders**.
+> **Early Alpha Notice:** Scripts do not hot-reload automatically on file save yet. Automatic reload on save is planned. **Debug → Reload Assets** (`Shift+R`) reloads shaders, textures, materials, flipbooks, sounds, animations, scripts/modules, themes, property defaults, surface types, and editor input bindings.
 
 ## What to Read Next
 

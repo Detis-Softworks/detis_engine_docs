@@ -1,4 +1,4 @@
-# Particle_system
+﻿# Particle_system
 
 Script API functions in the `particle_system` group.
 
@@ -139,6 +139,86 @@ function particle_system_get_max_rendered(t_entity_id) end
 ---@param t_entity_id integer
 ---@return boolean
 function particle_system_get_nearest_only(t_entity_id) end
+```
+
+### `particle_system_get_sprite_frame_columns`
+
+`particle_system_get_sprite_frame_columns(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return integer
+function particle_system_get_sprite_frame_columns(t_entity_id) end
+```
+
+### `particle_system_get_sprite_frame_count`
+
+`particle_system_get_sprite_frame_count(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return integer
+function particle_system_get_sprite_frame_count(t_entity_id) end
+```
+
+### `particle_system_get_sprite_frame_rate`
+
+`particle_system_get_sprite_frame_rate(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return number
+function particle_system_get_sprite_frame_rate(t_entity_id) end
+```
+
+### `particle_system_get_sprite_frame_rows`
+
+`particle_system_get_sprite_frame_rows(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return integer
+function particle_system_get_sprite_frame_rows(t_entity_id) end
+```
+
+### `particle_system_get_sprite_loop`
+
+`particle_system_get_sprite_loop(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return boolean
+function particle_system_get_sprite_loop(t_entity_id) end
+```
+
+### `particle_system_get_sprite_mode`
+
+`particle_system_get_sprite_mode(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return string
+function particle_system_get_sprite_mode(t_entity_id) end
+```
+
+### `particle_system_get_sprite_random_start_frame`
+
+`particle_system_get_sprite_random_start_frame(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return boolean
+function particle_system_get_sprite_random_start_frame(t_entity_id) end
+```
+
+### `particle_system_get_sprite_start_frame`
+
+`particle_system_get_sprite_start_frame(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return integer
+function particle_system_get_sprite_start_frame(t_entity_id) end
 ```
 
 ### `particle_system_get_uniform_bool`
@@ -310,6 +390,86 @@ function particle_system_set_max_rendered(t_entity_id, t_count) end
 ---@param t_entity_id integer
 ---@param t_enabled boolean
 function particle_system_set_nearest_only(t_entity_id, t_enabled) end
+```
+
+### `particle_system_set_sprite_frame_columns`
+
+`particle_system_set_sprite_frame_columns(t_entity_id, t_columns)`
+
+```lua
+---@param t_entity_id integer
+---@param t_columns integer
+function particle_system_set_sprite_frame_columns(t_entity_id, t_columns) end
+```
+
+### `particle_system_set_sprite_frame_count`
+
+`particle_system_set_sprite_frame_count(t_entity_id, t_frame_count)`
+
+```lua
+---@param t_entity_id integer
+---@param t_frame_count integer
+function particle_system_set_sprite_frame_count(t_entity_id, t_frame_count) end
+```
+
+### `particle_system_set_sprite_frame_rate`
+
+`particle_system_set_sprite_frame_rate(t_entity_id, t_frame_rate)`
+
+```lua
+---@param t_entity_id integer
+---@param t_frame_rate number
+function particle_system_set_sprite_frame_rate(t_entity_id, t_frame_rate) end
+```
+
+### `particle_system_set_sprite_frame_rows`
+
+`particle_system_set_sprite_frame_rows(t_entity_id, t_rows)`
+
+```lua
+---@param t_entity_id integer
+---@param t_rows integer
+function particle_system_set_sprite_frame_rows(t_entity_id, t_rows) end
+```
+
+### `particle_system_set_sprite_loop`
+
+`particle_system_set_sprite_loop(t_entity_id, t_loop)`
+
+```lua
+---@param t_entity_id integer
+---@param t_loop boolean
+function particle_system_set_sprite_loop(t_entity_id, t_loop) end
+```
+
+### `particle_system_set_sprite_mode`
+
+`particle_system_set_sprite_mode(t_entity_id, t_mode_name)`
+
+```lua
+---@param t_entity_id integer
+---@param t_mode_name string
+function particle_system_set_sprite_mode(t_entity_id, t_mode_name) end
+```
+
+### `particle_system_set_sprite_random_start_frame`
+
+`particle_system_set_sprite_random_start_frame(t_entity_id, t_random)`
+
+```lua
+---@param t_entity_id integer
+---@param t_random boolean
+function particle_system_set_sprite_random_start_frame(t_entity_id, t_random) end
+```
+
+### `particle_system_set_sprite_start_frame`
+
+`particle_system_set_sprite_start_frame(t_entity_id, t_start_frame)`
+
+```lua
+---@param t_entity_id integer
+---@param t_start_frame integer
+function particle_system_set_sprite_start_frame(t_entity_id, t_start_frame) end
 ```
 
 ### `particle_system_set_uniform_bool`

@@ -1,4 +1,4 @@
-# Mesh
+﻿# Mesh
 
 Script API functions in the `mesh` group.
 
@@ -22,14 +22,24 @@ function mesh_get_casts_shadows(t_entity_id) end
 function mesh_get_file(t_entity_id) end
 ```
 
-### `mesh_get_is_unique_instance`
+### `mesh_get_is_gpu_instancing_active`
 
-`mesh_get_is_unique_instance(t_entity_id)`
+`mesh_get_is_gpu_instancing_active(t_entity_id)`
 
 ```lua
 ---@param t_entity_id integer
 ---@return boolean
-function mesh_get_is_unique_instance(t_entity_id) end
+function mesh_get_is_gpu_instancing_active(t_entity_id) end
+```
+
+### `mesh_get_is_unique_material`
+
+`mesh_get_is_unique_material(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return boolean
+function mesh_get_is_unique_material(t_entity_id) end
 ```
 
 ### `mesh_get_material_file`
@@ -133,6 +143,16 @@ function mesh_set_casts_shadows(t_entity_id, t_casts_shadows) end
 function mesh_set_file(t_entity_id, t_mesh_file) end
 ```
 
+### `mesh_set_gpu_instancing_active`
+
+`mesh_set_gpu_instancing_active(t_entity_id, t_active)`
+
+```lua
+---@param t_entity_id integer
+---@param t_active boolean
+function mesh_set_gpu_instancing_active(t_entity_id, t_active) end
+```
+
 ### `mesh_set_material_file`
 
 `mesh_set_material_file(t_entity_id, t_index, t_material_file)`
@@ -204,14 +224,14 @@ function mesh_set_uniform_vec3(t_entity_id, t_uniform_name, t_value, t_integer_4
 function mesh_set_uniform_vec4(t_entity_id, t_uniform_name, t_value, t_integer_4) end
 ```
 
-### `mesh_set_unique_instance`
+### `mesh_set_unique_material`
 
-`mesh_set_unique_instance(t_entity_id, t_unique)`
+`mesh_set_unique_material(t_entity_id, t_unique)`
 
 ```lua
 ---@param t_entity_id integer
 ---@param t_unique boolean
-function mesh_set_unique_instance(t_entity_id, t_unique) end
+function mesh_set_unique_material(t_entity_id, t_unique) end
 ```
 
 ### `mesh_set_visible`

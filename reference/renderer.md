@@ -1,4 +1,4 @@
-# Renderer
+﻿# Renderer
 
 Script API functions in the `renderer` group.
 
@@ -28,6 +28,24 @@ function renderer_get_auto_exposure_bias() end
 function renderer_get_auto_exposure_center_weight() end
 ```
 
+### `renderer_get_auto_exposure_ev_max`
+
+`renderer_get_auto_exposure_ev_max()`
+
+```lua
+---@return number
+function renderer_get_auto_exposure_ev_max() end
+```
+
+### `renderer_get_auto_exposure_ev_min`
+
+`renderer_get_auto_exposure_ev_min()`
+
+```lua
+---@return number
+function renderer_get_auto_exposure_ev_min() end
+```
+
 ### `renderer_get_auto_exposure_key`
 
 `renderer_get_auto_exposure_key()`
@@ -35,24 +53,6 @@ function renderer_get_auto_exposure_center_weight() end
 ```lua
 ---@return number
 function renderer_get_auto_exposure_key() end
-```
-
-### `renderer_get_auto_exposure_max`
-
-`renderer_get_auto_exposure_max()`
-
-```lua
----@return number
-function renderer_get_auto_exposure_max() end
-```
-
-### `renderer_get_auto_exposure_min`
-
-`renderer_get_auto_exposure_min()`
-
-```lua
----@return number
-function renderer_get_auto_exposure_min() end
 ```
 
 ### `renderer_get_auto_exposure_speed_down`
@@ -107,6 +107,15 @@ function renderer_get_bloom_knee() end
 ```lua
 ---@return number
 function renderer_get_bloom_threshold() end
+```
+
+### `renderer_get_current_exposure_ev100`
+
+`renderer_get_current_exposure_ev100()`
+
+```lua
+---@return number
+function renderer_get_current_exposure_ev100() end
 ```
 
 ### `renderer_get_custom_post_process_color`
@@ -213,13 +222,22 @@ function renderer_get_distant_world_darken_factor() end
 function renderer_get_distant_world_darken_start() end
 ```
 
-### `renderer_get_exposure`
+### `renderer_get_exposure_ev100`
 
-`renderer_get_exposure()`
+`renderer_get_exposure_ev100()`
 
 ```lua
 ---@return number
-function renderer_get_exposure() end
+function renderer_get_exposure_ev100() end
+```
+
+### `renderer_get_fog_absorption`
+
+`renderer_get_fog_absorption()`
+
+```lua
+---@return number
+function renderer_get_fog_absorption() end
 ```
 
 ### `renderer_get_fog_cloud_altitude_origin`
@@ -310,6 +328,24 @@ function renderer_get_fog_color() end
 ```lua
 ---@return number
 function renderer_get_fog_density() end
+```
+
+### `renderer_get_fog_luminance`
+
+`renderer_get_fog_luminance()`
+
+```lua
+---@return number
+function renderer_get_fog_luminance() end
+```
+
+### `renderer_get_fog_luminance_synced_to_sky`
+
+`renderer_get_fog_luminance_synced_to_sky()`
+
+```lua
+---@return boolean
+function renderer_get_fog_luminance_synced_to_sky() end
 ```
 
 ### `renderer_get_fog_sky_intensity`
@@ -457,6 +493,15 @@ function renderer_get_is_color_correction_active() end
 function renderer_get_is_custom_post_process_active(t_pass_index) end
 ```
 
+### `renderer_get_is_depth_prepass_active`
+
+`renderer_get_is_depth_prepass_active()`
+
+```lua
+---@return boolean
+function renderer_get_is_depth_prepass_active() end
+```
+
 ### `renderer_get_is_distant_world_darken_active`
 
 `renderer_get_is_distant_world_darken_active()`
@@ -520,6 +565,15 @@ function renderer_get_is_fog_wind_texture_active() end
 function renderer_get_is_fxaa_active() end
 ```
 
+### `renderer_get_is_fxaa_fss_active`
+
+`renderer_get_is_fxaa_fss_active()`
+
+```lua
+---@return boolean
+function renderer_get_is_fxaa_fss_active() end
+```
+
 ### `renderer_get_is_local_light_shadows_active`
 
 `renderer_get_is_local_light_shadows_active()`
@@ -527,6 +581,15 @@ function renderer_get_is_fxaa_active() end
 ```lua
 ---@return boolean
 function renderer_get_is_local_light_shadows_active() end
+```
+
+### `renderer_get_is_local_light_shadows_distance_culling_active`
+
+`renderer_get_is_local_light_shadows_distance_culling_active()`
+
+```lua
+---@return boolean
+function renderer_get_is_local_light_shadows_distance_culling_active() end
 ```
 
 ### `renderer_get_is_local_lights_culling_active`
@@ -655,6 +718,24 @@ function renderer_get_is_sunlight_shadow_active() end
 function renderer_get_is_wind_active() end
 ```
 
+### `renderer_get_local_light_shadows_fade_range`
+
+`renderer_get_local_light_shadows_fade_range()`
+
+```lua
+---@return number
+function renderer_get_local_light_shadows_fade_range() end
+```
+
+### `renderer_get_local_light_shadows_max_distance`
+
+`renderer_get_local_light_shadows_max_distance()`
+
+```lua
+---@return number
+function renderer_get_local_light_shadows_max_distance() end
+```
+
 ### `renderer_get_local_lights_distance_culling_fade_range`
 
 `renderer_get_local_lights_distance_culling_fade_range()`
@@ -735,6 +816,15 @@ function renderer_get_screen_fade_color() end
 function renderer_get_screen_fade_intensity() end
 ```
 
+### `renderer_get_sky_ambient_lux`
+
+`renderer_get_sky_ambient_lux()`
+
+```lua
+---@return number
+function renderer_get_sky_ambient_lux() end
+```
+
 ### `renderer_get_sky_brightness`
 
 `renderer_get_sky_brightness()`
@@ -769,6 +859,15 @@ function renderer_get_sky_contrast() end
 ```lua
 ---@return number
 function renderer_get_sky_diffuse_ibl_intensity() end
+```
+
+### `renderer_get_sky_fill_luminance_nits`
+
+`renderer_get_sky_fill_luminance_nits()`
+
+```lua
+---@return number
+function renderer_get_sky_fill_luminance_nits() end
 ```
 
 ### `renderer_get_sky_ibl_apply_fog`
@@ -843,15 +942,6 @@ function renderer_get_ssao_quality() end
 function renderer_get_ssao_radius() end
 ```
 
-### `renderer_get_ssao_samples`
-
-`renderer_get_ssao_samples()`
-
-```lua
----@return integer
-function renderer_get_ssao_samples() end
-```
-
 ### `renderer_get_ssao_strength`
 
 `renderer_get_ssao_strength()`
@@ -886,15 +976,6 @@ function renderer_get_ssr_max_steps() end
 ```lua
 ---@return integer
 function renderer_get_ssr_quality() end
-```
-
-### `renderer_get_ssr_reflection_fallback_strength`
-
-`renderer_get_ssr_reflection_fallback_strength()`
-
-```lua
----@return number
-function renderer_get_ssr_reflection_fallback_strength() end
 ```
 
 ### `renderer_get_ssr_reflection_source_mode`
@@ -1148,6 +1229,24 @@ function renderer_set_auto_exposure_bias(t_bias) end
 function renderer_set_auto_exposure_center_weight(t_weight) end
 ```
 
+### `renderer_set_auto_exposure_ev_max`
+
+`renderer_set_auto_exposure_ev_max(t_ev_max)`
+
+```lua
+---@param t_ev_max number
+function renderer_set_auto_exposure_ev_max(t_ev_max) end
+```
+
+### `renderer_set_auto_exposure_ev_min`
+
+`renderer_set_auto_exposure_ev_min(t_ev_min)`
+
+```lua
+---@param t_ev_min number
+function renderer_set_auto_exposure_ev_min(t_ev_min) end
+```
+
 ### `renderer_set_auto_exposure_key`
 
 `renderer_set_auto_exposure_key(t_key)`
@@ -1157,22 +1256,12 @@ function renderer_set_auto_exposure_center_weight(t_weight) end
 function renderer_set_auto_exposure_key(t_key) end
 ```
 
-### `renderer_set_auto_exposure_max`
+### `renderer_set_auto_exposure_snap`
 
-`renderer_set_auto_exposure_max(t_exposure_max)`
-
-```lua
----@param t_exposure_max number
-function renderer_set_auto_exposure_max(t_exposure_max) end
-```
-
-### `renderer_set_auto_exposure_min`
-
-`renderer_set_auto_exposure_min(t_exposure_min)`
+`renderer_set_auto_exposure_snap()`
 
 ```lua
----@param t_exposure_min number
-function renderer_set_auto_exposure_min(t_exposure_min) end
+function renderer_set_auto_exposure_snap() end
 ```
 
 ### `renderer_set_auto_exposure_speed_down`
@@ -1316,6 +1405,15 @@ function renderer_set_custom_post_process_texture_file(t_pass_index, t_file_path
 function renderer_set_debug_view_mode(t_mode) end
 ```
 
+### `renderer_set_depth_prepass_active`
+
+`renderer_set_depth_prepass_active(t_active)`
+
+```lua
+---@param t_active boolean
+function renderer_set_depth_prepass_active(t_active) end
+```
+
 ### `renderer_set_distance_culling_distance`
 
 `renderer_set_distance_culling_distance(t_distance)`
@@ -1361,13 +1459,22 @@ function renderer_set_distant_world_darken_factor(t_factor) end
 function renderer_set_distant_world_darken_start(t_start) end
 ```
 
-### `renderer_set_exposure`
+### `renderer_set_exposure_ev100`
 
-`renderer_set_exposure(t_exposure)`
+`renderer_set_exposure_ev100(t_ev100)`
 
 ```lua
----@param t_exposure number
-function renderer_set_exposure(t_exposure) end
+---@param t_ev100 number
+function renderer_set_exposure_ev100(t_ev100) end
+```
+
+### `renderer_set_fog_absorption`
+
+`renderer_set_fog_absorption(t_absorption)`
+
+```lua
+---@param t_absorption number
+function renderer_set_fog_absorption(t_absorption) end
 ```
 
 ### `renderer_set_fog_active`
@@ -1487,6 +1594,24 @@ function renderer_set_fog_density(t_density) end
 function renderer_set_fog_end_clamp_active(t_active) end
 ```
 
+### `renderer_set_fog_luminance`
+
+`renderer_set_fog_luminance(t_luminance)`
+
+```lua
+---@param t_luminance number
+function renderer_set_fog_luminance(t_luminance) end
+```
+
+### `renderer_set_fog_luminance_synced_to_sky`
+
+`renderer_set_fog_luminance_synced_to_sky(t_synced)`
+
+```lua
+---@param t_synced boolean
+function renderer_set_fog_luminance_synced_to_sky(t_synced) end
+```
+
 ### `renderer_set_fog_sky_intensity`
 
 `renderer_set_fog_sky_intensity(t_intensity)`
@@ -1586,6 +1711,15 @@ function renderer_set_fog_wind_texture_active(t_active) end
 function renderer_set_fxaa_active(t_active) end
 ```
 
+### `renderer_set_fxaa_fss_active`
+
+`renderer_set_fxaa_fss_active(t_active)`
+
+```lua
+---@param t_active boolean
+function renderer_set_fxaa_fss_active(t_active) end
+```
+
 ### `renderer_set_gamma`
 
 `renderer_set_gamma(t_gamma)`
@@ -1620,6 +1754,33 @@ function renderer_set_image_trail_intensity(t_intensity) end
 ```lua
 ---@param t_active boolean
 function renderer_set_local_light_shadows_active(t_active) end
+```
+
+### `renderer_set_local_light_shadows_distance_culling_active`
+
+`renderer_set_local_light_shadows_distance_culling_active(t_active)`
+
+```lua
+---@param t_active boolean
+function renderer_set_local_light_shadows_distance_culling_active(t_active) end
+```
+
+### `renderer_set_local_light_shadows_fade_range`
+
+`renderer_set_local_light_shadows_fade_range(t_fade_range)`
+
+```lua
+---@param t_fade_range number
+function renderer_set_local_light_shadows_fade_range(t_fade_range) end
+```
+
+### `renderer_set_local_light_shadows_max_distance`
+
+`renderer_set_local_light_shadows_max_distance(t_distance)`
+
+```lua
+---@param t_distance number
+function renderer_set_local_light_shadows_max_distance(t_distance) end
 ```
 
 ### `renderer_set_local_lights_culling_active`
@@ -1736,6 +1897,15 @@ function renderer_set_screen_fade_intensity(t_intensity) end
 ```lua
 ---@param t_active boolean
 function renderer_set_sky_active(t_active) end
+```
+
+### `renderer_set_sky_ambient_lux`
+
+`renderer_set_sky_ambient_lux(t_ambient_lux)`
+
+```lua
+---@param t_ambient_lux number
+function renderer_set_sky_ambient_lux(t_ambient_lux) end
 ```
 
 ### `renderer_set_sky_brightness`
@@ -1864,15 +2034,6 @@ function renderer_set_ssao_quality(t_quality) end
 function renderer_set_ssao_radius(t_radius) end
 ```
 
-### `renderer_set_ssao_samples`
-
-`renderer_set_ssao_samples(t_samples)`
-
-```lua
----@param t_samples integer
-function renderer_set_ssao_samples(t_samples) end
-```
-
 ### `renderer_set_ssao_strength`
 
 `renderer_set_ssao_strength(t_strength)`
@@ -1916,15 +2077,6 @@ function renderer_set_ssr_max_steps(t_max_steps) end
 ```lua
 ---@param t_quality integer
 function renderer_set_ssr_quality(t_quality) end
-```
-
-### `renderer_set_ssr_reflection_fallback_strength`
-
-`renderer_set_ssr_reflection_fallback_strength(t_strength)`
-
-```lua
----@param t_strength number
-function renderer_set_ssr_reflection_fallback_strength(t_strength) end
 ```
 
 ### `renderer_set_ssr_reflection_source_mode`
@@ -2177,4 +2329,12 @@ function renderer_set_wind_noise_texture_file(t_file_path) end
 ```lua
 ---@param t_speed number
 function renderer_set_wind_speed(t_speed) end
+```
+
+### `renderer_sync_sky_fill_luminance`
+
+`renderer_sync_sky_fill_luminance()`
+
+```lua
+function renderer_sync_sky_fill_luminance() end
 ```

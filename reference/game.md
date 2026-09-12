@@ -1,4 +1,4 @@
-# Game
+﻿# Game
 
 Script API functions in the `game` group.
 

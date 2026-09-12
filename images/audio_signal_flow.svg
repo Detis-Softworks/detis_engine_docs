@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 980 500"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="audio_signal_flow.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview28"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.85772053"
+     inkscape:cx="419.13419"
+     inkscape:cy="236.09089"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="618"
+     inkscape:window-y="2149"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg28" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .box { fill: #2c3e50; stroke: #3498db; stroke-width: 2; }
+      .source-box { fill: #27ae60; stroke: #229954; stroke-width: 2; }
+      .bus-box { fill: #e67e22; stroke: #d35400; stroke-width: 2; }
+      .zone-box { fill: #9b59b6; stroke: #8e44ad; stroke-width: 2; }
+      .output-box { fill: #c0392b; stroke: #a93226; stroke-width: 2; }
+      .text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; font-weight: 500; fill: white; text-anchor: middle; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 700; fill: white; text-anchor: middle; }
+      .group-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; font-weight: 600; fill: #7f8c8d; text-anchor: start; }
+      .arrow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .connector { stroke: #34495e; stroke-width: 2; fill: none; }
+      .note { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #7f8c8d; }
+    </style>
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3, 0 6"
+         fill="#34495e"
+         id="polygon1" />
+    </marker>
+  </defs>
+  <rect
+     width="980"
+     height="500"
+     fill="#ecf0f1"
+     rx="8"
+     id="rect1"
+     x="0"
+     y="0" />
+  <text
+     x="490.04688"
+     y="28"
+     style="font-weight:700;font-size:24px;font-family:'-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;text-anchor:middle;fill:#2c3e50"
+     id="text1">AUDIO SIGNAL FLOW</text>
+  <text
+     x="159.67299"
+     y="54.676369"
+     class="group-label"
+     id="text2"
+     style="font-size:18.6667px;stroke-width:4.47479">SOURCES</text>
+  <rect
+     x="25.748821"
+     y="64"
+     width="150"
+     height="48"
+     rx="4"
+     class="source-box"
+     id="rect2" />
+  <text
+     x="99"
+     y="93"
+     class="text"
+     id="text3">Sound component</text>
+  <rect
+     x="217.98114"
+     y="64"
+     width="150"
+     height="48"
+     rx="4"
+     class="source-box"
+     id="rect3" />
+  <text
+     x="292.98114"
+     y="93"
+     class="text"
+     id="text4">Soundscape</text>
+  <text
+     x="766.41235"
+     y="51.376766"
+     class="group-label"
+     id="text5"
+     style="font-size:18.6667px">MUSIC</text>
+  <rect
+     x="716.27948"
+     y="62.251179"
+     width="160"
+     height="48"
+     rx="4"
+     class="source-box"
+     id="rect5" />
+  <text
+     x="796.27948"
+     y="91.251183"
+     class="text"
+     id="text6">Music stream</text>
+  <text
+     x="159.82513"
+     y="176.82468"
+     class="group-label"
+     id="text8"
+     style="font-size:18.6667px">BUSSES</text>
+  <rect
+     x="24.582941"
+     y="192.65408"
+     width="80"
+     height="40"
+     rx="4"
+     class="bus-box"
+     id="rect8" />
+  <text
+     x="64.582939"
+     y="217.65408"
+     class="title"
+     id="text9">Game</text>
+  <rect
+     x="112.58293"
+     y="192.65408"
+     width="80"
+     height="40"
+     rx="4"
+     class="bus-box"
+     id="rect9" />
+  <text
+     x="152.58293"
+     y="217.65408"
+     class="title"
+     id="text10">GUI</text>
+  <rect
+     x="200.58293"
+     y="192.65408"
+     width="80"
+     height="40"
+     rx="4"
+     class="bus-box"
+     id="rect10" />
+  <text
+     x="240.58293"
+     y="217.65408"
+     class="title"
+     id="text11">Ambient</text>
+  <rect
+     x="288.58295"
+     y="192.65408"
+     width="80"
+     height="40"
+     rx="4"
+     class="bus-box"
+     id="rect11" />
+  <text
+     x="328.58295"
+     y="217.65408"
+     class="title"
+     id="text12">Voice</text>
+  <path
+     d="m 64.582941,232.6541 v 10"
+     class="connector"
+     id="path14" />
+  <path
+     d="m 152.58294,232.6541 v 10"
+     class="connector"
+     id="path15" />
+  <path
+     d="m 240.58294,232.6541 v 10"
+     class="connector"
+     id="path16" />
+  <path
+     d="m 328.58294,232.6541 v 10"
+     class="connector"
+     id="path17" />
+  <path
+     d="M 64.582941,242.6541 H 328.58294"
+     class="connector"
+     id="path18" />
+  <path
+     d="m 195.34634,243.4785 v 32"
+     class="arrow"
+     id="path19" />
+  <text
+     x="211.70683"
+     y="271.16589"
+     class="group-label"
+     id="text19"
+     style="font-size:18.6667px">SOUND ZONE</text>
+  <rect
+     x="56"
+     y="280"
+     width="280"
+     height="48"
+     rx="4"
+     class="zone-box"
+     id="rect19" />
+  <text
+     x="196"
+     y="309"
+     class="text"
+     id="text20">Dry LPF, gain, reverb send</text>
+  <path
+     d="M 196 328 L 196 348"
+     class="connector"
+     id="path20" />
+  <path
+     d="M 798.61123,110.81954 V 349.03706"
+     class="connector"
+     id="path21" />
+  <path
+     d="M 196,348 H 799.38107"
+     class="connector"
+     id="path22" />
+  <path
+     d="M 380 348 L 380 370"
+     class="arrow"
+     id="path23" />
+  <text
+     x="419.53833"
+     y="333.55811"
+     class="group-label"
+     id="text23"
+     style="font-size:18.6667px">MASTER BUSS</text>
+  <rect
+     x="300"
+     y="370"
+     width="160"
+     height="48"
+     rx="4"
+     class="box"
+     id="rect23" />
+  <text
+     x="380"
+     y="399"
+     class="text"
+     id="text24">Master volume</text>
+  <path
+     d="M 460 394 L 520 394"
+     class="arrow"
+     id="path24" />
+  <rect
+     x="520"
+     y="370"
+     width="150"
+     height="48"
+     rx="4"
+     class="output-box"
+     id="rect24" />
+  <text
+     x="595"
+     y="399"
+     class="text"
+     id="text25">Speakers</text>
+</svg>

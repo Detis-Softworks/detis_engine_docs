@@ -1,4 +1,4 @@
-# Light
+﻿# Light
 
 Script API functions in the `light` group.
 

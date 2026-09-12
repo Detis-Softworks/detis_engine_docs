@@ -1,4 +1,4 @@
-# Physics
+﻿# Physics
 
 Script API functions in the `physics` group.
 
@@ -20,7 +20,6 @@ function physics_activate_all_dynamic_bodies() end
 ---@param t_half_extents vec3
 ---@param t_table_4 table
 ---@param t_include_mode boolean
----@return table
 function physics_box_sweep(t_from, t_to, t_half_extents, t_table_4, t_include_mode) end
 ```
 
@@ -35,7 +34,6 @@ function physics_box_sweep(t_from, t_to, t_half_extents, t_table_4, t_include_mo
 ---@param t_height number
 ---@param t_table_5 table
 ---@param t_include_mode boolean
----@return table
 function physics_capsule_sweep(t_from, t_to, t_radius, t_height, t_table_5, t_include_mode) end
 ```
 
@@ -67,7 +65,6 @@ function physics_get_gravity() end
 ---@param t_to vec3
 ---@param t_table_3 table
 ---@param t_include_mode boolean
----@return table
 function physics_raycast(t_from, t_to, t_table_3, t_include_mode) end
 ```
 
@@ -108,6 +105,5 @@ function physics_set_gravity(t_gravity) end
 ---@param t_radius number
 ---@param t_table_4 table
 ---@param t_include_mode boolean
----@return table
 function physics_sphere_sweep(t_from, t_to, t_radius, t_table_4, t_include_mode) end
 ```

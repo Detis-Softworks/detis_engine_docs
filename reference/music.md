@@ -1,4 +1,4 @@
-# Music
+﻿# Music
 
 Script API functions in the `music` group.
 

@@ -1,4 +1,4 @@
-# Camera
+﻿# Camera
 
 Script API functions in the `camera` group.
 

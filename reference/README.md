@@ -1,7 +1,7 @@
-# Script API reference
+﻿# Script API reference
 
 Generated from `engine_stubs.lua`. Signatures and EmmyLua types come from ScriptAPI bindings.
-Use the stubs under `game/engine/scripts/` for IDE autocomplete.
+Use the stubs under `game/engine/stubs/` and `game/content/stubs/` for IDE autocomplete.
 
 ## Groups
 
@@ -12,6 +12,7 @@ Use the stubs under `game/engine/scripts/` for IDE autocomplete.
 - [Character_body](character_body.md)
 - [Debug_overlay](debug_overlay.md)
 - [Dynamic_body](dynamic_body.md)
+- [Editor](editor.md)
 - [Engine](engine.md)
 - [Entity](entity.md)
 - [File_manager](file_manager.md)
@@ -38,10 +39,12 @@ Use the stubs under `game/engine/scripts/` for IDE autocomplete.
 - [Renderer](renderer.md)
 - [Script](script.md)
 - [Set](set.md)
+- [Settings](settings.md)
 - [Skeletal_mesh](skeletal_mesh.md)
 - [Sound](sound.md)
 - [Sound_zone](sound_zone.md)
 - [Soundscape_zone](soundscape_zone.md)
+- [Surface](surface.md)
 - [Text_mesh](text_mesh.md)
 - [Timer](timer.md)
 - [Transform](transform.md)

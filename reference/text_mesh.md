@@ -1,4 +1,4 @@
-# Text_mesh
+﻿# Text_mesh
 
 Script API functions in the `text_mesh` group.
 

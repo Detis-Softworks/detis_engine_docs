@@ -8,47 +8,45 @@ If you have not extracted the package yet, see [Installation](installation.md) f
 
 Open `game/bin` and run `detis_engine`.
 
-**This copy is** already **your game**. You do not create a project elsewhere.
+**This copy is already your game.** You do not create a project elsewhere.
 
-The app starts in the **editor** by default. Editor and game are the same executable.
+The app starts in the **editor**. Editor and game are the same executable. The world from `content/config/default_game.ini` is already loaded (shipped default: `worlds/default.world`).
 
 ## 2. Know where your work lives
 
 | Path | What you change |
 |------|-----------------|
-| `game/content/` | Worlds, scripts, meshes, game config. **Your game.** |
+| `game/content/` | Worlds, scripts, meshes, prefabs, game config. **Your game.** |
 | `game/engine/` | Engine builtins. Leave alone unless you know why. |
 | `game/bin/` | Executable. Run from here. |
 
-File dialogs open under `content/` by default.
+File dialogs open under `content/` by default. Prefabs also show up in **View → Entity Browser** (`Shift+Space`).
 
 ## 3. Play a demo
 
-![Open World FIle](../images/editor/load_world.jpg)
+1. **File → Load World** (`Ctrl+L`).
+2. Open `worlds/demo_content/visuals_exterior_demo.world`.
+3. Press **`Ctrl+P`** or **`Alt+P`** (or the green **Play** button) to enter **game** mode.
+4. Press `Ctrl+P` / `Alt+P` again to return to the **editor**.
 
-1. **File → Load World** (or `Ctrl+L`).
-2. Open `worlds/demo_content/visuals_demo_a.world` (the visuals demo).
-3. Press **`Ctrl+P`** or **`Alt+P`** to enter **game** mode and play.
-4. Press **`Ctrl+P`** or **`Alt+P`** again to return to the **editor**.
+**Debug → Play Game** is the same enter-game action as the Play button.
 
-**Play Game** in the menu does the same toggle.
+Other shipped demos live under `worlds/demo_content/`. See [Sample content](sample_content.md).
 
 ## 4. Edit, save, undo
 
 Back in the editor:
 
-1. Click something obvious in the viewport (a rock or similar prop).
-2. Move it with the translate gizmo (`W`).
-3. **File → Save World** (or `Ctrl+S`).
-4. To reverse the move, **Edit → Undo** (or `Ctrl+Z`). Save again if you want that undo written to disk.
+1. Click something in the viewport (a rock or similar prop).
+2. Move it with the translate gizmo (`W`, or the translate button on the left transform rail).
+3. **File → Save World** (`Ctrl+S`).
+4. To reverse the move, **Edit → Undo** (`Ctrl+Z`). Save again if you want that undo written to disk.
 
 Redo is `Ctrl+Y` or `Ctrl+Shift+Z`.
 
 Press `Ctrl+P` / `Alt+P` again to check the change in game mode.
 
 ## 5. Optional: open that demo on startup
-
-![Game Configuration](../images/engine/game_config.jpg)
 
 The world loaded at launch is set in `game/content/config/default_game.ini`:
 
@@ -57,14 +55,14 @@ The world loaded at launch is set in `game/content/config/default_game.ini`:
 default_world = ../content/worlds/default.world
 ```
 
-Point it at the visuals demo (or any world you prefer):
+Point it at the exterior visuals demo (or any world you prefer):
 
 ```ini
 [Core]
-default_world = ../content/worlds/demo_content/visuals_demo_a.world
+default_world = ../content/worlds/demo_content/visuals_exterior_demo.world
 ```
 
-Restart the executable after you save the file. On the next launch the editor should open with that world already loaded.
+Restart the executable after you save the file.
 
 ## Next
 

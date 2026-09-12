@@ -19,7 +19,7 @@ game/
 | `content/` | **Your** project. Edit this. |
 | `engine/` | Engine defaults and builtins. Leave alone unless you know why you are changing it. |
 
-Editor file dialogs open under `content/` by default.
+Editor file dialogs open under `content/` by default. The **Entity Browser** lists `.entity` prefabs from the game tree.
 
 ## What belongs in `content/`
 
@@ -28,9 +28,11 @@ Typical folders you will use:
 | Path | Purpose |
 |------|---------|
 | `content/worlds/` | `.world` files (levels / maps) |
+| `content/entities/` | Prefabs (`.entity`). Drag these from the Entity Browser |
 | `content/scripts/` | Lua scripts (worlds, entities, modules, shared code) |
-| `content/meshes/`, `textures/`, `materials/`, `sounds/`, `music/` | Assets you author or drop in |
-| `content/config/` | Game bootstrap and input / module lists |
+| `content/meshes/`, `textures/`, `materials/` | Art you author or drop in |
+| `content/sounds/`, `music/` | Audio files |
+| `content/config/` | Game bootstrap, modules, input, surface types |
 
 You can organize subfolders however you like under `content/` (for example `worlds/demo_content/`). Extension filters in the editor still apply when browsing.
 
@@ -38,18 +40,20 @@ The download also ships demo worlds, sample Lua, and example assets. See [Sample
 
 ### Config you will touch early
 
-Files under `content/config/` and `engine/config/` are mostly **defaults** (seeds for a fresh copy). They ship with the package so a new download boots correctly.
+Files under `content/config/` and `engine/config/` are **defaults** (seeds for a fresh copy). They ship with the package so a new download boots correctly.
 
 | File | Role |
 |------|------|
-| `content/config/default_game.ini` | Title, default world, editor vs game on startup |
+| `content/config/default_game.ini` | Title, default world, editor vs game on startup, `dev_mode` |
 | `content/config/modules.ini` | Which Lua modules load |
 | `content/config/game_input_bindings.ini` | Gameplay input bindings |
+| `content/config/surface_types.ini` | Contact type names for materials |
 | `engine/config/default_engine.ini` | Seed for display / renderer / audio prefs |
+| `engine/config/editor_input_bindings.ini` | Editor shortcuts |
 
 Startup keys such as `default_world` and `editor_active_on_startup` are read from the **shipped** `default_game.ini` at launch. Changing the live copies under the user root will not change which world boots or whether the editor opens.
 
-Edit the shipped defaults when you want every fresh run of **this** game copy to behave differently (title, first world, modules, and so on).
+Edit the shipped defaults when you want every fresh run of **this** game copy to behave differently.
 
 ## What belongs in `engine/`
 
@@ -67,9 +71,9 @@ Under `content/scripts/` you will commonly see:
 | `modules/` | Shared gameplay modules |
 | `shared/` | Reusable helpers |
 | `_templates/` | Optional script starters to copy from |
-| `entities/`, `player/`, … | Entity and player-facing scripts as your project grows |
+| `player/`, `components/`, `camera_effects/` | Entity, player, and effect scripts as the project grows |
 
-Exact folders can grow with your game. The important rule: gameplay and content scripts live under `content/scripts/`, not under `engine/`.
+Gameplay scripts live under `content/scripts/`, not under `engine/`. IDE stubs live under `engine/stubs/engine_stubs.lua` and `content/stubs/game_stubs.lua`. Do not edit those.
 
 ## User data (outside the package)
 
@@ -79,8 +83,6 @@ After the first run, **live** per-user data is written under a platform user roo
 |----------|-----------|
 | Windows | `Documents/My Games` |
 | Linux | `~/.<GameTitle>` (hidden folder in the home directory) |
-
-Typical layout:
 
 ```
 <UserRoot>/<GameTitle>/          (Windows)
@@ -94,20 +96,20 @@ Typical layout:
 
 Examples:
 
-- Windows: `Documents/My Games/My Game/engine/user_engine.ini`
-- Linux: `~/.My Game/engine/user_engine.ini` (enable “show hidden files” in the file manager)
+- Windows: `Documents/My Games/Detis Game/engine/user_engine.ini`
+- Linux: `~/.Detis Game/engine/user_engine.ini` (enable “show hidden files” in the file manager)
 
 | What | Where it actually lives |
 |------|-------------------------|
-| Engine Settings (display, renderer, audio, …) | `…/engine/user_engine.ini` |
+| **File → Settings** (display, renderer, audio, theme, …) | `…/engine/user_engine.ini` |
 | Editor settings | `…/engine/user_editor.ini` |
 | ImGui layout | `…/engine/imgui.ini` |
 | Gameplay / user game settings | `…/game/user_game_settings.ini` |
 | Logs | `…/logs/` |
 
-Package holds the defaults. The user root holds the live copies. That keeps machine preferences out of the project you ship.
+Package holds the defaults. The user root holds the live copies.
 
-Reset engine prefs by deleting `user_engine.ini` and relaunching (it is recopied from `default_engine.ini`).
+Reset engine prefs by deleting `user_engine.ini` and relaunching (it is recopied from `default_engine.ini`). **View → Reset Editor Layout** restores World Inspector, Entity Inspector, and Log.
 
 ## Rules of thumb
 

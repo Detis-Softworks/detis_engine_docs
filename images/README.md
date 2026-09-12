@@ -1,6 +1,6 @@
 # Images
 
-Put screenshots and diagrams here.
+Put screenshots and diagrams here. Editor screenshots are not in the repo yet. Add them later.
 
 ```
 images/

@@ -1,4 +1,4 @@
-# Timer
+﻿# Timer
 
 Script API functions in the `timer` group.
 

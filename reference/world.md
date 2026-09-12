@@ -1,4 +1,4 @@
-# World
+﻿# World
 
 Script API functions in the `world` group.
 
@@ -48,6 +48,17 @@ function world_clone_entity(t_entity_id) end
 ---@param t_name string?
 ---@return integer
 function world_create_entity(t_name) end
+```
+
+### `world_create_entity_pool`
+
+`world_create_entity_pool(t_pool_name, t_initial_capacity, t_max_capacity)`
+
+```lua
+---@param t_pool_name string
+---@param t_initial_capacity integer
+---@param t_max_capacity integer
+function world_create_entity_pool(t_pool_name, t_initial_capacity, t_max_capacity) end
 ```
 
 ### `world_despawn_entity`
@@ -194,6 +205,15 @@ function world_get_function(t_function_name) end
 ---@param t_param_name string
 ---@return boolean
 function world_get_has_script_parameter(t_param_name) end
+```
+
+### `world_get_is_loading`
+
+`world_get_is_loading()`
+
+```lua
+---@return boolean
+function world_get_is_loading() end
 ```
 
 ### `world_get_script_parameter`

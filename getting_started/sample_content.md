@@ -1,37 +1,61 @@
-# Sample Content
+# Sample content
 
-Detis engine ships loaded with **working demo worlds**, **sample Lua scripts**, and **example assets** so you can dive into a playable project on day one and see how everything fits together. Think of this page as a quick map of what's included and where to find it.
+The package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one.
 
-![Demo Assets](../images/game/demo_assets.jpg)
+All included game assets are **CC0**. There is a license file inside each asset folder. Modify, rewrite, or delete sample content as you build your game.
 
-All included game assets are **CC0**. You'll find a license file inside each asset folder. You are free to use and modify these assets in games you build with Detis Engine. Feel free to modify, rewrite, or delete any sample content as you build your game. 
+## How to use it
 
-## How to Use the Sample Content
+- Load a demo from **File → Load World**.
+- Drag prefabs from **View → Entity Browser** (`Shift+Space`).
+- Copy scripts and entity setups into your own work.
+- Grow the game inside this `game/content/` tree. Nothing is a protected package.
 
-* **Learn by tweaking:** Break working examples to see how they work.
-* **Jump right in:** Run the demo scenes referenced in the [Quick Start](quick_start.md) guide.
-* **Steal good patterns:** Copy the provided scripts and entity setups straight into your own projects.
-* **Build directly on top of it:** You can grow your game right inside this `game/content/` folder structure.
+Lighting and mix: [Lighting](../manuals/lighting.md), [Audio](../manuals/audio.md). Script kinds: [Script overview](../manuals/script_overview.md).
 
-## A Few Quick Rules of Thumb
+## Demo worlds
 
-* **It’s all yours:** This isn't a separate or "protected" package. It’s just starter content inside **your** engine directory.
-* **Clean separation:** Everything game-related lives under `content/`. The engine's low-level internals stay tucked away under `engine/`.
-* **Focus on structure here:** Scripting kinds and lifecycle are covered in [Script overview](../manuals/script_overview.md).
+Under `content/worlds/demo_content/`:
 
-## Sample Lua Scripts
+| World | What it shows |
+|-------|----------------|
+| `visuals_exterior_demo.world` | Outdoor lighting, foliage, set dressing |
+| `visuals_interior_demo.world` | Interior lighting and space |
+| `materials_demo.world` | Material variety |
+| `physics_demo.world` | Physics bodies |
+| `interactions_demo.world` | Interactables and the demo player |
+| `animation_demo.world` | Skeletal animation |
+| `gui_demo.world` | In-game UI |
+| `navigation_demo.world` | Nav and agents |
+| `detection_demo.world` | Detection agents |
+| `modules_demo.world` | Module scripts |
 
-Gameplay in Detis is driven by **Lua**. The project includes a lean, working codebase inside `content/scripts/`:
+`content/worlds/default.world` is the startup world in `default_game.ini`.
+
+## Prefabs
+
+`.entity` files under `content/entities/`. The Entity Browser lists them.
+
+| Path | Use |
+|------|-----|
+| `entities/primitive/` | Plane, cube, cylinder, pyramid |
+| `entities/lights/` | Point and spot lights |
+| `entities/demo_content/` | Characters, props, foliage, cave pieces, particles, systems |
+
+## Sample Lua
+
+Under `content/scripts/`:
 
 | Path | Purpose |
 |------|---------|
-| `content/scripts/_templates/` | Optional starters you can copy when creating a world, entity, or module script. |
-| `content/scripts/worlds/demos/` | World scripts powering the demo maps (handling visuals, physics, UI, and navigation). |
-| `content/scripts/player/` | A fully functional first person player controller, camera, HUD, and interaction setup. |
-| `content/scripts/shared/` | Shared utility scripts and UI widgets used across the demos. |
-| `content/scripts/modules/` | Core game modules registered in `content/config/modules.ini`. |
-| `content/scripts/components/` | Custom entity script components. |
+| `_templates/` | Starters to copy for world, entity, or module scripts |
+| `worlds/demos/` | World scripts for the demo maps |
+| `player/` | First-person player, camera, HUD, interaction |
+| `components/` | Reusable entity scripts (doors, lamps, interactables, agents) |
+| `modules/` | Game-wide modules listed in `content/config/modules.ini` |
+| `shared/` | Helpers and UI widgets |
+| `camera_effects/` | Post / camera effect scripts used by the camera-effects module |
 
 ## Next
 
-**[Editor overview](editor_overview.md).** Menus, transform bar, and panels.
+**[Editor overview](editor_overview.md).** Menus, toolbars, and panels.

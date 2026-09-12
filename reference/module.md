@@ -1,4 +1,4 @@
-# Module
+﻿# Module
 
 Script API functions in the `module` group.
 

@@ -1,4 +1,4 @@
-# Character_body
+﻿# Character_body
 
 Script API functions in the `character_body` group.
 

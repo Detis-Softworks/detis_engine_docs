@@ -1,4 +1,4 @@
-# Entity
+﻿# Entity
 
 Script API functions in the `entity` group.
 

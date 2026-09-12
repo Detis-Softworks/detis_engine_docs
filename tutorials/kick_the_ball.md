@@ -21,18 +21,16 @@ Mouse push / pull (LMB / RMB) is a later tutorial. This page stays on Interact.
 
 ## 1. Give the ball room and a clear backdrop
 
-Do this here so earlier tutorial screenshots stay valid.
-
 1. Select `ground` in the World Inspector.
 2. Open **Transform** and set Scale to `100`, `0`, `100`.
 
 That gives you a wide floor to chase the ball.
 
-3. **View → Show World Properties** (`Shift+4`).
+3. **View → World Settings** (`Shift+3`).
 4. Open **Sky / Environment**.
-5. Turn off **Render Sky Dome**.
+5. Turn off **Render Dome**.
 
-IBL can stay on. Hiding the sky dome makes the white ball easier to track against a plain backdrop.
+That hides the visual sky only. **Ambient Lux** still fills the scene. IBL can stay on. Hiding the dome makes the white ball easier to track against a plain backdrop.
 
 ## 2. Make the body Dynamic
 
@@ -47,7 +45,7 @@ Physics steps on a fixed tick. Interpolation blends the rendered pose between th
 
 5. Place the sphere on the ground if it is still sitting on the cube. Position Y `0.5` is a good start for a radius `0.5` mesh.
 
-Optional: enable **Debug Visualization** (or **Debug → Show Collision**, `Shift+C`) to confirm the sphere shape still matches.
+Optional: enable **Debug Visualization** (or **Debug → Toggle Collision Debug**, `Shift+C`) to confirm the sphere shape still matches.
 
 ## 3. Switch off triplanar for a rolling ball
 
@@ -69,24 +67,26 @@ That is a shipped gameplay script used by several demos. On ready it tags the en
 
 ## 5. Script parameters
 
-Scripts can expose values to the Entity Inspector so you can tweak them without editing Lua every time. This push script shows a few, including **Impulse Strength** (default `40`).
+Scripts can expose values to the Entity Inspector so you can tweak them without editing Lua every time. This push script shows a few, including **impulse_strength** (default `40`).
 
-You will use that dial in a moment. Leave it on `40` for the first kick.
+Parameter widgets use the names from the `--@PARAMETER` lines in the script (`impulse_strength`, `interact_label`), not title case.
+
+You will use that dial in a moment. Leave **impulse_strength** on `40` for the first kick.
 
 ## 6. Play and push (default strength)
 
 1. **File → Save World** (`Ctrl+S`).
-2. **Game → Play Game** (`Ctrl+P` / `Alt+P`).
+2. **Debug → Play Game** (`Ctrl+P` / `Alt+P`), or **Play** on the viewport toolbar.
 3. Walk up to the sphere and look at it.
 4. The HUD should show the interact label and your **Interact** key (whatever is bound, often **E**).
 5. Press Interact.
 
-On a light Dynamic sphere, `40` is huge. The ball should launch like it exploded off the kick. That is intentional. Toggle back to the editor.
+On a light Dynamic sphere, `40` is huge. The ball should launch like it exploded off the kick. That is intentional. Toggle back to the editor with `Ctrl+P` / `Alt+P`.
 
 ## 7. Dial the impulse down
 
 1. Select the sphere.
-2. In **Script**, set **Impulse Strength** to `10`.
+2. In **Script**, set **impulse_strength** to `10`.
 3. Play again and Interact once more.
 
 Same script file, much calmer kick. That is the point of inspector parameters: tune feel without opening the `.lua`.
@@ -99,7 +99,7 @@ Do not permanently change `scripts/components/push_impulse_interactable.lua`. De
 2. Open `kick_ball.lua` in a text editor.
 3. Rename the table from `PushImpulseInteractable` to `KickBall` everywhere in the file (local table, every `function KickBall.…`, and `return KickBall`).
 4. On the sphere’s Script component, browse to `scripts/tutorials/kick_ball.lua` instead of the shipped component script.
-5. In the Script inspector, set **Interact Label** to `Kick`.
+5. In the Script inspector, set **interact_label** to `Kick`.
 6. Save the world.
 
 ## 9. Add a short hop
@@ -136,24 +136,22 @@ Save the `.lua` file.
 
 ## 10. Reload and play again
 
-Scripts do not always pick up disk edits by themselves while the world is loaded.
+Scripts do not pick up disk edits by themselves while the world is loaded.
 
 1. Select the sphere.
-2. In **Script**, click **Reload** on the script path field.
+2. In **Script**, click **Reload** on the **Script File** field.
 
-Or use **Debug → Reload Assets** (`Shift+R`). In Alpha, that path reloads scripts (and shaders).
+Or use **Debug → Reload Assets** (`Shift+R`). That reloads shaders, textures, materials, flipbooks, sounds, animations, scripts/modules, themes, property defaults, surface types, and editor input bindings. It does **not** run on file save.
 
 3. Play, look at the ball, press Interact.
 
-You should get a hop instead of a flat shove. If the label still says `Push`, check that the Script File points at `kick_ball.lua` and that **Interact Label** is `Kick` in the inspector.
+You should get a hop instead of a flat shove. If the label still says `Push`, check that the Script File points at `kick_ball.lua` and that **interact_label** is `Kick` in the inspector.
 
-![Sphere](../images/editor/tutorial_kick_ball.jpg)
-
-> **Early Alpha Notice:** After you edit a `.lua` file on disk, reload it from the editor (Script Component field **Reload**, or Menu Bar **Debug → Reload Assets** / `Shift+R`). Automatic script change detection is planned.
+> **Early Alpha Notice:** After you edit a `.lua` file on disk, reload it from the editor (Script File **Reload**, or **Debug → Reload Assets** / `Shift+R`). Automatic script change detection is planned.
 
 ## 11. Optional: expose kick lift as a parameter
 
-Hardcoding `0.5` works. If you want to tune the hop from the inspector like **Impulse Strength**, expose it.
+Hardcoding `0.5` works. If you want to tune the hop from the inspector like **impulse_strength**, expose it.
 
 1. Near the other `--@PARAMETER` lines at the top of `kick_ball.lua`, add:
 
@@ -167,7 +165,7 @@ Hardcoding `0.5` works. If you want to tune the hop from the inspector like **Im
 forward = vec3(forward.x, kick_up, forward.z)
 ```
 
-3. Save the file, **Reload** the script, then dial **Kick Up** in the Script inspector and play again.
+3. Save the file, **Reload** the script, then dial **kick_up** in the Script inspector and play again.
 
 That is how script parameters are declared: a `--@PARAMETER` line, then use the name in the script. Keep this optional if you are happy with a fixed hop.
 
@@ -198,6 +196,8 @@ Otherwise leave these changes on this world instance only. The shipped primitive
 
 You have finished the guided path through Kick the ball.
 
-For a map of scripting kinds, lifecycle, parameters, and reload, see [Script overview](../manuals/script_overview.md). More tutorials will land here over time.
+For a map of scripting kinds, lifecycle, parameters, and reload, see [Script overview](../manuals/script_overview.md).
+
+For sun, local lights, and exposure, see [Lighting](../manuals/lighting.md). For mix, zones, and music, see [Audio](../manuals/audio.md).
 
 If you want to revisit something, use the sidebar.

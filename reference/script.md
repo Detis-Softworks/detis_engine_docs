@@ -1,4 +1,4 @@
-# Script
+﻿# Script
 
 Script API functions in the `script` group.
 

@@ -1,4 +1,4 @@
-# Vec2
+﻿# Vec2
 
 Script API functions in the `vec2` group.
 

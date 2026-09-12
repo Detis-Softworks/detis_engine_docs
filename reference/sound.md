@@ -1,4 +1,4 @@
-# Sound
+﻿# Sound
 
 Script API functions in the `sound` group.
 
@@ -140,6 +140,16 @@ function sound_get_file_path(t_entity_id) end
 ---@param t_entity_id integer
 ---@return integer
 function sound_get_files_count(t_entity_id) end
+```
+
+### `sound_get_full_spatialization_at`
+
+`sound_get_full_spatialization_at(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return number
+function sound_get_full_spatialization_at(t_entity_id) end
 ```
 
 ### `sound_get_gain`
@@ -441,11 +451,12 @@ function sound_pause(t_entity_id) end
 
 ### `sound_play`
 
-`sound_play(t_entity_id)`
+`sound_play(t_entity_id, t_fade_seconds)`
 
 ```lua
 ---@param t_entity_id integer
-function sound_play(t_entity_id) end
+---@param t_fade_seconds number
+function sound_play(t_entity_id, t_fade_seconds) end
 ```
 
 ### `sound_remove_file_at_index`
@@ -546,6 +557,16 @@ function sound_set_category_volume(t_category, t_volume) end
 ---@param t_entity_id integer
 ---@param t_file_path string
 function sound_set_file(t_entity_id, t_file_path) end
+```
+
+### `sound_set_full_spatialization_at`
+
+`sound_set_full_spatialization_at(t_entity_id, t_distance)`
+
+```lua
+---@param t_entity_id integer
+---@param t_distance number
+function sound_set_full_spatialization_at(t_entity_id, t_distance) end
 ```
 
 ### `sound_set_gain`
@@ -790,9 +811,10 @@ function sound_set_zone_reverb_width(t_entity_id, t_width) end
 
 ### `sound_stop`
 
-`sound_stop(t_entity_id)`
+`sound_stop(t_entity_id, t_fade_seconds)`
 
 ```lua
 ---@param t_entity_id integer
-function sound_stop(t_entity_id) end
+---@param t_fade_seconds number
+function sound_stop(t_entity_id, t_fade_seconds) end
 ```

@@ -1,4 +1,4 @@
-# Get
+﻿# Get
 
 Script API functions in the `get` group.
 
