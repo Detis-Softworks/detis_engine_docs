@@ -1,27 +1,26 @@
 # Detis Engine
 
-**Spend your time making games, not fighting your engine.**
-
-Detis Engine is a **focused, lightweight game engine designed for rapid iteration**. Built by a game dev veteran, Detis is **an opinionated toolset tailored for single-player 3D PC games.** There are no heavy import pipelines, no endless menu mazes, no shader compilation delays, and no C++ build plumbing to babysit.
+Detis Engine is a **focused, lightweight game engine designed for rapid iteration**. Designed and built by a game dev veteran, Detis is **an opinionated toolset tailored for single-player 3D PC games.** There are no heavy import pipelines, no endless menu mazes, no shader compilation delays, and no C++ build plumbing to babysit.
 
 Drop in your assets, author worlds in the built-in live editor, script in Lua, and hit play. All in a single executable.
 
 ## Built for production, shared with the world
 
-Although **initially built as an internal tool** to power a specific 3D game, strong interest from other game developers prompted the decision to release Detis publicly.
-
-Detis includes a **full visual 3D editor** alongside its **Lua API**. Prefabs (`.entity` files) live in the **Entity Browser**. Meshes, textures, materials, and worlds still use the engine file dialog and your OS file manager. That is an intentional trade-off for a small footprint, not a missing feature to wait on.
+Although **initially built as an internal tool** to power a specific 3D game, strong interest from other game developers prompted the decision to release Detis publicly. Detis comes with a **full visual 3D editor** alongside its **Lua API**. 
 
 > **Early Alpha Notice:** Detis is under active development. Expect occasional bugs, API refinements, and additional features as development advances.
 
+Need quick scope answers first? See [FAQ](faq.md).
+
 ## Why choose Detis Engine?
 
-- **Zero-friction iteration:** The editor and game live in the same app. Toggle with `Ctrl+P` / `Alt+P` in one viewport.
-- **Direct asset pipeline:** Drop in standard **glTF / GLB** models and **DDS** textures. No import wait.
-- **Core feature set:** Level editing, physics, a PBR renderer, 3D audio, animation, and AI pathfinding.
-- **Lua gameplay:** Script with a full API. Reload with **Debug → Reload Assets** (`Shift+R`). It does not reload on file save yet.
-- **Human-readable projects:** Worlds, materials, scripts, and shaders are plain text (JSON, `.mat`, `.lua`, `.glsl`). Diff them in Git, or point an AI coding tool at the folder.
-- **Self-contained workspace:** One folder **is** your game. No launcher, no project manager.
+- **Built for one clear target:** 3D single-player PC games with hand-authored, level-based worlds.
+- **Less overhead than general-purpose engines:** You avoid broad multi-platform and multi-genre complexity that slows iteration.
+- **Fast iteration loop:** Editor and game are the same executable. Switch modes with in one viewport.
+- **Direct asset pipeline:** Use raw **glTF / GLB** models and **DDS / KTX** textures with no import pipeline.
+- **Lean scripting model:** Gameplay in Lua with a deep API, with hot-reload.
+- **Practical core stack:** PBR renderer, physics, 3D audio, animation, and pathfinding without niche bloat.
+- **Plain-text project data:** Worlds, materials, scripts, and shaders are readable and diffable.
 
 ## Is Detis Engine right for your project?
 
@@ -31,16 +30,16 @@ Detis includes a **full visual 3D editor** alongside its **Lua API**. Prefabs (`
 - **Game scope:** 3D, single-player, level-based PC games.
 - **Team size:** Solo developers and small indie teams who want a tight toolset.
 - **Pragmatic devs:** Lua over visual scripting. Fast startup, lean tools.
-- **Authored content:** Handcrafted worlds and set pieces, not endless procedural open worlds.
+- **Authored content:** Made for handcrafted worlds and set pieces.
 
-### Look elsewhere if you need
+### Skip if you need
 
-- **Mobile, console, or native 2D.**
-- **Multiplayer or massively open worlds.**
-- **AAA photorealism.** Solid PBR, not bleeding-edge graphics tech.
+- **Mobile, console, or native 2D** right out of the box.
+- **Multiplayer.** No network suppor and not planned to happen soon. 
+- **Massively open worlds.** Not currently supported. 
 - **A built-in storefront or package manager.**
-- **Engine C++ source** on the indie (binary + Lua) tier.
-- **Visual scripting as the main way to make a game.**
+- **Engine C++ source.** Currently not available as part of the base tier.
+- **Visual scripting.** Not currently supported.
 
 ## Recommended order
 
@@ -48,11 +47,12 @@ Read these in sequence. Each page links to the next step at the bottom.
 
 ### Getting started
 
-1. **[Installation](installation.md)**
-2. **[Quick start](quick_start.md)**
-3. **[Project layout](project_layout.md)**
-4. **[Sample content](sample_content.md)**
-5. **[Editor overview](editor_overview.md)**
+1. **[FAQ](faq.md)**
+2. **[Installation](installation.md)**
+3. **[Quick start](quick_start.md)**
+4. **[Project layout](project_layout.md)**
+5. **[Sample content](sample_content.md)**
+6. **[Editor overview](editor_overview.md)**
 
 ### Tutorials
 
