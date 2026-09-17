@@ -1,4 +1,4 @@
-﻿# Surface
+# Surface
 
 Script API functions in the `surface` group.
 

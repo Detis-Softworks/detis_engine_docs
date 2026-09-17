@@ -1,4 +1,4 @@
-﻿# Bone_attachment
+# Bone_attachment
 
 Script API functions in the `bone_attachment` group.
 

@@ -1,4 +1,4 @@
-﻿# Particle_system
+# Particle_system
 
 Script API functions in the `particle_system` group.
 

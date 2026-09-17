@@ -1,4 +1,4 @@
-﻿# Dynamic_body
+# Dynamic_body
 
 Script API functions in the `dynamic_body` group.
 

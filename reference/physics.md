@@ -1,4 +1,4 @@
-﻿# Physics
+# Physics
 
 Script API functions in the `physics` group.
 

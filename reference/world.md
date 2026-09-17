@@ -1,4 +1,4 @@
-﻿# World
+# World
 
 Script API functions in the `world` group.
 

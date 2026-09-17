@@ -1,4 +1,4 @@
-﻿# Physics_body
+# Physics_body
 
 Script API functions in the `physics_body` group.
 

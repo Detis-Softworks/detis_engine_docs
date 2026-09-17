@@ -1,4 +1,4 @@
-﻿# Quat
+# Quat
 
 Script API functions in the `quat` group.
 

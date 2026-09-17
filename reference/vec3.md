@@ -1,4 +1,4 @@
-﻿# Vec3
+# Vec3
 
 Script API functions in the `vec3` group.
 

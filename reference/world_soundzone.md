@@ -1,4 +1,4 @@
-﻿# World_soundzone
+# World_soundzone
 
 Script API functions in the `world_soundzone` group.
 

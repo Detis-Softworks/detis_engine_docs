@@ -1,4 +1,4 @@
-﻿# Soundscape_zone
+# Soundscape_zone
 
 Script API functions in the `soundscape_zone` group.
 

@@ -1,4 +1,4 @@
-﻿# Set
+# Set
 
 Script API functions in the `set` group.
 

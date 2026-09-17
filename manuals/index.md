@@ -26,6 +26,10 @@ World sun, local Point and Spot lights, shadow settings, and EV100 exposure. Phy
 
 Sound components, soundscapes, sound zones, music, and the Game / GUI / Ambient / Voice mix.
 
+### [Art](art.md)
+
+Zero-import meshes, DDS textures, `.mat` materials, Material Editor, Texture Packer, and sky DDS authoring.
+
 ### [Scripting](script_overview.md)
 
 Entity, world, and module scripts. Lifecycle callbacks, `@PARAMETER` fields, and reloading from the editor.

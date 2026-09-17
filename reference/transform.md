@@ -1,4 +1,4 @@
-﻿# Transform
+# Transform
 
 Script API functions in the `transform` group.
 

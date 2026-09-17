@@ -1,4 +1,4 @@
-﻿# Physics_constraint
+# Physics_constraint
 
 Script API functions in the `physics_constraint` group.
 

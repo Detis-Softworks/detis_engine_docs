@@ -1,4 +1,4 @@
-﻿# Settings
+# Settings
 
 Script API functions in the `settings` group.
 
@@ -58,6 +58,24 @@ function settings_get_available_resolutions() end
 function settings_get_bool(t_section, t_key, t_default_value) end
 ```
 
+### `settings_get_default_world`
+
+`settings_get_default_world()`
+
+```lua
+---@return string
+function settings_get_default_world() end
+```
+
+### `settings_get_dev_mode_active`
+
+`settings_get_dev_mode_active()`
+
+```lua
+---@return boolean
+function settings_get_dev_mode_active() end
+```
+
 ### `settings_get_float`
 
 `settings_get_float(t_section, t_key, t_default_value)`
@@ -79,13 +97,13 @@ function settings_get_float(t_section, t_key, t_default_value) end
 function settings_get_fxaa_active() end
 ```
 
-### `settings_get_fxaa_fss_active`
+### `settings_get_game_title`
 
-`settings_get_fxaa_fss_active()`
+`settings_get_game_title()`
 
 ```lua
----@return boolean
-function settings_get_fxaa_fss_active() end
+---@return string
+function settings_get_game_title() end
 ```
 
 ### `settings_get_gamma`
@@ -410,11 +428,11 @@ function settings_set_ambient_volume(t_volume) end
 
 ### `settings_set_anisotropic_filter_level`
 
-`settings_set_anisotropic_filter_level(t_level)`
+`settings_set_anisotropic_filter_level(t_integer_1)`
 
 ```lua
----@param t_level integer
-function settings_set_anisotropic_filter_level(t_level) end
+---@param t_integer_1 integer
+function settings_set_anisotropic_filter_level(t_integer_1) end
 ```
 
 ### `settings_set_bool`
@@ -446,15 +464,6 @@ function settings_set_float(t_section, t_key, t_value) end
 ```lua
 ---@param t_active boolean
 function settings_set_fxaa_active(t_active) end
-```
-
-### `settings_set_fxaa_fss_active`
-
-`settings_set_fxaa_fss_active(t_active)`
-
-```lua
----@param t_active boolean
-function settings_set_fxaa_fss_active(t_active) end
 ```
 
 ### `settings_set_gamma`
@@ -635,11 +644,11 @@ function settings_set_resolution(t_width, t_height) end
 
 ### `settings_set_reverb_quality`
 
-`settings_set_reverb_quality(t_quality)`
+`settings_set_reverb_quality(t_integer_1)`
 
 ```lua
----@param t_quality integer
-function settings_set_reverb_quality(t_quality) end
+---@param t_integer_1 integer
+function settings_set_reverb_quality(t_integer_1) end
 ```
 
 ### `settings_set_sfx_volume`
@@ -653,29 +662,29 @@ function settings_set_sfx_volume(t_volume) end
 
 ### `settings_set_shadow_map_quality`
 
-`settings_set_shadow_map_quality(t_quality)`
+`settings_set_shadow_map_quality(t_integer_1)`
 
 ```lua
----@param t_quality integer
-function settings_set_shadow_map_quality(t_quality) end
+---@param t_integer_1 integer
+function settings_set_shadow_map_quality(t_integer_1) end
 ```
 
 ### `settings_set_ssao_quality`
 
-`settings_set_ssao_quality(t_quality)`
+`settings_set_ssao_quality(t_integer_1)`
 
 ```lua
----@param t_quality integer
-function settings_set_ssao_quality(t_quality) end
+---@param t_integer_1 integer
+function settings_set_ssao_quality(t_integer_1) end
 ```
 
 ### `settings_set_ssr_quality`
 
-`settings_set_ssr_quality(t_quality)`
+`settings_set_ssr_quality(t_integer_1)`
 
 ```lua
----@param t_quality integer
-function settings_set_ssr_quality(t_quality) end
+---@param t_integer_1 integer
+function settings_set_ssr_quality(t_integer_1) end
 ```
 
 ### `settings_set_string`
@@ -718,18 +727,18 @@ function settings_set_voice_volume(t_volume) end
 
 ### `settings_set_vsync_mode`
 
-`settings_set_vsync_mode(t_mode)`
+`settings_set_vsync_mode(t_integer_1)`
 
 ```lua
----@param t_mode integer
-function settings_set_vsync_mode(t_mode) end
+---@param t_integer_1 integer
+function settings_set_vsync_mode(t_integer_1) end
 ```
 
 ### `settings_set_window_mode`
 
-`settings_set_window_mode(t_mode)`
+`settings_set_window_mode(t_integer_1)`
 
 ```lua
----@param t_mode integer
-function settings_set_window_mode(t_mode) end
+---@param t_integer_1 integer
+function settings_set_window_mode(t_integer_1) end
 ```

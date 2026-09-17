@@ -1,4 +1,4 @@
-﻿# Mat3
+# Mat3
 
 Script API functions in the `mat3` group.
 

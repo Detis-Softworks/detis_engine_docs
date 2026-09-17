@@ -1,4 +1,4 @@
-﻿# Billboard
+# Billboard
 
 Script API functions in the `billboard` group.
 

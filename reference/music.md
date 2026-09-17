@@ -1,4 +1,4 @@
-﻿# Music
+# Music
 
 Script API functions in the `music` group.
 
@@ -58,12 +58,13 @@ function music_get_volume() end
 
 ### `music_play`
 
-`music_play(t_file_path, t_looping)`
+`music_play(t_file_path, t_looping, t_fade_duration)`
 
 ```lua
 ---@param t_file_path string
 ---@param t_looping boolean
-function music_play(t_file_path, t_looping) end
+---@param t_fade_duration number
+function music_play(t_file_path, t_looping, t_fade_duration) end
 ```
 
 ### `music_set_paused`
@@ -95,8 +96,9 @@ function music_set_volume(t_volume) end
 
 ### `music_stop`
 
-`music_stop()`
+`music_stop(t_fade_duration)`
 
 ```lua
-function music_stop() end
+---@param t_fade_duration number
+function music_stop(t_fade_duration) end
 ```

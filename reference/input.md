@@ -1,55 +1,55 @@
-﻿# Input
+# Input
 
 Script API functions in the `input` group.
 
 ### `input_get_action_binding_string`
 
-`input_get_action_binding_string(t_action)`
+`input_get_action_binding_string(t_binding)`
 
 ```lua
----@param t_action string
+---@param t_binding string
 ---@return string
-function input_get_action_binding_string(t_action) end
+function input_get_action_binding_string(t_binding) end
 ```
 
 ### `input_get_action_pressed_event`
 
-`input_get_action_pressed_event(t_action)`
+`input_get_action_pressed_event(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return boolean
-function input_get_action_pressed_event(t_action) end
+function input_get_action_pressed_event(t_string_1) end
 ```
 
 ### `input_get_action_released_event`
 
-`input_get_action_released_event(t_action)`
+`input_get_action_released_event(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return boolean
-function input_get_action_released_event(t_action) end
+function input_get_action_released_event(t_string_1) end
 ```
 
 ### `input_get_action_strength`
 
-`input_get_action_strength(t_action)`
+`input_get_action_strength(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return number
-function input_get_action_strength(t_action) end
+function input_get_action_strength(t_string_1) end
 ```
 
 ### `input_get_gamepad_axis`
 
-`input_get_gamepad_axis(t_axis_name)`
+`input_get_gamepad_axis(t_string_1)`
 
 ```lua
----@param t_axis_name string
+---@param t_string_1 string
 ---@return number
-function input_get_gamepad_axis(t_axis_name) end
+function input_get_gamepad_axis(t_string_1) end
 ```
 
 ### `input_get_has_gamepad_connected`
@@ -63,12 +63,12 @@ function input_get_has_gamepad_connected() end
 
 ### `input_get_is_action_pressed`
 
-`input_get_is_action_pressed(t_action)`
+`input_get_is_action_pressed(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return boolean
-function input_get_is_action_pressed(t_action) end
+function input_get_is_action_pressed(t_string_1) end
 ```
 
 ### `input_get_is_last_input_device_gamepad`
@@ -82,12 +82,12 @@ function input_get_is_last_input_device_gamepad() end
 
 ### `input_get_is_mouse_action_pressed`
 
-`input_get_is_mouse_action_pressed(t_action)`
+`input_get_is_mouse_action_pressed(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return boolean
-function input_get_is_mouse_action_pressed(t_action) end
+function input_get_is_mouse_action_pressed(t_string_1) end
 ```
 
 ### `input_get_just_pressed_key_name`
@@ -101,22 +101,22 @@ function input_get_just_pressed_key_name() end
 
 ### `input_get_mouse_action_pressed_event`
 
-`input_get_mouse_action_pressed_event(t_action)`
+`input_get_mouse_action_pressed_event(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return boolean
-function input_get_mouse_action_pressed_event(t_action) end
+function input_get_mouse_action_pressed_event(t_string_1) end
 ```
 
 ### `input_get_mouse_action_released_event`
 
-`input_get_mouse_action_released_event(t_action)`
+`input_get_mouse_action_released_event(t_string_1)`
 
 ```lua
----@param t_action string
+---@param t_string_1 string
 ---@return boolean
-function input_get_mouse_action_released_event(t_action) end
+function input_get_mouse_action_released_event(t_string_1) end
 ```
 
 ### `input_get_mouse_capture`
@@ -166,9 +166,9 @@ function input_get_mouse_wheel_up() end
 
 ### `input_set_mouse_capture`
 
-`input_set_mouse_capture(t_capture)`
+`input_set_mouse_capture(t_boolean_1)`
 
 ```lua
----@param t_capture boolean
-function input_set_mouse_capture(t_capture) end
+---@param t_boolean_1 boolean
+function input_set_mouse_capture(t_boolean_1) end
 ```
