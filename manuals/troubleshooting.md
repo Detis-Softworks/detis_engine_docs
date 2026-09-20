@@ -4,7 +4,7 @@ Fix common startup, loading, and performance problems. Most issues come from mov
 
 ## Engine Won't Start
 
-Keep `bin`, `content`, and `engine` together as shipped. Paths resolve from the executable, so moving `detis_engine.exe` out of `bin` breaks content lookup. Run it from `game/bin` as described in [Installation](../getting_started/installation.md).
+Keep `bin`, `content`, and `engine` together as shipped. Paths resolve from the executable, so moving `Detis Game.exe` (Windows) out of `bin` breaks content lookup. Run it from `game/bin` as described in [Installation](../getting_started/installation.md).
 
 If Windows reports a missing DLL on launch, check `bin/` first:
 
@@ -95,12 +95,12 @@ Editor panel layout lives separately in `user_editor.ini` in the same folder. De
 
 ## After Updating the Engine
 
-One engine copy is one game. Never drop a new `detis_engine.exe` into an old tree or mix DLLs across versions:
+One engine copy is one game. Never drop a new `Detis Game.exe` into an old tree or mix DLLs across versions:
 
 1. Extract the new package to a fresh folder.
 2. Copy your `content/` (worlds, entities, materials, scripts, configs) into the new tree.
 3. Diff your `content/config/*.ini` against the new defaults. New keys appear on version bumps and old files silently miss them.
-4. Keep `reference/` pinned to the stubs that shipped with your binary until you adopt the new API. Until VOK, `reference` stays frozen at `v1.0.2` (`engine/stubs/engine_stubs.lua`).
+4. Keep `reference/` pinned to the stubs that shipped with your binary until you adopt the new API. Until VOK, `reference` stays frozen at `v1.0.0-rc.1` (`engine/stubs/engine_stubs.lua`, 4857 lines).
 5. Launch once, read `bin/log.txt` top to bottom, and confirm the OpenGL version, memory profile, and world entity count look sane before editing.
 
 ## Where Files Live
