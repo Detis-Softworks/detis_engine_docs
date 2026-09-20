@@ -17,6 +17,11 @@
 
 * **Manual**
   * [Manual](manuals/index.md)
+  * [Worlds & Levels](manuals/worlds.md)
+  * [Entities & Prefabs](manuals/entities.md)
+  * [Troubleshooting](manuals/troubleshooting.md)
+  * [Physics](manuals/physics.md)
+  * [Input & Settings](manuals/input.md)
   * **Lighting**
     * [Lighting overview](manuals/lighting.md)
     * [World sun](manuals/lighting_sun.md)

@@ -18,6 +18,26 @@ Menus, viewport toolbar, transform rail, Entity Browser, inspectors, and the day
 
 Build a small level, author a prefab from components, and script interactable gameplay in Lua.
 
+### [Worlds & Levels](worlds.md)
+
+Level-based worlds, `.world` files, linking levels, and world soundscape/soundzone defaults.
+
+### [Entities & Prefabs](entities.md)
+
+Entity Browser, `.entity` prefabs, components, transform hierarchy, and spawning in Lua.
+
+### [Troubleshooting](troubleshooting.md)
+
+Startup, loading, and performance fixes. Log file, missing DLLs, settings reset, and update workflow.
+
+### [Physics](physics.md)
+
+Jolt bodies, character and dynamic motion, collision layers, constraints, and raycasts.
+
+### [Input & Settings](input.md)
+
+Action polling, mouse and gamepad, reading and writing settings, and ini files.
+
 ### [Lighting](lighting.md)
 
 World sun, local Point and Spot lights, shadow settings, and EV100 exposure. Physical units and World Settings workflow.
