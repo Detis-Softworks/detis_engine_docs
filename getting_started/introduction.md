@@ -22,7 +22,8 @@ There are no heavy import pipelines, no endless menu mazes, and no C++ build plu
 
 1. [Lighting](../manuals/lighting.md). Sun, local lights, shadows, exposure.
 2. [Audio](../manuals/audio.md). Sound components, soundscapes, zones, music.
-3. [Script overview](../manuals/script_overview.md). Entity, world, and module scripts.
+3. [In-game UI](../manuals/gui.md). HUD, design canvas, reference resolution, foreground draw.
+4. [Script overview](../manuals/script_overview.md). Entity, world, and module scripts.
 
 > **System requirement:** 64-bit PC (Windows or Linux) with a dedicated discrete GPU.
 

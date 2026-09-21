@@ -1,0 +1,20 @@
+---
+description: Re-read docs rules before editing Markdown in this repo
+alwaysApply: true
+---
+
+# Read the rules first — NON-NEGOTIABLE
+
+Before adding or changing documentation in **Detis Engine Documentation** (`detis_engine_docs`):
+
+1. Re-read **`.cursor/rules/code-examples.mdc`** if the change includes fenced code or API names.
+2. Re-read **`.cursor/rules/manual-voice.mdc`** if the change is under **`manuals/`**, **`tutorials/`**, or **`getting_started/`**.
+
+Do not rely on memory from an earlier chat. If the change type matches a rule file and you have not opened it this turn, do not edit yet.
+
+## Hard stops
+
+- Invented API identifiers or **`...`** inside example calls.
+- Paste-ready fences with undefined globals.
+- Front-loading advanced flags, wrappers, or layering before the simple working path.
+- Turning beginner pages into internal engine design notes.

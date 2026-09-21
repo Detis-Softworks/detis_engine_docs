@@ -26,6 +26,10 @@ World sun, local Point and Spot lights, shadow settings, and EV100 exposure. Phy
 
 Sound components, soundscapes, sound zones, music, and the Game / GUI / Ambient / Voice mix.
 
+### [In-game UI](gui.md)
+
+HUD vs menus, reference resolution / design canvas vs normalized sizes, optional demo `UiWidgets`, and what draws on top of what. Pair with `gui_demo.world`.
+
 ### [Scripting](script_overview.md)
 
 Entity, world, and module scripts. Lifecycle callbacks, `@PARAMETER` fields, and reloading from the editor.

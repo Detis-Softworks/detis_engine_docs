@@ -34,7 +34,7 @@ Implement only the callbacks your script needs:
 - **`on_process`**: Runs every frame with a variable delta time. Used for general gameplay updates.
 - **`on_fixed_process`**: Runs on a fixed physics-aligned timestep. Ideal for movement and physics logic.
 - **`on_late_process`**: Runs after `on_process` in the same frame. Useful for work that depends on earlier frame updates finishing first.
-- **`on_draw`**: Renders custom UI with the built-in UI framework.
+- **`on_draw`**: Renders custom UI with the built-in UI framework. See [In-game UI](gui.md).
 - **`on_shutdown`**: Runs right before the script is destroyed. Clean up temporary state here.
 - **`on_editor_mode_active`**: Triggers when toggling between editor view and play mode.
 

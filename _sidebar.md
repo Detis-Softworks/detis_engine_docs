@@ -29,6 +29,8 @@
     * [Soundscape](manuals/audio_soundscape.md)
     * [Sound zone](manuals/audio_sound_zone.md)
     * [Music](manuals/audio_music.md)
+  * **UI**
+    * [In-game UI](manuals/gui.md)
   * [Script overview](manuals/script_overview.md)
 
 * **Reference**

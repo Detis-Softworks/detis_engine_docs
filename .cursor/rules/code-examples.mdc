@@ -1,0 +1,33 @@
+---
+description: Code fences in docs must match the real API and paste as written
+globs: "{manuals,tutorials,getting_started,reference}/**/*.md"
+alwaysApply: false
+---
+
+# Documentation code examples — NON-NEGOTIABLE
+
+Applies when editing Markdown under `manuals/`, `tutorials/`, `getting_started/`, or `reference/`.
+
+## Engine and script API
+
+- Every **`gui_*`**, **`entity_*`**, **`world_*`**, and other bound call in a fence must match **`game/engine/stubs/engine_stubs.lua`** in the engine package (names, required arguments, types). Verify against stubs before publishing.
+- Do not invent identifiers: no **`MENU_FLAGS`**, no **`...`** inside calls, no fake placeholders like **`path`**, **`color`**, **`my_button_state`** unless the same line defines them in that fence.
+- Optional stub parameters must either be omitted (when the binding defaults them) or passed explicitly. If the binding requires an argument (example: **`gui_begin_design_canvas(name, flags)`**), show a valid value such as **`0`**, not a made-up flag bundle, unless the page is explicitly documenting that bundle.
+
+## Copy-paste contract (beginner manuals especially)
+
+- Treat each fenced block as something a reader may paste into a script. It must run once placed in the right lifecycle hook (**`on_ready`**, **`on_draw`**, etc.) without undefined globals.
+- Use **literals** in the fence (**`0.035`**, **`vec4(...)`**, string paths) when teaching a pattern. You may say shipped code uses named constants (**`CROSSHAIR_SIZE`** in **`player_hud.lua`**) in prose outside the fence, or in a separate “in the repo” excerpt that is labeled as partial, not paste-ready.
+- If a block needs **`dofile`**, module setup, or one-time init, include those lines in the same fence or in the immediately preceding fence on the same page.
+- Do not show **`UiWidgets.button(state)`** without either creating **`state`** in that fence or labeling the block as a non-paste excerpt and pointing to the full script.
+
+## Partial excerpts
+
+- Fragments that only make sense inside a larger function (world labels mid-function, **`parent_pos`** from surrounding layout code) are allowed in **reference** pages if prose says they are fragments. **Manuals and tutorials** prefer self-contained blocks or step-by-step fences that build up (init fence, then draw fence).
+
+## Self-check before finishing a doc edit
+
+1. Grep the fence for invented **`gui_*`** names or **`(...)`** ellipses in calls.
+2. Count required arguments against **`engine_stubs.lua`**.
+3. List every non-literal identifier in the fence. Is each defined in that fence or in an earlier fence on the same page?
+4. Would pasting into **`on_draw`** after the page’s init steps throw “attempt to call nil” or “wrong number of arguments”?

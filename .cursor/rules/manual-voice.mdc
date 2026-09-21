@@ -1,0 +1,44 @@
+---
+description: Manuals and tutorials — plain English, one step at a time
+globs: "{manuals,tutorials,getting_started}/**/*.md"
+alwaysApply: false
+---
+
+# Manual voice and pacing — NON-NEGOTIABLE
+
+Audience: someone new. Write as if explaining to a classmate, not an engine programmer.
+
+## Plain language
+
+- Short sentences. One main idea per paragraph.
+- Prefer **“you”** and concrete outcomes (“resize the window”, “click a button”) over abstract architecture essays.
+- Use **tables** for “when to use which” (HUD vs menu, scale modes, layers).
+- **`reference/`** may stay dry and catalog-like. **`manuals/`**, **`tutorials/`**, and **`getting_started/`** stay approachable.
+
+## Terminology
+
+- Use names readers will see in Lua and stubs: **`gui_begin_design_canvas`**, **reference resolution**, **design space**, **foreground draw**, **normalized**.
+- Do not lean on third-party UI library jargon in user-facing pages when an engine term exists.
+- Bold **`api_like_this`** when naming functions or enums the reader will type.
+
+## Teach the simple path first
+
+- Show the **minimum** that works, then optional polish.
+- Example: **`gui_begin_design_canvas(name, 0)`** before long **`GuiWindowFlags`** lists. Mention flag bundles only when discussing look-and-feel, with a pointer to a sample file (example: **`gui_demo_skin.lua`**) rather than front-loading every flag in the first example.
+- Split **init once** (**`on_ready`**: reference resolution) from **each frame** (**`on_draw`**: draw calls) when both are required.
+
+## Sample vs product
+
+- State clearly once per page (or in a dedicated section): shipped **`content/scripts/`** and worlds like **`gui_demo.world`** are **optional reference**, not requirements.
+- In code examples, teach **`gui_*`** (the engine). Helpers like **`UiWidgets`** are “if you copy sample code”, not the default path in every fence.
+- Do not repeat “demo” on every line; let the code and API names speak.
+
+## Depth and linking
+
+- Manuals teach **how to think and what to call first**. Exhaustive function lists live in **`reference/`** or engine repo **`docs/game/`**.
+- Link out instead of duplicating huge API tables on beginner pages.
+
+## Respect existing pages
+
+- Do not rewrite user-edited wording or section order unless the task asks for it.
+- Extend examples and fix accuracy; avoid drive-by renames or “cleanup” refactors.
