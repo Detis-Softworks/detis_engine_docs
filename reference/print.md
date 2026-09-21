@@ -1,4 +1,4 @@
-﻿# Print
+# Print
 
 Script API functions in the `print` group.
 

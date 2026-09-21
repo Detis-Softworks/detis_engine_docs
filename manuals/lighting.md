@@ -2,6 +2,10 @@
 
 Light scenes with the world sun and local Point / Spot lights. Balance brightness with lux, lumens, and auto-exposure.
 
+## Related
+
+- [Art — Sky texture](art_sky.md) — Author and assign the equirect sky DDS (not lux or IBL sliders).
+
 ## In this section
 
 - [World sun](lighting_sun.md) — Global sun and sun-shadow scales.

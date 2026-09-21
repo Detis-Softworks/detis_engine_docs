@@ -1,4 +1,4 @@
-﻿# Animation
+# Animation
 
 Script API functions in the `animation` group.
 

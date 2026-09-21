@@ -1,4 +1,4 @@
-﻿# Mesh
+# Mesh
 
 Script API functions in the `mesh` group.
 

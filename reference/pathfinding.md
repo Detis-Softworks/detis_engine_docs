@@ -1,4 +1,4 @@
-﻿# Pathfinding
+# Pathfinding
 
 Script API functions in the `pathfinding` group.
 

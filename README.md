@@ -34,5 +34,6 @@ Then continue through FAQ, Installation, Quick start, Engine Settings, Project l
 - [Manual](manuals/index.md)
 - [Lighting](manuals/lighting.md)
 - [Audio](manuals/audio.md)
+- [Art](manuals/art.md)
 - [Scripting](manuals/script_overview.md)
 - [Script API reference](reference/README.md)

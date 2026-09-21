@@ -1,4 +1,4 @@
-﻿# Skeletal_mesh
+# Skeletal_mesh
 
 Script API functions in the `skeletal_mesh` group.
 

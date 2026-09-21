@@ -1,4 +1,4 @@
-﻿# Sound
+# Sound
 
 Script API functions in the `sound` group.
 
@@ -93,12 +93,12 @@ function sound_get_category(t_entity_id) end
 
 ### `sound_get_category_volume`
 
-`sound_get_category_volume(t_category)`
+`sound_get_category_volume(t_integer_1)`
 
 ```lua
----@param t_category integer
+---@param t_integer_1 integer
 ---@return number
-function sound_get_category_volume(t_category) end
+function sound_get_category_volume(t_integer_1) end
 ```
 
 ### `sound_get_duration`
@@ -622,11 +622,11 @@ function sound_set_looping(t_entity_id, t_looping) end
 
 ### `sound_set_master_volume`
 
-`sound_set_master_volume(t_volume)`
+`sound_set_master_volume(t_number_1)`
 
 ```lua
----@param t_volume number
-function sound_set_master_volume(t_volume) end
+---@param t_number_1 number
+function sound_set_master_volume(t_number_1) end
 ```
 
 ### `sound_set_outer_radius`
@@ -702,11 +702,11 @@ function sound_set_play_on_start(t_entity_id, t_play_on_start) end
 
 ### `sound_set_reverb_quality`
 
-`sound_set_reverb_quality(t_quality)`
+`sound_set_reverb_quality(t_integer_1)`
 
 ```lua
----@param t_quality integer
-function sound_set_reverb_quality(t_quality) end
+---@param t_integer_1 integer
+function sound_set_reverb_quality(t_integer_1) end
 ```
 
 ### `sound_set_spatial`

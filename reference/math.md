@@ -1,4 +1,4 @@
-﻿# Math
+# Math
 
 Script API functions in the `math` group.
 

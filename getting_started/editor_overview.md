@@ -139,8 +139,8 @@ Same panels and editors are on the viewport toolbar. You do not need this menu f
 | **World Inspector** | `Shift+1` | Entity tree. **Add New Entity**, search, **Show Decorations**. Right-click: **Rename Entity**, **Group Selected Entities**, **Add Child Entity**, **Copy Entity Path**, **Move Up** / **Move Down** (`Shift+Up` / `Shift+Down`). |
 | **Entity Inspector** | `Shift+2` | Components on the selection |
 | **World Settings** | `Shift+3` | Sun, sky (**Ambient Lux**, IBL), exposure, soundscape, **Default Sound Zone**, world script |
-| **Material Editor** | `Shift+4` | Materials |
-| **Texture Packer** | `Shift+5` | Texture packing |
+| **Material Editor** | `Shift+4` | Materials — see [Art — Material Editor](../manuals/art_material_editor.md) |
+| **Texture Packer** | `Shift+5` | Texture packing — see [Art — Textures](../manuals/art_textures.md) |
 | **Viewport Tool** | | **None**, **Vertex Paint**, **Decorator**, **Terrain Patch**, **Agent Navigation**. Exclusive. |
 | **Module Manager** | `Shift+0` | Lua modules from `modules.ini` |
 | **Entity Browser** | `Shift+Space` | Prefab library. Drag into the viewport or onto the World Inspector |

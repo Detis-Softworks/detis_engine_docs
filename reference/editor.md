@@ -1,4 +1,4 @@
-﻿# Editor
+# Editor
 
 Script API functions in the `editor` group.
 
@@ -22,9 +22,9 @@ function editor_settings_get_theme_name() end
 
 ### `editor_settings_set_theme_name`
 
-`editor_settings_set_theme_name(t_theme_name)`
+`editor_settings_set_theme_name(t_string_1)`
 
 ```lua
----@param t_theme_name string
-function editor_settings_set_theme_name(t_theme_name) end
+---@param t_string_1 string
+function editor_settings_set_theme_name(t_string_1) end
 ```

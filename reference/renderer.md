@@ -1,4 +1,4 @@
-﻿# Renderer
+# Renderer
 
 Script API functions in the `renderer` group.
 
@@ -563,15 +563,6 @@ function renderer_get_is_fog_wind_texture_active() end
 ```lua
 ---@return boolean
 function renderer_get_is_fxaa_active() end
-```
-
-### `renderer_get_is_fxaa_fss_active`
-
-`renderer_get_is_fxaa_fss_active()`
-
-```lua
----@return boolean
-function renderer_get_is_fxaa_fss_active() end
 ```
 
 ### `renderer_get_is_local_light_shadows_active`
@@ -1709,15 +1700,6 @@ function renderer_set_fog_wind_texture_active(t_active) end
 ```lua
 ---@param t_active boolean
 function renderer_set_fxaa_active(t_active) end
-```
-
-### `renderer_set_fxaa_fss_active`
-
-`renderer_set_fxaa_fss_active(t_active)`
-
-```lua
----@param t_active boolean
-function renderer_set_fxaa_fss_active(t_active) end
 ```
 
 ### `renderer_set_gamma`

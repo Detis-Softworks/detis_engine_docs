@@ -1,4 +1,4 @@
-﻿# File_manager
+# File_manager
 
 Script API functions in the `file_manager` group.
 

@@ -1,4 +1,4 @@
-﻿# Vec4
+# Vec4
 
 Script API functions in the `vec4` group.
 

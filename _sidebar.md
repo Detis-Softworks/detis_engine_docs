@@ -29,9 +29,17 @@
     * [Soundscape](manuals/audio_soundscape.md)
     * [Sound zone](manuals/audio_sound_zone.md)
     * [Music](manuals/audio_music.md)
-  * **UI**
+  * **Art**
+    * [Art overview](manuals/art.md)
+    * [Pipeline](manuals/art_pipeline.md)
+    * [Textures](manuals/art_textures.md)
+    * [Meshes](manuals/art_meshes.md)
+    * [Materials](manuals/art_materials.md)
+    * [Material Editor](manuals/art_material_editor.md)
+    * [Sky texture](manuals/art_sky.md)
+  * **Scripting**
+    * [Script overview](manuals/script_overview.md)
     * [In-game UI](manuals/gui.md)
-  * [Script overview](manuals/script_overview.md)
 
 * **Reference**
   * [Script API](reference/README.md)

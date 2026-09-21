@@ -1,4 +1,4 @@
-﻿# Pathnode
+# Pathnode
 
 Script API functions in the `pathnode` group.
 

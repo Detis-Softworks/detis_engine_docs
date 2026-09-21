@@ -1,4 +1,4 @@
-﻿# Mat4
+# Mat4
 
 Script API functions in the `mat4` group.
 

@@ -1,4 +1,4 @@
-﻿# Gui
+# Gui
 
 Script API functions in the `gui` group.
 

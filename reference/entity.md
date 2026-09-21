@@ -1,4 +1,4 @@
-﻿# Entity
+# Entity
 
 Script API functions in the `entity` group.
 
@@ -307,6 +307,16 @@ function entity_get_is_valid(t_entity_id) end
 ---@param t_entity_id integer
 ---@return string
 function entity_get_name(t_entity_id) end
+```
+
+### `entity_get_parent`
+
+`entity_get_parent(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return integer
+function entity_get_parent(t_entity_id) end
 ```
 
 ### `entity_get_tags`
