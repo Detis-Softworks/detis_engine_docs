@@ -32,11 +32,13 @@ Zero-import meshes, DDS textures, `.mat` materials, Material Editor, Texture Pac
 
 ### [Script overview](script_overview.md)
 
-Entity, world, and module scripts. Lifecycle callbacks, `@PARAMETER` fields, and reloading from the editor.
+Lua gameplay: entity, world, and module scripts, stubs, and hot reload. Concept pages below (not tied to shipped demo code).
 
-### [In-game UI](gui.md)
-
-HUD vs menus, reference resolution / design canvas vs normalized sizes, optional demo `UiWidgets`, and what draws on top of what. Pair with `gui_demo.world`.
+- [Where logic lives](script_placement.md)
+- [Lifecycle and timesteps](script_lifecycle.md)
+- [Parameters](script_parameters.md)
+- [Communication](script_communication.md)
+- [In-game UI](script_gui.md)
 
 ### [Script API reference](../reference/README.md)
 

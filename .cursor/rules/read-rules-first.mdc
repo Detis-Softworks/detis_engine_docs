@@ -14,6 +14,9 @@ Do not rely on memory from an earlier chat. If the change type matches a rule fi
 
 ## Hard stops
 
+- Em dash (—) anywhere in Markdown you edit. Use **:** or ** - ** instead.
+- Generic **scene** / **level** / **map** when the engine means **world** (**`.world`**, world script, **`world_load_*`**, View → World Settings).
+- Terminology not found in stubs, editor labels, or existing docs (invented synonyms).
 - Invented API identifiers or **`...`** inside example calls.
 - Paste-ready fences with undefined globals.
 - Front-loading advanced flags, wrappers, or layering before the simple working path.

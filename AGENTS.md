@@ -17,3 +17,11 @@ This repository is the **user-facing manual site**, not the engine source tree.
 ## Audience
 
 Students and first-time users. Manuals teach simple working paths; reference pages may be denser.
+
+## Punctuation
+
+Do not use the em dash (—) in this repo’s Markdown. Use a colon or a spaced hyphen instead. See **`.cursor/rules/manual-voice.mdc`**.
+
+## Terminology
+
+Stick to engine and editor wording (**world**, **entity**, **module**, **`gui_*`**, etc.). A loaded level is a **world**, not a “scene”. Do not invent alternate names. See **`.cursor/rules/manual-voice.mdc`**.

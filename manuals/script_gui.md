@@ -132,7 +132,7 @@ When two things overlap, we need a way to define the draw priority.
 
 Think of three layers:
 
-1. **The 3D game** - 3D scene layer. 
+1. **The 3D world** - what you see in the viewport (the loaded **`.world`**). 
 2. **Windows** - Controls and menu panels draw here.  
 3. **Foreground draw** - HUD **`gui_draw_*`** and tooltips can draw here, **in front of all windows**.
 
@@ -182,7 +182,7 @@ A label floating above an NPC is still **2D text on the screen**, (note the engi
 
 Typical flow:
 
-1. **`camera_get_world_to_screen_position(vec3(...))`** → screen x/y, or **`nil`** if off-screen.  
+1. **`camera_get_world_to_screen_position(vec3(...))`**: screen x/y, or **`nil`** if off-screen.  
 2. **`gui_get_text_size(t_text, LABEL_FONT_SIZE)`**, then **`gui_draw_text(t_text, vec2(text_x, text_y), LABEL_FONT_SIZE, LABEL_TEXT_COLOR)`** (optional **`font_id`**, **`scale`**).
 
 Same HUD rules apply (often screen fractions for font size).
@@ -196,6 +196,5 @@ Check **`gui_demo.world`** and press **1-9** to select demo mode.
 
 ## API reference
 
-- [Gui functions (reference)](../reference/gui.md) - alphabetical **`gui_*`** list from ScriptAPI  
-- [Script overview](script_overview.md) - **`on_draw`** and script types  
+- [Gui functions (reference)](../reference/gui.md): alphabetical **`gui_*`** list  
 - IDE autocomplete: **`engine/stubs/engine_stubs.lua`**

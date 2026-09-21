@@ -39,7 +39,11 @@
     * [Sky texture](manuals/art_sky.md)
   * **Scripting**
     * [Script overview](manuals/script_overview.md)
-    * [In-game UI](manuals/gui.md)
+    * [Where logic lives](manuals/script_placement.md)
+    * [Lifecycle and timesteps](manuals/script_lifecycle.md)
+    * [Parameters](manuals/script_parameters.md)
+    * [Communication](manuals/script_communication.md)
+    * [In-game UI](manuals/script_gui.md)
 
 * **Reference**
   * [Script API](reference/README.md)

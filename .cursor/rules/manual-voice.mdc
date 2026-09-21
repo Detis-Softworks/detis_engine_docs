@@ -8,6 +8,13 @@ alwaysApply: false
 
 Audience: someone new. Write as if explaining to a classmate, not an engine programmer.
 
+## Punctuation
+
+- **Never use the em dash (—).** Not in prose, tables, or list suffixes.
+- Use a **colon** when the second part explains the first (example: **`on_ready`**: runs after init).
+- Use a **hyphen** with spaces when you need a break (example: HUD **-** crosshair and prompts).
+- Normal **`-`** in markdown bullets and in API names is fine. Only the long em dash character is banned.
+
 ## Plain language
 
 - Short sentences. One main idea per paragraph.
@@ -17,7 +24,9 @@ Audience: someone new. Write as if explaining to a classmate, not an engine prog
 
 ## Terminology
 
-- Use names readers will see in Lua and stubs: **`gui_begin_design_canvas`**, **reference resolution**, **design space**, **foreground draw**, **normalized**.
+- **Use Detis / engine names.** Verify against stubs, the editor UI, and **`reference/`**. Do not invent labels or borrow generic gamedev words when the product already has a term.
+- **World, not scene.** A loaded **`.world`** and everything in it is a **world**. Say **world script**, **world load**, **current world**. Do not call it a scene, level, or map unless you are quoting user speech and immediately map it to **world**.
+- Use names readers will see in Lua and stubs: **`gui_begin_design_canvas`**, **reference resolution**, **design space**, **foreground draw**, **normalized**, **`world_*`**, **`entity_*`**.
 - Do not lean on third-party UI library jargon in user-facing pages when an engine term exists.
 - Bold **`api_like_this`** when naming functions or enums the reader will type.
 
