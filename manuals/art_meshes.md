@@ -34,8 +34,6 @@ When **Unique Material** is off:
 
 - The path points at a shared `.mat`. Editing that file in the Material Editor affects every entity that references it.
 
-> **Early Alpha Notice:** Undo and redo do not cover most Entity Inspector fields yet. Save worlds and **Save As** materials when you care about a look.
-
 ## GPU instancing
 
 **GPU Instancing** batches identical meshes for performance. The checkbox is disabled when the mesh or material setup cannot instance (the tooltip on the disabled control explains why). Leave it off until you understand the constraint for that asset.
@@ -58,6 +56,8 @@ Most placed props are `.entity` prefabs that already reference a mesh and materi
 - [Material Editor](art_material_editor.md)
 - [Mesh API](../reference/mesh.md)
 
-## Next
+## Continue reading
 
-**[Materials](art_materials.md).** `.mat` structure and shader types.
+**Previous:** [Textures](art_textures.md): DDS and map naming.
+
+**Next:** [Materials](art_materials.md): `.mat` structure and shader types.

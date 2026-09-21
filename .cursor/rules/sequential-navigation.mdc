@@ -1,0 +1,34 @@
+---
+description: Continue reading footer — Previous and Next on guide pages
+globs: "{manuals,tutorials,getting_started}/**/*.md"
+alwaysApply: false
+---
+
+# Sequential navigation — NON-NEGOTIABLE
+
+Multi-page guides (**`getting_started/`**, **`manuals/`** topic chains, **`tutorials/`** series) are meant to be read **in order**, like chapters.
+
+## At the end of each page
+
+- Add one **`## Continue reading`** section with **Previous** and **Next** on separate lines (one header for both directions).
+- **First** page in a chain: **Next** line only. **Last** page: **Previous** line only (optional closing lines below are fine).
+- One short phrase after each link is optional (what the reader does there).
+
+## Do not
+
+- End pages with a **Related** bullet list of several other guides.
+- Put a **table of every chapter** at the top of the hub page if it replaces reading the current page (hub may list the series once; the first page **Continue reading** block still starts the chain).
+- Link **Kick the ball** or other tutorials from the **Scripting** manual chain unless the user explicitly asks for that path.
+
+## Hub pages
+
+**`getting_started/introduction.md`** and **`manuals/index.md`** may index a section. Still use **Continue reading** with **Next** to the **first** chapter only (match **`_sidebar.md`** order unless the task says otherwise).
+
+## Mid-page links
+
+- **`reference/`**, editor menu names, and one-off deep dives are fine in the body.
+- Avoid mid-page links to **other chapters in the same guide** when the footer **Next** line already covers that path.
+
+## Sidebar
+
+Keep **`_sidebar.md`** order aligned with the **Continue reading** chain for that section.

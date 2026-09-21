@@ -147,7 +147,7 @@ Or use **Debug → Reload Assets** (`Shift+R`). That reloads shaders, textures, 
 
 You should get a hop instead of a flat shove. If the label still says `Push`, check that the Script File points at `kick_ball.lua` and that **interact_label** is `Kick` in the inspector.
 
-> **Early Alpha Notice:** After you edit a `.lua` file on disk, reload it from the editor (Script File **Reload**, or **Debug → Reload Assets** / `Shift+R`). Automatic script change detection is planned.
+> **Note:** After you edit a `.lua` file on disk, reload it from the editor (Script component **Reload**, or **Debug → Reload Assets** / **`Shift+R`**). Automatic script change detection is planned.
 
 ## 11. Optional: expose kick lift as a parameter
 
@@ -192,12 +192,8 @@ If you want every new sphere instance to come in ready to kick:
 
 Otherwise leave these changes on this world instance only. The shipped primitive can stay Static if you prefer.
 
-## Next
+## Continue reading
 
-You have finished the guided path through Kick the ball.
+**Previous:** [Your first prefab](your_first_prefab.md): components and Prefab Save.
 
-For a map of scripting kinds, lifecycle, parameters, and reload, see [Script overview](../manuals/script_overview.md).
-
-For sun, local lights, and exposure, see [Lighting](../manuals/lighting.md). For mix, zones, and music, see [Audio](../manuals/audio.md).
-
-If you want to revisit something, use the sidebar.
+You have finished the guided tutorial path. Continue with [Script overview](../manuals/script_overview.md), [Lighting](../manuals/lighting.md), or [Audio](../manuals/audio.md), or use the sidebar to jump anywhere.

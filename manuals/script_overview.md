@@ -52,10 +52,12 @@ Use stubs for IDE autocomplete. Do not edit them.
 
 ## Hot reload
 
-While the engine is running you can reload a script after editing the **`.lua`** file. Use **`Shift` + `R`** (**Debug -> Reload Assets**)
+While the engine is running you can reload a script after editing the **`.lua`** file on disk.
+
+> **Note:** Reload from the editor (Script component **Reload**, or **Debug → Reload Assets** / **`Shift+R`**). Automatic script change detection is planned.
 
 ---
 
-## Next
+## Continue reading
 
-**[Where logic lives](script_placement.md)**: choose entity, world, module, or shared helper.
+**Next:** [Where logic lives](script_placement.md): choose entity, world, module, or shared helper.

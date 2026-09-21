@@ -44,6 +44,8 @@ The FAQ also mentions **KTX** textures. The Material Editor texture browse filte
 
 Materials and textures do not round-trip through GLB export. Keep `.mat` and `.dds` in `content/` as the source of truth for look.
 
-## Next
+## Continue reading
 
-**[Textures](art_textures.md).** DDS naming, gamma, and Texture Packer.
+**Previous:** [Art overview](art.md): folders, formats, and workflow map.
+
+**Next:** [Textures](art_textures.md): DDS naming, gamma, and Texture Packer.

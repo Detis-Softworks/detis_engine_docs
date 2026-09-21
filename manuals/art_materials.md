@@ -59,6 +59,8 @@ Unique material copies cannot change **Type** after the copy is created. Set typ
 
 Panel-by-panel detail is in [Material Editor](art_material_editor.md).
 
-## Next
+## Continue reading
 
-**[Material Editor](art_material_editor.md).** Sections, type visibility, and recipes.
+**Previous:** [Meshes](art_meshes.md): slots and unique materials.
+
+**Next:** [Material Editor](art_material_editor.md): sections, type visibility, and recipes.

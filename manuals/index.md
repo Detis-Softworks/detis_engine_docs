@@ -10,9 +10,9 @@ Detis is a lightweight engine for 3D single-player PC games on Windows and Linux
 
 Install the engine, learn the project layout, load demo content, and take the first guided tutorials.
 
-### [Editor](../getting_started/editor_overview.md)
+### [Editor](editor.md)
 
-Menus, viewport toolbar, transform rail, Entity Browser, inspectors, and the day-one edit loop.
+Day-one layout: [Editor overview](../getting_started/editor_overview.md). Reference: [Engine Settings](editor_engine_settings.md) (**File → Settings**).
 
 ### [Tutorials](../tutorials/your_first_world.md)
 

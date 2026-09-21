@@ -51,6 +51,8 @@ After replacing the DDS on disk, use **Debug → Reload Assets** (`Shift+R`). Sk
 - [Textures](art_textures.md)
 - [Renderer API](../reference/renderer.md) (`renderer_set_sky_texture_file`, sky IBL)
 
-## Next
+## Continue reading
 
-**[Lighting overview](lighting.md).** Sun, Ambient Lux, IBL tuning, and exposure.
+**Previous:** [Material Editor](art_material_editor.md): edit `.mat` files in the editor.
+
+**Next:** [Lighting overview](lighting.md): sun, Ambient Lux, IBL, and exposure.

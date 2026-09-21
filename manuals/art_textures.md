@@ -64,6 +64,8 @@ Texture Packer is for channel packing, not for baking a sky HDRI. For sky backgr
 | Shimmering at a distance | Missing mipmaps |
 | Wrong roughness/metal | RMA channels swapped, or separate files not packed consistently |
 
-## Next
+## Continue reading
 
-**[Meshes](art_meshes.md).** GLB paths and material slots.
+**Previous:** [Pipeline](art_pipeline.md): zero-import workflow.
+
+**Next:** [Meshes](art_meshes.md): GLB paths and material slots.

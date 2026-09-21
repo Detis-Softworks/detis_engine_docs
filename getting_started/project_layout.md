@@ -1,14 +1,14 @@
 # Project layout
 
-One engine copy is one game. Paths below are easiest to think about relative to `/bin` (where you run `detis_engine`). The runtime always anchors there.
+**Goal:** know which folders are **your game** vs engine internals. One download is one game. You run the program from **`game/bin`**. Everything the engine loads for your title lives under **`game/content/`**.
 
 ## The three roots
 
 ```
 game/
-  bin/        Executable and runtime files (run from here). Do not touvh unless you know why. 
-  content/    Worlds, scripts, assets, game config. This are your game files. 
-  engine/     Engine builtins: shaders, editor data, defaults. Do not touvh unless you know why. 
+  bin/        Executable and runtime files (run from here). Do not touch unless you know why.
+  content/    Worlds, scripts, assets, game config. These are your game files.
+  engine/     Engine builtins: shaders, editor data, defaults. Do not touch unless you know why.
 ```
 
 ## What belongs in `content/`
@@ -19,7 +19,7 @@ Typical project structure:
 
 | Path | Purpose |
 |------|---------|
-| `content/worlds/` | `.world` files (levels / maps) |
+| `content/worlds/` | **World** files ( **`.world`** ). One file is one playable space you load in the editor. |
 | `content/entities/` | Prefabs (`.entity`). Drag these from the Entity Browser |
 | `content/scripts/` | Sample Lua. You can put `.lua` files anywhere under `content/`. |
 | `content/meshes/`, `textures/`, `materials/` | Art you author or drop in |
@@ -77,6 +77,8 @@ Delete a user INI and relaunch to regenerate it from the matching default.
 2. Put your work in `game/content/`.
 3. Keep `bin`, `content`, and `engine` together.
 
-## Next
+## Continue reading
 
-**[Sample content](sample_content.md).** Shipped Lua, demos, and example assets.
+**Previous:** [Quick start](quick_start.md): first Play and save.
+
+**Next:** [Sample content](sample_content.md): shipped demos and example assets.

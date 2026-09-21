@@ -4,8 +4,6 @@
 
 <img src="../images/editor/ed_material_editor.png" alt="Material Editor" style="max-width:600px;height:auto;display:block">
 
-> **Early Alpha Notice:** Material Editor and Entity Inspector edits are not fully covered by undo yet. **Save As** often. Reload the world if you lose track of shared vs unique copies.
-
 ## Toolbar
 
 | Control | Action |
@@ -137,6 +135,8 @@ Workflow for each: **Load** or assign on Mesh → tweak → **Save As** → assi
 - [Exposure & EV100](lighting_exposure.md)
 - [Mesh API](../reference/mesh.md)
 
-## Next
+## Continue reading
 
-**[Sky texture](art_sky.md).** Author and assign the sky DDS.
+**Previous:** [Materials](art_materials.md): shader types and `.mat` files.
+
+**Next:** [Sky texture](art_sky.md): author and assign the sky DDS.

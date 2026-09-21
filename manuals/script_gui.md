@@ -198,3 +198,9 @@ Check **`gui_demo.world`** and press **1-9** to select demo mode.
 
 - [Gui functions (reference)](../reference/gui.md): alphabetical **`gui_*`** list  
 - IDE autocomplete: **`engine/stubs/engine_stubs.lua`**
+
+---
+
+## Continue reading
+
+**Previous:** [Communication](script_communication.md): call other scripts and modules.

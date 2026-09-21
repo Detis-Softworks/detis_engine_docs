@@ -9,6 +9,7 @@ Before adding or changing documentation in **Detis Engine Documentation** (`deti
 
 1. Re-read **`.cursor/rules/code-examples.mdc`** if the change includes fenced code or API names.
 2. Re-read **`.cursor/rules/manual-voice.mdc`** if the change is under **`manuals/`**, **`tutorials/`**, or **`getting_started/`**.
+3. Re-read **`.cursor/rules/sequential-navigation.mdc`** when adding or reordering multi-page guides or **`## Continue reading`** footers.
 
 Do not rely on memory from an earlier chat. If the change type matches a rule file and you have not opened it this turn, do not edit yet.
 

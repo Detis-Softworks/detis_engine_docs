@@ -38,6 +38,6 @@ See [Project layout](../getting_started/project_layout.md). Typical art paths:
 - [Mesh](../reference/mesh.md)
 - [Renderer](../reference/renderer.md) (sky texture path)
 
-## Next
+## Continue reading
 
-**[Pipeline](art_pipeline.md).** End-to-end zero-import workflow.
+**Next:** [Pipeline](art_pipeline.md): end-to-end zero-import workflow.

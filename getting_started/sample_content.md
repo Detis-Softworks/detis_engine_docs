@@ -1,6 +1,6 @@
 # Sample content
 
-The package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one.
+The package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one. You can ignore all of it and replace it with your own work over time.
 
 Shipped content is meant to be used inside Detis only. Use it in games you build with this engine, not as a general asset pack for other tools.
 
@@ -46,13 +46,15 @@ Under `content/scripts/`:
 | Path | Purpose |
 |------|---------|
 | `_templates/` | Starters to copy for world, entity, or module scripts |
-| `worlds/demos/` | World scripts for the demo maps |
+| `worlds/demos/` | World scripts for the demo worlds |
 | `player/` | First-person player, camera, HUD, interaction |
 | `components/` | Reusable entity scripts (doors, lamps, interactables, agents) |
 | `modules/` | Game-wide modules listed in `content/config/modules.ini` |
 | `shared/` | Helpers and UI widgets |
 | `camera_effects/` | Post / camera effect scripts used by the camera-effects module |
 
-## Next
+## Continue reading
 
-**[Editor overview](editor_overview.md).** Menus, toolbars, and panels.
+**Previous:** [Project layout](project_layout.md): `bin`, `content`, and `engine`.
+
+**Next:** [Editor overview](editor_overview.md): menus, toolbars, and panels.

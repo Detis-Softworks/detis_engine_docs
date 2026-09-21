@@ -98,6 +98,8 @@ You now have two spheres from one prefab file. Edits to an unlocked instance sta
 
 Toggle back to the editor with `Ctrl+P` / `Alt+P` when you are done.
 
-## Next
+## Continue reading
 
-**[Kick the ball](kick_the_ball.md).** Make it Dynamic, attach an entity script, Interact, then edit and reload Lua.
+**Previous:** [Your first world](your_first_world.md): save a small `.world`.
+
+**Next:** [Kick the ball](kick_the_ball.md): script, interact, and reload Lua.

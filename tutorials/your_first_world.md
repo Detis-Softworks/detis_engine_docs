@@ -56,8 +56,6 @@ Add a point light.
 
    Use the translate gizmo (**W**) if you prefer to drag it into place. Lights are not pickable in the viewport yet, so select `light` in the World Inspector first.
 
-> **Early Alpha Notice:** You cannot pick invisible entities in the viewport yet (lights, empty parents, and similar). Select them in the **World Inspector** first, then use the gizmo, or edit **Transform** in the Entity Inspector directly.
-
 ## 6. Add a cube
 
 1. Search `cube` in the Entity Browser.
@@ -123,8 +121,10 @@ default_world = ../content/worlds/your_first_world.world
 
 Use the path you actually saved (include `tutorials/` if you put it there). Restart the executable. The editor should open with this world loaded.
 
-## Next
+## Continue reading
 
-**[Your first prefab](your_first_prefab.md).** Build a sphere from components, save it, and load it again.
+**Previous:** [Editor overview](../getting_started/editor_overview.md): toolbars and day-one loop.
+
+**Next:** [Your first prefab](your_first_prefab.md): build a sphere prefab from components.
 
 Sun, **Ambient Lux**, and local lights are covered in [Lighting](../manuals/lighting.md). Mix and music are in [Audio](../manuals/audio.md).

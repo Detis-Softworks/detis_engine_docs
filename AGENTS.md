@@ -8,6 +8,7 @@ This repository is the **user-facing manual site**, not the engine source tree.
 2. **`.cursor/rules/read-rules-first.mdc`**
 3. **`.cursor/rules/code-examples.mdc`** when examples or API names change
 4. **`.cursor/rules/manual-voice.mdc`** for **`manuals/`**, **`tutorials/`**, **`getting_started/`**
+5. **`.cursor/rules/sequential-navigation.mdc`** for **`## Continue reading`** footers and multi-page guide order
 
 ## Where truth lives
 
@@ -25,3 +26,7 @@ Do not use the em dash (—) in this repo’s Markdown. Use a colon or a spaced 
 ## Terminology
 
 Stick to engine and editor wording (**world**, **entity**, **module**, **`gui_*`**, etc.). A loaded level is a **world**, not a “scene”. Do not invent alternate names. See **`.cursor/rules/manual-voice.mdc`**.
+
+## Release labels
+
+Do not mention release phase or version names in user docs (no alpha, beta, RC, version numbers). Describe behavior as it is today. Use **`> **Note:**`** for short limitations (see existing script reload and viewport picking notes), not **Early Alpha Notice** blocks.

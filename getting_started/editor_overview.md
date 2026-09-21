@@ -1,8 +1,8 @@
 # Editor overview
 
-After [Quick start](quick_start.md) you already know Load World, Play, save, and undo.
+**Goal:** a map of the editor after you have run [Quick start](quick_start.md) (load world, Play, save, undo). Daily work lives on the two toolbars around the viewport. You do not need the main menu for most tasks.
 
-Daily work lives on the two toolbars around the viewport. You do not need the main menu to open inspectors, asset editors, or viewport tools.
+If Play mode or the viewport feels **slow or stuttery**, open **File → Settings** and see [Engine Settings](../manuals/editor_engine_settings.md) (graphics quality, **Render Scale**, shadows, VSync).
 
 ## What you are looking at
 
@@ -27,10 +27,8 @@ Hover a toolbar button for its name and shortcut. **Help → Shortcuts** is the 
 | Undo / redo | **Edit → Undo** (`Ctrl+Z`) / **Edit → Redo** (`Ctrl+Y` or `Ctrl+Shift+Z`) |
 | Play / back to editor | Green **Play** on the viewport toolbar. `Ctrl+P` / `Alt+P` toggles both ways |
 | Place a prefab | Entity Browser button on the viewport toolbar (`Shift+Space`), drag an `.entity` into the viewport |
-| Settings / theme | **File → Settings**. See [Engine Settings](engine_settings.md) |
+| Settings / theme | **File → Settings**. Details: [Engine Settings](../manuals/editor_engine_settings.md) |
 | See all shortcuts | **Help → Shortcuts** |
-
-> **Early Alpha Notice:** Undo and redo cover viewport transforms, spawn, hierarchy, and similar commands. They do not cover every inspector field yet.
 
 ## Viewport toolbar
 
@@ -113,13 +111,13 @@ Same actions live under **View → Viewport Camera**.
 | **Escape** | Deselect |
 | **Ctrl+A** | Select all |
 
-Lights and other invisible entities are not pickable in the viewport yet. Select them in the World Inspector, then use the gizmo or **Transform** in the Entity Inspector.
+> **Note:** You cannot pick invisible entities in the viewport yet (lights, empty parents, and similar). Select them in the **World Inspector** first, then use the gizmo, or edit **Transform** in the Entity Inspector directly.
 
 ## File
 
 - **New World**, **Load World**, **Save World**, **Save World As...**
 - **Export → World (GLB)** / **Selected Entities (GLB)**
-- **Settings** — [Engine Settings](engine_settings.md). Appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer.
+- **Settings**: appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer. See [Engine Settings](../manuals/editor_engine_settings.md).
 - **Quit** (`Alt+F4`)
 
 ## Edit
@@ -139,8 +137,8 @@ Same panels and editors are on the viewport toolbar. You do not need this menu f
 | **World Inspector** | `Shift+1` | Entity tree. **Add New Entity**, search, **Show Decorations**. Right-click: **Rename Entity**, **Group Selected Entities**, **Add Child Entity**, **Copy Entity Path**, **Move Up** / **Move Down** (`Shift+Up` / `Shift+Down`). |
 | **Entity Inspector** | `Shift+2` | Components on the selection |
 | **World Settings** | `Shift+3` | Sun, sky (**Ambient Lux**, IBL), exposure, soundscape, **Default Sound Zone**, world script |
-| **Material Editor** | `Shift+4` | Materials — see [Art — Material Editor](../manuals/art_material_editor.md) |
-| **Texture Packer** | `Shift+5` | Texture packing — see [Art — Textures](../manuals/art_textures.md) |
+| **Material Editor** | `Shift+4` | Edit **`.mat`** material files |
+| **Texture Packer** | `Shift+5` | Pack texture channels for materials |
 | **Viewport Tool** | | **None**, **Vertex Paint**, **Decorator**, **Terrain Patch**, **Agent Navigation**. Exclusive. |
 | **Module Manager** | `Shift+0` | Lua modules from `modules.ini` |
 | **Entity Browser** | `Shift+Space` | Prefab library. Drag into the viewport or onto the World Inspector |
@@ -187,6 +185,8 @@ Use **Add New Entity** when you are authoring a new prefab from components. That
 | **About** | Version |
 | **Credits** | Credits |
 
-## Next
+## Continue reading
 
-**[Your first world](../tutorials/your_first_world.md).** Build a small level from scratch.
+**Previous:** [Sample content](sample_content.md): demo worlds and prefabs.
+
+**Next:** [Your first world](../tutorials/your_first_world.md): build a small world (tutorial).

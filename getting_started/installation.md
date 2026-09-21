@@ -2,7 +2,7 @@
 
 Detis Engine does not use a launcher or a multi-project workspace. **One engine copy is one game.**
 
-Download and extract the engine package. That data is your project: binary, required engine data, and your content together.
+Download and extract the engine package. That data is your project!
 
 ## Editor and game
 
@@ -28,6 +28,8 @@ Do not put several unrelated games inside one copy unless you intend to.
 
 Desktop PC: **Windows** and **Linux** (64-bit). Use the build that matches your OS.
 
-## Next
+## Continue reading
 
-**[Quick start](quick_start.md).** Load a demo, play, then edit something.
+**Previous:** [FAQ](faq.md): scope and common questions.
+
+**Next:** [Quick start](quick_start.md): load a demo, play, then edit something.

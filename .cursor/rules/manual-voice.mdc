@@ -46,6 +46,12 @@ Audience: someone new. Write as if explaining to a classmate, not an engine prog
 
 - Manuals teach **how to think and what to call first**. Exhaustive function lists live in **`reference/`** or engine repo **`docs/game/`**.
 - Link out instead of duplicating huge API tables on beginner pages.
+- Multi-page guides use one **`## Continue reading`** footer with **Previous** and **Next** lines (see **`.cursor/rules/sequential-navigation.mdc`**). No **Related** link dumps.
+
+## Release labels and notes
+
+- Do not label docs with release phase or version (alpha, beta, RC, build numbers).
+- Use **`> **Note:**`** for brief limitation callouts. Do not use **Early Alpha Notice** or similar version-tied banners.
 
 ## Respect existing pages
 

@@ -91,6 +91,8 @@ end
 
 ---
 
-## Next
+## Continue reading
 
-**[In-game UI](script_gui.md)**: HUD and menus in **`on_draw`**.
+**Previous:** [Parameters](script_parameters.md): **`--@PARAMETER`** in the inspector.
+
+**Next:** [In-game UI](script_gui.md): HUD and menus in **`on_draw`**.

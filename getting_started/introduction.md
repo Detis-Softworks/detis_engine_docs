@@ -6,17 +6,18 @@ There are no heavy import pipelines, no endless menu mazes, and no C++ build plu
 
 <img src="../images/editor/ed_overview_b.png" alt="Editor overview" style="max-width:600px;height:auto;display:block">
 
-> **Early Alpha Notice:** Expect API refinements, and additional features as development advances.
-
 ### Getting started
+
+**System requirement:** 64-bit PC (Windows or Linux) with a dedicated discrete GPU.
+
+**New here?** Work through the pages below **in order**. Each page ends with **Continue reading** (**Previous** / **Next**) so you always know where to go.
 
 1. [FAQ](faq.md)
 2. [Installation](installation.md)
 3. [Quick start](quick_start.md)
-4. [Engine Settings](engine_settings.md)
-5. [Project layout](project_layout.md)
-6. [Sample content](sample_content.md)
-7. [Editor overview](editor_overview.md)
+4. [Project layout](project_layout.md)
+5. [Sample content](sample_content.md)
+6. [Editor overview](editor_overview.md)
 
 ### Manuals
 
@@ -25,14 +26,12 @@ There are no heavy import pipelines, no endless menu mazes, and no C++ build plu
 3. [Art](../manuals/art.md). Meshes, textures, materials, Material Editor, sky DDS.
 4. [Script overview](../manuals/script_overview.md). Lua script types, lifecycle, modules, and UI concepts.
 
-> **System requirement:** 64-bit PC (Windows or Linux) with a dedicated discrete GPU.
-
 ### Tutorials
 
 1. [Your first world](../tutorials/your_first_world.md)
 2. [Your first prefab](../tutorials/your_first_prefab.md)
 3. [Kick the ball](../tutorials/kick_the_ball.md)
 
-## Next
+## Continue reading
 
-**[Installation](installation.md).** Download and get up and running.
+**Next:** [FAQ](faq.md): what Detis is (and is not) before you install.

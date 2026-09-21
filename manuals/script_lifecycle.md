@@ -82,6 +82,8 @@ Use **`entity_id`** only in entity scripts. World and module scripts use their o
 
 ---
 
-## Next
+## Continue reading
 
-**[Parameters](script_parameters.md)**: designer fields in the inspector (**`--@PARAMETER`**).
+**Previous:** [Where logic lives](script_placement.md): entity, world, module, or helper.
+
+**Next:** [Parameters](script_parameters.md): designer fields in the inspector (**`--@PARAMETER`**).

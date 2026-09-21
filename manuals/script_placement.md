@@ -51,6 +51,8 @@ You can organize your project however you like. Shipped samples use paths such a
 
 ---
 
-## Next
+## Continue reading
 
-**[Lifecycle and timesteps](script_lifecycle.md)**: which engine callbacks run when.
+**Previous:** [Script overview](script_overview.md): script types and file shape.
+
+**Next:** [Lifecycle and timesteps](script_lifecycle.md): which engine callbacks run when.

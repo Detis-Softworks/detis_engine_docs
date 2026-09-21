@@ -58,6 +58,8 @@ Other scripts can read parameters on an entity with **`script_get_parameter`**.
 
 ---
 
-## Next
+## Continue reading
 
-**[Communication](script_communication.md)**: call other scripts and modules.
+**Previous:** [Lifecycle and timesteps](script_lifecycle.md): **`on_ready`**, **`on_process`**, and the rest.
+
+**Next:** [Communication](script_communication.md): call other scripts and modules.
