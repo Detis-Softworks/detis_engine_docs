@@ -1,6 +1,6 @@
 # Project layout
 
-**Goal:** know which folders are **your game** vs engine internals. One download is one game. You run the program from **`game/bin`**. Everything the engine loads for your title lives under **`game/content/`**.
+A reminder that one engine download is one game. You run the program from **`game/bin`**. Everything the engine loads for your title is expected to live under **`game/content/`**.
 
 ## The three roots
 
@@ -26,37 +26,11 @@ Typical project structure:
 | `content/sounds/`, `music/` | Audio files |
 | `content/config/` | Game bootstrap, modules, input, surface types |
 
-### Config you will touch early
-
-Files under `content/config/` and `engine/config/` are **defaults**. They ship with the package so a new download boots correctly.
-
-| File | Role |
-|------|------|
-| `content/config/default_game.ini` | Title, default world, editor vs game on startup, `dev_mode`. Also seeds live game settings. |
-| `content/config/modules.ini` | Which Lua modules load |
-| `content/config/game_input_bindings.ini` | Gameplay input bindings |
-| `content/config/surface_types.ini` | Contact type names for materials |
-| `engine/config/default_engine_settings.ini` | Seed for display / renderer / audio prefs |
-| `engine/config/default_editor.ini` | Seed for editor prefs |
-| `engine/config/editor_input_bindings.ini` | Editor shortcuts |
-
-On first run, Detis copies the engine, editor, and game-settings defaults into a user folder, then reads and writes those copies. See [User data](#user-data-outside-the-package).
-
-Startup keys such as `default_world` and `editor_active_on_startup` stay on the **shipped** `default_game.ini`. Changing the user copy will not change which world boots or whether the editor opens.
-
-Edit the shipped defaults when you want every fresh profile of **this** game copy to start with different values.
-
 ## What belongs in `engine/`
 
 Shaders, fonts, editor bindings, default engine settings seed, and other builtins the executable expects.
 
 Treat this as part of the engine package. Unless you know what you are doing leave this directory alone. Put game-specific work under `content/`.
-
-## Scripts
-
-Put gameplay `.lua` files anywhere under `content/`. For a typical setup use `content/scripts/`.
-
-IDE stubs for code completion live under `engine/stubs/engine_stubs.lua` and `content/stubs/game_stubs.lua`. Do not edit those. They are automatically generated. 
 
 ## User specific data
 

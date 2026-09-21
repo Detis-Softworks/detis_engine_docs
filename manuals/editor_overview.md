@@ -1,8 +1,8 @@
 # Editor overview
 
-**Goal:** a map of the editor after you have run [Quick start](quick_start.md) (load world, Play, save, undo). Daily work lives on the two toolbars around the viewport. You do not need the main menu for most tasks.
+Daily work lives on the two toolbars around the viewport. You do not need the main menu for most tasks.
 
-If Play mode or the viewport feels **slow or stuttery**, open **File → Settings** and see [Engine Settings](../manuals/editor_engine_settings.md) (graphics quality, **Render Scale**, shadows, VSync).
+If Play mode or the viewport feels **slow or stuttery**, open **File → Settings** and see [Engine Settings](editor_engine_settings.md) (graphics quality, **Render Scale**, shadows, VSync).
 
 ## What you are looking at
 
@@ -11,7 +11,7 @@ If Play mode or the viewport feels **slow or stuttery**, open **File → Setting
 1. **Viewport toolbar** (above the 3D view): inspectors, Entity Browser, viewport tools, Material Editor, Texture Packer, Log, **Play**, reload, collision debug, mute, and **Spectator Speed**.
 2. **Transform rail** (left of the 3D view): gizmo mode, snap, local space, translucent selection, flat light.
 3. **Viewport:** fly the camera, select entities, drag gizmos, drop prefabs from the Entity Browser.
-4. **Docked panels:** World Inspector, Entity Inspector, World Settings, Entity Browser, and the rest. Open them from the viewport toolbar. Shortcuts still work.
+4. **Docked panels:** World Inspector, Entity Inspector, World Settings, Entity Browser, and the rest. Open them from the viewport toolbar. 
 5. **Menu bar:** **File**, **Edit**, **View**, **Debug**, **Help**. Use it for new / load / save, Settings, and a few extras that are not on the toolbar (Module Manager, Debug View, Performance Metrics).
 
 Hover a toolbar button for its name and shortcut. **Help → Shortcuts** is the full cheat sheet. Bindings live in `engine/config/editor_input_bindings.ini`.
@@ -27,7 +27,7 @@ Hover a toolbar button for its name and shortcut. **Help → Shortcuts** is the 
 | Undo / redo | **Edit → Undo** (`Ctrl+Z`) / **Edit → Redo** (`Ctrl+Y` or `Ctrl+Shift+Z`) |
 | Play / back to editor | Green **Play** on the viewport toolbar. `Ctrl+P` / `Alt+P` toggles both ways |
 | Place a prefab | Entity Browser button on the viewport toolbar (`Shift+Space`), drag an `.entity` into the viewport |
-| Settings / theme | **File → Settings**. Details: [Engine Settings](../manuals/editor_engine_settings.md) |
+| Settings / theme | **File → Settings**. Details: [Engine Settings](editor_engine_settings.md) |
 | See all shortcuts | **Help → Shortcuts** |
 
 ## Viewport toolbar
@@ -79,7 +79,7 @@ Orthographic view is **not** on this rail. Use Keypad **5** or **View → Viewpo
 
 ## Camera
 
-In the viewport (perspective by default):
+Spectator fly modes, orthographic pan/zoom, and when **LMB** vs **RMB** apply: [Viewport navigation](editor_viewport_navigation.md). Quick reference (perspective by default):
 
 | Input | Action |
 |-------|--------|
@@ -117,7 +117,7 @@ Same actions live under **View → Viewport Camera**.
 
 - **New World**, **Load World**, **Save World**, **Save World As...**
 - **Export → World (GLB)** / **Selected Entities (GLB)**
-- **Settings**: appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer. See [Engine Settings](../manuals/editor_engine_settings.md).
+- **Settings**: appearance (**Theme**, **UI Scale (%)**), display, renderer (**Shadow Quality**), local lights (**Local Light Shadows**), audio mixer. See [Engine Settings](editor_engine_settings.md).
 - **Quit** (`Alt+F4`)
 
 ## Edit
@@ -187,6 +187,6 @@ Use **Add New Entity** when you are authoring a new prefab from components. That
 
 ## Continue reading
 
-**Previous:** [Sample content](sample_content.md): demo worlds and prefabs.
+**Previous:** [Sample content](../getting_started/sample_content.md): demo worlds and prefabs.
 
 **Next:** [Your first world](../tutorials/your_first_world.md): build a small world (tutorial).

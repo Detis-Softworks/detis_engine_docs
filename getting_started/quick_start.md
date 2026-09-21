@@ -33,21 +33,11 @@ Press `Ctrl+P` / `Alt+P` again to check the change in game mode.
 
 ## 3. Optional: open that demo on startup
 
-The world loaded at launch is set in `game/content/config/default_game.ini`:
+1. **File → Project Settings**.
+2. Set **Entry World** to `worlds/demo_content/visuals_exterior_demo.world` (or any `.world` you prefer).
+3. Restart the executable. The entry world does not reload until the next launch.
 
-```ini
-[Core]
-default_world = ../content/worlds/default.world
-```
-
-Point it at the exterior visuals demo (or any world you prefer):
-
-```ini
-[Core]
-default_world = ../content/worlds/demo_content/visuals_exterior_demo.world
-```
-
-Restart the executable after you save the file.
+> **Note:** The same value is stored in `content/config/default_game.ini` under `[Core]` as `default_world`. You can edit that file directly instead if you prefer.
 
 ## Continue reading
 

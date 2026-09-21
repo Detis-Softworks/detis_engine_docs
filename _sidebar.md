@@ -7,7 +7,6 @@
   * [Quick start](getting_started/quick_start.md)
   * [Project layout](getting_started/project_layout.md)
   * [Sample content](getting_started/sample_content.md)
-  * [Editor overview](getting_started/editor_overview.md)
 
 * **Tutorials**
   * [Your first world](tutorials/your_first_world.md)
@@ -17,7 +16,9 @@
 * **Manual**
   * [Manual](manuals/index.md)
   * **Editor**
-    * [Editor overview](manuals/editor.md)
+    * [Editor](manuals/editor.md)
+    * [Editor overview](manuals/editor_overview.md)
+    * [Viewport navigation](manuals/editor_viewport_navigation.md)
     * [Engine Settings](manuals/editor_engine_settings.md)
   * **Lighting**
     * [Lighting overview](manuals/lighting.md)

@@ -12,7 +12,7 @@ Install the engine, learn the project layout, load demo content, and take the fi
 
 ### [Editor](editor.md)
 
-Day-one layout: [Editor overview](../getting_started/editor_overview.md). Reference: [Engine Settings](editor_engine_settings.md) (**File → Settings**).
+Day-one layout: [Editor overview](editor_overview.md). Viewport fly and focus: [Viewport navigation](editor_viewport_navigation.md). Reference: [Engine Settings](editor_engine_settings.md) (**File → Settings**).
 
 ### [Tutorials](../tutorials/your_first_world.md)
 

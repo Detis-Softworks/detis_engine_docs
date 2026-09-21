@@ -1,6 +1,6 @@
 # Sample content
 
-The package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one. You can ignore all of it and replace it with your own work over time.
+A demo package ships with **working demo worlds**, **prefabs**, **sample Lua**, and **example assets** so you can play something on day one. You can ignore all of it and replace it with your own work over time.
 
 Shipped content is meant to be used inside Detis only. Use it in games you build with this engine, not as a general asset pack for other tools.
 
@@ -35,9 +35,7 @@ Under `content/worlds/demo_content/`:
 
 | Path | Use |
 |------|-----|
-| `entities/primitive/` | Plane, cube, cylinder, pyramid |
-| `entities/lights/` | Point and spot lights |
-| `entities/demo_content/` | Characters, props, foliage, cave pieces, particles, systems |
+| `entities/demo_content/` | Characters, props, foliage, etc |
 
 ## Sample Lua
 
@@ -57,4 +55,4 @@ Under `content/scripts/`:
 
 **Previous:** [Project layout](project_layout.md): `bin`, `content`, and `engine`.
 
-**Next:** [Editor overview](editor_overview.md): menus, toolbars, and panels.
+**Next:** [Your first world](../tutorials/your_first_world.md): build a small world (tutorial).

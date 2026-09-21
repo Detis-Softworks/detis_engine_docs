@@ -24,10 +24,6 @@ Want a second game? Copy a **fresh** engine package and work in that `game` fold
 
 Do not put several unrelated games inside one copy unless you intend to. 
 
-## Platforms
-
-Desktop PC: **Windows** and **Linux** (64-bit). Use the build that matches your OS.
-
 ## Continue reading
 
 **Previous:** [FAQ](faq.md): scope and common questions.
