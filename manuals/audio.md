@@ -1,13 +1,6 @@
 # Audio
 
-Play sounds from entities, layer ambient soundscapes, shape them with Sound Zones, and stream music.
-
-## In this section
-
-- [Sound component](audio_sound_component.md): playback on an entity.
-- [Soundscape](audio_soundscape.md): loops and scattered one-shots.
-- [Sound zone](audio_sound_zone.md): listener-based gain, low-pass, and reverb send.
-- [Music](audio_music.md): one global music stream.
+Detis audio is built into the engine and supports all the essential concepts such as spatial SFX on entities, ambient soundscapes, listener-based **Sound Zones**, category mixing, and streamed music while remaining simple to use. You do not need to install any complex middleware stack on the side. 
 
 ## Categories (Busses)
 
@@ -21,8 +14,6 @@ Every in-game sound (except music which uses its own buss) uses one category. Yo
 | **Voice** | **Voice Volume** | Dialogue. |
 
 Think of a category as **which group owns this sound**. Assign footsteps to **Game** and they ride **SFX Volume** with every other Game sound. Turn that slider down and the whole group goes down together. You control those category levels in **File -> Settings**. Inside Sound Zones, the category also picks which **reverb send** row applies (Game vs Ambient vs Voice).
-
-<img src="../images/editor/ed_engine_settings_sound_mixer.png" alt="Engine Settings mixer" style="max-width:600px;height:auto;display:block">
 
 ## Pause behavior
 
