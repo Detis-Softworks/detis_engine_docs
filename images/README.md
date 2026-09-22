@@ -9,8 +9,8 @@ images/
   engine/     tools / other
 ```
 
-From a Getting started page:
+From Markdown (Docsify on GitHub Pages). Use site-root paths, not `../`:
 
 ```md
-![Editor overview](../images/editor/overview.png)
+![Editor overview](images/editor/overview.png)
 ```

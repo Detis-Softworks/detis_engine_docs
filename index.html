@@ -42,7 +42,14 @@
         placeholder: 'Search docs',
         noData: 'No results',
         depth: 3
-      }
+      },
+      plugins: [
+        function (hook) {
+          hook.beforeEach(function (content) {
+            return content.replace(/\.\.\/images\//g, base_path + 'images/');
+          });
+        }
+      ]
       };
     })();
   </script>
