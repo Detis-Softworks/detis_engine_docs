@@ -1,20 +1,16 @@
 # Soundscape
 
-Ambient beds: looping layers plus occasional one-shots. Routed through the **Ambient** category.
+Think of a soundscape as background air for the world (wind, hum, distant traffic, rain, birds etc). You usually set a default in World Settings, then override it in special areas with Soundscape Zone entities.
 
 World Settings holds the default bed and the Default Sound Zone:
 
-<img src="../images/editor/ed_world_sound.png" alt="World sound" style="max-width:600px;height:auto;display:block">
-
-## When to use
-
-Wind, rooms, streets, and other environment beds. Use Soundscape Zones when ambience should change by area.
+<img src="../images/editor/ed_world_sound.png" alt="World sound" style="max-width:400px;height:auto;display:block">
 
 ## Setup
 
 1. Set a **World Soundscape** in World Settings for the default bed.
-2. Add Soundscape Zone entities where a different profile should win.
-3. Add loop and one-shot layers on that profile.
+2. Add Soundscape Zone entities where a different profile should win and set priorities.
+3. Add loop and one-shot layers on each profile.
 
 ## Loop layers
 
@@ -38,7 +34,7 @@ Loop pitch is an editor / JSON field. Lua profile tables do not round-trip it.
 | **Spatial Scatter** | Place the shot in 3D around the listener. |
 | **Scatter Radius** | How far shots can spawn. |
 | **Inner Radius** / **Outer Radius** | Attenuation when spatial. |
-| **Affected By Zones** | Let Sound Zones process one-shots. Default on. |
+| **Affected By Zones** | Let Sound Zones process this one-shot layer. Default on. |
 
 ## Soundscape zones
 
@@ -58,17 +54,15 @@ World soundscape fade duration has no Lua setter. Entity Soundscape Zones use `s
 
 ## Sound Zones
 
-Soundscapes use the Ambient category. With **Affected By Zones** on, they take the listener entity zone (or the world Default Sound Zone). They are not excluded from entity zones.
+Soundscapes use the Ambient category. With **Affected By Zones** on, they take the listener entity zone.
 
-## Notes
+## Script API reference
 
-- Soundscapes pause with Game / Ambient / Voice.
-- One-shots add variation. Keep intervals wide enough that they do not become a bed of their own.
+- [Soundscape zone](../reference/soundscape_zone.md)
+- [World soundscape](../reference/world_soundscape.md)
 
-## See also
+## Continue reading
 
-- [Audio overview](audio.md)
-- [Sound zone guide](audio_sound_zone.md)
-- [Music guide](audio_music.md)
-- [Soundscape zone API](../reference/soundscape_zone.md)
-- [World soundscape API](../reference/world_soundscape.md)
+**Previous:** [Sound component](audio_sound_component.md): one-shot SFX on entities.
+
+**Next:** [Sound zone](audio_sound_zone.md): muffling and reverb while the listener is inside a box.

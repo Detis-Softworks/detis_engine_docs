@@ -1,8 +1,10 @@
 # Sound component
 
-Play sounds from an entity. Use this for actions, effects, and anything tied to an object's position.
+The Sound component plays audio from an entity. Most of the time you use it for **spatial** in-game sounds: footsteps, doors, machines, and other effects that should get louder or quieter as the player moves. Turn **Spatial** on and the engine uses the **Transform** component for 3D position and distance falloff.
 
-<img src="../images/editor/ed_sound_component.png" alt="Sound component" style="max-width:600px;height:auto;display:block">
+You can also leave **Spatial** off and play a **stereo** (2D) clip with **Pan** for left/right balance. That path is less common for world props.
+
+<img src="../images/editor/ed_sound_component.png" alt="Sound component" style="max-width:400px;height:auto;display:block">
 
 ## Basic setup
 
@@ -16,29 +18,27 @@ Play sounds from an entity. Use this for actions, effects, and anything tied to 
 
 | Widget | Purpose |
 |--------|---------|
-| **Files** | Audio files on this component (`.wav`, `.ogg`). |
+| **Files** | Audio files on this component (`.wav` preferred`). |
 | **Play Mode** | How to pick a file when more than one is assigned. **Random**, **Forward**, or **Backward**. Default is Random. Disabled until two files are assigned. |
 | **Category** | Game, GUI, Ambient, or Voice. |
 | **Play On Start** | Play when the entity activates. |
 | **Looping** | Repeat until stopped. |
-| **Gain** | Linear loudness, 0 to 1. Not dB. |
+| **Gain** | Linear loudness, 0 to 1. |
 | **Pitch** | Playback rate (0.5 is half speed, 2.0 is double). |
-
-Lua: `sound_play(entity_id)` or `sound_play(entity_id, fade_seconds)`. Fade is optional and defaults to 0.
 
 ## Spatial audio
 
 | Widget | Purpose |
 |--------|---------|
-| **Spatial** | 3D positioning from the entity transform. Needs a Transform. |
+| **Spatial** | 3D positioning from the entity transform. Needs a Transform component. |
 | **Attenuation Inner** | Radius where volume stays full. |
 | **Attenuation Outer** | Distance where the sound fades out. |
-| **Full Spatialization At** | Distance where panning reaches full 3D. |
+| **Full Spatialization At** | Distance where panning reaches full 3D. This is to prevent hard panning when close to the source. |
 | **Pan** | Left/right when **Spatial** is off. Disabled when Spatial is on. |
 
 ## Air absorption
 
-High-frequency loss over distance. Only applies when **Spatial** is on.
+Frequency content loss over distance. Only applies when **Spatial** is on.
 
 | Widget | Purpose |
 |--------|---------|
@@ -63,11 +63,14 @@ High-frequency loss over distance. Only applies when **Spatial** is on.
 |--------|---------|
 | **Affected By Zones** | Let the active listener Sound Zone change dry LPF, gain, and reverb send. Default on. |
 
-GUI category cannot opt in. The checkbox is disabled. With the gate off, the source stays dry identity (no zone gain, no send). It does **not** fall back to the world Default Sound Zone.
+GUI category cannot opt in.
 
-## See also
+## Script API reference
 
-- [Sound zone guide](audio_sound_zone.md)
-- [Soundscape guide](audio_soundscape.md)
-- [Music guide](audio_music.md)
-- [Sound API reference](../reference/sound.md)
+- [Sound](../reference/sound.md)
+
+## Continue reading
+
+**Previous:** [Audio overview](audio.md): categories, pause, and signal flow.
+
+**Next:** [Soundscape](audio_soundscape.md): ambient loops and random one-shots.

@@ -1,15 +1,27 @@
 # Sound zone
 
-A box that changes how opted-in sounds are heard while the **listener** is inside it. Use zones for indoor reverb, muffling, or outdoor-to-indoor contrast.
+A sound zone defines how opted-in sounds are heard while the **listener** is inside it. Mostly used for indoor reverb and muffling.
 
-<img src="../images/editor/ed_sound_zone.png" alt="Sound Zone" style="max-width:600px;height:auto;display:block">
+The listener position follows the active camera. 
+
+Each zone has two profiles: 
+
+- **Internal** is the room you are standing in. Sounds that belong inside the box with you, use **Internal Settings**. 
+
+- **External** is how you hear the **outside** when you are inside the zone. A spatial source still playing outside the box uses **External Settings** so it can sound muffled or distant through the walls. 
+
+The **Reverb** block on the component is the shared room (one tail for the whole zone). 
+
+When the listener is outside every entity zone, the world **Default Sound Zone** in World Settings applies instead.
+
+<img src="../images/editor/ed_sound_zone.png" alt="Sound Zone" style="max-width:400px;height:auto;display:block">
 
 ## Setup
 
 1. Create an entity with a Sound Zone component. The transform scale is the box.
-2. Set **Internal Settings** (listener and source both inside, or any non-spatial source).
-3. Set **External Settings** for spatial sources that sit outside the box while the listener is inside.
-4. Optionally tune **Default Sound Zone** in World Settings for when no entity zone applies.
+2. Set **Reverb** (shared room character).
+3. Set **Internal Settings** for sources inside the box with the listener (and non-spatial beds).
+4. Set **External Settings** for spatial sources outside the box while the listener is inside.
 
 ## Zone volume
 
@@ -26,7 +38,7 @@ Routing only runs when **Affected By Zones** is on (Sound component or soundscap
 
 | Case | Result |
 |------|--------|
-| Gate off | Dry identity. No zone gain, no reverb send. Not the world default. |
+| **Affected By Zones** off | Dry sound. No zone gain, no reverb send. Not the world default. |
 | No entity zone | World **Default Sound Zone**. |
 | Listener inside an entity zone, non-spatial / soundscape | **Internal**. |
 | Listener inside, spatial source inside the box | **Internal**. |
@@ -34,72 +46,57 @@ Routing only runs when **Affected By Zones** is on (Sound component or soundscap
 
 World Default Sound Zone has no External profile.
 
-## Emitter processing
+## Reverb (shared room)
 
-Each profile has these emitter controls. Values are linear, not dB.
-
-| Widget | Purpose | Range |
-|--------|---------|-------|
-| **Gain** | Multiplier on the source. | 0 to 4 |
-| **Low Pass Cutoff** | Dry low-pass. | 20 to 20000 Hz |
-
-Underwater-style muffling is a low **Low Pass Cutoff** plus **Gain** below 1 (for example 0.5), not a dB field.
-
-## Reverb
-
-One shared Freeverb on the mix. **Character** (room size, damping, width, predelay, feed filters) follows the listener **Internal** profile, or the world Default Sound Zone.
-
-Per-source **send** is `reverb_level × category_send`.
+One wet bus per zone while the listener is inside. Tune it in the top **Reverb** group on the component (same layout on the world Default Sound Zone).
 
 | Widget | Purpose |
 |--------|---------|
-| **Level** | How much this source sends into the shared verb (0 to 1). |
-| **Room Size** | Verb space. Drives the wet bus only on Internal / world. |
-| **Damping** | How quickly highs die in the tail. Internal / world character. |
-| **Width** | Stereo spread of the verb. Internal / world character. |
-| **Predelay** | Delay before the tail, in ms. Internal / world character. |
-| **Low Pass Feed** / **High Pass Feed** | Filters on the verb input. Internal / world character. |
-| **Game** / **Ambient** / **Voice** send | Category send multipliers. |
+| **Room Size** | Reverb space. |
+| **Damping** | How quickly highs die in the tail. |
+| **Width** | Stereo spread. |
+| **Predelay** | Delay before the tail (ms). |
+| **Low Pass Feed** / **High Pass Feed** | Filters on the reverb input. |
 
-External **Room Size**, **Damping**, **Width**, **Predelay**, and feed filters still appear in the inspector. They do **not** drive the shared wet bus. External still uses **Gain**, **Low Pass Cutoff**, **Level**, and the category sends.
+## Internal Settings
 
-GUI send exists on the data (default 0) and is not shown in the inspector. There is no Lua API for category send.
+Used when the routing table picks **Internal** (see above).
+
+**Emitter**
+
+| Widget | Purpose | Range |
+|--------|---------|-------|
+| **Gain** | Multiplier on the source. |
+| **Low Pass Cutoff** | Dry low-pass. |
+
+**Reverb send**
+
+| Widget | Purpose |
+|--------|---------|
+| **Level** | Send into the shared reverb (0 to 1). |
+| **Game** / **Ambient** / **Voice** | Category multipliers. Final send is **Level × category send**. |
+
+Example: Underwater-style muffling is often a low **Low Pass Cutoff** plus **Gain** below 1.
+
+## External Settings
+
+Used when the listener is inside the zone and the spatial source is **outside** the box.
+
+**Emitter:** **Gain**, **Low Pass Cutoff** (same ranges as Internal).
+
+**Reverb send:** **Level**, **Game** / **Ambient** / **Voice** (same idea as Internal). 
 
 ## World Default Sound Zone
 
-World Settings → **Default Sound Zone**. Used when the listener is outside every entity zone. Same Internal-style params (gain, LPF, verb character, Game / Ambient / Voice send). No External block.
+World Settings → **Default Sound Zone**. Used when the listener is outside every entity zone. 
 
-## Example starting points
+## Script API reference
 
-**Small indoor room (Internal):**
+- [Sound zone](../reference/sound_zone.md)
+- [World soundzone](../reference/world_soundzone.md)
 
-- **Low Pass Cutoff:** 8000 Hz
-- **Level:** 0.5
-- **Room Size:** 0.3
-- **Damping:** 0.8
+## Continue reading
 
-**Cave (Internal):**
+**Previous:** [Soundscape](audio_soundscape.md): world beds and Soundscape Zones.
 
-- **Low Pass Cutoff:** 5000 Hz
-- **Level:** 0.8
-- **Room Size:** 0.8
-- **Damping:** 0.3
-
-**Outside heard from indoors (External):**
-
-- Lower **Gain** (for example 0.5)
-- Lower **Low Pass Cutoff**
-- Keep **Level** modest. Character still comes from Internal.
-
-## Notes
-
-- Keep footsteps on Game and beds on Ambient. Lower the Game send on the zone if foley should stay drier than the room.
-- Overlapping listener zones pick the highest **Priority**, then the lower entity id.
-
-## See also
-
-- [Audio overview](audio.md)
-- [Sound component guide](audio_sound_component.md)
-- [Soundscape guide](audio_soundscape.md)
-- [Sound zone API](../reference/sound_zone.md)
-- [World soundzone API](../reference/world_soundzone.md)
+**Next:** [Music](audio_music.md): one global music stream from Lua.

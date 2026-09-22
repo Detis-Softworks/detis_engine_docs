@@ -8,15 +8,17 @@ alwaysApply: true
 Before adding or changing documentation in **Detis Engine Documentation** (`detis_engine_docs`):
 
 1. Re-read **`.cursor/rules/code-examples.mdc`** if the change includes fenced code or API names.
-2. Re-read **`.cursor/rules/manual-voice.mdc`** if the change is under **`manuals/`**, **`tutorials/`**, or **`getting_started/`**.
-3. Re-read **`.cursor/rules/sequential-navigation.mdc`** when adding or reordering multi-page guides or **`## Continue reading`** footers.
+2. Re-read **`.cursor/rules/ascii-markdown.mdc`** for any **`.md`** edit.
+3. Re-read **`.cursor/rules/manual-voice.mdc`** if the change is under **`manuals/`**, **`tutorials/`**, or **`getting_started/`**.
+4. Re-read **`.cursor/rules/sequential-navigation.mdc`** when adding or reordering multi-page guides or **`## Continue reading`** footers.
 
 Do not rely on memory from an earlier chat. If the change type matches a rule file and you have not opened it this turn, do not edit yet.
 
 ## Hard stops
 
 - Em dash (—) anywhere in Markdown you edit. Use **:** or ** - ** instead.
-- Generic **scene** / **level** / **map** when the engine means **world** (**`.world`**, world script, **`world_load_*`**, View → World Settings).
+- Unicode arrows (**→**, **←**, etc.) in Markdown you edit. Use **`->`** or **`<-`** instead.
+- Generic **scene** / **level** / **map** when the engine means **world** (**`.world`**, world script, **`world_load_*`**, **View -> World Settings**).
 - Terminology not found in stubs, editor labels, or existing docs (invented synonyms).
 - Invented API identifiers or **`...`** inside example calls.
 - Paste-ready fences with undefined globals.

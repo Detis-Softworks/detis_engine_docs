@@ -6,9 +6,10 @@ This repository is the **user-facing manual site**, not the engine source tree.
 
 1. **`AGENTS.md`** (this file)
 2. **`.cursor/rules/read-rules-first.mdc`**
-3. **`.cursor/rules/code-examples.mdc`** when examples or API names change
-4. **`.cursor/rules/manual-voice.mdc`** for **`manuals/`**, **`tutorials/`**, **`getting_started/`**
-5. **`.cursor/rules/sequential-navigation.mdc`** for **`## Continue reading`** footers and multi-page guide order
+3. **`.cursor/rules/ascii-markdown.mdc`** for any Markdown edit
+4. **`.cursor/rules/code-examples.mdc`** when examples or API names change
+5. **`.cursor/rules/manual-voice.mdc`** for **`manuals/`**, **`tutorials/`**, **`getting_started/`**
+6. **`.cursor/rules/sequential-navigation.mdc`** for **`## Continue reading`** footers and multi-page guide order
 
 ## Where truth lives
 
@@ -21,7 +22,7 @@ Students and first-time users. Manuals teach simple working paths; reference pag
 
 ## Punctuation
 
-Do not use the em dash (—) in this repo’s Markdown. Use a colon or a spaced hyphen instead. See **`.cursor/rules/manual-voice.mdc`**.
+Do not use the em dash (—) or Unicode arrows (→) in this repo’s Markdown. Use **`->`**, a colon, or a spaced hyphen instead. See **`.cursor/rules/ascii-markdown.mdc`** and **`.cursor/rules/manual-voice.mdc`**.
 
 ## Terminology
 

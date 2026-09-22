@@ -4,45 +4,40 @@ Play sounds from entities, layer ambient soundscapes, shape them with Sound Zone
 
 ## In this section
 
-- [Sound component](audio_sound_component.md) — Playback on an entity.
-- [Soundscape](audio_soundscape.md) — Loops and scattered one-shots.
-- [Sound zone](audio_sound_zone.md) — Listener-based gain, low-pass, and reverb send.
-- [Music](audio_music.md) — One global music stream.
+- [Sound component](audio_sound_component.md): playback on an entity.
+- [Soundscape](audio_soundscape.md): loops and scattered one-shots.
+- [Sound zone](audio_sound_zone.md): listener-based gain, low-pass, and reverb send.
+- [Music](audio_music.md): one global music stream.
 
-## Categories
+## Categories (Busses)
 
-`SoundCategory` is four integers. Music is **not** a category.
+Every in-game sound (except music which uses its own buss) uses one category. You pick it on the Sound component in the editor.
 
-| Category | Integer | Engine Settings slider | Use |
-|----------|---------|------------------------|-----|
-| **Game** | 0 | **SFX Volume** | Footsteps, impacts, interactions. |
-| **GUI** | 1 | **UI Volume** | Menus and HUD. Cannot join Sound Zones. |
-| **Ambient** | 2 | **Ambient Volume** | Soundscapes and environment beds. |
-| **Voice** | 3 | **Voice Volume** | Dialogue. |
+| Category | Engine Settings slider | Use |
+|----------|------------------------|-----|
+| **Game** | **SFX Volume** | Footsteps, impacts, interactions. |
+| **GUI** | **UI Volume** | Menus and HUD. Cannot join Sound Zones. |
+| **Ambient** | **Ambient Volume** | Soundscapes and environment beds. |
+| **Voice** | **Voice Volume** | Dialogue. |
 
-Each slider is shown in dB and stored as linear gain on sources. Pause stops Game, Ambient, and Voice. GUI keeps playing.
+Think of a category as **which group owns this sound**. Assign footsteps to **Game** and they ride **SFX Volume** with every other Game sound. Turn that slider down and the whole group goes down together. You control those category levels in **File -> Settings**. Inside Sound Zones, the category also picks which **reverb send** row applies (Game vs Ambient vs Voice).
 
 <img src="../images/editor/ed_engine_settings_sound_mixer.png" alt="Engine Settings mixer" style="max-width:600px;height:auto;display:block">
 
 ## Pause behavior
 
-- Game, Ambient, Voice: paused by game pause.
-- GUI: continues during game pause.
-- Music: continues until explicitly paused with music API.
+When the player pauses the game, the **same category groups** decide what pauses with the world and what keeps playing.
 
-These are volume / pause / reverb-send groups. They are not separate miniaudio mix buses.
+- **Game**, **Ambient**, and **Voice** pause. They resume when the game unpauses.
+- **GUI** does not pause with the game.
+- **Music** does not pause with the game. Use the music API if a pause menu should silence the track.
 
 ## Signal flow
 
 <img src="../images/audio_signal_flow.svg" alt="Audio signal flow" style="max-width:600px;height:auto;display:block">
 
-Left lane: Sound component or soundscape → category volume → optional Sound Zone (dry LPF, gain, reverb send) → **Master volume**.
 
-Right lane: Music stream → **Music Volume** → the same **Master volume**.
-
-Master is `ma_engine` output (Engine Settings **Master Volume**). Speakers come after master. Music is not multiplied by master a second time on the stream. Music never uses a category or a Sound Zone.
-
-## API reference
+## Script API reference
 
 - [Sound](../reference/sound.md)
 - [Music](../reference/music.md)
@@ -50,3 +45,7 @@ Master is `ma_engine` output (Engine Settings **Master Volume**). Speakers come 
 - [Soundscape zone](../reference/soundscape_zone.md)
 - [World soundscape](../reference/world_soundscape.md)
 - [World soundzone](../reference/world_soundzone.md)
+
+## Continue reading
+
+**Next:** [Sound component](audio_sound_component.md): add a Sound component and play from Lua.

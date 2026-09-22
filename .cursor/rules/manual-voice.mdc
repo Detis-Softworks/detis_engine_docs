@@ -11,6 +11,7 @@ Audience: someone new. Write as if explaining to a classmate, not an engine prog
 ## Punctuation
 
 - **Never use the em dash (—).** Not in prose, tables, or list suffixes.
+- **Never use Unicode arrows (→ ← ⇒ etc.).** Use ASCII **`->`**, **`<-`**, or **`=>`** (example: **File -> Settings**, **Music -> Master Volume**). See **`.cursor/rules/ascii-markdown.mdc`**.
 - Use a **colon** when the second part explains the first (example: **`on_ready`**: runs after init).
 - Use a **hyphen** with spaces when you need a break (example: HUD **-** crosshair and prompts).
 - Normal **`-`** in markdown bullets and in API names is fine. Only the long em dash character is banned.

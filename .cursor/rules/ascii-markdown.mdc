@@ -1,0 +1,31 @@
+---
+description: Markdown uses ASCII punctuation only (no Unicode arrows or dashes)
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# ASCII Markdown punctuation — NON-NEGOTIABLE
+
+User-facing Markdown must stay easy to read in plain editors, diff tools, search, and static site generators. **Do not use Unicode punctuation symbols** when an ASCII form exists.
+
+## Do not use
+
+- **Arrows:** → ← ⇒ ➜ and similar. Use **`->`**, **`<-`**, or **`=>`** instead.
+- **Em dash:** — (already banned in **manual-voice.mdc**). Use **:** or a spaced **`-`**.
+- **En dash for ranges in prose:** prefer **`to`** or **` - `** (example: **0 to 1**, not **0–1**).
+- **Ellipsis character:** … Use three periods **`...`** if you need one.
+- **Curly quotes** in new prose: **`"`** and **`'`** only.
+
+## Do use
+
+| Instead of | Write |
+|------------|--------|
+| **A → B** | **A -> B** |
+| **File → Settings** | **File -> Settings** |
+| **step — detail** | **step:** detail or **step -** detail |
+
+Menu paths, signal-flow chains, and **Continue reading** lines follow the same rule.
+
+## When editing existing pages
+
+If you touch a file, replace Unicode punctuation in the lines you change. Do not run repo-wide symbol sweeps unless the user asks.
