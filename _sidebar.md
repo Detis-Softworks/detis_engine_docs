@@ -1,4 +1,4 @@
-* [Home](/)
+* [Home](README.md)
 
 * **Getting started**
   * [Introduction](getting_started/introduction.md)

@@ -4,13 +4,13 @@ This is the user manual for Detis Engine.
 
 **[Detis Engine Manual](manuals/index.md)** is the hub for editor guides, topic manuals, and the script API. Read the getting-started path in order if you are new. Each of those pages ends with **Continue reading** (**Previous** / **Next**).
 
-## Start here
+## Start here {docsify-ignore}
 
 **[Introduction](getting_started/introduction.md)**: what Detis is, and whether it fits your project.
 
 Then continue through FAQ, Installation, Quick start, Project layout, Sample content, and the first tutorials. For the full editor tour, open [Editor overview](manuals/editor_overview.md) under **Manual → Editor**.
 
-## Full path
+## Full path {docsify-ignore}
 
 ### Getting started
 
