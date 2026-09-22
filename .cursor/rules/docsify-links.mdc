@@ -10,20 +10,27 @@ The site uses Docsify with **`relativePath: true`** in **`index.html`**. Docsify
 
 ## Why
 
-- **`[Sound](sound.md)`** on **`#/reference/README`** becomes **`#/sound`** (404) unless **`relativePath: true`** and the link is a same-folder sibling.
-- **`[Audio](/manuals/audio.md)`** in **`_sidebar.md`** is required. With **`relativePath: true`**, a sidebar target **`manuals/audio.md`** (no leading slash) from **`#/manuals/index`** becomes **`#/manuals/manuals/audio`** (404).
+- From **`#/manuals/index`**, **`[Introduction](../getting_started/introduction.md)`** becomes **`#/manuals/getting_started/introduction`**. Getting started and tutorials are **not** under manuals.
+- From **`#/manuals/index`**, **`[Audio](manuals/audio.md)`** (no leading slash) becomes **`#/manuals/manuals/audio`**.
 
 ## Rules
 
-1. **Same folder (page body):** filename only. On **`manuals/audio.md`**: **`[Sound component](audio_sound_component.md)`**.
-2. **Cross folder (page body):** **`../`**. On **`manuals/audio.md`**: **`[Sound](../reference/sound.md)`**.
-3. **`_sidebar.md` and root `README.md`:** always a **leading slash** from the site root. Examples: **`/manuals/audio.md`**, **`/getting_started/faq.md`**, **`/reference/README.md`**, **`/README.md`**. Never **`manuals/audio.md`** without **`/`** in the sidebar.
-4. **Inside a content folder**, do not repeat that folder name. On **`getting_started/faq.md`**, use **`installation.md`**, not **`getting_started/installation.md`**.
-5. **Inside `reference/`**, group links on **`README.md`** use **`sound.md`**, not **`reference/sound.md`**.
+1. **Same folder only:** filename only. On **`manuals/audio.md`**: **`[Sound component](audio_sound_component.md)`**.
+2. **Any other top-level folder** (`getting_started`, `tutorials`, `manuals`, `reference`): use a **leading slash** from the site root. Examples on **`manuals/index.md`**: **`/getting_started/introduction.md`**, **`/reference/sound.md`**, **`/tutorials/your_first_world.md`**. **Do not use `../getting_started/` or `../tutorials/`** in page bodies.
+3. **`_sidebar.md` and root `README.md`:** same leading-slash rule for every link (**`/getting_started/...`**, **`/manuals/...`**, etc.).
+4. **Inside a content folder**, do not repeat that folder name in the path. On **`getting_started/faq.md`**: **`installation.md`**, not **`getting_started/installation.md`**.
+5. **`reference/README.md`:** group links stay sibling **`sound.md`**, not **`reference/sound.md`**.
+
+## Top-level folders (do not nest in URLs)
+
+- **`getting_started/`**
+- **`tutorials/`**
+- **`manuals/`**
+- **`reference/`**
 
 ## Script API index
 
-**`tools/generate_script_api_reference.py`** (engine repo) emits **`({group}.md)`** on **`reference/README.md`**. If it touches **`_sidebar.md`**, the Script API entry must be **`/reference/README.md`**.
+**`tools/generate_script_api_reference.py`** emits **`({group}.md)`** on **`reference/README.md`**. Sidebar Script API entry: **`/reference/README.md`**.
 
 ## When editing **`index.html`**
 
@@ -31,4 +38,4 @@ Keep **`relativePath: true`**. Do not remove it without another routing fix.
 
 ## Check before shipping
 
-From **`#/manuals/audio`**, click **Manual** in the sidebar (expect **`#/manuals/index`**, not **`#/manuals/manuals/index`**). From **`#/reference/README`**, click **Sound** (expect **`#/reference/sound`**).
+Run **`tools/check_docsify_links.ps1`**. From **`#/manuals/index`**, **Getting started** must go to **`#/getting_started/introduction`**, not **`#/manuals/getting_started/introduction`**.

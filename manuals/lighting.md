@@ -31,9 +31,9 @@ Local shadows use a budget of 16 lights and two AND gates. The **Local shadows**
 
 ## API reference
 
-- [Light](../reference/light.md)
-- [Renderer](../reference/renderer.md)
-- [Settings](../reference/settings.md)
+- [Light](/reference/light.md)
+- [Renderer](/reference/renderer.md)
+- [Settings](/reference/settings.md)
 
 ## Continue reading
 

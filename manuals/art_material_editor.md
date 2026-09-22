@@ -133,7 +133,7 @@ Workflow for each: **Load** or assign on Mesh → tweak → **Save As** → assi
 - [Materials](art_materials.md)
 - [Textures](art_textures.md)
 - [Exposure & EV100](lighting_exposure.md)
-- [Mesh API](../reference/mesh.md)
+- [Mesh API](/reference/mesh.md)
 
 ## Continue reading
 

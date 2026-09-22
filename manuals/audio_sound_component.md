@@ -65,7 +65,7 @@ GUI category cannot opt in.
 
 ## Script API reference
 
-- [Sound](../reference/sound.md)
+- [Sound](/reference/sound.md)
 
 ## Continue reading
 

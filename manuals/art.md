@@ -1,6 +1,6 @@
 # Art
 
-Author meshes, textures, and materials for Detis worlds. Detis uses a [zero-import pipeline](../getting_started/faq.md#what-is-the-asset-pipeline): drop files under `content/`, point the editor at paths, and play. Materials are `.mat` text files in the engine, not node graphs imported from Blender. The next pages walk pipeline, textures, meshes, materials, the Material Editor, and sky textures in order.
+Author meshes, textures, and materials for Detis worlds. Detis uses a [zero-import pipeline](/getting_started/faq.md#what-is-the-asset-pipeline): drop files under `content/`, point the editor at paths, and play. Materials are `.mat` text files in the engine, not node graphs imported from Blender. The next pages walk pipeline, textures, meshes, materials, the Material Editor, and sky textures in order.
 
 ## Editor tools
 
@@ -15,7 +15,7 @@ Author meshes, textures, and materials for Detis worlds. Detis uses a [zero-impo
 
 ## Content folders
 
-See [Project layout](../getting_started/project_layout.md). Typical art paths:
+See [Project layout](/getting_started/project_layout.md). Typical art paths:
 
 | Folder | You put |
 |--------|---------|
@@ -26,8 +26,8 @@ See [Project layout](../getting_started/project_layout.md). Typical art paths:
 
 ## API reference
 
-- [Mesh](../reference/mesh.md)
-- [Renderer](../reference/renderer.md) (sky texture path)
+- [Mesh](/reference/mesh.md)
+- [Renderer](/reference/renderer.md) (sky texture path)
 
 ## Continue reading
 

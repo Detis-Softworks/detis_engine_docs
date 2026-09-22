@@ -90,8 +90,8 @@ World Settings → **Default Sound Zone**. Used when the listener is outside eve
 
 ## Script API reference
 
-- [Sound zone](../reference/sound_zone.md)
-- [World soundzone](../reference/world_soundzone.md)
+- [Sound zone](/reference/sound_zone.md)
+- [World soundzone](/reference/world_soundzone.md)
 
 ## Continue reading
 

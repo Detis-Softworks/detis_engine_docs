@@ -55,4 +55,4 @@ Under `content/scripts/`:
 
 **Previous:** [Project layout](project_layout.md): `bin`, `content`, and `engine`.
 
-**Next:** [Your first world](../tutorials/your_first_world.md): build a small world (tutorial).
+**Next:** [Your first world](/tutorials/your_first_world.md): build a small world (tutorial).

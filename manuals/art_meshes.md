@@ -44,17 +44,17 @@ Skinned characters use the same GLB path on **Mesh** (or **Skeletal** workflow o
 
 ## Triplanar vs mesh rotation
 
-**Triplanar** materials (for example `primitive_triplanar_*.mat`) project textures in world space. On a **rolling** dynamic mesh the surface can look like it slides while the mesh spins. For balls and wheels use a standard UV material (see [Kick the ball](../tutorials/kick_the_ball.md)).
+**Triplanar** materials (for example `primitive_triplanar_*.mat`) project textures in world space. On a **rolling** dynamic mesh the surface can look like it slides while the mesh spins. For balls and wheels use a standard UV material (see [Kick the ball](/tutorials/kick_the_ball.md)).
 
 ## Prefabs
 
-Most placed props are `.entity` prefabs that already reference a mesh and materials. Author new prefabs in [Your first prefab](../tutorials/your_first_prefab.md).
+Most placed props are `.entity` prefabs that already reference a mesh and materials. Author new prefabs in [Your first prefab](/tutorials/your_first_prefab.md).
 
 ## See also
 
 - [Materials](art_materials.md)
 - [Material Editor](art_material_editor.md)
-- [Mesh API](../reference/mesh.md)
+- [Mesh API](/reference/mesh.md)
 
 ## Continue reading
 

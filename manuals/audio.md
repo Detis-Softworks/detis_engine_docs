@@ -30,12 +30,12 @@ When the player pauses the game, the **same category groups** decide what pauses
 
 ## Script API reference
 
-- [Sound](../reference/sound.md)
-- [Music](../reference/music.md)
-- [Sound zone](../reference/sound_zone.md)
-- [Soundscape zone](../reference/soundscape_zone.md)
-- [World soundscape](../reference/world_soundscape.md)
-- [World soundzone](../reference/world_soundzone.md)
+- [Sound](/reference/sound.md)
+- [Music](/reference/music.md)
+- [Sound zone](/reference/sound_zone.md)
+- [Soundscape zone](/reference/soundscape_zone.md)
+- [World soundscape](/reference/world_soundscape.md)
+- [World soundzone](/reference/world_soundzone.md)
 
 ## Continue reading
 

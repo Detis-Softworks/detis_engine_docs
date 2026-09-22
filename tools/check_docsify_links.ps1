@@ -20,6 +20,10 @@ Get-ChildItem -Path $root -Filter "*.md" -Recurse | Where-Object {
         if (-not $target.EndsWith(".md")) { continue }
         if ($target.StartsWith("http")) { continue }
 
+        if ($target -match '^\.\./') {
+            $issues.Add("use leading slash not ../: $rel -> $target")
+        }
+
         if (($isSidebar -or $isRootReadme) -and -not $target.StartsWith("/")) {
             $issues.Add("sidebar/root needs leading slash: $rel -> $target")
         }

@@ -56,8 +56,8 @@ Soundscapes use the Ambient category. With **Affected By Zones** on, they take t
 
 ## Script API reference
 
-- [Soundscape zone](../reference/soundscape_zone.md)
-- [World soundscape](../reference/world_soundscape.md)
+- [Soundscape zone](/reference/soundscape_zone.md)
+- [World soundscape](/reference/world_soundscape.md)
 
 ## Continue reading
 

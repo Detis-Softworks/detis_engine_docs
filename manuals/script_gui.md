@@ -196,7 +196,7 @@ Check **`gui_demo.world`** and press **1-9** to select demo mode.
 
 ## API reference
 
-- [Gui functions (reference)](../reference/gui.md): alphabetical **`gui_*`** list  
+- [Gui functions (reference)](/reference/gui.md): alphabetical **`gui_*`** list  
 - IDE autocomplete: **`engine/stubs/engine_stubs.lua`**
 
 ---
@@ -205,4 +205,4 @@ Check **`gui_demo.world`** and press **1-9** to select demo mode.
 
 **Previous:** [Communication](script_communication.md): call other scripts and modules.
 
-**Next:** [Script API](../reference/README.md): generated Lua function reference.
+**Next:** [Script API](/reference/README.md): generated Lua function reference.

@@ -27,4 +27,5 @@ Do not rely on memory from an earlier chat. If the change type matches a rule fi
 - Turning beginner pages into internal engine design notes.
 - Same-folder links that include the folder name (**`manuals/foo.md`** inside **`manuals/`**, **`reference/bar.md`** inside **`reference/`**).
 - **`_sidebar.md`** or root **`README.md`** links without a leading slash (**`manuals/audio.md`** instead of **`/manuals/audio.md`**) while **`relativePath: true`** is on.
+- Cross-folder links with **`../getting_started/`**, **`../tutorials/`**, **`../manuals/`**, or **`../reference/`** in Markdown (use **`/getting_started/...`**, **`/tutorials/...`**, etc. instead).
 - Removing **`relativePath: true`** from **`index.html`** without a replacement routing fix.

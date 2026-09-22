@@ -2,7 +2,7 @@
 
 Detis uses a **zero-import** asset path. There is no import queue or per-file import settings dialog. You export from your DCC tool, copy files into `content/`, assign paths in the editor, and reload when you change files on disk.
 
-The FAQ defines this in one paragraph. See [What is the asset pipeline?](../getting_started/faq.md#what-is-the-asset-pipeline). This page is the practical checklist.
+The FAQ defines this in one paragraph. See [What is the asset pipeline?](/getting_started/faq.md#what-is-the-asset-pipeline). This page is the practical checklist.
 
 ## Asset map
 
@@ -35,7 +35,7 @@ The FAQ also mentions **KTX** textures. The Material Editor texture browse filte
 | Goal | Use |
 |------|-----|
 | Drop a prop, character, or kit piece into a level | **Entity Browser** → drag `.entity` into the viewport |
-| Build a reusable prefab from components | **Add New Entity** in the World Inspector, add components, **Prefab → Save** — see [Your first prefab](../tutorials/your_first_prefab.md) |
+| Build a reusable prefab from components | **Add New Entity** in the World Inspector, add components, **Prefab → Save** — see [Your first prefab](/tutorials/your_first_prefab.md) |
 | Swap mesh on an existing entity | **Mesh** component → browse GLB |
 
 ## Round-trip to a DCC tool

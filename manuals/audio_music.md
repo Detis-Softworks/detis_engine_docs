@@ -38,7 +38,7 @@ Music volume -> **Master Volume** -> speakers.
 
 ## Script API reference
 
-- [Music](../reference/music.md)
+- [Music](/reference/music.md)
 
 ## Continue reading
 

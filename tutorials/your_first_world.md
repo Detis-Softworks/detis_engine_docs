@@ -92,6 +92,6 @@ You should see an editor-only player marker in the viewport. That is expected.
 
 ## Continue reading
 
-**Previous:** [Sample content](../getting_started/sample_content.md): demo worlds and prefabs.
+**Previous:** [Sample content](/getting_started/sample_content.md): demo worlds and prefabs.
 
 **Next:** [Your first prefab](your_first_prefab.md): build a sphere prefab from components.

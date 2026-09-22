@@ -36,7 +36,7 @@ The file dialog accepts `.dds` only.
 | **Ambient Lux** | — | Sky fill illuminance |
 | **IBL** Active / Specular / Diffuse | — | Reflections and diffuse from baked cubemap |
 
-Scene fill for gameplay is **Ambient Lux**, not IBL alone. IBL adds specular and diffuse from an environment cubemap the engine **bakes from your sky texture at load**. That is why [Your first world](../tutorials/your_first_world.md) enables both fill and IBL.
+Scene fill for gameplay is **Ambient Lux**, not IBL alone. IBL adds specular and diffuse from an environment cubemap the engine **bakes from your sky texture at load**. That is why [Your first world](/tutorials/your_first_world.md) enables both fill and IBL.
 
 With **Texture File** empty, the dome can still use flat tint color from the same panel. Procedural sky modes are not in the shipping engine yet.
 

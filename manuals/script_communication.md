@@ -38,7 +38,7 @@ return MyLatch
 
 ## Call a function on another entity
 
-The function must exist on that entity’s **returned script table**. Resolve the **entity id** in **`on_ready`** (name, parameter, spawn logic). See [Entity](../reference/entity.md).
+The function must exist on that entity’s **returned script table**. Resolve the **entity id** in **`on_ready`** (name, parameter, spawn logic). See [Entity](/reference/entity.md).
 
 | API | Arguments | Return value from target |
 |-----|-----------|---------------------------|
@@ -87,7 +87,7 @@ if module_get_is_valid("game_module") then
 end
 ```
 
-**`module_call_function`** can pass extra arguments after the function name when the module function expects them. See [Module](../reference/module.md).
+**`module_call_function`** can pass extra arguments after the function name when the module function expects them. See [Module](/reference/module.md).
 
 ---
 
