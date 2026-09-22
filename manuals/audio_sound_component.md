@@ -4,7 +4,7 @@ The Sound component plays audio from an entity. Most of the time you use it for 
 
 You can also leave **Spatial** off and play a **stereo** (2D) clip with **Pan** for left/right balance. That path is less common for world props.
 
-<img src="../images/editor/ed_sound_component.png" alt="Sound component" style="max-width:400px;height:auto;display:block">
+<img src="../images/editor/ed_sound_component.png" alt="Sound component" style="max-width:360px;height:auto;display:block">
 
 ## Basic setup
 
