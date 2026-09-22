@@ -55,11 +55,8 @@ Under **Local Lights**:
 2. Keep Engine Settings shadow **Max Distance** tight.
 3. Use sun CSM for broad outdoor coverage.
 
-## See also
+## Continue reading
 
-- [Light component](lighting_component.md)
-- [World sun](lighting_sun.md)
-- [Lighting overview](lighting.md)
-- [Exposure & EV100](lighting_exposure.md)
-- [Renderer API](../reference/renderer.md)
-- [Settings API](../reference/settings.md)
+**Previous:** [Light component](lighting_component.md): Point and Spot lights.
+
+**Next:** [Exposure & EV100](lighting_exposure.md): auto-exposure and physical units.

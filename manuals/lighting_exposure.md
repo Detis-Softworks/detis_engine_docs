@@ -86,8 +86,8 @@ If local lights vanish outdoors, lower sun **Lux** and **Ambient Lux** before ra
 | `renderer_set_auto_exposure_bias(ev)` | **Compensation (EV)** |
 | `renderer_set_sky_ambient_lux(lux)` | **Ambient Lux** |
 
-## See also
+## Continue reading
 
-- [World sun](lighting_sun.md)
-- [Light component](lighting_component.md)
-- [Local shadows](lighting_local_shadows.md)
+**Previous:** [Local shadows](lighting_local_shadows.md): shadow budget and quality gates.
+
+**Next:** [Audio overview](audio.md): sound categories, zones, and music.

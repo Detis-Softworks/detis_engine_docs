@@ -2,7 +2,7 @@
 
 How to move the **spectator camera** in the 3D viewport while you edit. This is **not** Play mode. Play uses your game camera and player controls.
 
-The editor keeps a hidden **spectator camera** for the viewport. You fly it with the mouse and keyboard. For toolbars and menus, see [Editor overview](editor_overview.md).
+The editor keeps a hidden **spectator camera** for the viewport. You fly it with the mouse and keyboard. For toolbars and menus, see [Editor](editor.md).
 
 ## Starting and stopping
 
@@ -67,6 +67,6 @@ Mouse **`aim`** is **RMB** and **`select`** is **LMB**. Movement keys and view s
 
 ## Continue reading
 
-**Previous:** [Editor overview](editor_overview.md): toolbars, Play, save, and prefabs.
+**Previous:** [Editor](editor.md): layout, prefabs, and the day-one loop.
 
-**Next:** [Engine Settings](editor_engine_settings.md): **File → Settings** when you tune performance or appearance.
+**Next:** [Engine Settings](editor_engine_settings.md): **File -> Settings** when you tune performance or appearance.

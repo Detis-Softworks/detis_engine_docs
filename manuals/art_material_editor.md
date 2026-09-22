@@ -123,7 +123,7 @@ Workflow for each: **Load** or assign on Mesh → tweak → **Save As** → assi
 
 ## When a surface looks wrong
 
-1. **Debug → Debug View** — Albedo, normals, lighting buffers (see [Editor overview](editor_overview.md)).
+1. **Debug -> Debug View** — Albedo, normals, lighting buffers (see [Editor](editor.md)).
 2. Confirm **shared** `.mat` vs **Unique Material** on the Mesh component.
 3. **Shift+R** after external edits to `.mat` or `.dds`.
 4. Check texture gamma in [Textures](art_textures.md).

@@ -18,9 +18,9 @@
 
 ### Manual
 
-- [Manual](manuals/index.md)
-- [Lighting](manuals/lighting.md)
+- [Manual](manuals/index.md) (Audio section published; more topics coming)
 - [Audio](manuals/audio.md)
-- [Art](manuals/art.md)
-- [Scripting](manuals/script_overview.md)
-- [Script API reference](reference/README.md)
+
+### Reference
+
+- [Script API](reference/README.md)

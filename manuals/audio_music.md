@@ -39,3 +39,7 @@ Music volume -> **Master Volume** -> speakers.
 ## Script API reference
 
 - [Music](../reference/music.md)
+
+## Continue reading
+
+**Previous:** [Sound zone](audio_sound_zone.md): listener gain, low-pass, and reverb send.

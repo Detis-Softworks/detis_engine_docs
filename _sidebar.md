@@ -16,38 +16,13 @@
 
 * **Manual**
   * [Manual](manuals/index.md)
-  * **Editor**
-    * [Editor](manuals/editor.md)
-    * [Editor overview](manuals/editor_overview.md)
-    * [Viewport navigation](manuals/editor_viewport_navigation.md)
-    * [Engine Settings](manuals/editor_engine_settings.md)
-  * **Lighting**
-    * [Lighting overview](manuals/lighting.md)
-    * [World sun](manuals/lighting_sun.md)
-    * [Light component](manuals/lighting_component.md)
-    * [Local shadows](manuals/lighting_local_shadows.md)
-    * [Exposure & EV100](manuals/lighting_exposure.md)
   * **Audio**
     * [Audio overview](manuals/audio.md)
     * [Sound component](manuals/audio_sound_component.md)
     * [Soundscape](manuals/audio_soundscape.md)
     * [Sound zone](manuals/audio_sound_zone.md)
     * [Music](manuals/audio_music.md)
-  * **Art**
-    * [Art overview](manuals/art.md)
-    * [Pipeline](manuals/art_pipeline.md)
-    * [Textures](manuals/art_textures.md)
-    * [Meshes](manuals/art_meshes.md)
-    * [Materials](manuals/art_materials.md)
-    * [Material Editor](manuals/art_material_editor.md)
-    * [Sky texture](manuals/art_sky.md)
-  * **Scripting**
-    * [Script overview](manuals/script_overview.md)
-    * [Where logic lives](manuals/script_placement.md)
-    * [Lifecycle and timesteps](manuals/script_lifecycle.md)
-    * [Parameters](manuals/script_parameters.md)
-    * [Communication](manuals/script_communication.md)
-    * [In-game UI](manuals/script_gui.md)
+  <!-- Manual sections below are hidden in the sidebar until reviewed. Files remain under manuals/. Restore Editor, Lighting, Art, and Scripting blocks from git history when ready. -->
 
 * **Reference**
   * [Script API](reference/README.md)

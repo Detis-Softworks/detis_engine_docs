@@ -109,4 +109,4 @@ Otherwise leave these changes on this world instance only. The shipped primitive
 
 **Previous:** [Kick the ball](kick_the_ball.md): Dynamic body, Interact, and script parameters.
 
-You have finished the guided tutorial path. Continue with [Script overview](../manuals/script_overview.md), [Lighting](../manuals/lighting.md), or [Audio](../manuals/audio.md), or use the sidebar to jump anywhere.
+You have finished the guided tutorial path. Continue with the [Audio manual](../manuals/audio.md), or use the sidebar for Getting started and reference.

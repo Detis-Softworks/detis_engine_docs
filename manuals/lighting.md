@@ -1,17 +1,6 @@
 # Lighting
 
-Light scenes with the world sun and local Point / Spot lights. Balance brightness with lux, lumens, and auto-exposure.
-
-## Related
-
-- [Art — Sky texture](art_sky.md) — Author and assign the equirect sky DDS (not lux or IBL sliders).
-
-## In this section
-
-- [World sun](lighting_sun.md) — Global sun and sun-shadow scales.
-- [Light component](lighting_component.md) — Local Point and Spot lights.
-- [Local shadows](lighting_local_shadows.md) — Per-light shadows and Engine Settings limits.
-- [Exposure & EV100](lighting_exposure.md) — Physical units and auto-exposure.
+Light scenes with the world sun and local Point / Spot lights. Balance brightness with lux, lumens, and auto-exposure. The next pages cover the world sun, local lights, shadows, and exposure in order.
 
 ## Light system
 
@@ -36,12 +25,18 @@ Light scenes with the world sun and local Point / Spot lights. Balance brightnes
 
 ## Shadow maps
 
-Sun shadows are cascaded (CSM). Cascade count and sun shadow distance come from **File → Settings** → **Shadow Quality**, not World Settings. See [Engine Settings](editor_engine_settings.md).
+Sun shadows are cascaded (CSM). Cascade count and sun shadow distance come from **File -> Settings** -> **Shadow Quality**, not World Settings.
 
-Local shadows use a budget of 16 lights and two AND gates. See [Local shadows](lighting_local_shadows.md).
+Local shadows use a budget of 16 lights and two AND gates. The **Local shadows** chapter covers the limits.
 
 ## API reference
 
 - [Light](../reference/light.md)
 - [Renderer](../reference/renderer.md)
 - [Settings](../reference/settings.md)
+
+## Continue reading
+
+**Previous:** [Engine Settings](editor_engine_settings.md): graphics, shadows, and audio mixer.
+
+**Next:** [World sun](lighting_sun.md): global sun and sun-shadow scales.

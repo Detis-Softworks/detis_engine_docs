@@ -103,3 +103,9 @@ Optional apps Detis opens when you edit files from the editor.
 | **Audio Editor** | Your audio tool for **`.wav`** / **`.ogg`** files. |
 
 **Browse** picks the program. **Clear** removes the path.
+
+## Continue reading
+
+**Previous:** [Viewport navigation](editor_viewport_navigation.md): spectator camera and focus shortcuts.
+
+**Next:** [Lighting overview](lighting.md): world sun, local lights, and exposure.

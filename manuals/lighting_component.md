@@ -61,9 +61,8 @@ Up to 16 local lights can cast shadows at once. Engine Settings **Local Light Sh
 | `light_set_angle(entity_id, degrees)` | Spot **Cone Angle (deg)**. |
 | `light_set_cast_shadows(entity_id, enabled)` | **Cast Shadows**. |
 
-## See also
+## Continue reading
 
-- [World sun](lighting_sun.md)
-- [Local shadows](lighting_local_shadows.md)
-- [Exposure & EV100](lighting_exposure.md)
-- [Light API](../reference/light.md)
+**Previous:** [World sun](lighting_sun.md): global sun and CSM.
+
+**Next:** [Local shadows](lighting_local_shadows.md): per-light shadows and Engine Settings limits.

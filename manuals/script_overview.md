@@ -60,4 +60,6 @@ While the engine is running you can reload a script after editing the **`.lua`**
 
 ## Continue reading
 
+**Previous:** [Sky texture](art_sky.md): equirect sky DDS and World Settings.
+
 **Next:** [Where logic lives](script_placement.md): choose entity, world, module, or shared helper.

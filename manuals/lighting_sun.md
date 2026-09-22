@@ -65,10 +65,8 @@ Quality overwrites those distances at load. Near-cascade split is 0.1 × distanc
 | `renderer_set_sunlight_shadow_blur(blur)` | **Blur Scale**. |
 | `renderer_set_sky_ambient_lux(lux)` | Sky fill (**Ambient Lux**). |
 
-## See also
+## Continue reading
 
-- [Lighting overview](lighting.md)
-- [Light component](lighting_component.md)
-- [Local shadows](lighting_local_shadows.md)
-- [Exposure & EV100](lighting_exposure.md)
-- [Renderer API](../reference/renderer.md)
+**Previous:** [Lighting overview](lighting.md): lux, lumens, and shadow maps.
+
+**Next:** [Light component](lighting_component.md): local Point and Spot lights.

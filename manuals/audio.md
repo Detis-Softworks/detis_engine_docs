@@ -39,4 +39,6 @@ When the player pauses the game, the **same category groups** decide what pauses
 
 ## Continue reading
 
+**Previous:** [Detis Engine Manual](index.md): manual home.
+
 **Next:** [Sound component](audio_sound_component.md): add a Sound component and play from Lua.

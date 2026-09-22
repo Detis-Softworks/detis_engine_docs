@@ -44,15 +44,8 @@ With **Texture File** empty, the dome can still use flat tint color from the sam
 
 After replacing the DDS on disk, use **Debug → Reload Assets** (`Shift+R`). Sky IBL rebuilds from the current texture when the sky file is set.
 
-## See also
-
-- [World sun](lighting_sun.md)
-- [Lighting overview](lighting.md)
-- [Textures](art_textures.md)
-- [Renderer API](../reference/renderer.md) (`renderer_set_sky_texture_file`, sky IBL)
-
 ## Continue reading
 
 **Previous:** [Material Editor](art_material_editor.md): edit `.mat` files in the editor.
 
-**Next:** [Lighting overview](lighting.md): sun, Ambient Lux, IBL, and exposure.
+**Next:** [Script overview](script_overview.md): entity, world, and module scripts.
