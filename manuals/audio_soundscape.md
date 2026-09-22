@@ -4,8 +4,6 @@ Think of a soundscape as background air for the world (wind, hum, distant traffi
 
 World Settings holds the default bed and the Default Sound Zone:
 
-<img src="../images/editor/ed_world_sound.png" alt="World sound" style="max-width:400px;height:auto;display:block">
-
 ## Setup
 
 1. Set a **World Soundscape** in World Settings for the default bed.

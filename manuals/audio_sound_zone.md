@@ -14,8 +14,6 @@ The **Reverb** block on the component is the shared room (one tail for the whole
 
 When the listener is outside every entity zone, the world **Default Sound Zone** in World Settings applies instead.
 
-<img src="../images/editor/ed_sound_zone.png" alt="Sound Zone" style="max-width:400px;height:auto;display:block">
-
 ## Setup
 
 1. Create an entity with a Sound Zone component. The transform scale is the box.
