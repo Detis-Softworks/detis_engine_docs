@@ -6,28 +6,29 @@ alwaysApply: false
 
 # Docsify links — NON-NEGOTIABLE
 
-The site uses Docsify with **`relativePath: true`** in **`index.html`**. Write links so they resolve from the **current file’s folder**, not from the hash root.
+The site uses Docsify with **`relativePath: true`** in **`index.html`**. Docsify resolves every link against the **current hash route**, not against the file that contains the link.
 
 ## Why
 
-Without correct relative links, `[Sound](sound.md)` on **`reference/README.md`** becomes **`#/sound`** (404) instead of **`#/reference/sound`**. The same bug hits **`manuals/`** sibling links and **Continue reading** footers.
+- **`[Sound](sound.md)`** on **`#/reference/README`** becomes **`#/sound`** (404) unless **`relativePath: true`** and the link is a same-folder sibling.
+- **`[Audio](/manuals/audio.md)`** in **`_sidebar.md`** is required. With **`relativePath: true`**, a sidebar target **`manuals/audio.md`** (no leading slash) from **`#/manuals/index`** becomes **`#/manuals/manuals/audio`** (404).
 
 ## Rules
 
-1. **Same folder:** filename only. Example on **`manuals/audio.md`**: `[Sound component](audio_sound_component.md)`.
-2. **Parent or sibling folder:** use **`../`**. Example on **`manuals/audio.md`**: `[Sound](../reference/sound.md)`.
-3. **From repo root** (`README.md`, **`_sidebar.md`**): path from root. Example: `getting_started/introduction.md`, `manuals/audio.md`, `reference/README.md`.
-4. **Do not** repeat the current folder in the path. On **`getting_started/faq.md`**, use **`installation.md`**, not **`getting_started/installation.md`** (that can produce **`#/getting_started/getting_started/...`**).
-5. **Do not** prefix same-folder links with **`manuals/`** or **`reference/`** inside those folders. On **`reference/README.md`**, use **`sound.md`**, not **`reference/sound.md`**.
+1. **Same folder (page body):** filename only. On **`manuals/audio.md`**: **`[Sound component](audio_sound_component.md)`**.
+2. **Cross folder (page body):** **`../`**. On **`manuals/audio.md`**: **`[Sound](../reference/sound.md)`**.
+3. **`_sidebar.md` and root `README.md`:** always a **leading slash** from the site root. Examples: **`/manuals/audio.md`**, **`/getting_started/faq.md`**, **`/reference/README.md`**, **`/README.md`**. Never **`manuals/audio.md`** without **`/`** in the sidebar.
+4. **Inside a content folder**, do not repeat that folder name. On **`getting_started/faq.md`**, use **`installation.md`**, not **`getting_started/installation.md`**.
+5. **Inside `reference/`**, group links on **`README.md`** use **`sound.md`**, not **`reference/sound.md`**.
 
 ## Script API index
 
-**`tools/generate_script_api_reference.py`** (engine repo) must emit group links as **`({group}.md)`** on **`reference/README.md`**, not **`reference/{group}.md`**.
+**`tools/generate_script_api_reference.py`** (engine repo) emits **`({group}.md)`** on **`reference/README.md`**. If it touches **`_sidebar.md`**, the Script API entry must be **`/reference/README.md`**.
 
 ## When editing **`index.html`**
 
-Keep **`relativePath: true`** unless you replace it with another fix that preserves folder-relative routing. Do not remove it to simplify config.
+Keep **`relativePath: true`**. Do not remove it without another routing fix.
 
 ## Check before shipping
 
-After link or **`index.html`** changes, spot-check on GitHub Pages: **`#/reference/README`** then **Sound** (expect **`#/reference/sound`**); **`#/manuals/audio`** then **Continue reading** (expect **`#/manuals/audio_sound_component`**).
+From **`#/manuals/audio`**, click **Manual** in the sidebar (expect **`#/manuals/index`**, not **`#/manuals/manuals/index`**). From **`#/reference/README`**, click **Sound** (expect **`#/reference/sound`**).

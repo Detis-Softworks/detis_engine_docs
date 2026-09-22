@@ -26,4 +26,5 @@ Do not rely on memory from an earlier chat. If the change type matches a rule fi
 - Front-loading advanced flags, wrappers, or layering before the simple working path.
 - Turning beginner pages into internal engine design notes.
 - Same-folder links that include the folder name (**`manuals/foo.md`** inside **`manuals/`**, **`reference/bar.md`** inside **`reference/`**).
+- **`_sidebar.md`** or root **`README.md`** links without a leading slash (**`manuals/audio.md`** instead of **`/manuals/audio.md`**) while **`relativePath: true`** is on.
 - Removing **`relativePath: true`** from **`index.html`** without a replacement routing fix.
