@@ -10,6 +10,7 @@ This repository is the **user-facing manual site**, not the engine source tree.
 4. **`.cursor/rules/code-examples.mdc`** when examples or API names change
 5. **`.cursor/rules/manual-voice.mdc`** for **`manuals/`**, **`tutorials/`**, **`getting_started/`**
 6. **`.cursor/rules/sequential-navigation.mdc`** for **`## Continue reading`** footers and multi-page guide order
+7. **`.cursor/rules/docsify-links.mdc`** for internal links, **`_sidebar.md`**, and **`index.html`** (Docsify **`relativePath`**)
 
 ## Where truth lives
 

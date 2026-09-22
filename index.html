@@ -31,6 +31,9 @@
       name: 'Detis Engine Docs',
       repo: 'detis-softworks/detis_engine_docs',
       basePath: base_path,
+      // Resolve markdown links relative to the current page file (reference/sound.md, manuals/audio.md, etc.).
+      // Without this, a link like [Sound](sound.md) on reference/README becomes #/sound and 404s on GitHub Pages.
+      relativePath: true,
       loadSidebar: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
