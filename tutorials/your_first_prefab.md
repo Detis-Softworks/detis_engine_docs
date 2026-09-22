@@ -1,16 +1,14 @@
 # Your first prefab
 
-In [Your first world](your_first_world.md) you dragged ready-made `.entity` files from the Entity Browser. Now build one from components, save it as a prefab, and place it again from the browser.
+Let's build one entity from components, save it as a prefab, and load it back in the world.
 
-The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap you will fill. Giving it collision now also sets you up to reuse this prefab as a ball in the next tutorial.
+The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap we will fill. Giving it collision now also sets us up to reuse this prefab as a ball in the next tutorial.
 
 You should already have a saved tutorial world open. If not, do [Your first world](your_first_world.md) first.
 
 ## What a prefab is
 
-A prefab is an `.entity` file: an entity (and optionally children) saved to disk. Place instances from the **Entity Browser** (drag into the viewport, or onto the World Inspector). **Prefab → Save As** writes the selected entity out as a reusable asset.
-
-**Add New Entity** is for authoring a new prefab from components, which is this page. **Prefab → Load** on an existing entity still works if you already created the entity and want to keep its name.
+A prefab is an entity (and optionally its children in the world hierarchy) saved as *.entity file to disk to be reused. 
 
 ## 1. Add an empty entity
 
@@ -30,7 +28,7 @@ New entities come with a **Transform**. That is enough to start.
 
 1. Open the **Mesh** section.
 2. On the mesh file field, browse to `meshes/primitive/sphere.glb`.
-3. On **Material 0**, pick `materials/primitive/primitive_triplanar_yellow.mat` so it feels consistent with the other primitive prefabs.
+3. On **Material 0**, pick `materials/primitive/primitive_triplanar_yellow.mat`.
 
 You should see a sphere in the viewport. The mesh is about `1` unit across (radius `0.5`). Move it beside your cube with **Transform** or the translate gizmo (**W**), and set Position Y to `1.5` so it sits on the cube.
 
@@ -59,7 +57,7 @@ You want the wireframe sphere to line up with the mesh before you save the prefa
 
 **Whole scene**
 
-1. **Debug → Toggle Collision Debug** (`Shift+C`), or the collision button on the viewport toolbar.
+1. **Debug -> Toggle Collision Debug** (`Shift+C`), or the collision button on the viewport toolbar.
 2. That cycles Off / Selected / All.
 
 Use whichever is handy. Per-entity debug is good while editing one shape. Scene-wide debug is good when you want to compare several bodies at once. Cycle **Toggle Collision Debug** back to Off when you are done looking.
@@ -82,21 +80,19 @@ That file is now a reusable asset next to `cube.entity`, `plane.entity`, and the
 3. Search `sphere`, then drag `sphere.entity` into the viewport.
 4. Move the new instance so it is not sitting on top of the first one.
 
-The new instance is named from the file stem (`sphere_2` if `sphere` already exists). Right-click in the World Inspector → **Rename Entity** if you want a different name.
-
 You now have two spheres from one prefab file. Edits to an unlocked instance stay local until you save the prefab again. Lock, Unlock, Reset, and Break are covered in a later guide. For now, Save As plus drag from the browser is the day-one loop.
 
 ## 8. Save the world
 
-**File → Save World** (`Ctrl+S`) so the new entities stay in your map.
+**File -> Save World** (`Ctrl+S`) so the new entities stay in your map.
 
 ## 9. Play and check collision
 
-1. **Debug → Play Game** (`Ctrl+P` / `Alt+P`), or **Play** on the viewport toolbar.
+1. **Debug -> Play Game** (`Ctrl+P` / `Alt+P`), or **Play** on the viewport toolbar.
 2. Walk into a sphere with the demo player. It should block you like a solid prop.
 3. Static bodies stay put. They will not fall or roll yet.
 
-Toggle back to the editor with `Ctrl+P` / `Alt+P` when you are done.
+Toggle back to the editor with `Ctrl+P` / `Alt+P` / Escape when you are done.
 
 ## Continue reading
 

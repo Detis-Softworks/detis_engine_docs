@@ -2,10 +2,6 @@
 
 Build a small playable room from scratch: ground, light, a prop, materials, IBL, and the demo player.
 
-There is no finished tutorial world in the package. You save this one yourself.
-
-You should already know how to run the engine and move in the editor. If not, do [Quick start](../getting_started/quick_start.md) and [Editor overview](../getting_started/editor_overview.md) first.
-
 ## 1. New world
 
 1. **File → New World** (`Ctrl+N`).
@@ -14,12 +10,10 @@ You should already know how to run the engine and move in the editor. If not, do
 ## 2. Save it
 
 1. **File → Save World As...** (`Ctrl+Shift+S`).
-2. Browse under `content/worlds/` (file dialogs open in `content/` by default).
-3. Save as `your_first_world.world` (a `tutorials` subfolder is optional).
+2. Browse under `content/worlds/`. Keeping the file under `content/worlds/` matches the rest of the package. Note that file dialogs open in `content/` by default.
+3. Let's save as `my_first_world.world`.
 
-Keeping the file under `content/worlds/` matches the rest of the package. See [Project layout](../getting_started/project_layout.md).
-
-## 3. Required Tools
+## 3. Required Tool Panels
 
 1. **View → World Inspector** (`Shift+1`) if it is not already open. You rename and parent entities here.
 2. **View → Entity Inspector** (`Shift+2`) if it is not already open. You can add, edit, or remove components here. 
@@ -32,9 +26,8 @@ Keeping the file under `content/worlds/` matches the rest of the package. See [P
 
 1. In the Entity Browser, search `plane` (or open `content/entities/primitive/`).
 2. Drag `plane.entity` into the viewport.
-3. In the World Inspector, right-click it → **Rename Entity** and name it `ground`.
+3. In the World Inspector, right-click it and select **Rename Entity** and name it `ground`.
 4. Open **Transform** in the Entity Inspector and set:
-
    - Position: `0`, `0`, `0`
    - Rotation: `0`, `0`, `0`
    - Scale: `10`, `1`, `10`
@@ -49,7 +42,7 @@ Add a point light.
 
 1. In the Entity Browser, search `light_point`.
 2. Drag `light_point.entity` into the viewport.
-3. Right-click it in the World Inspector → **Rename Entity** and name it `light`.
+3. Right-click it in the World Inspector and **Rename Entity** and name it `light`.
 4. Open **Transform** and place it above the ground, for example:
 
    - Position: `0.0`, `2.5`, `0.0`
@@ -69,11 +62,9 @@ Materials live on the **Mesh** component. Each mesh slot has a **Material 0** (a
 
 1. Select `ground` in the World Inspector.
 2. In the Entity Inspector, open the **Mesh** section.
-3. On **Material 0**, browse and pick `materials/primitive/primitive_triplanar_dark_grey.mat`.
-4. Select `cube`.
-5. On **Material 0**, pick `materials/primitive/primitive_triplanar_yellow.mat`.
+3. On **Material 0**, browse and pick `materials/primitive/primitive_triplanar_dark_blue.mat`.
 
-The ground and cube should now read clearly under the point light.
+Optionally the same withthe cube if you really like.
 
 ## 8. Enable point light shadows
 
@@ -84,47 +75,23 @@ The ground and cube should now read clearly under the point light.
 
 The cube should cast a clear shadow across the ground. Prefab defaults (**Lumens** 800, **Range (m)** 30) are enough for this space. If there is no shadow, **File → Settings** → **Local Light Shadows** must be on.
 
-## 9. Sky fill and IBL
-
-Scene fill is **Ambient Lux**, not IBL. IBL adds reflections from the sky cubemap.
-
-1. **View → World Settings** (`Shift+3`).
-2. Open **Sky / Environment**.
-3. Enable **Active** if it is off.
-4. Leave **Ambient Lux** at `2` unless the room feels too flat or too bright.
-5. Under **IBL**, enable **Active** if it is off.
-6. Leave **Specular** and **Diffuse** on their defaults (`1.0`) unless you want to experiment.
-
-## 10. Add the demo player prefab
+## 9. Add the demo player prefab
 
 1. In the Entity Browser, search `player_character`.
 2. Drag `player_character.entity` into the viewport.
-3. Right-click it in the World Inspector → **Rename Entity** and name it `player`.
+3. Right-click it in the World Inspector and **Rename Entity** and name it `player`.
 4. Move it onto the ground in front of the cube, for example Position `-0.9`, `0`, `2.9`.
 
 You should see an editor-only player marker in the viewport. That is expected.
 
-## 11. Save and play
+## 10. Save and play
 
-1. **File → Save World** (`Ctrl+S`).
-2. **Debug → Play Game** (`Ctrl+P` / `Alt+P`), or **Play** on the viewport toolbar.
+1. **File -> Save World** (`Ctrl+S`).
+2. **Debug -> Play Game** (`Ctrl+P` / `Alt+P`), or **Play** on the viewport toolbar.
 3. Walk around with the demo player controls, look at the lit cube, then toggle back to the editor with `Ctrl+P` / `Alt+P`.
-
-## Optional: boot into this world next time
-
-In `game/content/config/default_game.ini`:
-
-```ini
-[Core]
-default_world = ../content/worlds/your_first_world.world
-```
-
-Use the path you actually saved (include `tutorials/` if you put it there). Restart the executable. The editor should open with this world loaded.
 
 ## Continue reading
 
-**Previous:** [Editor overview](../getting_started/editor_overview.md): toolbars and day-one loop.
+**Previous:** [Sample content](../getting_started/sample_content.md): demo worlds and prefabs.
 
 **Next:** [Your first prefab](your_first_prefab.md): build a sphere prefab from components.
-
-Sun, **Ambient Lux**, and local lights are covered in [Lighting](../manuals/lighting.md). Mix and music are in [Audio](../manuals/audio.md).
