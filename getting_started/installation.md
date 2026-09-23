@@ -26,6 +26,6 @@ Do not put several unrelated games inside one copy unless you intend to.
 
 ## Continue reading
 
-**Previous:** [FAQ](faq.md): scope and common questions.
+**Previous:** [Engine reference](engine_reference.md): platforms, terminology, and units.
 
 **Next:** [Quick start](quick_start.md): load a demo, play, then edit something.
