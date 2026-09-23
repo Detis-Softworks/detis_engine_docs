@@ -7,10 +7,10 @@ Facts that apply everywhere in Detis: platforms, recommended hardware, and share
 | Topic | Detis today |
 |-------|-------------|
 | **OS** | **64-bit Windows** and **64-bit Linux** |
-| **Graphics API** | **OpenGL 4.5 Core** |
+| **Graphics API** | **OpenGL 4.5** |
 | **Input** | Keyboard, mouse, and standard gamepads |
 | **Gameplay language** | **Lua** |
-| **Scope** | **Single-player 3D PC** games. Hand-authored **worlds**, not a general-purpose or live-service platform |
+| **Scope** | **Single-player 3D PC** games. Not a general-purpose or live-service platform |
 
 macOS, mobile, and consoles are out of scope for now.
 
@@ -20,8 +20,7 @@ Detis does **not** publish a certified **minimum** spec or benchmark matrix. Tre
 
 | Area | Recommended |
 |------|-------------|
-| **OS** | **64-bit Windows** or **64-bit Linux** |
-| **Graphics** | **Discrete GPU** with **OpenGL 4.5 Core** and up-to-date drivers. Some integrated GPUs can run at reduced quality with lower frame rates. |
+| **Graphics** | **Discrete GPU** with **OpenGL 4.5** and up-to-date drivers. Some integrated GPUs can run at reduced quality with lower frame rates. |
 | **System RAM** | **16 GB** for comfortable work with the editor and other tools open. Smaller projects can run on less. |
 | **CPU** | **64-bit x86-64**, recent **multi-core** desktop or laptop. |
 | **Disk** | Space for the engine install plus your **`content/`** tree. |
