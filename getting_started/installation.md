@@ -13,14 +13,14 @@ Starting in game mode on launch is a packaging choice, not something you need on
 
 ## Run it
 
-1. Open `game/bin`.
+1. Open **`bin/`** at your project root.
 2. Run `detis_engine` (Windows or Linux build that matches your machine).
 
 Paths are resolved from that executable. Keep `bin`, `content`, and `engine` together as shipped.
 
 ## Another game, another copy
 
-Want a second game? Copy a **fresh** engine package and work in that `game` folder.
+Want a second game? Copy a **fresh** engine package. Each copy is its own project root.
 
 Do not put several unrelated games inside one copy unless you intend to. 
 

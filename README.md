@@ -1,5 +1,7 @@
 # Detis Engine Documentation
 
+> **Note:** This site is **work in progress**. What you see today is only the essential material you need to get started. More chapters will appear as they are written and reviewed.
+
 ### Getting started
 
 1. [Introduction](/getting_started/introduction.md)
@@ -19,10 +21,11 @@
 
 ### Manual
 
-- [Manual](/manuals/index.md) (Audio section published; more topics coming)
+- [Manual](/manuals/index.md) (Audio and Scripting published; more topics coming)
 - [Audio](/manuals/audio.md)
+- [Scripting overview](/manuals/script_overview.md)
 
 ### Reference
 
 - [Script API](/reference/README.md)
-
+

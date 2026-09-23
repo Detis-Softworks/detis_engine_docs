@@ -1,7 +1,7 @@
 # Script API reference
 
 Generated from `engine_stubs.lua`. Signatures and EmmyLua types come from ScriptAPI bindings.
-Use the stubs under `game/engine/stubs/` and `game/content/stubs/` for IDE autocomplete.
+Use the stubs at **`engine/stubs/`** and **`content/stubs/`** (paths from the project root) for IDE autocomplete.
 
 ## Groups
 

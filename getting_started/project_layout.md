@@ -1,14 +1,16 @@
 # Project layout
 
-A reminder that one engine download is one game. You run the program from **`game/bin`**. Everything the engine loads for your title is expected to live under **`game/content/`**.
+A reminder that one engine download is one game. You run the program from **`bin/`** inside your **project root**. Everything the engine loads for your title lives under **`content/`** in that same root.
 
-## The three roots
+The root folder can be named anything. What matters is that **`bin`**, **`content`**, and **`engine`** stay siblings.
+
+## Layout at the project root
 
 ```
-game/
-  bin/        Executable and runtime files (run from here). Do not touch unless you know why.
-  content/    Worlds, scripts, assets, game config. These are your game files.
-  engine/     Engine builtins: shaders, editor data, defaults. Do not touch unless you know why.
+<your root>/     (any folder name)
+  bin/           Executable and runtime files (run from here). Do not touch unless you know why.
+  content/       Worlds, scripts, assets, game config. These are your game files.
+  engine/        Engine builtins: shaders, editor data, defaults. Do not touch unless you know why.
 ```
 
 ## What belongs in `content/`
@@ -34,7 +36,7 @@ Treat this as part of the engine package. Unless you know what you are doing lea
 
 ## User specific data
 
-On first run, Detis creates a folder under the platform user root and **copies the default configs into it**. After that, **File ->Settings** and the editor write those user copies. The shipped files in `game/` stay as the template for the next fresh profile.
+On first run, Detis creates a folder under the platform user root and **copies the default configs into it**. After that, **File -> Settings** and the editor write those user copies. The shipped **`bin`**, **`content`**, and **`engine`** trees in your project root stay as the template for the next fresh profile.
 
 The game title from `default_game.ini`, `title`, names the folder.
 
@@ -47,9 +49,9 @@ Delete a user INI and relaunch to regenerate it from the matching default.
 
 ## Rules of thumb
 
-1. Your executables are in `game/bin`.
-2. Put your work in `game/content/`.
-3. Keep `bin`, `content`, and `engine` together.
+1. Your executables are in **`bin/`** at the project root.
+2. Put your work in **`content/`**.
+3. Keep **`bin`**, **`content`**, and **`engine`** together in one root folder.
 
 ## Continue reading
 

@@ -53,7 +53,7 @@ Unique material copies cannot change **Type** after the copy is created. Set typ
 
 1. Duplicate a nearby demo `.mat` or **New Material** in the Material Editor.
 2. Assign DDS paths and tune uniforms.
-3. **Save As** under your game folder.
+3. **Save As** under **`content/materials/`** (or your own tree under **`content/`**).
 4. Assign on the Mesh component (or open from the slot edit button).
 5. **Debug → Reload Assets** (`Shift+R`) if you edited the file on disk outside the editor.
 

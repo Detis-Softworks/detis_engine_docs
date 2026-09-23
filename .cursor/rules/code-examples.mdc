@@ -10,7 +10,7 @@ Applies when editing Markdown under `manuals/`, `tutorials/`, `getting_started/`
 
 ## Engine and script API
 
-- Every **`gui_*`**, **`entity_*`**, **`world_*`**, and other bound call in a fence must match **`game/engine/stubs/engine_stubs.lua`** in the engine package (names, required arguments, types). Verify against stubs before publishing.
+- Every **`gui_*`**, **`entity_*`**, **`world_*`**, and other bound call in a fence must match **`engine/stubs/engine_stubs.lua`** at the project root in the shipped package (names, required arguments, types). Verify against stubs before publishing.
 - Do not invent identifiers: no **`MENU_FLAGS`**, no **`...`** inside calls, no fake placeholders like **`path`**, **`color`**, **`my_button_state`** unless the same line defines them in that fence.
 - Optional stub parameters must either be omitted (when the binding defaults them) or passed explicitly. If the binding requires an argument (example: **`gui_begin_design_canvas(name, flags)`**), show a valid value such as **`0`**, not a made-up flag bundle, unless the page is explicitly documenting that bundle.
 

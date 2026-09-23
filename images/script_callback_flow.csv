@@ -1,0 +1,19 @@
+step,phase,callback,who,notes
+1,engine start,on_initialize,modules,No world is loaded yet. Lower priority first.
+2,world load,on_add,entity,When that entity script component is added. Before the ready pass.
+3,play start,on_initialize,modules,Skipped when the module is already loaded. That is every world change.
+4,play start,on_initialize,world,
+5,play start,on_initialize,entities,Active scripts only.
+6,play start,on_ready,entities,Active scripts only.
+7,play start,on_ready,world,Entities have finished on_ready. Modules have not.
+8,play start,on_ready,modules,Can read entities and call the world script. Lower priority first.
+9,each frame,on_fixed_process,modules then world then entities,Modules run even while paused when pauseable is false. World and entities skip while paused.
+10,each frame,on_process,modules then world then entities,Same pause rule as fixed.
+11,each frame,on_late_process,modules then world then entities,Same pause rule as fixed.
+12,each frame,on_draw,modules then world then entities,Draw is not paused. World and entity draw are skipped while a world load is queued.
+13,world change,on_shutdown,world,Modules stay loaded.
+14,world change,on_shutdown,entities,Then the world is cleared and the next play start runs from step 3.
+15,shutdown,on_shutdown,world,Leave play or engine shutdown. World first.
+16,shutdown,on_shutdown,entities,
+17,shutdown,on_shutdown,modules,Modules unload here. The next play start runs their on_initialize again at step 3.
+18,editor mode toggle,on_editor_mode_active,modules then world then entities,

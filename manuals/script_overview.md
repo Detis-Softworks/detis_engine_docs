@@ -1,65 +1,60 @@
-# Script overview
+# Scripting overview
 
-This page explains the big picture. Where scripts live, what shape a file has, etc. Gameplay is **Lua**. You attach **`.lua`** files to an entity, the current **world**, or the whole game. The engine calls named functions on your script when things happen. You call **`entity_*`**, **`input_*`**, **`gui_*`**, and other globals to read and change the world.
+**Lua** scripts run your gameplay. Detis calls a certain number of functions on your scripts wautomatically. 
 
-## Shipped sample code
+There are three places a script can live:
 
-Everything under **`content/scripts/`** in the package is **sample and demo code**. You do not have to copy it. It shows one way to wire things. Your game can use different file names, layout, and helpers. Feel free to use, copy, modify, or delete it. It is up to you.
+| Kind | Attached where | Stays loaded when you load another world? |
+|------|------------------|-------------------------------------------|
+| **Entity script** | **Script** component on one entity | No (per entity in the current world) |
+| **World script** | The active **`.world`** | No (this world file only) |
+| **Module script** | **View -> Module Manager** (writes **`content/config/modules.ini`**) | Yes (whole game) |
 
-Templates under **`content/scripts/_templates/`** are optional starters. Copy and rename them if you want a head start.
+Each script file returns one **Lua table** filled with functions. 
 
----
+Shared **`.lua`** files may be be used using **`dofile`** and are meant as libraries. They do not get engine callbacks.
 
-## Three script types
+Shipped **`content/scripts/`** is sample code. Use it, copy it. modify it, or delete it. It's up to you.
 
-| Type | Attached to | What it is for |
-|------|-------------|----------------|
-| **Entity script** | Entity as a ScriptComponent | Defines the behavior for **that entity**. Every placed copy of the same prefab runs the same script file on its own instance. |
-| **World script** | Active World | Logic that belongs to **this `.world` only**. Holds rules that do not belong on a single prefab. |
-| **Module script** | Whole game | Logic for the **whole game**. Loaded at startup and **kept** when the player loads another world. |
+## Callbacks
 
-Shared **`.lua`** files loaded with **`dofile`** are **not** a fourth type. They have no lifecycle. Other scripts pull in functions from them.
+**Callbacks** are functions on a script table the engine calls automatically if defined (**`on_ready`**, **`on_process`**, and so on). 
 
----
+Implement only the callbacks you need. Remove any empty ones to maintain game performance, especially the per-frame ones.
 
-## Basic script shape
+| Callback | When | Typical use |
+|----------|------|-------------|
+| **`on_initialize`** | Called once, when the script instance is created | Initialize required script elements |
+| **`on_ready`** | Called once, once world entities exist | Cache **`entity_id`**, read parameters, find other entities |
+| **`on_process`** | Every frame (**`t_delta_time`**) | Timers, input, per-frame logic |
+| **`on_fixed_process`** | Fixed physics step | Physics and movement |
+| **`on_late_process`** | After **`on_process`** same frame | Follow targets that moved in **`on_process`** |
+| **`on_draw`** | Render phase | Drawing in-game UI. Per-entity UI is rare |
+| **`on_shutdown`** | Called once, before script removal | Cleanup |
+| **`on_editor_mode_active`** | Editor vs play | Debug draws in the viewport |
 
-Every gameplay script is a **Lua table** with functions on it. The file **returns** that table. The table name must match what you **`return`**.
+Use **`on_process`** unless you need a fixed step. Add **`on_fixed_process`** when logic must match the physics timestep.
 
-```lua
-local MyDoor = {}
+**`on_collision`** and **`on_overlap`** fire for physics contacts and triggers. They are separate from the table above.
 
-function MyDoor.on_ready()
-end
+## Callback order
 
-return MyDoor
-```
+Module **`on_initialize`** runs at engine start, before a world is loaded. It does not run again on a world change while the module stays loaded.
 
-Attach the **`.lua`** file path on the entity, world, or in **`modules.ini`**. The engine looks up functions by name (**`on_ready`**, **`on_process`**, and so on).
+**`on_ready`** order is entity scripts, then the world script, then modules.
 
----
+**`on_shutdown`** on a world change runs for the world script and entity scripts only. The module stays loaded. On engine quit, and when you leave **Play**, **`on_shutdown`** then runs for the module too, and the module is unloaded.
 
-## Built-in globals
-
-Entity scripts receive **`entity_id`** for the owning entity. Other globals depend on script type. Automatically generated stubs list what exists:
-
-- **`engine/stubs/engine_stubs.lua`**: engine API (**`entity_*`**, **`gui_*`**, …)
-- **`content/stubs/game_stubs.lua`**: script globals and **`@PARAMETER`** names
-
-Use stubs for IDE autocomplete. Do not edit them.
-
----
+<img src="../images/script_callback_flow.svg" alt="Script callback order" style="max-width:720px;height:auto;display:block">
 
 ## Hot reload
 
-While the engine is running you can reload a script after editing the **`.lua`** file on disk.
+In the Detis editor, use **Reload** on the **Script File** field in the script component or world proprties panels, or **Debug -> Reload Assets** (**`Shift+R`**) to reload scripts along with other assets without the need to restart the engine or editor. 
 
-> **Note:** Reload from the editor (Script component **Reload**, or **Debug → Reload Assets** / **`Shift+R`**). Automatic script change detection is planned.
-
----
+> **Note:** Automatic reload when a file changes on disk is planned.
 
 ## Continue reading
 
-**Previous:** [Sky texture](art_sky.md): equirect sky DDS and World Settings.
+**Previous:** [Detis Engine Manual](index.md): manual home.
 
-**Next:** [Where logic lives](script_placement.md): choose entity, world, module, or shared helper.
+**Next:** [Lua editor setup](script_setup.md): VS Code and stubs.

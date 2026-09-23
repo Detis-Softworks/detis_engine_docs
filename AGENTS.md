@@ -14,7 +14,7 @@ This repository is the **user-facing manual site**, not the engine source tree.
 
 ## Where truth lives
 
-- Script API shape: **`game/engine/stubs/engine_stubs.lua`** in the shipped engine package
+- Script API shape: **`engine/stubs/engine_stubs.lua`** at the project root in the shipped package
 - Deep engine notes (optional link targets): engine repo **`docs/game/`**
 
 ## Audience
@@ -28,6 +28,8 @@ Do not use the em dash (—) or Unicode arrows (→) in this repo’s Markdown. 
 ## Terminology
 
 Stick to engine and editor wording (**world**, **entity**, **module**, **`gui_*`**, etc.). A loaded level is a **world**, not a “scene”. Do not invent alternate names. See **`.cursor/rules/manual-voice.mdc`**.
+
+The shipped tree uses **`bin/`**, **`content/`**, and **`engine/`** under a **project root**. That root folder can be named anything. Do not tell readers to open a folder named **`game`** unless you are quoting their disk layout literally.
 
 ## Release labels
 

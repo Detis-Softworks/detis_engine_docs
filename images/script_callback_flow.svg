@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 980 520"
+   version="1.1"
+   id="svg23"
+   sodipodi:docname="script_callback_flow.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview23"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.29158654"
+     inkscape:cx="-1046.0016"
+     inkscape:cy="289.7939"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="618"
+     inkscape:window-y="2149"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg23" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">
+      .bg { fill: #ecf0f1; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 22px; font-weight: 700; fill: #2c3e50; text-anchor: middle; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; font-weight: 700; fill: #7f8c8d; }
+      .text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; fill: #ffffff; text-anchor: middle; }
+      .note { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #34495e; }
+      .mod { fill: #27ae60; }
+      .world { fill: #2980b9; }
+      .ent { fill: #8e44ad; }
+      .arrow { stroke: #34495e; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="3"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3, 0 6"
+         fill="#34495e"
+         id="polygon1" />
+    </marker>
+  </defs>
+  <rect
+     class="bg"
+     width="980"
+     height="520"
+     rx="8"
+     id="rect1"
+     x="0"
+     y="0" />
+  <text
+     class="title"
+     x="490"
+     y="36"
+     id="text1">SCRIPT CALLBACK ORDER</text>
+  <text
+     class="label"
+     x="40"
+     y="68"
+     id="text2">ENGINE START</text>
+  <rect
+     class="mod"
+     x="40"
+     y="80"
+     width="200"
+     height="44"
+     rx="6"
+     id="rect2" />
+  <text
+     class="text"
+     x="140"
+     y="107"
+     id="text3">Module on_initialize</text>
+  <text
+     class="label"
+     x="300"
+     y="68"
+     id="text4">PLAY START</text>
+  <rect
+     class="world"
+     x="300"
+     y="80"
+     width="200"
+     height="36"
+     rx="6"
+     id="rect4" />
+  <text
+     class="text"
+     x="400"
+     y="103"
+     id="text5">World on_initialize</text>
+  <rect
+     class="ent"
+     x="300"
+     y="126"
+     width="200"
+     height="36"
+     rx="6"
+     id="rect5" />
+  <text
+     class="text"
+     x="400"
+     y="149"
+     id="text6">Entity on_initialize</text>
+  <rect
+     class="ent"
+     x="300"
+     y="172"
+     width="200"
+     height="36"
+     rx="6"
+     id="rect6" />
+  <text
+     class="text"
+     x="400"
+     y="195"
+     id="text7">Entity on_ready</text>
+  <rect
+     class="world"
+     x="300"
+     y="218"
+     width="200"
+     height="36"
+     rx="6"
+     id="rect7" />
+  <text
+     class="text"
+     x="400"
+     y="241"
+     id="text8">World on_ready</text>
+  <rect
+     class="mod"
+     x="300"
+     y="264"
+     width="200"
+     height="36"
+     rx="6"
+     id="rect8" />
+  <text
+     class="text"
+     x="400"
+     y="287"
+     id="text9">Module on_ready</text>
+  <text
+     class="label"
+     x="620"
+     y="68"
+     id="text10">WORLD CHANGE</text>
+  <rect
+     class="world"
+     x="620"
+     y="80"
+     width="220"
+     height="44"
+     rx="6"
+     id="rect10" />
+  <text
+     class="text"
+     x="730"
+     y="107"
+     id="text11">World on_shutdown</text>
+  <rect
+     class="ent"
+     x="620"
+     y="140"
+     width="220"
+     height="44"
+     rx="6"
+     id="rect11" />
+  <text
+     class="text"
+     x="730"
+     y="167"
+     id="text12">Entity on_shutdown</text>
+  <path
+     class="arrow"
+     d="M240 102 H292"
+     id="path15" />
+  <path
+     class="arrow"
+     d="M 500,282 H 615.16949"
+     id="path16"
+     sodipodi:nodetypes="cc" />
+  <path
+     class="arrow"
+     d="M560 282 V102 H612"
+     id="path17" />
+  <text
+     class="label"
+     x="618.97644"
+     y="246.08354"
+     id="text17">ENGINE QUIT</text>
+  <rect
+     class="world"
+     x="618.97644"
+     y="262.08353"
+     width="220"
+     height="44"
+     rx="6"
+     id="rect17" />
+  <text
+     class="text"
+     x="728.97644"
+     y="289.08353"
+     id="text18">World on_shutdown</text>
+  <rect
+     class="ent"
+     x="619.19165"
+     y="316.59323"
+     width="220"
+     height="44"
+     rx="6"
+     id="rect18" />
+  <text
+     class="text"
+     x="729.19165"
+     y="343.59323"
+     id="text19">Entity on_shutdown</text>
+  <rect
+     class="mod"
+     x="620.01306"
+     y="372.36896"
+     width="220"
+     height="44"
+     rx="6"
+     id="rect19" />
+  <text
+     class="text"
+     x="729.4068"
+     y="396.94394"
+     id="text20">Module on_shutdown</text>
+  <rect
+     class="mod"
+     x="40"
+     y="460"
+     width="16"
+     height="16"
+     rx="3"
+     id="rect21" />
+  <text
+     class="note"
+     x="64"
+     y="473"
+     id="text21">Module</text>
+  <rect
+     class="world"
+     x="150"
+     y="460"
+     width="16"
+     height="16"
+     rx="3"
+     id="rect22" />
+  <text
+     class="note"
+     x="174"
+     y="473"
+     id="text22">World script</text>
+  <rect
+     class="ent"
+     x="300"
+     y="460"
+     width="16"
+     height="16"
+     rx="3"
+     id="rect23" />
+  <text
+     class="note"
+     x="324"
+     y="473"
+     id="text23">Entity scripts</text>
+</svg>

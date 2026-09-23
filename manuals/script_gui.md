@@ -6,9 +6,7 @@ You build it in **Lua**, same as gameplay logic. **`on_draw`** function is speci
 
 ## Demo script helpers
 
-Everything under **`content/scripts/`** in the shipped package is **sample and demo code**. You do not have to use any of it in your game. 
-
-**`UiWidgets`** (`content/scripts/shared/ui_widgets.lua`) is a **demo helper library** offering basic buttons, rows, grids, and a skin options. It's specifically added to save you time and show one possible layout. You are free to copy it or delete it and write your own wrappers if you prefer.
+**`UiWidgets`** (`content/scripts/shared/ui_widgets.lua`), included in the demo content, is a **demo helper library** offering basic buttons, rows, grids, and a skin options. It's specifically added to save you time and show one possible layout. You are free to copy it or delete it and write your own wrappers if you prefer.
 
 ---
 

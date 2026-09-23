@@ -10,7 +10,7 @@ Static and skinned geometry comes from **GLB** or **GLTF** files under `content/
 2. In the **Entity Inspector**, open **Mesh**.
 3. Browse **Mesh** to a `.glb` or `.gltf` under `content/meshes/`.
 
-The file dialog filter is mesh files only. Paths are stored relative to the runtime anchor (`game/bin`).
+The file dialog filter is mesh files only. Paths are stored relative to the runtime anchor (**`bin/`**, where the executable lives).
 
 ## Material slots
 

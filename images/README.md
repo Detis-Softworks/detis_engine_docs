@@ -5,7 +5,7 @@ Put screenshots and diagrams here. Editor screenshots are not in the repo yet. A
 ```
 images/
   editor/     editor UI (for example ed_material_editor.png, ed_mesh_component.png, ed_texture_packer.png, ed_ambient_lighting.png)
-  game/       in-game / GUI
+  game/       in-game / GUI screenshots (this docs repo folder only, not the engine project root)
   engine/     tools / other
 ```
 

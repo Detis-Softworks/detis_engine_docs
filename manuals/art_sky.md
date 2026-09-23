@@ -48,4 +48,4 @@ After replacing the DDS on disk, use **Debug → Reload Assets** (`Shift+R`). Sk
 
 **Previous:** [Material Editor](art_material_editor.md): edit `.mat` files in the editor.
 
-**Next:** [Script overview](script_overview.md): entity, world, and module scripts.
+**Next:** [Scripting overview](script_overview.md): entity, world, and module scripts.

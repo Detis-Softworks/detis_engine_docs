@@ -4,7 +4,7 @@
 
 ## 1. Run your copy
 
-Open `game/bin` and run `detis_engine`.
+Open **`bin/`** at your project root and run **`detis_engine`**.
 
 **This copy is already your game.** You do not create a project elsewhere.
 
