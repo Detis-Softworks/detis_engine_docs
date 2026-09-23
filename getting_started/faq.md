@@ -48,13 +48,21 @@ Windows and Linux on **64-bit PC**. **macOS**, mobile, and console are out of sc
 
 ## What hardware do I need?
 
-See [Engine reference](engine_reference.md) for recommended development hardware, supported platforms, and world conventions (meters, axes, time).
+Detis does **not** publish a certified **minimum** spec or benchmark matrix. Treat the table below as a **recommended starting point** for development on a typical indie PC. **What you need at runtime** (RAM in Play mode, VRAM, disk, CPU headroom) scales with **your project**: world size, asset weight, entity count, and **File ->Settings** quality.
+
+| Area | Recommended |
+|------|----------|
+| **OS** | **64-bit Windows** or **64-bit Linux** |
+| **Graphics** | **Discrete GPU** with **OpenGL 4.5 Core** support and up-to-date drivers. Some **integrated** GPUs can run at reduced quality, but expect lower frame rates.  |
+| **System RAM** | **16 GB** for comfortable everyday work with the editor and other tools open. Smaller projects can run on less. |
+| **CPU** | **64-bit x86-64**, recent **multi-core** desktop or laptop processor. Simulation and loading scale with your content. |
+| **Disk** | Space for the engine install plus your **`content/`** tree. |
 
 ## What is the asset pipeline?
 
 Detis uses a zero-import pipeline. Meshes are raw `.glb` or `.gltf`. Textures are DDS or KTX. There is no separate import step before you can place or play content.
 
-Change assets on disk, then use **Debug → Reload Assets** (`Shift+R`) in the editor to pick up shaders, textures, materials, sounds, animations, scripts, and related data. Worlds also load on demand, which keeps load times short and makes linking smaller worlds into a larger game practical.
+Change assets on disk, then use **Debug ->Reload Assets** (`Shift+R`) in the editor to pick up shaders, textures, materials, sounds, animations, scripts, and related data. Worlds also load on demand, which keeps load times short and makes linking smaller worlds into a larger game practical.
 
 ## Why use OpenGL as the base rendering API?
 

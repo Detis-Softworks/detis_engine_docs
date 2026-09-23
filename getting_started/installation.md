@@ -8,7 +8,7 @@ Download and extract the engine package. That data is your project!
 
 The editor is built into the game. You run one executable: `detis_engine`.
 
-By default it starts in **editor** mode (`editor_active_on_startup` in `content/config/default_game.ini`). Enter **game** with the green **Play** button on the viewport toolbar, **Debug → Play Game**, or `Ctrl+P` / `Alt+P`. The same play shortcut returns you to the editor. 
+By default it starts in **editor** mode (`editor_active_on_startup` in `content/config/default_game.ini`). Enter **game** with the green **Play** button on the viewport toolbar, **Debug ->Play Game**, or `Ctrl+P` / `Alt+P`. The same play shortcut returns you to the editor. 
 Starting in game mode on launch is a packaging choice, not something you need on day one.
 
 ## Run it

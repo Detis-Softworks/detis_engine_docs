@@ -34,7 +34,7 @@ Treat this as part of the engine package. Unless you know what you are doing lea
 
 ## User specific data
 
-On first run, Detis creates a folder under the platform user root and **copies the default configs into it**. After that, **File → Settings** and the editor write those user copies. The shipped files in `game/` stay as the template for the next fresh profile.
+On first run, Detis creates a folder under the platform user root and **copies the default configs into it**. After that, **File ->Settings** and the editor write those user copies. The shipped files in `game/` stay as the template for the next fresh profile.
 
 The game title from `default_game.ini`, `title`, names the folder.
 
