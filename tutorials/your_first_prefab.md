@@ -2,7 +2,7 @@
 
 Let's build one entity from components, save it as a prefab, and load it back in the world.
 
-The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap we will fill. Giving it collision now also sets us up to reuse this prefab as a ball in the next tutorial.
+The package already has `sphere.glb` under `meshes/primitive/`, but there is no matching `sphere.entity` yet. That is the gap we will fill.
 
 You should already have a saved tutorial world open. If not, do [Your first world](your_first_world.md) first.
 
@@ -28,13 +28,13 @@ New entities come with a **Transform**. That is enough to start.
 
 1. Open the **Mesh** section.
 2. On the mesh file field, browse to `meshes/primitive/sphere.glb`.
-3. On **Material 0**, pick `materials/primitive/primitive_triplanar_yellow.mat`.
+3. On **Material 0**, pick `materials/primitive/primitive_yellow.mat`.
 
 You should see a sphere in the viewport. The mesh is about `1` unit across (radius `0.5`). Move it beside your cube with **Transform** or the translate gizmo (**W**), and set Position Y to `1.5` so it sits on the cube.
 
-## 4. Add collision
+<img src="../images/tutorials/tut_ball_prefab.jpg" alt="Ball Prefab" style="max-width:600px;height:auto;display:block">
 
-Keep this prefab **Static** for now. It is a solid prop. You will switch it to **Dynamic** when you script the kick in the next tutorial.
+## 4. Add collision
 
 1. With `sphere` still selected, click **Add Component** again.
 2. Choose **PhysicsBody**.
@@ -44,8 +44,6 @@ Keep this prefab **Static** for now. It is a solid prop. You will switch it to *
 6. Set **Type** to **Sphere**.
 7. Set **Radius** to `0.5` so it matches the mesh.
 
-Leave mass and friction on the defaults. Dynamic mass and bounce matter more once the body can move.
-
 ## 5. Preview the collision shape
 
 You want the wireframe sphere to line up with the mesh before you save the prefab.
@@ -54,15 +52,19 @@ You want the wireframe sphere to line up with the mesh before you save the prefa
 
 1. Still in **Physics Body**, enable **Debug Visualization**.
 2. You should see this body's collision shape drawn in the viewport.
+3. Toggle **Debug Visualization** off to hide it again. 
 
 **Whole scene**
 
-1. **Debug -> Toggle Collision Debug** (`Shift+C`), or the collision button on the viewport toolbar.
-2. That cycles Off / Selected / All.
+1. Make sure no entity is selected. 
+2. Debug -> Toggle Collision Debug (`Shift+C`), or the collision button on the viewport toolbar.
 
-Use whichever is handy. Per-entity debug is good while editing one shape. Scene-wide debug is good when you want to compare several bodies at once. Cycle **Toggle Collision Debug** back to Off when you are done looking.
+Use whichever is handy. Per-entity debug is good while editing one shape. Scene-wide debug is good when you want to compare several bodies at once.
+Use **Toggle Collision Debug** back to Off when you are done looking.
 
 If the debug sphere does not match the mesh, fix **Radius** (and **Offset** if needed) before you save.
+
+<img src="../images/tutorials/tut_ball_collision.jpg" alt="Ball Collision" style="max-width:600px;height:auto;display:block">
 
 ## 6. Save it as a prefab
 
@@ -73,14 +75,24 @@ If the debug sphere does not match the mesh, fix **Radius** (and **Offset** if n
 
 That file is now a reusable asset next to `cube.entity`, `plane.entity`, and the other primitives. Mesh, material, and collision travel with it.
 
-## 7. Prove it shows up in the browser
+## 7. Check it shows up in the Entity Browser
 
 1. Open the **Entity Browser** (`Shift+Space`) if it is closed.
 2. Click **Refresh** if `sphere.entity` is not listed yet.
 3. Search `sphere`, then drag `sphere.entity` into the viewport.
 4. Move the new instance so it is not sitting on top of the first one.
 
-You now have two spheres from one prefab file. Edits to an unlocked instance stay local until you save the prefab again. Lock, Unlock, Reset, and Break are covered in a later guide. For now, Save As plus drag from the browser is the day-one loop.
+You now have two spheres spawned from one prefab file. Each instance in the world is its own copy. 
+
+**Editing one sphere (radius, material, position) does not change the other.**
+
+Prefabs do not auto-update. Resaving the linked `.entity` file does **not** refresh instances already in the map. That is true whether you use **Save** in the **Prefab** section, edit the file outside the editor, or change the asset and save again. Existing instances keep what they had until you choose an action:
+
+- **Reset** on one instance reloads that instance from the file on disk.
+- **Apply to All** reloads every instance in the currently open world that shares that prefab path.
+- Dragging from the Entity Browser again spawns a **new** instance from the file as it is on disk now.
+
+Lock, Unlock, Reset, Break, and Apply to All will be covered in a later guide. For now, **Save As** plus drag from the Entity Browser is enough.
 
 ## 8. Save the world
 
@@ -88,11 +100,10 @@ You now have two spheres from one prefab file. Edits to an unlocked instance sta
 
 ## 9. Play and check collision
 
-1. **Debug -> Play Game** (`Ctrl+P` / `Alt+P`), or **Play** on the viewport toolbar.
+1. Hit the play button (or `Ctrl+P` / `Alt+P`) on the viewport toolbar.
 2. Walk into a sphere with the demo player. It should block you like a solid prop.
-3. Static bodies stay put. They will not fall or roll yet.
 
-Toggle back to the editor with `Ctrl+P` / `Alt+P` / Escape when you are done.
+Toggle back to the editor with `Ctrl+P` / `Alt+P` when you are done.
 
 ## Continue reading
 

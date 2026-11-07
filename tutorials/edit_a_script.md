@@ -1,8 +1,8 @@
 # Edit a script
 
-Continue from [Kick the ball](kick_the_ball.md). You already have a **Dynamic** sphere with **`push_impulse_interactable.lua`** and you tuned **impulse_strength** in the **Entity Inspector**.
+Let's edit a script. Continue from [Kick the ball](kick_the_ball.md). You already have a Dynamic sphere with `push_impulse_interactable.lua`.
 
-Do not edit `scripts/components/push_impulse_interactable.lua`. Demos share that shipped interactable script.
+> **NOTE:** Avoid editting `scripts/components/push_impulse_interactable.lua` directly if you want to use the demo content as reference. Demos share that shipped interactable script.
 
 ## 1. Copy the interactable script, then assign it to the ball
 
@@ -96,12 +96,9 @@ The hop from the script only adds lift on Interact. Bounce when the ball hits th
 
 Restitution is how much energy comes back on impact. `0` is dead. Near `1` is very springy. Optional: lower **Rolling Friction** a little if the ball stops spinning too fast.
 
-## 7. Optional: bake Dynamic + script into the prefab
+## 7. Optional: Save as a new prefab
 
-If you want every new sphere instance to come in ready to kick:
-
-1. Confirm Mesh (plain white material), PhysicsBody (**Dynamic**, with your restitution), Transform (**Enable Interpolation**), and Script look right.
-2. Prefab -> **Save As** -> overwrite or update `entities/primitive/sphere.entity` (or save a tutorial-specific prefab under `entities/tutorials/`).
+If you want every new sphere instance to come in ready to kick use Prefab -> **Save As** -> overwrite or update `entities/primitive/sphere.entity` (or save a tutorial-specific prefab under `entities/tutorials/`).
 
 Otherwise leave these changes on this world instance only. The shipped primitive can stay Static if you prefer.
 
