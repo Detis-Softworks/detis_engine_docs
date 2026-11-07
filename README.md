@@ -11,7 +11,7 @@
 5. [Project layout](/getting_started/project_layout.md)
 6. [Sample content](/getting_started/sample_content.md)
 
-### Engine reference (optional)
+### Engine reference
 
 Read these when you need facts or caps, not before first install.
 

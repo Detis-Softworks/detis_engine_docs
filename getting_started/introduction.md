@@ -6,7 +6,7 @@ This documentation is designed to get you up and running with the Detis toolset.
 
 <img src="../images/editor/ed_overview_b.jpg" alt="Editor overview" style="max-width:600px;height:auto;display:block">
 
-When you need platforms, hardware, units, or terminology, see [Engine reference](engine_reference.md) (optional).
+When you need platforms, hardware, units, or terminology, see [Engine reference](engine_reference.md).
 
 ## Continue reading
 

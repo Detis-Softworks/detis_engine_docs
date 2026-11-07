@@ -8,7 +8,7 @@
   * [Project layout](/getting_started/project_layout.md)
   * [Sample content](/getting_started/sample_content.md)
 
-* **Engine reference (optional)**
+* **Engine reference**
   * [Engine reference](/getting_started/engine_reference.md)
   * [Engine limitations](/getting_started/limitations.md)
 
