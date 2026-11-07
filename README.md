@@ -13,8 +13,6 @@
 
 ### Engine reference
 
-Read these when you need facts or caps, not before first install.
-
 - [Engine reference](/getting_started/engine_reference.md)
 - [Engine limitations](/getting_started/limitations.md)
 
@@ -27,7 +25,7 @@ Read these when you need facts or caps, not before first install.
 
 ### Manual
 
-- [Manual](/manuals/index.md) (Audio and Scripting published; more topics coming)
+- [Manual](/manuals/index.md) (More topics coming soon)
 
 **Audio:** [overview](/manuals/audio.md) · [Sound component](/manuals/audio_sound_component.md) · [Soundscape](/manuals/audio_soundscape.md) · [Sound zone](/manuals/audio_sound_zone.md) · [Music](/manuals/audio_music.md)
 
