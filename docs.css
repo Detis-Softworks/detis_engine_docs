@@ -487,9 +487,24 @@ section.content {
 .markdown-section pre {
   font-family: "JetBrains Mono", Monaco, monospace;
 }
-.markdown-section code {
-  background-color: var(--docs-page-panel);
+/* Inline `code` only (vue.css uses orange + margin gaps between adjacent spans) */
+.markdown-section :not(pre) > code {
+  margin: 0;
+  padding: 0.12em 0.35em;
+  border-radius: var(--docs-radius);
+  font-size: 0.9em;
+}
+/* Light: usual doc-site chips (light gray fill, accent text) — not the dark fenced-block well */
+html[data-docs-theme="light"] .markdown-section :not(pre) > code,
+html:not([data-docs-theme]) .markdown-section :not(pre) > code {
+  color: #b45309;
+  background-color: #eeeff1;
+  border: none;
+}
+html[data-docs-theme="dark"] .markdown-section :not(pre) > code {
   color: var(--docs-amber);
+  background-color: var(--docs-code-well);
+  border: 1px solid var(--docs-code-edge);
 }
 .markdown-section pre {
   background-color: var(--docs-code-well);
@@ -499,6 +514,10 @@ section.content {
 .markdown-section pre > code {
   background-color: transparent;
   color: var(--docs-bone);
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
 }
 .markdown-section pre:after,
 .markdown-section output:after {
