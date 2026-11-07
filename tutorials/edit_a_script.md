@@ -9,10 +9,10 @@ Let's edit a script. Continue from [Kick the ball](kick_the_ball.md). You alread
 1. Copy `content/scripts/components/push_impulse_interactable.lua`and save your copy as **`kick_ball.lua`**.
 2. Select the sphere.
 3. In the **Entity Inspector**, open the **Script** section.
-4. On **Script File**, browse to `scripts/tutorials/kick_ball.lua.
+4. On **Script File**, browse to your new `kick_ball.lua.`
 5. **File -> Save World** (`Ctrl+S`).
 
-From here on, edit only `scripts/tutorials/kick_ball.lua`.
+From here on, edit only the new `kick_ball.lua` script.
 
 ## 2. Rename the script table
 
@@ -55,13 +55,8 @@ Save the `.lua` file.
 
 ## 4. Reload and play again
 
-Scripts do not pick up disk edits by themselves while the world is loaded.
-
-1. Select the sphere.
-2. In the **Entity Inspector**, open the **Script** section and click **Reload** on the **Script File** field (or **Debug -> Reload Assets**, `Shift+R`, to reload scripts among other assets).
-3. Play, look at the ball, press Interact.
-
-You should get a hop instead of a flat shove. 
+1. Press `Shift+R`, to reload scripts among other assets or use the related viewport button. Scripts do not pick up disk edits by themselves while the world is loaded. 
+2. Play, look at the ball, press Interact. You should get a hop instead of a flat shove. 
 
 > **Note:** Automatic script change detection is planned as an optional feature later.
 
@@ -94,16 +89,16 @@ The hop from the script only adds lift on Interact. Bounce when the ball hits th
 3. Set **Restitution** to about `0.7` (try `0.5` to `0.8` until it feels right).
 4. Play, kick the ball, and watch it bounce a few times before settling.
 
-Restitution is how much energy comes back on impact. `0` is dead. Near `1` is very springy. Optional: lower **Rolling Friction** a little if the ball stops spinning too fast.
+Restitution is how much energy comes back on impact. `0` is dead. Near `1` is very springy. Optional: lower Rolling Friction a little if the ball stops spinning too fast.
 
 ## 7. Optional: Save as a new prefab
 
-If you want every new sphere instance to come in ready to kick use Prefab -> **Save As** -> overwrite or update `entities/primitive/sphere.entity` (or save a tutorial-specific prefab under `entities/tutorials/`).
-
-Otherwise leave these changes on this world instance only. The shipped primitive can stay Static if you prefer.
+If you want to save this instance as prefab so it comes in ready to kick use Prefab -> **Save As** -> and give it a new name. Otherwise leave these changes on this world instance only. 
 
 ## Continue reading
 
 **Previous:** [Kick the ball](kick_the_ball.md): Dynamic body, Interact, and script parameters.
 
-You have finished the guided tutorial path. Continue with the [Audio manual](/manuals/audio.md), or use the sidebar for Getting started and reference.
+You have finished the guided tutorial path. 
+
+For more information about scripting check [Scripting Overview](/manuals/script_overview) or continue browsing other topics. Check [Home](/README), or use the sidebar.
