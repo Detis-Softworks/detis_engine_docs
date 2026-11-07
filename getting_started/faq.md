@@ -35,7 +35,7 @@ Keyboard, mouse, and standard gamepads out of the box (one gamepad at a time).
 
 ## Is Detis AI-ready?
 
-Yes. Worlds, materials, scripts, configs, and most project data are plain text. An AI agent can read the Lua API stubs, sample scripts, and your project files, then generate gameplay systems, entity scripts, or world content directly in the tree. Nothing important is locked inside opaque binary blobs. Additionally, Detis includes an MCP server for gameplay scripting. Native editor prompting is planned for a future update.
+Yes. Worlds, materials, scripts, configs, and most project data are plain text. An AI agent can read the Lua API stubs, sample scripts, and your project files, then generate gameplay systems, entity scripts, or world content directly in the tree. Nothing important is locked inside opaque binary blobs. Additionally, Detis includes an MCP server (**`detis_mcp`** in **`bin/`**) for agentic gameplay scripting. See [MCP server for agentic scripting](/manuals/script_mcp.md). Native editor prompting is planned for a future update.
 
 ## Which platforms are supported?
 

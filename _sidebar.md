@@ -29,6 +29,7 @@
   * **Scripting**
     * [Scripting overview](/manuals/script_overview.md)
     * [Lua editor setup](/manuals/script_setup.md)
+    * [MCP server for agentic scripting](/manuals/script_mcp.md)
     * [Entity scripts](/manuals/script_entity.md)
     * [World scripts](/manuals/script_world.md)
     * [Module scripts](/manuals/script_module.md)

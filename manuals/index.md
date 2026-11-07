@@ -16,6 +16,7 @@ You edit and play in the same program. If you have not installed yet or opened a
 
 - [Scripting overview](script_overview.md)
 - [Lua editor setup](script_setup.md)
+- [MCP server for agentic scripting](script_mcp.md)
 - [Entity scripts](script_entity.md)
 - [World scripts](script_world.md)
 - [Module scripts](script_module.md)

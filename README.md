@@ -31,7 +31,7 @@ Read these when you need facts or caps, not before first install.
 
 **Audio:** [overview](/manuals/audio.md) · [Sound component](/manuals/audio_sound_component.md) · [Soundscape](/manuals/audio_soundscape.md) · [Sound zone](/manuals/audio_sound_zone.md) · [Music](/manuals/audio_music.md)
 
-**Scripting:** [overview](/manuals/script_overview.md) · [Lua editor setup](/manuals/script_setup.md) · [Entity scripts](/manuals/script_entity.md) · [World scripts](/manuals/script_world.md) · [Module scripts](/manuals/script_module.md) · [Communication](/manuals/script_communication.md) · [In-game UI](/manuals/script_gui.md)
+**Scripting:** [overview](/manuals/script_overview.md) · [Lua editor setup](/manuals/script_setup.md) · [MCP for agentic scripting](/manuals/script_mcp.md) · [Entity scripts](/manuals/script_entity.md) · [World scripts](/manuals/script_world.md) · [Module scripts](/manuals/script_module.md) · [Communication](/manuals/script_communication.md) · [In-game UI](/manuals/script_gui.md)
 
 ### Reference
 

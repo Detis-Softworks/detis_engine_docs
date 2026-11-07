@@ -35,4 +35,4 @@ Stubs are automatically generated. You do not need to edit them by hand.
 
 **Previous:** [Scripting overview](script_overview.md): three script types.
 
-**Next:** [Entity scripts](script_entity.md): **Script** component and callbacks.
+**Next:** [MCP server for agentic scripting](script_mcp.md): connect Cursor, VS Code, or Claude Code.

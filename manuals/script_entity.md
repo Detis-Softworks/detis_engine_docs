@@ -52,6 +52,6 @@ Other scripts can read parameters on this entity with **`script_get_parameter`**
 
 ## Continue reading
 
-**Previous:** [Lua editor setup](script_setup.md): VS Code and stubs.
+**Previous:** [MCP server for agentic scripting](script_mcp.md): optional AI lookup server.
 
 **Next:** [World scripts](script_world.md): attach on the **`.world`**.
