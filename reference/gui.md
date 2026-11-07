@@ -2,6 +2,19 @@
 
 Script API functions in the `gui` group.
 
+### `gui_apply_focused_step_tweak`
+
+`gui_apply_focused_step_tweak(t_value, t_min_value, t_max_value, t_step)`
+
+```lua
+---@param t_value number
+---@param t_min_value number
+---@param t_max_value number
+---@param t_step number
+---@return number
+function gui_apply_focused_step_tweak(t_value, t_min_value, t_max_value, t_step) end
+```
+
 ### `gui_begin_child`
 
 `gui_begin_child(t_id, t_size, t_flags)`
@@ -406,6 +419,15 @@ function gui_get_display_size() end
 function gui_get_draw_priority() end
 ```
 
+### `gui_get_focused_nav_step_y`
+
+`gui_get_focused_nav_step_y()`
+
+```lua
+---@return integer
+function gui_get_focused_nav_step_y() end
+```
+
 ### `gui_get_font_global_scale`
 
 `gui_get_font_global_scale()`
@@ -460,6 +482,15 @@ function gui_get_is_item_focused() end
 function gui_get_is_item_hovered() end
 ```
 
+### `gui_get_is_ui_nav_activate_pressed`
+
+`gui_get_is_ui_nav_activate_pressed()`
+
+```lua
+---@return boolean
+function gui_get_is_ui_nav_activate_pressed() end
+```
+
 ### `gui_get_item_rect_min`
 
 `gui_get_item_rect_min()`
@@ -503,6 +534,15 @@ function gui_get_letterbox_offset() end
 ```lua
 ---@return number
 function gui_get_letterbox_scale() end
+```
+
+### `gui_get_menu_nav_step_y`
+
+`gui_get_menu_nav_step_y()`
+
+```lua
+---@return integer
+function gui_get_menu_nav_step_y() end
 ```
 
 ### `gui_get_normalized_to_pixels`
@@ -693,7 +733,7 @@ function gui_input_text(t_id, t_text, t_width, t_max_length) end
 ```lua
 ---@param t_id string
 ---@param t_size vec2
----@param t_enable_nav boolean
+---@param t_enable_nav boolean?
 ---@return boolean
 function gui_invisible_button(t_id, t_size, t_enable_nav) end
 ```
@@ -763,6 +803,14 @@ function gui_pop_style_color(t_count) end
 ```lua
 ---@param t_count integer?
 function gui_pop_style_var(t_count) end
+```
+
+### `gui_pop_text_wrap_pos`
+
+`gui_pop_text_wrap_pos()`
+
+```lua
+function gui_pop_text_wrap_pos() end
 ```
 
 ### `gui_progress_bar`
@@ -848,6 +896,15 @@ function gui_push_style_var_float(t_style_var, t_value) end
 ---@param t_style_var integer
 ---@param t_value vec2
 function gui_push_style_var_vec2(t_style_var, t_value) end
+```
+
+### `gui_push_text_wrap_width`
+
+`gui_push_text_wrap_width(t_design_width)`
+
+```lua
+---@param t_design_width number
+function gui_push_text_wrap_width(t_design_width) end
 ```
 
 ### `gui_same_line`

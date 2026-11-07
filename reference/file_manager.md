@@ -184,7 +184,7 @@ function file_manager_get_relative_path(t_file_path) end
 `file_manager_get_trimmed_string(t_value)`
 
 ```lua
----@param t_value string
+---@param t_value string?
 ---@return string
 function file_manager_get_trimmed_string(t_value) end
 ```

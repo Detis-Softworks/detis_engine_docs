@@ -22,6 +22,26 @@ function text_mesh_get_billboard(t_entity_id) end
 function text_mesh_get_editor_only(t_entity_id) end
 ```
 
+### `text_mesh_get_font_id`
+
+`text_mesh_get_font_id(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return string
+function text_mesh_get_font_id(t_entity_id) end
+```
+
+### `text_mesh_get_font_pixel_size`
+
+`text_mesh_get_font_pixel_size(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return number
+function text_mesh_get_font_pixel_size(t_entity_id) end
+```
+
 ### `text_mesh_get_text`
 
 `text_mesh_get_text(t_entity_id)`
@@ -52,6 +72,16 @@ function text_mesh_get_text_color(t_entity_id) end
 function text_mesh_get_visible(t_entity_id) end
 ```
 
+### `text_mesh_get_world_height`
+
+`text_mesh_get_world_height(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return number
+function text_mesh_get_world_height(t_entity_id) end
+```
+
 ### `text_mesh_set_billboard_active`
 
 `text_mesh_set_billboard_active(t_entity_id, t_billboard)`
@@ -70,6 +100,26 @@ function text_mesh_set_billboard_active(t_entity_id, t_billboard) end
 ---@param t_entity_id integer
 ---@param t_editor_only boolean
 function text_mesh_set_editor_only(t_entity_id, t_editor_only) end
+```
+
+### `text_mesh_set_font_id`
+
+`text_mesh_set_font_id(t_entity_id, t_font_id)`
+
+```lua
+---@param t_entity_id integer
+---@param t_font_id string
+function text_mesh_set_font_id(t_entity_id, t_font_id) end
+```
+
+### `text_mesh_set_font_pixel_size`
+
+`text_mesh_set_font_pixel_size(t_entity_id, t_font_pixel_size)`
+
+```lua
+---@param t_entity_id integer
+---@param t_font_pixel_size number
+function text_mesh_set_font_pixel_size(t_entity_id, t_font_pixel_size) end
 ```
 
 ### `text_mesh_set_text`
@@ -100,4 +150,14 @@ function text_mesh_set_text_color(t_entity_id, t_color) end
 ---@param t_entity_id integer
 ---@param t_visible boolean
 function text_mesh_set_visible(t_entity_id, t_visible) end
+```
+
+### `text_mesh_set_world_height`
+
+`text_mesh_set_world_height(t_entity_id, t_world_height)`
+
+```lua
+---@param t_entity_id integer
+---@param t_world_height number
+function text_mesh_set_world_height(t_entity_id, t_world_height) end
 ```

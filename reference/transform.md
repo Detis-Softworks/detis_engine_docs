@@ -82,6 +82,16 @@ function transform_get_local_scale(t_entity_id) end
 function transform_get_local_up(t_entity_id) end
 ```
 
+### `transform_get_render_world_position`
+
+`transform_get_render_world_position(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+---@return vec3
+function transform_get_render_world_position(t_entity_id) end
+```
+
 ### `transform_get_world_forward`
 
 `transform_get_world_forward(t_entity_id)`
@@ -212,6 +222,7 @@ function transform_look_at_world(t_entity_id, t_target, t_up) end
 
 ```lua
 ---@param t_entity_id integer
+---@return boolean
 function transform_remove_parent(t_entity_id) end
 ```
 
@@ -282,6 +293,7 @@ function transform_set_local_scale(t_entity_id, t_scale) end
 ```lua
 ---@param t_entity_id integer
 ---@param t_parent_id integer
+---@return boolean
 function transform_set_parent(t_entity_id, t_parent_id) end
 ```
 
@@ -292,6 +304,7 @@ function transform_set_parent(t_entity_id, t_parent_id) end
 ```lua
 ---@param t_entity_id integer
 ---@param t_parent_id integer
+---@return boolean
 function transform_set_parent_preserve_world(t_entity_id, t_parent_id) end
 ```
 

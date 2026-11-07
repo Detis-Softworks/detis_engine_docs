@@ -2,8 +2,6 @@
 
 Script API functions in the `sound_zone` group.
 
-Shared reverb character uses `sound_zone_get_reverb_*` / `sound_zone_set_reverb_*` (one room per zone). Per-source mix uses `internal_*` or `external_*` gain, low-pass, and **Level**. Category reverb sends are editor-only (no Lua).
-
 ### `sound_zone_get_external_gain_multiplier`
 
 `sound_zone_get_external_gain_multiplier(t_entity_id)`

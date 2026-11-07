@@ -364,3 +364,12 @@ function physics_body_set_trigger_callbacks_enabled(t_entity_id, t_enabled) end
 ---@param t_enabled boolean
 function physics_body_set_use_ccd(t_entity_id, t_enabled) end
 ```
+
+### `physics_body_warp_to_transform`
+
+`physics_body_warp_to_transform(t_entity_id)`
+
+```lua
+---@param t_entity_id integer
+function physics_body_warp_to_transform(t_entity_id) end
+```

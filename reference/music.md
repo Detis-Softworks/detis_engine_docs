@@ -2,6 +2,15 @@
 
 Script API functions in the `music` group.
 
+### `music_fade_in`
+
+`music_fade_in(t_fade_duration)`
+
+```lua
+---@param t_fade_duration number
+function music_fade_in(t_fade_duration) end
+```
+
 ### `music_get_duration`
 
 `music_get_duration()`
@@ -9,6 +18,15 @@ Script API functions in the `music` group.
 ```lua
 ---@return number
 function music_get_duration() end
+```
+
+### `music_get_fade_state`
+
+`music_get_fade_state()`
+
+```lua
+---@return string
+function music_get_fade_state() end
 ```
 
 ### `music_get_file_path`
@@ -38,6 +56,24 @@ function music_get_is_paused() end
 function music_get_is_playing() end
 ```
 
+### `music_get_mix_multiplier`
+
+`music_get_mix_multiplier()`
+
+```lua
+---@return number
+function music_get_mix_multiplier() end
+```
+
+### `music_get_playback_volume`
+
+`music_get_playback_volume()`
+
+```lua
+---@return number
+function music_get_playback_volume() end
+```
+
 ### `music_get_time`
 
 `music_get_time()`
@@ -65,6 +101,15 @@ function music_get_volume() end
 ---@param t_looping boolean
 ---@param t_fade_duration number
 function music_play(t_file_path, t_looping, t_fade_duration) end
+```
+
+### `music_set_mix_multiplier`
+
+`music_set_mix_multiplier(t_multiplier)`
+
+```lua
+---@param t_multiplier number
+function music_set_mix_multiplier(t_multiplier) end
 ```
 
 ### `music_set_paused`

@@ -91,6 +91,16 @@ function sound_get_base_pitch(t_entity_id) end
 function sound_get_category(t_entity_id) end
 ```
 
+### `sound_get_category_mix_multiplier`
+
+`sound_get_category_mix_multiplier(t_category)`
+
+```lua
+---@param t_category integer
+---@return number
+function sound_get_category_mix_multiplier(t_category) end
+```
+
 ### `sound_get_category_volume`
 
 `sound_get_category_volume(t_integer_1)`
@@ -537,6 +547,16 @@ function sound_set_air_absorption_outer_radius(t_entity_id, t_radius) end
 ---@param t_entity_id integer
 ---@param t_category integer
 function sound_set_category(t_entity_id, t_category) end
+```
+
+### `sound_set_category_mix_multiplier`
+
+`sound_set_category_mix_multiplier(t_category, t_multiplier)`
+
+```lua
+---@param t_category integer
+---@param t_multiplier number
+function sound_set_category_mix_multiplier(t_category, t_multiplier) end
 ```
 
 ### `sound_set_category_volume`

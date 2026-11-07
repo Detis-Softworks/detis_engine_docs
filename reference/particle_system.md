@@ -121,26 +121,6 @@ function particle_system_get_material_file(t_entity_id) end
 function particle_system_get_max_particles(t_entity_id) end
 ```
 
-### `particle_system_get_max_rendered`
-
-`particle_system_get_max_rendered(t_entity_id)`
-
-```lua
----@param t_entity_id integer
----@return integer
-function particle_system_get_max_rendered(t_entity_id) end
-```
-
-### `particle_system_get_nearest_only`
-
-`particle_system_get_nearest_only(t_entity_id)`
-
-```lua
----@param t_entity_id integer
----@return boolean
-function particle_system_get_nearest_only(t_entity_id) end
-```
-
 ### `particle_system_get_sprite_frame_columns`
 
 `particle_system_get_sprite_frame_columns(t_entity_id)`
@@ -370,26 +350,6 @@ function particle_system_set_material_file(t_entity_id, t_material_file) end
 ---@param t_entity_id integer
 ---@param t_count integer
 function particle_system_set_max_particles(t_entity_id, t_count) end
-```
-
-### `particle_system_set_max_rendered`
-
-`particle_system_set_max_rendered(t_entity_id, t_count)`
-
-```lua
----@param t_entity_id integer
----@param t_count integer
-function particle_system_set_max_rendered(t_entity_id, t_count) end
-```
-
-### `particle_system_set_nearest_only`
-
-`particle_system_set_nearest_only(t_entity_id, t_enabled)`
-
-```lua
----@param t_entity_id integer
----@param t_enabled boolean
-function particle_system_set_nearest_only(t_entity_id, t_enabled) end
 ```
 
 ### `particle_system_set_sprite_frame_columns`

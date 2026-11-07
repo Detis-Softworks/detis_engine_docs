@@ -379,3 +379,15 @@ function entity_set_active(t_entity_id, t_active) end
 ---@param t_name string
 function entity_set_name(t_entity_id, t_name) end
 ```
+
+### `entity_set_parent`
+
+`entity_set_parent(t_child_entity_id, t_parent_entity_id, t_keep_world_pose)`
+
+```lua
+---@param t_child_entity_id integer
+---@param t_parent_entity_id integer
+---@param t_keep_world_pose boolean?
+---@return boolean
+function entity_set_parent(t_child_entity_id, t_parent_entity_id, t_keep_world_pose) end
+```

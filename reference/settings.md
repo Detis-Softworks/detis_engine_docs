@@ -28,6 +28,15 @@ function settings_get_ambient_volume() end
 function settings_get_anisotropic_filter_level() end
 ```
 
+### `settings_get_anti_aliasing`
+
+`settings_get_anti_aliasing()`
+
+```lua
+---@return integer
+function settings_get_anti_aliasing() end
+```
+
 ### `settings_get_available_monitors`
 
 `settings_get_available_monitors()`
@@ -86,15 +95,6 @@ function settings_get_dev_mode_active() end
 ---@param t_default_value number?
 ---@return number
 function settings_get_float(t_section, t_key, t_default_value) end
-```
-
-### `settings_get_fxaa_active`
-
-`settings_get_fxaa_active()`
-
-```lua
----@return boolean
-function settings_get_fxaa_active() end
 ```
 
 ### `settings_get_game_title`
@@ -297,6 +297,15 @@ function settings_get_resolution() end
 function settings_get_reverb_quality() end
 ```
 
+### `settings_get_screen_space_contact_shadow_active`
+
+`settings_get_screen_space_contact_shadow_active()`
+
+```lua
+---@return boolean
+function settings_get_screen_space_contact_shadow_active() end
+```
+
 ### `settings_get_sfx_volume`
 
 `settings_get_sfx_volume()`
@@ -322,6 +331,15 @@ function settings_get_shadow_map_quality() end
 ```lua
 ---@return integer
 function settings_get_ssao_quality() end
+```
+
+### `settings_get_ssgi_quality`
+
+`settings_get_ssgi_quality()`
+
+```lua
+---@return integer
+function settings_get_ssgi_quality() end
 ```
 
 ### `settings_get_ssr_quality`
@@ -435,6 +453,15 @@ function settings_set_ambient_volume(t_volume) end
 function settings_set_anisotropic_filter_level(t_integer_1) end
 ```
 
+### `settings_set_anti_aliasing`
+
+`settings_set_anti_aliasing(t_integer_1)`
+
+```lua
+---@param t_integer_1 integer
+function settings_set_anti_aliasing(t_integer_1) end
+```
+
 ### `settings_set_bool`
 
 `settings_set_bool(t_section, t_key, t_value)`
@@ -455,15 +482,6 @@ function settings_set_bool(t_section, t_key, t_value) end
 ---@param t_key string
 ---@param t_value number
 function settings_set_float(t_section, t_key, t_value) end
-```
-
-### `settings_set_fxaa_active`
-
-`settings_set_fxaa_active(t_active)`
-
-```lua
----@param t_active boolean
-function settings_set_fxaa_active(t_active) end
 ```
 
 ### `settings_set_gamma`
@@ -651,6 +669,15 @@ function settings_set_resolution(t_width, t_height) end
 function settings_set_reverb_quality(t_integer_1) end
 ```
 
+### `settings_set_screen_space_contact_shadow_active`
+
+`settings_set_screen_space_contact_shadow_active(t_active)`
+
+```lua
+---@param t_active boolean
+function settings_set_screen_space_contact_shadow_active(t_active) end
+```
+
 ### `settings_set_sfx_volume`
 
 `settings_set_sfx_volume(t_volume)`
@@ -676,6 +703,15 @@ function settings_set_shadow_map_quality(t_integer_1) end
 ```lua
 ---@param t_integer_1 integer
 function settings_set_ssao_quality(t_integer_1) end
+```
+
+### `settings_set_ssgi_quality`
+
+`settings_set_ssgi_quality(t_integer_1)`
+
+```lua
+---@param t_integer_1 integer
+function settings_set_ssgi_quality(t_integer_1) end
 ```
 
 ### `settings_set_ssr_quality`

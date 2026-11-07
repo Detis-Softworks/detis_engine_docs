@@ -228,12 +228,13 @@ function world_get_script_parameter(t_param_name) end
 
 ### `world_load_from_file`
 
-`world_load_from_file(t_file_path)`
+`world_load_from_file(t_file_path, t_skip_preload_overlay)`
 
 ```lua
 ---@param t_file_path string
+---@param t_skip_preload_overlay boolean
 ---@return boolean
-function world_load_from_file(t_file_path) end
+function world_load_from_file(t_file_path, t_skip_preload_overlay) end
 ```
 
 ### `world_set_current_camera`

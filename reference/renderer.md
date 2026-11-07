@@ -438,6 +438,15 @@ function renderer_get_gamma() end
 function renderer_get_global_wetness_intensity() end
 ```
 
+### `renderer_get_gpu_name`
+
+`renderer_get_gpu_name()`
+
+```lua
+---@return string
+function renderer_get_gpu_name() end
+```
+
 ### `renderer_get_has_wind_noise_texture`
 
 `renderer_get_has_wind_noise_texture()`
@@ -493,15 +502,6 @@ function renderer_get_is_color_correction_active() end
 function renderer_get_is_custom_post_process_active(t_pass_index) end
 ```
 
-### `renderer_get_is_depth_prepass_active`
-
-`renderer_get_is_depth_prepass_active()`
-
-```lua
----@return boolean
-function renderer_get_is_depth_prepass_active() end
-```
-
 ### `renderer_get_is_distant_world_darken_active`
 
 `renderer_get_is_distant_world_darken_active()`
@@ -554,15 +554,6 @@ function renderer_get_is_fog_volumetric_active() end
 ```lua
 ---@return boolean
 function renderer_get_is_fog_wind_texture_active() end
-```
-
-### `renderer_get_is_fxaa_active`
-
-`renderer_get_is_fxaa_active()`
-
-```lua
----@return boolean
-function renderer_get_is_fxaa_active() end
 ```
 
 ### `renderer_get_is_local_light_shadows_active`
@@ -1396,15 +1387,6 @@ function renderer_set_custom_post_process_texture_file(t_pass_index, t_file_path
 function renderer_set_debug_view_mode(t_mode) end
 ```
 
-### `renderer_set_depth_prepass_active`
-
-`renderer_set_depth_prepass_active(t_active)`
-
-```lua
----@param t_active boolean
-function renderer_set_depth_prepass_active(t_active) end
-```
-
 ### `renderer_set_distance_culling_distance`
 
 `renderer_set_distance_culling_distance(t_distance)`
@@ -1691,15 +1673,6 @@ function renderer_set_fog_volumetric_sun_visibility_min(t_visibility) end
 ```lua
 ---@param t_active boolean
 function renderer_set_fog_wind_texture_active(t_active) end
-```
-
-### `renderer_set_fxaa_active`
-
-`renderer_set_fxaa_active(t_active)`
-
-```lua
----@param t_active boolean
-function renderer_set_fxaa_active(t_active) end
 ```
 
 ### `renderer_set_gamma`

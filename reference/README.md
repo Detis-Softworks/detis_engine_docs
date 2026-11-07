@@ -1,7 +1,7 @@
 # Script API reference
 
 Generated from `engine_stubs.lua`. Signatures and EmmyLua types come from ScriptAPI bindings.
-Use the stubs at **`engine/stubs/`** and **`content/stubs/`** (paths from the project root) for IDE autocomplete.
+Use the stubs under `game/engine/stubs/` and `game/content/stubs/` for IDE autocomplete.
 
 ## Groups
 
@@ -34,6 +34,7 @@ Use the stubs at **`engine/stubs/`** and **`content/stubs/`** (paths from the pr
 - [Physics](physics.md)
 - [Physics_body](physics_body.md)
 - [Physics_constraint](physics_constraint.md)
+- [Platform](platform.md)
 - [Print](print.md)
 - [Quat](quat.md)
 - [Renderer](renderer.md)
