@@ -1,6 +1,8 @@
 # Engine Settings
 
-Reference for **File → Settings**. You do not need this page on day one. Open it when you want to tune performance, audio levels, or editor appearance.
+Reference for **File -> Settings**. You do not need this page on day one. Open it when you want to tune performance, audio levels, or editor appearance.
+
+Many toggles here mirror world or engine caps. If a value still looks wrong after you change settings, check [Engine limitations](/getting_started/limitations.md) for hard limits and defaults.
 
 <img src="../images/editor/ed_engine_settings_redering.png" alt="Engine Settings rendering" style="max-width:400px;height:auto;display:block">
 

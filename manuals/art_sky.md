@@ -13,7 +13,7 @@ The visible sky dome and reflection environment can use a **2:1 equirectangular 
 
 See [Textures](art_textures.md) for GIMP export detail.
 
-**HDRI sources:** Export or tonemap in your DCC to an LDR equirect DDS today. A dedicated **Import HDRI** editor tool is planned but not shipped yet.
+**HDRI sources:** Export or tonemap in your DCC to an LDR equirect DDS today. A dedicated **Import HDRI** editor tool, procedural sky, and deferred decals are not shipped yet.
 
 ## Assign in the editor
 

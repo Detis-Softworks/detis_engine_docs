@@ -6,11 +6,17 @@
 
 1. [Introduction](/getting_started/introduction.md)
 2. [FAQ](/getting_started/faq.md)
-3. [Engine reference](/getting_started/engine_reference.md)
-4. [Installation](/getting_started/installation.md)
-5. [Quick start](/getting_started/quick_start.md)
-6. [Project layout](/getting_started/project_layout.md)
-7. [Sample content](/getting_started/sample_content.md)
+3. [Installation](/getting_started/installation.md)
+4. [Quick start](/getting_started/quick_start.md)
+5. [Project layout](/getting_started/project_layout.md)
+6. [Sample content](/getting_started/sample_content.md)
+
+### Engine reference (optional)
+
+Read these when you need facts or caps, not before first install.
+
+- [Engine reference](/getting_started/engine_reference.md)
+- [Engine limitations](/getting_started/limitations.md)
 
 ### Tutorials
 

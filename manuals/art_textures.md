@@ -44,8 +44,6 @@ The alpha channel can store **height** for parallax. Use white if you do not nee
 
 **View → Texture Packer** (`Shift+5`) merges separate grayscale or RGB images into one DDS channel map (typical use: build an **RMA** from separate roughness, metal, and AO files).
 
-<img src="../images/editor/ed_texture_packer.png" alt="Texture Packer" style="max-width:600px;height:auto;display:block">
-
 Texture Packer is for channel packing, not for baking a sky HDRI. For sky backgrounds see [Sky texture](art_sky.md).
 
 ## Rules of thumb

@@ -1,0 +1,310 @@
+/* Detis docs theme - dark, matched to detissoftworks.com
+   Loaded after the docsify vue.css so every rule here wins the cascade.
+   Palette / fonts mirror the marketing site's global.css. */
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --theme-color: #2eb7b0; /* docsify picks this up everywhere it used #42b983 */
+  --docs-bg: #101418;
+  --docs-panel: #1a2026;
+  --docs-well: #0e1318;
+  --docs-edge: #2f3840;
+  --docs-bone: #d9e4ec;
+  --docs-dim: #9dafbb;
+  --docs-faint: #8899a5;
+  --docs-amber: #f5a623;
+  --docs-teal: #2eb7b0;
+}
+
+/* ── shell ─────────────────────────────────────────────────────── */
+
+body,
+.sidebar {
+  background-color: var(--docs-bg);
+}
+body {
+  color: var(--docs-bone);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+::selection {
+  background: var(--docs-amber);
+  color: #101418;
+}
+
+/* sidebar */
+.sidebar {
+  border-right: 1px solid var(--docs-edge);
+  color: var(--docs-bone);
+}
+.sidebar > h1 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.sidebar > h1 .app-name-link {
+  color: var(--docs-bone);
+}
+.sidebar ul li a {
+  color: var(--docs-dim);
+  font-size: 14.5px;
+}
+.sidebar ul li a:hover {
+  color: var(--docs-bone);
+}
+.sidebar ul li.active > a {
+  color: var(--docs-teal);
+}
+.sidebar ul li.active > a {
+  border-right-color: var(--docs-teal);
+}
+.sidebar > h1 strong,
+.sidebar li > p {
+  color: var(--docs-bone);
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--docs-edge);
+}
+.sidebar-toggle {
+  background-color: rgba(16, 20, 24, 0.8);
+}
+body.close .sidebar-toggle {
+  background-color: rgba(16, 20, 24, 0.8);
+}
+
+/* top nav + progress bar */
+.app-nav a {
+  color: var(--docs-dim);
+}
+.app-nav a.active,
+.app-nav a:hover {
+  color: var(--docs-teal);
+}
+.app-nav li ul {
+  background-color: var(--docs-panel);
+  border-color: var(--docs-edge);
+}
+
+/* ── content ───────────────────────────────────────────────────── */
+
+.markdown-section {
+  color: var(--docs-dim);
+  font-size: 16px;
+}
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section strong {
+  color: var(--docs-bone);
+  font-weight: 600;
+}
+.markdown-section h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+.markdown-section h2 {
+  font-size: 1.6rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--docs-edge);
+}
+.markdown-section h3 {
+  font-size: 1.3rem;
+}
+.markdown-section a {
+  color: var(--docs-teal);
+}
+.markdown-section a:hover {
+  text-decoration: underline;
+}
+.markdown-section hr {
+  border-bottom: 1px solid var(--docs-edge);
+}
+.markdown-section em {
+  color: var(--docs-faint);
+}
+.markdown-section blockquote {
+  color: var(--docs-faint);
+}
+.markdown-section .anchor span {
+  color: var(--docs-bone);
+}
+.markdown-section img {
+  /* keeps the repo's existing image rule intent; rounded to site style */
+  border-radius: 4px;
+}
+
+/* callouts */
+.markdown-section p.tip {
+  background-color: var(--docs-panel);
+  border-left: 4px solid var(--docs-amber);
+  color: var(--docs-dim);
+}
+.markdown-section p.tip:before {
+  background-color: var(--docs-amber);
+  color: #101418;
+}
+.markdown-section p.tip em {
+  color: var(--docs-bone);
+}
+.markdown-section p.tip code {
+  background-color: var(--docs-well);
+}
+.markdown-section p.warn {
+  background: rgba(46, 183, 176, 0.1);
+}
+
+/* tables */
+.markdown-section td,
+.markdown-section th {
+  border-color: var(--docs-edge);
+}
+.markdown-section tr {
+  border-top-color: var(--docs-edge);
+}
+.markdown-section p.tip,
+.markdown-section tr:nth-child(2n) {
+  background-color: var(--docs-panel);
+}
+.markdown-section th {
+  background-color: var(--docs-panel);
+  color: var(--docs-bone);
+}
+
+/* ── code ──────────────────────────────────────────────────────── */
+
+.markdown-section code,
+.markdown-section pre {
+  font-family: "JetBrains Mono", Monaco, monospace;
+}
+.markdown-section code {
+  background-color: var(--docs-panel);
+  color: var(--docs-amber);
+}
+.markdown-section pre {
+  background-color: var(--docs-well);
+  border: 1px solid var(--docs-edge);
+  border-radius: 6px;
+}
+.markdown-section pre > code {
+  color: var(--docs-bone);
+}
+.markdown-section pre:after,
+.markdown-section output:after {
+  color: var(--docs-faint);
+}
+.markdown-section output {
+  border-color: var(--docs-edge);
+  background-color: var(--docs-well);
+}
+kbd {
+  background: var(--docs-panel);
+  border-color: var(--docs-edge);
+  color: var(--docs-bone);
+}
+
+/* prism tokens - site accent palette */
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: var(--docs-faint);
+}
+.token.boolean,
+.token.number {
+  color: var(--docs-amber);
+}
+.token.punctuation {
+  color: var(--docs-dim);
+}
+.token.property {
+  color: #60a5fa;
+}
+.token.tag,
+.token.attr-name {
+  color: #a78bfa;
+}
+.token.string {
+  color: #4ade80;
+}
+.token.selector,
+.token.atrule,
+.token.regex {
+  color: var(--docs-teal);
+}
+.token.attr-value,
+.token.directive,
+.token.unit,
+.token.control {
+  color: #4ade80;
+}
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.url {
+  color: #4ade80;
+}
+.token.function,
+.token.keyword {
+  color: var(--docs-amber);
+}
+.token.placeholder,
+.token.variable {
+  color: #60a5fa;
+}
+.token.important {
+  color: #f472b6;
+}
+
+/* ── search ────────────────────────────────────────────────────── */
+
+.search input,
+.search input:focus {
+  background-color: var(--docs-panel);
+  border: 1px solid var(--docs-edge);
+  color: var(--docs-bone);
+  box-shadow: none;
+}
+.search input::placeholder {
+  color: var(--docs-faint);
+}
+.search .results-panel {
+  background-color: var(--docs-bg);
+}
+.search .results-item {
+  color: var(--docs-dim);
+  border-bottom: 1px solid var(--docs-edge);
+}
+.search .results-item:hover {
+  background-color: var(--docs-panel);
+}
+.search h2 {
+  color: var(--docs-bone);
+}
+.search .matching-post {
+  border-bottom: 1px solid var(--docs-edge);
+}
+.search .clear-button {
+  color: var(--docs-faint);
+}

@@ -1,6 +1,6 @@
 # Project layout
 
-A reminder that one engine download is one game. You run the program from **`bin/`** inside your **project root**. Everything the engine loads for your title lives under **`content/`** in that same root.
+A reminder that one engine copy is one game. Everything the engine loads for your game lives under `content/` in that same root.
 
 The root folder can be named anything. What matters is that **`bin`**, **`content`**, and **`engine`** stay siblings.
 
@@ -15,18 +15,16 @@ The root folder can be named anything. What matters is that **`bin`**, **`conten
 
 ## What belongs in `content/`
 
-You can organize subfolders however you like under `content/`. Extension filters in the editor still apply when browsing.
-
-Typical project structure:
+You can organize subfolders however you like under `content/`. This is just the typical structure.
 
 | Path | Purpose |
 |------|---------|
-| `content/worlds/` | **World** files ( **`.world`** ). One file is one playable space you load in the editor. |
-| `content/entities/` | Prefabs (`.entity`). Drag these from the Entity Browser |
-| `content/scripts/` | Sample Lua. You can put `.lua` files anywhere under `content/`. |
-| `content/meshes/`, `textures/`, `materials/` | Art you author or drop in |
-| `content/sounds/`, `music/` | Audio files |
-| `content/config/` | Game bootstrap, modules, input, surface types |
+| `content/worlds/` | **World** files ( **`.world`** ). |
+| `content/entities/` | Prefabs (`.entity`). |
+| `content/scripts/` | Lua scripts. |
+| `content/meshes/`, `textures/`, `materials/` | Art you author or drop in. |
+| `content/sounds/`, `music/` | Audio files. |
+| `content/config/` | Configuration files (.ini/.json) |
 
 ## What belongs in `engine/`
 
@@ -38,14 +36,14 @@ Treat this as part of the engine package. Unless you know what you are doing lea
 
 On first run, Detis creates a folder under the platform user root and **copies the default configs into it**. After that, **File -> Settings** and the editor write those user copies. The shipped **`bin`**, **`content`**, and **`engine`** trees in your project root stay as the template for the next fresh profile.
 
-The game title from `default_game.ini`, `title`, names the folder.
+The game title defined in `default_game.ini`, `title`, or the project settings in the editor names the folder.
 
 | Platform | User root |
 |----------|-----------|
 | Windows | `Documents/My Games` |
 | Linux | `~/.<GameTitle>` (hidden folder in the home directory) |
 
-Delete a user INI and relaunch to regenerate it from the matching default. 
+if you delete a user INI, relaunching the game or editor regenerates it from the matching default. 
 
 ## Rules of thumb
 

@@ -2,8 +2,6 @@
 
 Static and skinned geometry comes from **GLB** or **GLTF** files under `content/meshes/`. The **Mesh** component on an entity points at one file and binds one `.mat` per submesh slot.
 
-<img src="../images/editor/ed_mesh_component.png" alt="Mesh component" style="max-width:600px;height:auto;display:block">
-
 ## Assign a mesh
 
 1. Select an entity in the **World Inspector**.

@@ -2,8 +2,6 @@
 
 **View → Material Editor** (`Shift+4`) edits `.mat` files and in-memory drafts. Open it from the viewport toolbar or from the **edit** control on a Mesh material slot.
 
-<img src="../images/editor/ed_material_editor.png" alt="Material Editor" style="max-width:600px;height:auto;display:block">
-
 ## Toolbar
 
 | Control | Action |
