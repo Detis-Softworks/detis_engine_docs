@@ -13,8 +13,7 @@
       try { stored = localStorage.getItem(key); } catch (e) { stored = null; }
       var theme = stored;
       if (theme !== 'light' && theme !== 'dark') {
-        var darkMq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-        theme = darkMq && darkMq.matches ? 'dark' : 'light';
+        theme = 'light';
       }
       document.documentElement.setAttribute('data-docs-theme', theme);
       window.__docsThemeKey = key;
@@ -101,16 +100,15 @@
             var toggle = sidebar.querySelector('.docs-theme-toggle');
             var nav = sidebar.querySelector('.sidebar-nav');
             if (!h1) return;
+            if (toggle && toggle.parentNode === sidebar) {
+              sidebar.insertBefore(toggle, h1);
+            }
             if (search && search.parentNode === sidebar) {
               h1.insertAdjacentElement('afterend', search);
             }
-            if (toggle && toggle.parentNode === sidebar) {
-              var beforeNav = search || h1;
-              beforeNav.insertAdjacentElement('afterend', toggle);
-            }
             if (nav && nav.parentNode === sidebar) {
-              var last = toggle || search || h1;
-              last.insertAdjacentElement('afterend', nav);
+              var afterSearch = search || h1;
+              afterSearch.insertAdjacentElement('afterend', nav);
             }
           }
           var sidebarChromeReady = false;

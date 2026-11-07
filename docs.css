@@ -1,4 +1,5 @@
-/* Detis docs theme: dark sidebar + light reading column.
+/* Detis docs theme: editor-like chrome + light reading column.
+   Panel colors follow game/engine/config/editor_themes.ini [Default] (not the viewport).
    Loaded after the docsify vue.css so every rule here wins the cascade. */
 
 @font-face {
@@ -24,59 +25,75 @@
 }
 
 :root {
-  --theme-color: #2eb7b0;
-  /* sidebar stays dark in both themes */
-  --docs-sidebar-bg: #0c0d0f;
-  --docs-sidebar-panel: #14171a;
-  --docs-sidebar-edge: #262a2f;
-  --docs-bone: #d4dce3;
-  --docs-dim: #949da8;
-  --docs-faint: #7a848e;
-  /* code blocks stay dark in both themes */
-  --docs-code-well: #0e1318;
-  --docs-code-edge: #2f3840;
-  --docs-amber-bright: #f5a623;
-  --docs-sidebar-accent: #2eb7b0;
-  --docs-sidebar-accent-hover: #45c9c2;
+  /* editor_themes.ini [Default] — linear RGB 0..1 rounded to 8-bit hex */
+  --theme-color: #0a8a94;
+  --docs-editor-accent: #0a8a94;
+  --docs-editor-accent-hover: #1eadb8;
+  --docs-editor-chrome: #19191a;
+  --docs-editor-frame: #1e1e20;
+  --docs-editor-panel: #2f3032;
+  --docs-editor-panel-inner: #28292a;
+  --docs-editor-border: #232425;
+  --docs-editor-text: #dfe0e2;
+  --docs-editor-text-muted: #787a7c;
+  --docs-editor-header: #3a3b3c;
+  --docs-editor-scrollbar: #575b5c;
+  --docs-editor-scrollbar-hover: #6e7274;
+  --docs-editor-log-warn: #f2851f;
+  /* sidebar + code: editor chrome (inspectors / log), not viewport */
+  --docs-sidebar-bg: var(--docs-editor-chrome);
+  --docs-sidebar-panel: var(--docs-editor-panel-inner);
+  --docs-sidebar-edge: var(--docs-editor-border);
+  --docs-bone: var(--docs-editor-text);
+  --docs-dim: var(--docs-editor-text-muted);
+  --docs-faint: var(--docs-editor-text-muted);
+  --docs-code-well: var(--docs-editor-panel-inner);
+  --docs-code-edge: var(--docs-editor-border);
+  --docs-amber-bright: var(--docs-editor-log-warn);
+  --docs-sidebar-accent: var(--docs-editor-accent);
+  --docs-sidebar-accent-hover: var(--docs-editor-accent-hover);
   --docs-content-width: 52rem;
   --docs-sidebar-width: 23rem;
+  --docs-radius: 2px;
 }
 
-/* bright reading column (default; also fallback if attribute missing) */
+/* light reading column (default): neutral paper; accent = editor selection teal */
 html[data-docs-theme="light"],
 html:not([data-docs-theme]) {
-  --docs-page-bg: #ffffff;
-  --docs-page-text: #1c2429;
-  --docs-page-heading: #0a0e11;
-  --docs-page-muted: #4a545c;
-  --docs-page-faint: #5f6a73;
-  --docs-page-border: #d8dee4;
-  --docs-page-panel: #eef1f4;
-  --docs-page-well: #f4f6f8;
-  --docs-page-link: #075c56;
-  --docs-page-link-hover: #04433f;
-  --docs-amber: #9a5f07;
-  --docs-chrome-fab-bg: rgba(255, 255, 255, 0.94);
-  --docs-chrome-fab-edge: #d8dee4;
-  --docs-chrome-fab-icon: #4a545c;
+  --docs-page-bg: #e9eaeb;
+  --docs-page-text: #2f3032;
+  --docs-page-heading: #19191a;
+  --docs-page-muted: #5a5c5e;
+  --docs-page-faint: #787a7c;
+  --docs-page-border: #c8c9cb;
+  --docs-page-panel: #f3f3f4;
+  --docs-page-well: #fafafa;
+  --docs-page-link: #0a8a94;
+  --docs-page-link-hover: var(--docs-editor-accent-hover);
+  --docs-page-heading-accent: var(--docs-page-heading);
+  --docs-amber: var(--docs-editor-log-warn);
+  --docs-chrome-fab-bg: rgba(233, 234, 235, 0.94);
+  --docs-chrome-fab-edge: #c8c9cb;
+  --docs-chrome-fab-icon: #5a5c5e;
 }
 
-/* dark reading column */
+/* dark reading column: same grays as editor Default theme */
 html[data-docs-theme="dark"] {
-  --docs-page-bg: #101418;
-  --docs-page-text: #b4c2cc;
-  --docs-page-heading: #e2eaef;
-  --docs-page-muted: #94a3ad;
-  --docs-page-faint: #7f8d97;
-  --docs-page-border: #2f3840;
-  --docs-page-panel: #1a2026;
-  --docs-page-well: #0e1318;
-  --docs-page-link: #3ec9c2;
-  --docs-page-link-hover: #6fdfd9;
-  --docs-amber: #f5a623;
-  --docs-chrome-fab-bg: rgba(12, 13, 15, 0.92);
-  --docs-chrome-fab-edge: #262a2f;
-  --docs-chrome-fab-icon: #d4dce3;
+  --docs-page-bg: var(--docs-editor-chrome);
+  --docs-page-text: var(--docs-editor-text);
+  --docs-page-heading: var(--docs-editor-text);
+  --docs-page-muted: var(--docs-editor-text-muted);
+  --docs-page-faint: var(--docs-editor-text-muted);
+  --docs-page-border: var(--docs-editor-border);
+  --docs-page-panel: var(--docs-editor-panel);
+  --docs-page-well: var(--docs-editor-panel-inner);
+  --docs-page-link: var(--docs-editor-accent);
+  --docs-page-link-hover: var(--docs-editor-accent-hover);
+  --docs-page-heading-accent: var(--docs-page-heading);
+  --docs-amber: var(--docs-editor-log-warn);
+  --docs-chrome-fab-bg: color-mix(in srgb, var(--docs-editor-chrome) 92%, transparent);
+  --docs-chrome-fab-edge: var(--docs-editor-border);
+  --docs-chrome-fab-icon: var(--docs-editor-text);
 }
 
 /* ── shell ─────────────────────────────────────────────────────── */
@@ -93,16 +110,21 @@ section.content {
   background-color: var(--docs-page-bg);
 }
 ::selection {
-  background: var(--docs-amber-bright);
-  color: #101418;
+  background: color-mix(in srgb, var(--docs-editor-accent) 38%, var(--docs-page-bg));
+  color: var(--docs-page-heading);
 }
 
-/* sidebar */
+/* sidebar (vue.css defaults to Source Sans Pro; match editor dock typography) */
 .sidebar {
   background-color: var(--docs-sidebar-bg);
   border-right: 1px solid var(--docs-sidebar-edge);
   color: var(--docs-bone);
   width: var(--docs-sidebar-width);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .content {
   left: var(--docs-sidebar-width);
@@ -126,10 +148,12 @@ body.close .sidebar {
   }
 }
 .sidebar > h1 {
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin: 0 0 0.75rem;
-  padding: 0 0.5rem;
+  margin: 0 0 0.85rem;
+  padding: 0 0.65rem;
+  text-align: center;
 }
 .docs-theme-toggle {
   margin: 0 0 0.85rem;
@@ -139,12 +163,12 @@ body.close .sidebar {
   width: 100%;
   padding: 0.48rem 0.75rem;
   border: 1px solid var(--docs-sidebar-edge);
-  border-radius: 4px;
+  border-radius: var(--docs-radius);
   background-color: var(--docs-sidebar-panel);
   color: var(--docs-dim);
   cursor: pointer;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 0.9375rem;
   font-weight: 500;
   text-align: left;
 }
@@ -160,7 +184,12 @@ body.close .sidebar {
   color: var(--docs-bone);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
 }
 .sidebar > h1 .app-name-link img {
   display: block;
@@ -173,28 +202,35 @@ body.close .sidebar {
   object-fit: contain;
 }
 .sidebar > .search {
-  margin: 0 0 0.85rem;
-  padding: 0 0.5rem;
+  margin: 0 0 0.85rem !important;
+  padding: 0 0.5rem !important;
+  border-bottom: none !important;
 }
 .sidebar > .search input {
   width: 100%;
   box-sizing: border-box;
   padding: 0.5rem 0.65rem;
+  font-family: inherit;
+  font-size: 16px;
 }
 .sidebar ul li a {
-  color: #a8b4be;
-  font-size: 14.5px;
+  color: var(--docs-dim);
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
 }
 .sidebar ul li a:hover {
   color: var(--docs-bone);
+  text-decoration: none;
 }
 .sidebar ul li.active > a {
-  color: var(--docs-sidebar-accent);
+  background-color: color-mix(in srgb, var(--docs-editor-accent) 24%, var(--docs-sidebar-bg));
+  color: var(--docs-sidebar-accent-hover);
   border-right-color: var(--docs-sidebar-accent);
 }
 .sidebar .sidebar-nav {
   padding: 0.25rem 1.1rem 2rem 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .sidebar .sidebar-nav > ul > li {
   margin-top: 0.65rem;
@@ -202,15 +238,24 @@ body.close .sidebar {
 .sidebar .sidebar-nav > ul > li:first-child {
   margin-top: 0;
 }
-.sidebar .sidebar-nav > ul > li > strong {
-  display: block;
-  padding: 0.4rem 0.35rem 0.3rem 0.2rem;
-  line-height: 1.4;
-}
+.sidebar .sidebar-nav > ul > li > strong,
 .sidebar .sidebar-nav ul ul > li > strong {
   display: block;
-  padding: 0.45rem 0.3rem 0.25rem 0.15rem;
-  line-height: 1.4;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+  text-transform: none;
+}
+.sidebar .sidebar-nav > ul > li > strong {
+  padding: 0.5rem 0.35rem 0.2rem 0.2rem;
+  color: var(--docs-bone);
+}
+.sidebar .sidebar-nav ul ul > li > strong {
+  padding: 0.35rem 0.3rem 0.15rem 0.15rem;
+  font-size: 0.9375rem;
+  color: var(--docs-dim);
 }
 .sidebar .sidebar-nav ul li ul {
   margin: 0.4rem 0 0.55rem;
@@ -234,9 +279,25 @@ body.close .sidebar {
 .sidebar > h1 strong,
 .sidebar li > p {
   color: var(--docs-bone);
+  font-weight: 600;
+}
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--docs-editor-scrollbar) transparent;
+}
+.sidebar::-webkit-scrollbar {
+  width: 9px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background: var(--docs-sidebar-edge);
+  background: var(--docs-editor-scrollbar);
+  border: 2px solid var(--docs-sidebar-bg);
+  border-radius: 0;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--docs-editor-scrollbar-hover);
 }
 .sidebar-toggle {
   width: calc(var(--docs-sidebar-width) - 1rem);
@@ -299,6 +360,7 @@ section.content {
   font-size: 1.6rem;
   padding-bottom: 0.3em;
   border-bottom: 1px solid var(--docs-page-border);
+  color: var(--docs-page-heading-accent, var(--docs-page-heading));
 }
 .markdown-section h3 {
   font-size: 1.3rem;
@@ -327,11 +389,11 @@ section.content {
 }
 .markdown-section img {
   /* keeps the repo's existing image rule intent; rounded to site style */
-  border-radius: 4px;
+  border-radius: var(--docs-radius);
 }
 
-/* prev/next (docsify-pagination; plugin defaults label to 0.8em) */
-.markdown-section .pagination-container {
+/* prev/next (docsify-pagination; plugin dims Previous via :not(:last-child)) */
+.markdown-section .docsify-pagination-container {
   margin: 2.5rem 0 0.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--docs-page-border);
@@ -345,18 +407,24 @@ section.content {
   padding: 0.65rem 0.25rem;
 }
 .markdown-section .pagination-item-label {
-  color: var(--docs-page-link);
-  font-size: 1.2rem !important;
+  opacity: 1 !important;
+  color: var(--docs-page-heading);
+  font-size: 1.05rem !important;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
-.markdown-section .pagination-item a:hover .pagination-item-label {
-  color: var(--docs-page-link-hover);
+.markdown-section .pagination-item--previous .pagination-item-label,
+.markdown-section .pagination-item--next .pagination-item-label {
+  opacity: 1 !important;
+}
+.markdown-section .pagination-item a:hover .pagination-item-label,
+.markdown-section .pagination-item:not(:last-child) a:hover .pagination-item-label {
+  color: var(--docs-page-link);
+  opacity: 1 !important;
 }
 .markdown-section .pagination-item-label svg {
-  height: 1.1em !important;
-  width: auto;
-  vertical-align: -0.15em;
+  display: none !important;
 }
 .markdown-section .pagination-item-title,
 .markdown-section .pagination-item-subtitle {
