@@ -35,3 +35,6 @@
 
 - [Script API](/reference/README.md)
 
+### Help us with the documentation
+This documentation is open-source. If you want to contribute, feel free to submit a pull request or open an issue.
+
