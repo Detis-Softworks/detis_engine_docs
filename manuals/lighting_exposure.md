@@ -2,7 +2,7 @@
 
 How brightness is measured, and how auto-exposure maps scene light to the image.
 
-<img src="../images/editor/ed_exposure.png" alt="Exposure" style="max-width:600px;height:auto;display:block">
+<img src="../images/editor/ed_exposure.png" alt="Exposure">
 
 ## Practical workflow
 

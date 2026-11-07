@@ -6,7 +6,7 @@ If Play mode or the viewport feels slow, open **File -> Settings**. The **Engine
 
 ## What you are looking at
 
-<img src="../images/editor/ed_overview_a.png" alt="Editor overview" style="max-width:600px;height:auto;display:block">
+<img src="../images/editor/ed_overview_a.png" alt="Editor overview">
 
 1. **Viewport toolbar** (above the 3D view): open inspectors, Entity Browser, asset tools, **Play**, reload, debug toggles, and spectator speed.
 2. **Transform rail** (left of the viewport): move, rotate, and scale gizmos, snap, and flat light.

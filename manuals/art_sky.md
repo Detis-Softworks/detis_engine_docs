@@ -24,7 +24,7 @@ See [Textures](art_textures.md) for GIMP export detail.
 
 The file dialog accepts `.dds` only.
 
-<img src="../images/editor/ed_ambient_lighting.png" alt="Sky / Environment" style="max-width:600px;height:auto;display:block">
+<img src="../images/editor/ed_ambient_lighting.png" alt="Sky / Environment">
 
 ## Presentation vs lighting
 

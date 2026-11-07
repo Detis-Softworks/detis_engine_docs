@@ -28,7 +28,7 @@ You can also use the viewport shortcuts to open and close these windows.
 
    That makes the plane large enough for this tutorial.
 
-   <img src="../images/tutorials/tut_adding_ground.jpg" alt="Adding Ground" style="max-width:600px;height:auto;display:block">
+   <img src="../images/tutorials/tut_adding_ground.jpg" alt="Adding Ground">
 
 ## 4. Add a cube
 
@@ -36,7 +36,7 @@ You can also use the viewport shortcuts to open and close these windows.
 2. Drag `cube.entity` into the viewport..
 3. Open **Transform** and set Position to `0`, `0.5`, `0` so the cube sits on the plane.
 
-<img src="../images/tutorials/tut_adding_cube.jpg" alt="Adding Cube" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_adding_cube.jpg" alt="Adding Cube">
 
 ## 5. Add a light
 
@@ -53,7 +53,7 @@ The cube should cast a clear shadow across the ground. Prefab defaults (**Lumens
 
 > **Note:** Local light shadows are expensive, especially for point lights. Be mindful when enabling them and reserve them only for hero lights. 
 
-<img src="../images/tutorials/tut_adding_light.jpg" alt="Adding Light" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_adding_light.jpg" alt="Adding Light">
 
 ## 6. Apply materials
 
@@ -63,7 +63,7 @@ Materials live on the **Mesh** component. Each mesh slot has a **Material 0** (a
 2. In the Entity Inspector, open the **Mesh** section.
 3. On **Material 0**, browse and pick `materials/primitive/primitive_triplanar_dark_grey.mat`.
 
-<img src="../images/tutorials/tut_applying_materials.jpg" alt="Applying Materials" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_applying_materials.jpg" alt="Applying Materials">
 
 ## 7. Add the demo player prefab
 
@@ -71,7 +71,7 @@ Materials live on the **Mesh** component. Each mesh slot has a **Material 0** (a
 2. Drag `player_character.entity` into the viewport.
 3. Move it onto the ground in front of the cube, for example Position `0.0`, `0.0`, `3.0`.
 
-<img src="../images/tutorials/tut_adding_player.jpg" alt="Adding Player" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_adding_player.jpg" alt="Adding Player">
 
 ## 10. Save and play
 

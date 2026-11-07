@@ -22,7 +22,7 @@ Optional: enable **Debug Visualization** (or **Debug → Toggle Collision Debug*
 
 **File → Save World** (`Ctrl+S`), then hit **Play** (`Ctrl+P` / `Alt+P`). Walk into the ball. The demo player can still shove it with their body even before you add the script. Toggle back to the editor when you are done.
 
-<img src="../images/tutorials/tut_kick_the_ball.jpg" alt="Kick the ball" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_kick_the_ball.jpg" alt="Kick the ball">
 
 ## 3. Add a Script component
 
@@ -54,7 +54,7 @@ On a light Dynamic sphere, `40` is huge. The ball should launch like it exploded
 
 Same script file, much calmer kick. That is the point of inspector parameters. Tune gaeplay feel without opening the `.lua` script files.
 
-<img src="../images/tutorials/tut_ball_script_component.jpg" alt="Kick Script" style="max-width:460px !important;height:auto;display:block">
+<img src="../images/tutorials/tut_ball_script_component.jpg" alt="Kick Script">
 
 ## Continue reading
 

@@ -25,7 +25,7 @@ When the player pauses the game, the **same category groups** decide what pauses
 
 ## Signal flow
 
-<img src="../images/audio_signal_flow.svg" alt="Audio signal flow" style="max-width:600px;height:auto;display:block">
+<img src="../images/audio_signal_flow.svg" alt="Audio signal flow">
 
 
 ## Script API reference

@@ -2,7 +2,7 @@
 
 One directional light for the whole world. Configure it in World Settings.
 
-<img src="../images/editor/ed_sunlight.png" alt="Sunlight" style="max-width:600px;height:auto;display:block">
+<img src="../images/editor/ed_sunlight.png" alt="Sunlight">
 
 ## Properties
 
@@ -22,7 +22,7 @@ The stored direction vector is light travel **into** the scene. `(0, -1, 0)` is 
 
 Pair **Lux** with **Ambient Lux**. **Ambient Lux** is the sky fill widget in **Sky / Environment**, not "Sky ambient".
 
-<img src="../images/editor/ed_ambient_lighting.png" alt="Sky / Environment" style="max-width:600px;height:auto;display:block">
+<img src="../images/editor/ed_ambient_lighting.png" alt="Sky / Environment">
 
 Full physical sun (~100,000 lux) is optional and needs a matching exposure range. Do not use outdoor EV 10–16 with sun lux 6.
 

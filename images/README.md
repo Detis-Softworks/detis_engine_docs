@@ -4,7 +4,7 @@ Put screenshots and diagrams here. Editor screenshots are not in the repo yet. A
 
 ```
 images/
-  brand/      docs shell (engine_icon.png, apple-touch-icon.png; copy from detis_engine/game/engine/graphics/ when refreshing)
+  brand/      docs shell (company_logo.png sidebar; engine_icon favicon; apple-touch-icon; copy from detis_engine/game/engine/graphics/ when refreshing)
   editor/     editor UI (for example ed_material_editor.png, ed_mesh_component.png, ed_texture_packer.png, ed_ambient_lighting.png)
   game/       in-game / GUI screenshots (this docs repo folder only, not the engine project root)
   engine/     tools / other

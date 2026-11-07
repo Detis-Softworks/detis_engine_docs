@@ -32,7 +32,7 @@ New entities come with a **Transform**. That is enough to start.
 
 You should see a sphere in the viewport. The mesh is about `1` unit across (radius `0.5`). Move it beside your cube with **Transform** or the translate gizmo (**W**), and set Position Y to `1.5` so it sits on the cube.
 
-<img src="../images/tutorials/tut_ball_prefab.jpg" alt="Ball Prefab" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_ball_prefab.jpg" alt="Ball Prefab">
 
 ## 4. Add collision
 
@@ -64,7 +64,7 @@ Use **Toggle Collision Debug** back to Off when you are done looking.
 
 If the debug sphere does not match the mesh, fix **Radius** (and **Offset** if needed) before you save.
 
-<img src="../images/tutorials/tut_ball_collision.jpg" alt="Ball Collision" style="max-width:600px;height:auto;display:block">
+<img src="../images/tutorials/tut_ball_collision.jpg" alt="Ball Collision">
 
 ## 6. Save it as a prefab
 

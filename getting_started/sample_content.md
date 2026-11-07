@@ -1,6 +1,6 @@
 # Sample content
 
-<img src="../images/demo/demo_content_overview.jpg" alt="Demo content overview" style="max-width:600px;height:auto;display:block">
+<img src="../images/demo/demo_content_overview.jpg" alt="Demo content overview">
 
 [The Orb](https://detissoftworks.itch.io/the-orb-detis-demo) demo data ship with the engine package so you can play with something on day one. You can ignore or delete all of it and replace it with your own work.
 

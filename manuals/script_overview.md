@@ -45,7 +45,7 @@ Module **`on_initialize`** runs at engine start, before a world is loaded. It do
 
 **`on_shutdown`** on a world change runs for the world script and entity scripts only. The module stays loaded. On engine quit, and when you leave **Play**, **`on_shutdown`** then runs for the module too, and the module is unloaded.
 
-<img src="../images/script_callback_flow.svg" alt="Script callback order" style="max-width:720px;height:auto;display:block">
+<img src="../images/script_callback_flow.svg" alt="Script callback order">
 
 ## Hot reload
 

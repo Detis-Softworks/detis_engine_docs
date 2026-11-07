@@ -388,8 +388,23 @@ section.content {
   color: var(--docs-page-heading);
 }
 .markdown-section img {
-  /* keeps the repo's existing image rule intent; rounded to site style */
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(37.5rem, 100%);
+  object-fit: contain;
+  margin: 1em 0;
   border-radius: var(--docs-radius);
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .markdown-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .markdown-section img {
+    max-width: 100%;
+  }
 }
 
 /* prev/next (docsify-pagination; plugin dims Previous via :not(:last-child)) */

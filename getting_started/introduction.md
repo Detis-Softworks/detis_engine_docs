@@ -4,7 +4,7 @@ Detis is a game engine for solo devs and small indie teams making single-player,
 
 This documentation is designed to get you up and running with the Detis toolset.
 
-<img src="../images/editor/ed_overview_b.jpg" alt="Editor overview" style="max-width:600px;height:auto;display:block">
+<img src="../images/editor/ed_overview_b.jpg" alt="Editor overview">
 
 When you need platforms, hardware, units, or terminology, see [Engine reference](engine_reference.md).
 
