@@ -39,4 +39,3 @@
 
 * **Reference**
   * [Script API](/reference/README.md)
-

@@ -1,6 +1,5 @@
-/* Detis docs theme - dark, matched to detissoftworks.com
-   Loaded after the docsify vue.css so every rule here wins the cascade.
-   Palette / fonts mirror the marketing site's global.css. */
+/* Detis docs theme: dark sidebar + light reading column.
+   Loaded after the docsify vue.css so every rule here wins the cascade. */
 
 @font-face {
   font-family: "Inter";
@@ -25,98 +24,270 @@
 }
 
 :root {
-  --theme-color: #2eb7b0; /* docsify picks this up everywhere it used #42b983 */
-  --docs-bg: #101418;
-  --docs-panel: #1a2026;
-  --docs-well: #0e1318;
-  --docs-edge: #2f3840;
-  --docs-bone: #d9e4ec;
-  --docs-dim: #9dafbb;
-  --docs-faint: #8899a5;
+  --theme-color: #2eb7b0;
+  /* sidebar stays dark in both themes */
+  --docs-sidebar-bg: #0c0d0f;
+  --docs-sidebar-panel: #14171a;
+  --docs-sidebar-edge: #262a2f;
+  --docs-bone: #d4dce3;
+  --docs-dim: #949da8;
+  --docs-faint: #7a848e;
+  /* code blocks stay dark in both themes */
+  --docs-code-well: #0e1318;
+  --docs-code-edge: #2f3840;
+  --docs-amber-bright: #f5a623;
+  --docs-sidebar-accent: #2eb7b0;
+  --docs-sidebar-accent-hover: #45c9c2;
+  --docs-content-width: 52rem;
+  --docs-sidebar-width: 23rem;
+}
+
+/* bright reading column (default; also fallback if attribute missing) */
+html[data-docs-theme="light"],
+html:not([data-docs-theme]) {
+  --docs-page-bg: #ffffff;
+  --docs-page-text: #1c2429;
+  --docs-page-heading: #0a0e11;
+  --docs-page-muted: #4a545c;
+  --docs-page-faint: #5f6a73;
+  --docs-page-border: #d8dee4;
+  --docs-page-panel: #eef1f4;
+  --docs-page-well: #f4f6f8;
+  --docs-page-link: #075c56;
+  --docs-page-link-hover: #04433f;
+  --docs-amber: #9a5f07;
+  --docs-chrome-fab-bg: rgba(255, 255, 255, 0.94);
+  --docs-chrome-fab-edge: #d8dee4;
+  --docs-chrome-fab-icon: #4a545c;
+}
+
+/* dark reading column */
+html[data-docs-theme="dark"] {
+  --docs-page-bg: #101418;
+  --docs-page-text: #b4c2cc;
+  --docs-page-heading: #e2eaef;
+  --docs-page-muted: #94a3ad;
+  --docs-page-faint: #7f8d97;
+  --docs-page-border: #2f3840;
+  --docs-page-panel: #1a2026;
+  --docs-page-well: #0e1318;
+  --docs-page-link: #3ec9c2;
+  --docs-page-link-hover: #6fdfd9;
   --docs-amber: #f5a623;
-  --docs-teal: #2eb7b0;
+  --docs-chrome-fab-bg: rgba(12, 13, 15, 0.92);
+  --docs-chrome-fab-edge: #262a2f;
+  --docs-chrome-fab-icon: #d4dce3;
 }
 
 /* ── shell ─────────────────────────────────────────────────────── */
 
-body,
-.sidebar {
-  background-color: var(--docs-bg);
-}
 body {
-  color: var(--docs-bone);
+  background-color: var(--docs-page-bg);
+  color: var(--docs-page-text);
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.6;
+}
+main,
+section.content {
+  background-color: var(--docs-page-bg);
 }
 ::selection {
-  background: var(--docs-amber);
+  background: var(--docs-amber-bright);
   color: #101418;
 }
 
 /* sidebar */
 .sidebar {
-  border-right: 1px solid var(--docs-edge);
+  background-color: var(--docs-sidebar-bg);
+  border-right: 1px solid var(--docs-sidebar-edge);
   color: var(--docs-bone);
+  width: var(--docs-sidebar-width);
+}
+.content {
+  left: var(--docs-sidebar-width);
+}
+body.close .sidebar {
+  transform: translateX(calc(-1 * var(--docs-sidebar-width)));
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    left: calc(-1 * var(--docs-sidebar-width));
+    width: var(--docs-sidebar-width);
+  }
+  body.close .sidebar {
+    transform: translateX(var(--docs-sidebar-width));
+  }
+  body.close .content {
+    transform: translateX(var(--docs-sidebar-width));
+  }
+  body.close .sidebar-toggle {
+    width: calc(var(--docs-sidebar-width) - 1rem);
+  }
 }
 .sidebar > h1 {
   font-weight: 600;
   letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+  padding: 0 0.5rem;
+}
+.docs-theme-toggle {
+  margin: 0 0 0.85rem;
+  padding: 0 0.5rem;
+}
+.docs-theme-toggle-btn {
+  width: 100%;
+  padding: 0.48rem 0.75rem;
+  border: 1px solid var(--docs-sidebar-edge);
+  border-radius: 4px;
+  background-color: var(--docs-sidebar-panel);
+  color: var(--docs-dim);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+.docs-theme-toggle-btn:hover {
+  border-color: var(--docs-faint);
+  color: var(--docs-bone);
+}
+.docs-theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--docs-sidebar-accent);
+  outline-offset: 2px;
 }
 .sidebar > h1 .app-name-link {
   color: var(--docs-bone);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.sidebar > h1 .app-name-link img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  margin: 0 !important;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.sidebar > .search {
+  margin: 0 0 0.85rem;
+  padding: 0 0.5rem;
+}
+.sidebar > .search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.65rem;
 }
 .sidebar ul li a {
-  color: var(--docs-dim);
+  color: #a8b4be;
   font-size: 14.5px;
 }
 .sidebar ul li a:hover {
   color: var(--docs-bone);
 }
 .sidebar ul li.active > a {
-  color: var(--docs-teal);
+  color: var(--docs-sidebar-accent);
+  border-right-color: var(--docs-sidebar-accent);
 }
-.sidebar ul li.active > a {
-  border-right-color: var(--docs-teal);
+.sidebar .sidebar-nav {
+  padding: 0.25rem 1.1rem 2rem 0.9rem;
+  line-height: 1.5;
+}
+.sidebar .sidebar-nav > ul > li {
+  margin-top: 0.65rem;
+}
+.sidebar .sidebar-nav > ul > li:first-child {
+  margin-top: 0;
+}
+.sidebar .sidebar-nav > ul > li > strong {
+  display: block;
+  padding: 0.4rem 0.35rem 0.3rem 0.2rem;
+  line-height: 1.4;
+}
+.sidebar .sidebar-nav ul ul > li > strong {
+  display: block;
+  padding: 0.45rem 0.3rem 0.25rem 0.15rem;
+  line-height: 1.4;
+}
+.sidebar .sidebar-nav ul li ul {
+  margin: 0.4rem 0 0.55rem;
+  padding-left: 1.15rem;
+  border-left: 1px solid var(--docs-sidebar-edge);
+}
+.sidebar .sidebar-nav ul ul ul {
+  margin-top: 0.35rem;
+  margin-bottom: 0.45rem;
+  padding-left: 1.05rem;
+}
+.sidebar .sidebar-nav ul li a {
+  padding: 0.34rem 0.5rem 0.34rem 0.25rem;
+  line-height: 1.45;
+}
+/* docsify-sidebar-collapse: hide chevrons; groups still toggle on section title click */
+.sidebar .sidebar-nav ul:not(.app-sub-sidebar) > li:not(.file)::before {
+  display: none !important;
+  content: none !important;
 }
 .sidebar > h1 strong,
 .sidebar li > p {
   color: var(--docs-bone);
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background: var(--docs-edge);
+  background: var(--docs-sidebar-edge);
 }
 .sidebar-toggle {
-  background-color: rgba(16, 20, 24, 0.8);
+  width: calc(var(--docs-sidebar-width) - 1rem);
+  background-color: var(--docs-chrome-fab-bg);
+  border-color: var(--docs-chrome-fab-edge);
 }
 body.close .sidebar-toggle {
-  background-color: rgba(16, 20, 24, 0.8);
+  background-color: var(--docs-chrome-fab-bg);
+}
+.sidebar-toggle .sidebar-toggle-button {
+  background-color: var(--docs-chrome-fab-icon);
 }
 
-/* top nav + progress bar */
+/* top nav + progress bar (sits over the light content column) */
+nav.app-nav {
+  background-color: color-mix(in srgb, var(--docs-page-bg) 94%, transparent);
+  border-bottom: 1px solid var(--docs-page-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
 .app-nav a {
-  color: var(--docs-dim);
+  color: var(--docs-page-muted);
 }
 .app-nav a.active,
 .app-nav a:hover {
-  color: var(--docs-teal);
+  color: var(--docs-page-link);
 }
 .app-nav li ul {
-  background-color: var(--docs-panel);
-  border-color: var(--docs-edge);
+  background-color: var(--docs-page-bg);
+  border-color: var(--docs-page-border);
 }
 
 /* ── content ───────────────────────────────────────────────────── */
 
+section.content {
+  padding-top: 1.75rem;
+}
 .markdown-section {
-  color: var(--docs-dim);
+  color: var(--docs-page-text);
   font-size: 16px;
+  max-width: var(--docs-content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem 2.5rem;
 }
 .markdown-section h1,
 .markdown-section h2,
 .markdown-section h3,
 .markdown-section h4,
 .markdown-section strong {
-  color: var(--docs-bone);
+  color: var(--docs-page-heading);
   font-weight: 600;
 }
 .markdown-section h1 {
@@ -127,69 +298,119 @@ body.close .sidebar-toggle {
 .markdown-section h2 {
   font-size: 1.6rem;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid var(--docs-edge);
+  border-bottom: 1px solid var(--docs-page-border);
 }
 .markdown-section h3 {
   font-size: 1.3rem;
 }
 .markdown-section a {
-  color: var(--docs-teal);
+  color: var(--docs-page-link);
+  font-weight: 500;
+  text-underline-offset: 0.12em;
 }
 .markdown-section a:hover {
+  color: var(--docs-page-link-hover);
   text-decoration: underline;
 }
 .markdown-section hr {
-  border-bottom: 1px solid var(--docs-edge);
+  border-bottom: 1px solid var(--docs-page-border);
 }
 .markdown-section em {
-  color: var(--docs-faint);
+  color: var(--docs-page-muted);
 }
 .markdown-section blockquote {
-  color: var(--docs-faint);
+  border-left-color: var(--docs-page-border);
+  color: var(--docs-page-muted);
 }
 .markdown-section .anchor span {
-  color: var(--docs-bone);
+  color: var(--docs-page-heading);
 }
 .markdown-section img {
   /* keeps the repo's existing image rule intent; rounded to site style */
   border-radius: 4px;
 }
 
+/* prev/next (docsify-pagination; plugin defaults label to 0.8em) */
+.markdown-section .pagination-container {
+  margin: 2.5rem 0 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--docs-page-border);
+}
+.markdown-section .pagination-item {
+  margin-top: 0;
+  flex: 1 1 45%;
+}
+.markdown-section .pagination-item a {
+  display: inline-block;
+  padding: 0.65rem 0.25rem;
+}
+.markdown-section .pagination-item-label {
+  color: var(--docs-page-link);
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.markdown-section .pagination-item a:hover .pagination-item-label {
+  color: var(--docs-page-link-hover);
+}
+.markdown-section .pagination-item-label svg {
+  height: 1.1em !important;
+  width: auto;
+  vertical-align: -0.15em;
+}
+.markdown-section .pagination-item-title,
+.markdown-section .pagination-item-subtitle {
+  display: none !important;
+}
+
+/* copy on code blocks (docsify-copy-code) */
+.docsify-copy-code-button {
+  background-color: var(--docs-sidebar-panel) !important;
+  border: 1px solid var(--docs-code-edge) !important;
+  border-radius: 4px !important;
+  color: var(--docs-dim) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+}
+.docsify-copy-code-button:hover {
+  color: var(--docs-bone) !important;
+}
+
 /* callouts */
 .markdown-section p.tip {
-  background-color: var(--docs-panel);
-  border-left: 4px solid var(--docs-amber);
-  color: var(--docs-dim);
+  background-color: var(--docs-page-panel);
+  border-left: 4px solid var(--docs-amber-bright);
+  color: var(--docs-page-text);
 }
 .markdown-section p.tip:before {
-  background-color: var(--docs-amber);
+  background-color: var(--docs-amber-bright);
   color: #101418;
 }
 .markdown-section p.tip em {
-  color: var(--docs-bone);
+  color: var(--docs-page-heading);
 }
 .markdown-section p.tip code {
-  background-color: var(--docs-well);
+  background-color: var(--docs-page-well);
 }
 .markdown-section p.warn {
-  background: rgba(46, 183, 176, 0.1);
+  background: rgba(29, 154, 148, 0.1);
 }
 
 /* tables */
 .markdown-section td,
 .markdown-section th {
-  border-color: var(--docs-edge);
+  border-color: var(--docs-page-border);
 }
 .markdown-section tr {
-  border-top-color: var(--docs-edge);
+  border-top-color: var(--docs-page-border);
 }
 .markdown-section p.tip,
 .markdown-section tr:nth-child(2n) {
-  background-color: var(--docs-panel);
+  background-color: var(--docs-page-panel);
 }
 .markdown-section th {
-  background-color: var(--docs-panel);
-  color: var(--docs-bone);
+  background-color: var(--docs-page-panel);
+  color: var(--docs-page-heading);
 }
 
 /* ── code ──────────────────────────────────────────────────────── */
@@ -199,15 +420,16 @@ body.close .sidebar-toggle {
   font-family: "JetBrains Mono", Monaco, monospace;
 }
 .markdown-section code {
-  background-color: var(--docs-panel);
+  background-color: var(--docs-page-panel);
   color: var(--docs-amber);
 }
 .markdown-section pre {
-  background-color: var(--docs-well);
-  border: 1px solid var(--docs-edge);
+  background-color: var(--docs-code-well);
+  border: 1px solid var(--docs-code-edge);
   border-radius: 6px;
 }
 .markdown-section pre > code {
+  background-color: transparent;
   color: var(--docs-bone);
 }
 .markdown-section pre:after,
@@ -215,13 +437,13 @@ body.close .sidebar-toggle {
   color: var(--docs-faint);
 }
 .markdown-section output {
-  border-color: var(--docs-edge);
-  background-color: var(--docs-well);
+  border-color: var(--docs-page-border);
+  background-color: var(--docs-page-well);
 }
 kbd {
-  background: var(--docs-panel);
-  border-color: var(--docs-edge);
-  color: var(--docs-bone);
+  background: var(--docs-page-panel);
+  border-color: var(--docs-page-border);
+  color: var(--docs-page-heading);
 }
 
 /* prism tokens - site accent palette */
@@ -251,7 +473,7 @@ kbd {
 .token.selector,
 .token.atrule,
 .token.regex {
-  color: var(--docs-teal);
+  color: var(--theme-color);
 }
 .token.attr-value,
 .token.directive,
@@ -277,34 +499,35 @@ kbd {
   color: #f472b6;
 }
 
-/* ── search ────────────────────────────────────────────────────── */
+/* ── search (lives in the sidebar) ───────────────────────────────── */
 
-.search input,
-.search input:focus {
-  background-color: var(--docs-panel);
-  border: 1px solid var(--docs-edge);
+.sidebar .search input,
+.sidebar .search input:focus {
+  background-color: var(--docs-sidebar-panel);
+  border: 1px solid var(--docs-sidebar-edge);
   color: var(--docs-bone);
   box-shadow: none;
 }
-.search input::placeholder {
+.sidebar .search input::placeholder {
   color: var(--docs-faint);
 }
-.search .results-panel {
-  background-color: var(--docs-bg);
+.sidebar .search .results-panel {
+  background-color: var(--docs-sidebar-bg);
+  border: 1px solid var(--docs-sidebar-edge);
 }
-.search .results-item {
+.sidebar .search .results-item {
   color: var(--docs-dim);
-  border-bottom: 1px solid var(--docs-edge);
+  border-bottom: 1px solid var(--docs-sidebar-edge);
 }
-.search .results-item:hover {
-  background-color: var(--docs-panel);
+.sidebar .search .results-item:hover {
+  background-color: var(--docs-sidebar-panel);
 }
-.search h2 {
+.sidebar .search h2 {
   color: var(--docs-bone);
 }
-.search .matching-post {
-  border-bottom: 1px solid var(--docs-edge);
+.sidebar .search .matching-post {
+  border-bottom: 1px solid var(--docs-sidebar-edge);
 }
-.search .clear-button {
+.sidebar .search .clear-button {
   color: var(--docs-faint);
 }

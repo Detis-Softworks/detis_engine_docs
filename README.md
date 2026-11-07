@@ -1,6 +1,9 @@
 # Detis Engine Documentation
 
+Official guides for installing Detis Engine, building worlds, scripting gameplay, and looking up the Lua API.
+
 > **Note:** This site is **work in progress**. What you see today is only the essential material you need to get started. More chapters will appear as they are written and reviewed.
+
 
 ### Getting started
 
@@ -36,5 +39,5 @@
 - [Script API](/reference/README.md)
 
 ### Help us with the documentation
-This documentation is open-source. If you want to contribute, feel free to submit a pull request or open an issue.
 
+This documentation is open-source. If you want to contribute, feel free to submit a pull request or open an issue.
