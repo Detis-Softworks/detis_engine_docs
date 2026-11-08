@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Detis Engine Docs</title>
+  <title>Detis Engine Documentation</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="Detis Engine documentation and guides.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -54,9 +54,10 @@
     (function () {
       var base_path = window.__docsBasePath || '/';
       var brand_logo_src = base_path + 'images/brand/company_logo.png';
+      var site_title = 'Detis Engine Documentation';
 
       window.$docsify = {
-      name: 'Detis Engine Docs',
+      name: site_title,
       // Leading ./ skips Docsify's extra basePath join; src is corrected below for GitHub Pages.
       logo: './images/brand/company_logo.png',
       repo: 'detis-softworks/detis_engine_docs',
@@ -96,8 +97,20 @@
         },
         function (hook) {
           function fixSidebarLogo() {
-            var img = document.querySelector('.sidebar > h1 .app-name-link img');
-            if (img) img.src = brand_logo_src;
+            var link = document.querySelector('.sidebar > h1 .app-name-link');
+            if (!link) return;
+            var img = link.querySelector('img');
+            if (img) {
+              img.src = brand_logo_src;
+              img.alt = site_title;
+            }
+            var title = link.querySelector('.docs-site-title');
+            if (!title) {
+              title = document.createElement('span');
+              title.className = 'docs-site-title';
+              link.appendChild(title);
+            }
+            title.textContent = site_title;
           }
           hook.mounted(fixSidebarLogo);
           hook.doneEach(fixSidebarLogo);

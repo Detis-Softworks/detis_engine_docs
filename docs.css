@@ -183,13 +183,23 @@ body.close .sidebar {
 .sidebar > h1 .app-name-link {
   color: var(--docs-bone);
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.25;
   text-decoration: none;
+}
+.sidebar > h1 .docs-site-title {
+  display: block;
+  max-width: 11.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  text-align: center;
 }
 .sidebar > h1 .app-name-link img {
   display: block;
