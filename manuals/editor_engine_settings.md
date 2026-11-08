@@ -1,6 +1,6 @@
 # Engine Settings
 
-Reference for **File -> Settings**. You do not need this page on day one. Open it when you want to tune performance, audio levels, or editor appearance.
+Reference for **Edit -> Engine Settings**. You do not need this page on day one. Open it when you want to tune performance, audio levels, or editor appearance.
 
 Many toggles here mirror world or engine caps. If a value still looks wrong after you change settings, check [Engine limitations](/getting_started/limitations.md) for hard limits and defaults.
 
@@ -84,15 +84,15 @@ Options for worlds with many point and spot lights. Defaults are fine for small 
 
 ## Sound
 
-| Setting | In plain terms |
-|---------|----------------|
-| **Master Volume** | Overall loudness cap for everything. |
-| **Music Volume** | Background music. |
-| **SFX Volume** | Gameplay sounds: footsteps, gunshots, doors, impacts. |
-| **UI Volume** | Menus, buttons, HUD bleeps. |
-| **Ambient Volume** | Wind, room tone, outdoor beds from soundscapes. |
-| **Voice Volume** | Dialogue and voice lines. |
-| **Reverb** | Shared echo effect. How strong it is per room comes from **Sound Zone** entities in your world. |
+| Setting (panel label) | In plain terms |
+|-----------------------|----------------|
+| **Master** | Overall loudness cap for everything. |
+| **Music** | Background music stream (not a Sound category). |
+| **Game** | Gameplay sounds: footsteps, gunshots, doors, impacts (**Game** category on Sound components). |
+| **UI** | Menus, buttons, HUD bleeps (**GUI** category). |
+| **Ambient** | Wind, room tone, outdoor beds from soundscapes (**Ambient** category). |
+| **Voice** | Dialogue and voice lines (**Voice** category). |
+| **Reverb** | Master switch for the shared reverb effect. Wet level per room still comes from **Sound Zone** entities and world **Default Sound Zone**. |
 
 ## External Tools
 

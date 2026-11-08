@@ -1,6 +1,6 @@
 # World scripts
 
-A **world script** belongs to the current **`.world`** running. Use it for logic that is not owned by a single entity. Wiring a puzzle, starting music when the level loads, and similar.
+A **world script** belongs to the current **`.world`** running. Use it for game logic valid for that world alone. Wiring a puzzle, starting music when the level loads, and similar.
 
 When the player loads a different **`.world`**, that world's script is torn down and the new world's script runs. It does not carry over.
 

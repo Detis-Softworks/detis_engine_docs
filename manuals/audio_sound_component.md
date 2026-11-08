@@ -10,19 +10,19 @@ You can also leave **Spatial** off and play a **stereo** (2D) clip with **Pan** 
 2. Add a Sound component.
 3. Assign one or more audio files.
 4. Set **Category** (Game, GUI, Ambient, Voice).
-5. Play with `sound_play(entity_id)` from a script, or enable **Play On Start**.
+5. Play with `sound_play(entity_id)` from a script (optional second argument: fade-in seconds), or enable **Play On Start**.
 
 ## Properties
 
 | Widget | Purpose |
 |--------|---------|
-| **Files** | Audio files on this component (`.wav` preferred`). |
+| **Files** | Audio files on this component (`.wav` or `.ogg`, `.wav` preferred). Use **Add Sound Files** in the inspector. |
 | **Play Mode** | How to pick a file when more than one is assigned. **Random**, **Forward**, or **Backward**. Default is Random. Disabled until two files are assigned. |
 | **Category** | Game, GUI, Ambient, or Voice. |
 | **Play On Start** | Play when the entity activates. |
 | **Looping** | Repeat until stopped. |
 | **Gain** | Linear loudness, 0 to 1. |
-| **Pitch** | Playback rate (0.5 is half speed, 2.0 is double). |
+| **Pitch** | Playback rate (editor range 0 to 4; `1.0` is normal speed). |
 
 ## Spatial audio
 

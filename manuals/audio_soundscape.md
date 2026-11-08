@@ -6,11 +6,11 @@ World Settings holds the default bed and the Default Sound Zone:
 
 ## Setup
 
-1. Set a **World Soundscape** in World Settings for the default bed.
-2. Add Soundscape Zone entities where a different profile should win and set priorities.
-3. Add loop and one-shot layers on each profile.
+1. **View -> World Settings** (`Shift+3`) -> **Sound** -> **Default Soundscape**. Set **Fade Duration**, then add **Ambient Loops** and **One-Shot Emitters** on the default profile.
+2. Add entities with a **Soundscape Zone** component where a different profile should win. Set **Priority** and **Fade Duration** on the zone.
+3. Edit the zone **Profile** with the same loop and one-shot sections.
 
-## Loop layers
+## Ambient Loops
 
 | Widget | Purpose |
 |--------|---------|
@@ -21,7 +21,7 @@ World Settings holds the default bed and the Default Sound Zone:
 
 Loop pitch is an editor / JSON field. Lua profile tables do not round-trip it.
 
-## One-shot layers
+## One-Shot Emitters
 
 | Widget | Purpose |
 |--------|---------|
@@ -42,13 +42,12 @@ Loop pitch is an editor / JSON field. Lua profile tables do not round-trip it.
 | **Priority** | Higher wins when zones overlap. |
 | **Fade Duration** | Crossfade when the active profile changes (seconds). |
 
-## World soundscape
+## Default Soundscape (world)
 
 | Widget | Purpose |
 |--------|---------|
-| **World Soundscape** | Default profile when no Soundscape Zone applies. |
-
-World soundscape fade duration has no Lua setter. Entity Soundscape Zones use `soundscape_zone_set_fade_duration`.
+| **Fade Duration** | Crossfade when switching to or from the world default profile (seconds). |
+| Profile rows | **Ambient Loops** and **One-Shot Emitters** when no **Soundscape Zone** wins. |
 
 ## Sound Zones
 
