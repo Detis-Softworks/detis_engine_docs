@@ -99,6 +99,4 @@ If you want to save this instance as prefab so it comes in ready to kick use Pre
 
 **Previous:** [Kick the ball](kick_the_ball.md): Dynamic body, Interact, and script parameters.
 
-You have finished the guided tutorial path. 
-
-For more information about scripting check [Scripting Overview](/manuals/script_overview) or continue browsing other topics. Check [Home](/README), or use the sidebar.
+**Next:** [World settings and sky](world_settings.md): World Settings panel, sky dome, texture, and IBL.

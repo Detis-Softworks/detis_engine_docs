@@ -1,6 +1,6 @@
 # Your first world
 
-Build a small playable room from scratch: ground, light, a prop, materials, IBL, and the demo player.
+Build a small playable room from scratch: ground, light, a prop, materials, and the demo player.
 
 ## 1. New world
 
@@ -73,7 +73,7 @@ Materials live on the **Mesh** component. Each mesh slot has a **Material 0** (a
 
 <img src="../images/tutorials/tut_adding_player.jpg" alt="Adding Player">
 
-## 10. Save and play
+## 8. Save and play
 
 1. **File -> Save World** (`Ctrl+S`).
 2. Hit the Play button (or `Ctrl+P` / `Alt+P`) on the viewport toolbar.
