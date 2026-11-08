@@ -99,13 +99,15 @@ Detis is planned as a one-time purchase, about the price of an indie game. No su
 
 ## Can bundled assets be used commercially?
 
-Yes. Assets shipped in the engine's `content/` folders are free to use in projects built with Detis, including commercial releases. The bundled sample assets are CC0, with license notes in their asset folders and a full list under **Help -> Credits** in the editor.
+Yes. Assets shipped in the engine's `content/` folders are free to use in projects built with Detis, including commercial releases. The third-party bundled sample assets are CC0, with license notes in their asset folders and a full list under **Help -> Credits** in the editor.
 
-## Where are hard engine limits documented?
-
-See [Engine limitations](limitations.md) when behavior looks wrong but might be an intentional cap (shadow counts, animation rules, cull distances, and similar). Optional reading. Not required before install.
+## Where are engine specifications hard limits documented?
 
 For platforms, units, and terminology, see [Engine reference](engine_reference.md).
+
+See [Engine limitations](limitations.md) for limitations. 
+
+> NOTE: Note: Detis is actively used for internal game development. Beta access includes the production-ready engine, regular updates, and all features as they ship. Features and specifications will evolve as development continues and many technical limitations will be expanded or removed over time.
 
 ## Continue reading
 
