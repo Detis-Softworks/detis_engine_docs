@@ -23,8 +23,27 @@
       };
     })();
   </script>
-  <link rel="icon" type="image/png" href="images/brand/engine_icon.png">
-  <link rel="apple-touch-icon" href="images/brand/apple-touch-icon.png">
+  <script>
+    (function () {
+      var path = location.pathname;
+      var pages_base = '/detis_engine_docs/';
+      var base_path = '/';
+      if (path === '/detis_engine_docs' || path.indexOf('/detis_engine_docs/') === 0)
+        base_path = pages_base;
+      window.__docsBasePath = base_path;
+      var brand_icon = base_path + 'images/brand/company_logo.png';
+      var touch_icon = base_path + 'images/brand/apple-touch-icon.png';
+      function addLink(rel, type, href) {
+        var el = document.createElement('link');
+        el.rel = rel;
+        if (type) el.type = type;
+        el.href = href;
+        document.head.appendChild(el);
+      }
+      addLink('icon', 'image/png', brand_icon);
+      addLink('apple-touch-icon', null, touch_icon);
+    })();
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="docs.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse@1.3.5/dist/sidebar.min.css">
@@ -33,15 +52,13 @@
   <div id="app"></div>
   <script>
     (function () {
-      var path = location.pathname;
-      var pages_base = '/detis_engine_docs/';
-      var base_path = '/';
-      if (path === '/detis_engine_docs' || path.indexOf('/detis_engine_docs/') === 0)
-        base_path = pages_base;
+      var base_path = window.__docsBasePath || '/';
+      var brand_logo_src = base_path + 'images/brand/company_logo.png';
 
       window.$docsify = {
       name: 'Detis Engine Docs',
-      logo: base_path + 'images/brand/company_logo.png',
+      // Leading ./ skips Docsify's extra basePath join; src is corrected below for GitHub Pages.
+      logo: './images/brand/company_logo.png',
       repo: 'detis-softworks/detis_engine_docs',
       basePath: base_path,
       // Resolve markdown links relative to the current page file (reference/sound.md, manuals/audio.md, etc.).
@@ -76,6 +93,14 @@
           hook.beforeEach(function (content) {
             return content.replace(/\.\.\/images\//g, base_path + 'images/');
           });
+        },
+        function (hook) {
+          function fixSidebarLogo() {
+            var img = document.querySelector('.sidebar > h1 .app-name-link img');
+            if (img) img.src = brand_logo_src;
+          }
+          hook.mounted(fixSidebarLogo);
+          hook.doneEach(fixSidebarLogo);
         },
         function (hook) {
           function syncThemeButton(btn) {
