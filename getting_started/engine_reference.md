@@ -2,7 +2,7 @@
 
 Facts that apply everywhere in Detis: platforms, recommended hardware, and shared conventions.
 
-> **Note:** This page is optional reference. It is not part of the install path. Hard caps and workarounds are in [Engine limitations](limitations.md) when you need them.
+Hard caps are in [Engine limitations](limitations.md) when you need them.
 
 ## Platforms
 

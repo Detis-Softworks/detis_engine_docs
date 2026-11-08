@@ -1,8 +1,6 @@
 # Engine limitations
 
-Hard caps, default cutoffs, and intentional gaps in Detis today. Use this page when something looks wrong but might be expected behavior. Optional reference, not part of the getting started path.
-
-Most quality limits can be tuned in File -> Settings or per entity. This page lists engine-level limits that do not disappear with a single slider.
+Quality limits can be tuned in Edit -> Engine Settings or per entity. This page lists engine-level limits that do not disappear with a single button.
 
 ## Platform and project scope
 
