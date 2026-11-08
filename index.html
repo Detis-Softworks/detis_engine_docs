@@ -174,6 +174,85 @@
               mountThemeToggle(true);
             }
           });
+        },
+        function (hook) {
+          var paginationSkip = {
+            'getting_started/engine_reference': true,
+            'getting_started/limitations': true
+          };
+          function normalizeDocPath(h) {
+            if (!h) return '';
+            h = decodeURIComponent(String(h)).split('?')[0].split('#')[0];
+            h = h.replace(/^#\/?/, '').replace(/^\/+/, '');
+            if (h.endsWith('.md')) h = h.slice(0, -3);
+            if (h === '' || h === 'README') return 'README';
+            return h;
+          }
+          function pathFromHref(href) {
+            if (!href) return '';
+            return normalizeDocPath(href);
+          }
+          function currentPath() {
+            var hash = location.hash.replace(/^#\/?/, '');
+            if (!hash) return 'README';
+            return normalizeDocPath(hash);
+          }
+          function sidebarPages() {
+            var pages = [];
+            document.querySelectorAll('.sidebar .sidebar-nav a[href]').forEach(function (a) {
+              var path = pathFromHref(a.getAttribute('href'));
+              if (!path) return;
+              pages.push({ href: a.getAttribute('href'), path: path });
+            });
+            return pages;
+          }
+          function paginationChain(pages) {
+            return pages.filter(function (p) { return !paginationSkip[p.path]; });
+          }
+          function findPrev(pages, idx) {
+            for (var i = idx - 1; i >= 0; i--) if (!paginationSkip[pages[i].path]) return pages[i];
+            return null;
+          }
+          function findNext(pages, idx) {
+            for (var i = idx + 1; i < pages.length; i++) if (!paginationSkip[pages[i].path]) return pages[i];
+            return null;
+          }
+          function fixPaginationSkip() {
+            var container = document.querySelector('.markdown-section .docsify-pagination-container');
+            if (!container) return;
+            var all = sidebarPages();
+            var chain = paginationChain(all);
+            var path = currentPath();
+            var prev = null;
+            var next = null;
+            var idxChain = chain.findIndex(function (p) { return p.path === path; });
+            if (idxChain !== -1) {
+              prev = idxChain > 0 ? chain[idxChain - 1] : null;
+              next = idxChain < chain.length - 1 ? chain[idxChain + 1] : null;
+            } else if (paginationSkip[path]) {
+              var idxAll = all.findIndex(function (p) { return p.path === path; });
+              if (idxAll !== -1) {
+                prev = findPrev(all, idxAll);
+                next = findNext(all, idxAll);
+              }
+            } else {
+              return;
+            }
+            function setSide(selector, page) {
+              var item = container.querySelector(selector);
+              if (!item) return;
+              if (!page) {
+                item.style.display = 'none';
+                return;
+              }
+              item.style.display = '';
+              var a = item.querySelector('a');
+              if (a) a.setAttribute('href', page.href);
+            }
+            setSide('.pagination-item--previous', prev);
+            setSide('.pagination-item--next', next);
+          }
+          hook.doneEach(fixPaginationSkip);
         }
       ]
       };

@@ -10,9 +10,7 @@ It is built for small indie teams and solo developers who want rapid iteration w
 
 ## Where can I download it?
 
-It is currently available on [Detis Softworks](https://detissoftworks.com/)
-
-Download and unzip. No launcher or account wall needed to start building.
+The engine is not available for download yet but will be very soon.
 
 ## Who is Detis Engine for?
 Detis is for small developers making 3D single-player PC games who value iteration speed and proven, reliable tech over bleeding-edge overhead. Detis is not for everyone, nor does it pretend to be. It is built specifically for handcrafted worlds rather than infinite, seamless or procedurally generated open worlds, and it targets single-player experiences.
@@ -65,7 +63,7 @@ Change assets on disk, then use Debug -> Reload Assets (Shift+R) in the editor t
 
 OpenGL was chosen as the most optimal, reliable foundation to build and ship the base engine quickly without wasting time on driver-level overhead. While no longer receiving major specification updates, the API natively covers every graphics capability Detis needs today. Vendor drivers on Windows and Linux are mature, stable, and deliver a production-ready feature set for modern PBR, lighting, and post-processing. As Detis matures, support for additional graphics APIs is planned for future development.
 
-## Does it support big seamless open ir procedural worlds?
+## Does it support big seamless open or procedural worlds?
 
 Not as a built-in streaming open world. Detis is built for authored worlds, not infinite terrain streaming.
 
