@@ -31,7 +31,7 @@
       if (path === '/detis_engine_docs' || path.indexOf('/detis_engine_docs/') === 0)
         base_path = pages_base;
       window.__docsBasePath = base_path;
-      var brand_icon = base_path + 'images/brand/company_logo.png';
+      var brand_icon = base_path + 'images/brand/engine_logo.png';
       var touch_icon = base_path + 'images/brand/apple-touch-icon.png';
       function addLink(rel, type, href) {
         var el = document.createElement('link');
@@ -53,13 +53,13 @@
   <script>
     (function () {
       var base_path = window.__docsBasePath || '/';
-      var brand_logo_src = base_path + 'images/brand/company_logo.png';
+      var brand_logo_src = base_path + 'images/brand/engine_logo.png';
       var site_title = 'Detis Engine Documentation';
 
       window.$docsify = {
       name: site_title,
       // Leading ./ skips Docsify's extra basePath join; src is corrected below for GitHub Pages.
-      logo: './images/brand/company_logo.png',
+      logo: './images/brand/engine_logo.png',
       repo: 'detis-softworks/detis_engine_docs',
       basePath: base_path,
       // Resolve markdown links relative to the current page file (reference/sound.md, manuals/audio.md, etc.).

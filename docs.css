@@ -210,6 +210,7 @@ body.close .sidebar {
   margin: 0 !important;
   flex-shrink: 0;
   object-fit: contain;
+  border-radius: 12px;
 }
 .sidebar > .search {
   margin: 0 0 0.85rem !important;
