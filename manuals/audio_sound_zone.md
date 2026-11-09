@@ -6,9 +6,9 @@ The listener position follows the active camera.
 
 Each zone has two profiles: 
 
-- **Internal** is the room you are standing in. Sounds that belong inside the box with you, use **Internal Settings**. 
+- **Inside** (**Inside Sound Settings**) is the room you are standing in. Sounds inside the box with the listener use this profile.
 
-- **External** is how you hear the **outside** when you are inside the zone. A spatial source still playing outside the box uses **External Settings** so it can sound muffled or distant through the walls. 
+- **Outside** (**Outside Sound Settings**) is how you hear the **outside** when you are inside the zone. A spatial source still playing outside the box uses this profile so it can sound muffled or distant through the walls.
 
 The **Reverb** block on the component is the shared room (one tail for the whole zone). 
 
@@ -18,8 +18,8 @@ When the listener is outside every entity zone, the world **Default Sound Zone**
 
 1. Create an entity with a Sound Zone component. The transform scale is the box.
 2. Set **Reverb** (shared room character).
-3. Set **Internal Settings** for sources inside the box with the listener (and non-spatial beds).
-4. Set **External Settings** for spatial sources outside the box while the listener is inside.
+3. Set **Inside Sound Settings** for sources inside the box with the listener (and non-spatial beds).
+4. Set **Outside Sound Settings** for spatial sources outside the box while the listener is inside.
 
 ## Zone volume
 
@@ -38,11 +38,11 @@ Routing only runs when **Affected By Zones** is on (Sound component or soundscap
 |------|--------|
 | **Affected By Zones** off | Dry sound. No zone gain, no reverb send. Not the world default. |
 | No entity zone | World **Default Sound Zone**. |
-| Listener inside an entity zone, non-spatial / soundscape | **Internal**. |
-| Listener inside, spatial source inside the box | **Internal**. |
-| Listener inside, spatial source outside the box | **External**. |
+| Listener inside an entity zone, non-spatial / soundscape | Inside profile. |
+| Listener inside, spatial source inside the box | Inside profile. |
+| Listener inside, spatial source outside the box | Outside profile. |
 
-World Default Sound Zone has no External profile.
+World **Default Sound Zone** has no Outside profile.
 
 ## Reverb (shared room)
 
@@ -56,9 +56,9 @@ One wet bus per zone while the listener is inside. Tune it in the top **Reverb**
 | **Predelay** | Delay before the tail (ms). |
 | **Low Pass Feed** / **High Pass Feed** | Filters on the reverb input. |
 
-## Internal Settings
+## Inside Sound Settings
 
-Used when the routing table picks **Internal** (see above).
+Used when the routing table picks the inside profile (see above).
 
 **Emitter**
 
@@ -76,17 +76,17 @@ Used when the routing table picks **Internal** (see above).
 
 Example: Underwater-style muffling is often a low **Low Pass Cutoff** plus **Gain** below 1.
 
-## External Settings
+## Outside Sound Settings
 
 Used when the listener is inside the zone and the spatial source is **outside** the box.
 
-**Emitter:** **Gain**, **Low Pass Cutoff** (same ranges as Internal).
+**Emitter:** **Gain**, **Low Pass Cutoff** (same ranges as inside).
 
-**Reverb send:** **Level**, **Game** / **Ambient** / **Voice** (same idea as Internal). 
+**Reverb send:** **Level**, **Game** / **Ambient** / **Voice** (same idea as inside).
 
 ## World Default Sound Zone
 
-World Settings → **Default Sound Zone**. Used when the listener is outside every entity zone. 
+**View -> World Settings** -> **Sound** -> **Default Sound Zone**. Used when the listener is outside every entity zone. 
 
 ## Script API reference
 

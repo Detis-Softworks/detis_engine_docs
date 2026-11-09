@@ -69,4 +69,4 @@ Mouse **`aim`** is **RMB** and **`select`** is **LMB**. Movement keys and view s
 
 **Previous:** [Editor](editor.md): layout, prefabs, and the day-one loop.
 
-**Next:** [Engine Settings](editor_engine_settings.md): **File -> Settings** when you tune performance or appearance.
+**Next:** [Engine Settings](editor_engine_settings.md): **Edit -> Engine Settings** when you tune performance or appearance.

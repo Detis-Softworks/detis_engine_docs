@@ -4,15 +4,15 @@ Detis uses one global music stream. It is meant for soundtracks, menus, and stin
 
 ## Basic setup
 
-Music is tied to **what the game is doing** (enter a level, start combat, open a pause menu). There is no Music component on entities. Detis expacts you to start and change tracks from **Lua** when those moments happen.
+Music is tied to **what the game is doing** (enter a level, start combat, open a pause menu). There is no Music component on entities. Detis expects you to start and change tracks from **Lua** when those moments happen.
 
 Call **`music_play(path)`** from a world script, module, or entity script. Use **`music_stop`**, **`music_set_paused`**, and **`music_set_volume`** the same way when state changes.
 
 ## Mix path
 
-Music volume -> **Master Volume** -> speakers.
+Music loudness -> **Music** slider -> **Master** slider -> speakers.
 
-**Master volume** (Engine Settings) applies after the music slider. **`music_get_volume`** / **`music_set_volume`** are the music slider only. 
+**Master** (**Edit -> Engine Settings**) applies after the per-bus sliders. **`music_set_volume`** sets the **Music** slider and saves audio settings. **`music_get_volume`** reads that slider. **`music_get_playback_volume`** is the live output level (includes fades).
 
 ## Scripting
 
@@ -21,7 +21,7 @@ Music volume -> **Master Volume** -> speakers.
 | **`music_play(file_path)`** | Start the track. Loops. |
 | **`music_play(file_path, looping)`** | Start with an explicit loop flag. |
 | **`music_play(file_path, looping, fade_duration)`** | Start with fade-in (seconds). |
-| **`music_set_volume(volume)`** | Set music loudness (linear). |
+| **`music_set_volume(volume)`** | Set music loudness (linear). Saved in the settings config.|
 | **`music_set_paused(paused)`** | Pause or resume. |
 | **`music_set_time(seconds)`** | Seek. |
 | **`music_stop()`** | Stop immediately. |
@@ -29,7 +29,12 @@ Music volume -> **Master Volume** -> speakers.
 | **`music_get_is_playing()`** | Whether a track is loaded and playing. |
 | **`music_get_is_paused()`** | Pause state. |
 | **`music_get_duration()`** | Length in seconds. |
-| **`music_get_volume()`** | Current music slider value (linear). |
+| **`music_get_volume()`** | Current **Music** slider value (linear). |
+| **`music_get_playback_volume()`** | Live playback loudness (linear). |
+| **`music_get_file_path()`** | Path of the loaded track, or empty. |
+| **`music_fade_in(fade_duration)`** | Fade the current track up (seconds). |
+| **`music_get_fade_state()`** | Fade state string (`none`, `in`, `out`, `crossfade`). |
+| **`music_get_mix_multiplier()`** / **`music_set_mix_multiplier(multiplier)`** | Runtime mix scale on the music bus. |
 
 ## Notes
 

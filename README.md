@@ -29,6 +29,7 @@ Stuck or have questions? **[Join our Discord](https://discord.gg/z6zgwznJBP)**, 
 2. [Your first prefab](/tutorials/your_first_prefab.md)
 3. [Kick the ball](/tutorials/kick_the_ball.md)
 4. [Edit a script](/tutorials/edit_a_script.md)
+5. [World settings and sky](/tutorials/world_settings.md)
 
 ### Manual
 
@@ -57,6 +58,6 @@ Stuck or have questions? **[Join our Discord](https://discord.gg/z6zgwznJBP)**, 
 
 - [Script API](/reference/README.md)
 
-### Help us with the documentation
+### Contribution
 
-This documentation is open-source. If you want to contribute, feel free to submit a pull request or open an issue.
+This documentation is open-source. If you want to contribute, feel free to submit a pull request or open an issue. The repository is available on [GitHub](https://github.com/detis-softworks/detis_engine_docs).
