@@ -2,7 +2,11 @@
 
 Official guides for installing Detis Engine, building worlds, scripting gameplay, and looking up the Lua API.
 
-> **Note:** This site is **work in progress**. What you see today is only the essential material you need to get started. More chapters will appear as they are written and reviewed.
+<span class="wip-tag">Work in progress</span> 
+
+What you see today is only the essential material you need to get started. More chapters will appear as they are written and reviewed.
+
+Stuck or have questions? **[Join our Discord](https://discord.gg/z6zgwznJBP)**, the fastest place to get help and follow development.
 
 
 ### Getting started

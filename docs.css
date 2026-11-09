@@ -644,3 +644,20 @@ kbd {
 .sidebar .search .clear-button {
   color: var(--docs-faint);
 }
+
+/* README work-in-progress tag — deliberately loud and red */
+.wip-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  margin-right: 0.35rem;
+  border: 1px solid rgba(237, 66, 69, 0.55);
+  border-radius: var(--docs-radius);
+  /* Discord red (#ed4245) so the status reads at a glance in both schemes */
+  color: #ed4245;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
