@@ -16,9 +16,9 @@ images/
 
 | File | Use |
 |------|-----|
-| `engine_logo.png` | Sidebar logo, tab favicon (teal square mark; keep baked-in background) |
-| `apple-touch-icon.png` | Copy of `engine_logo.png` for iOS home-screen |
-| `company_logo.png` | Softworks mark (not used by the docs shell today) |
+| `engine_logo.png` | Teal engine mark (archived — no longer used by the docs shell; was sidebar logo + favicon) |
+| `apple-touch-icon.png` | Copy of `engine_logo.png` for iOS home-screen (kept opaque for Apple) |
+| `company_logo.png` | Softworks mark — sidebar logo and tab favicon; synced from the website's `public/company_logo.png` |
 | `engine_icon.png` | Older engine icon (legacy) |
 
 When you replace a brand file, copy the PNG into `images/brand/`, commit it, and push. To refresh from shipped engine art, copy from `detis_engine/game/engine/graphics/` (same names), not from the marketing site tree.
