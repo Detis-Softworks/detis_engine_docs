@@ -1,6 +1,6 @@
 # Detis Engine
 
-Detis is a game engine for solo devs and small indie teams making single-player, 3D, desktop games. 
+Detis (from the Greek Δέτης, meaning "the one who binds together") is a game engine for solo devs and small indie teams making single-player, 3D, desktop games. 
 
 This documentation is designed to get you up and running with the Detis toolset.
 

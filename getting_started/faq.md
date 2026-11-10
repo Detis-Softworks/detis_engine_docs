@@ -4,7 +4,7 @@ Quick answers about Detis Engine scope.
 
 ## What is Detis Engine?
 
-Detis is a lightweight, hyper-focused 3D C++ game engine designed from the ground up for single-player PC games and hand-authored worlds.
+Detis (from the Greek Δέτης, meaning "the one who binds together") is a lightweight, hyper-focused 3D C++ game engine designed from the ground up for single-player PC games and hand-authored worlds.
 
 It is built for small indie teams and solo developers who want rapid iteration without general-purpose engine overhead. You get an integrated editor, a deep Lua gameplay API, PBR rendering, physics, 3D audio, animation, pathfinding and much more, in one focused package.
 
