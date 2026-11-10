@@ -10,7 +10,7 @@ It is built for small indie teams and solo developers who want rapid iteration w
 
 ## Where can I download it?
 
-The engine is not available for download yet but will be very soon.
+Download from the links on the official [Detis Softworks](https://detissoftworks.com/) website, then follow [Installation](installation.md).
 
 ## Who is Detis Engine for?
 Detis is for small developers making 3D single-player PC games who value iteration speed and proven, reliable tech over bleeding-edge overhead. Detis is not for everyone, nor does it pretend to be. It is built specifically for handcrafted worlds rather than infinite, seamless or procedurally generated open worlds, and it targets single-player experiences.
