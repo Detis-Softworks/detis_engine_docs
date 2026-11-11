@@ -10,7 +10,7 @@ It is built for small indie teams and solo developers who want rapid iteration w
 
 ## Where can I download it?
 
-Download Detis from the links on the official [**Detis Softworks**](https://detissoftworks.com/) website, then follow the [**Installation Guide**](http://localhost:8000/#/getting_started/installation).
+Download from the links on the official [Detis Softworks](https://detissoftworks.com/) website, then follow [Installation](installation.md).
 
 ## Who is Detis Engine for?
 Detis is for small developers making 3D single-player PC games who value iteration speed and proven, reliable tech over bleeding-edge overhead. Detis is not for everyone, nor does it pretend to be. It is built specifically for handcrafted worlds rather than infinite, seamless or procedurally generated open worlds, and it targets single-player experiences.
@@ -103,6 +103,8 @@ Yes. Assets shipped in the engine's `content/` folders are free to use in projec
 
 ## Where are engine specifications hard limits documented?
 
+For a grouped list of what the engine includes, see [Features](features.md).
+
 For platforms, units, and terminology, see [Engine reference](engine_reference.md).
 
 See [Engine limitations](limitations.md) for limitations. 
@@ -111,6 +113,6 @@ See [Engine limitations](limitations.md) for limitations.
 
 ## Continue reading
 
-**Previous:** [Introduction](introduction.md): what Detis is and where to start.
+**Previous:** [Features](features.md): capability overview by area.
 
 **Next:** [Installation](installation.md): download and run the editor.

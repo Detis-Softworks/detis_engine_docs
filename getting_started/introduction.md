@@ -10,4 +10,4 @@ For platforms or hardware support, units, or terminology, see [Engine reference]
 
 ## Continue reading
 
-**Next:** [FAQ](faq.md): what Detis is (and is not) before you install.
+**Next:** [Features](features.md): what the engine includes by area.

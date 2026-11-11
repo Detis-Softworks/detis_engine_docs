@@ -2,6 +2,7 @@
 
 * **Getting started**
   * [Introduction](/getting_started/introduction.md)
+  * [Features](/getting_started/features.md)
   * [FAQ](/getting_started/faq.md)
   * [Installation](/getting_started/installation.md)
   * [Quick start](/getting_started/quick_start.md)
