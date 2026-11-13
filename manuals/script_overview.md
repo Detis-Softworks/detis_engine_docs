@@ -31,7 +31,7 @@ Implement only the callbacks you need. Remove any empty ones to maintain game pe
 | **`on_late_process`** | After **`on_process`** same frame | Follow targets that moved in **`on_process`** |
 | **`on_draw`** | Render phase | Drawing in-game UI. Per-entity UI is rare |
 | **`on_shutdown`** | Called once, before script removal | Cleanup |
-| **`on_editor_mode_active`** | Editor vs play | Debug draws in the viewport |
+| **`on_editor_mode_active`** | Editor vs play | Debug draws in the viewport. See [Debug draw](script_debug_draw.md) |
 
 Use **`on_process`** unless you need a fixed step. Add **`on_fixed_process`** when logic must match the physics timestep.
 

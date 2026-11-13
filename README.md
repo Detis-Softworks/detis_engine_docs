@@ -54,6 +54,8 @@ Stuck or have questions? **[Join our Discord](https://discord.gg/z6zgwznJBP)**, 
 - [Module scripts](/manuals/script_module.md)
 - [Communication](/manuals/script_communication.md)
 - [In-game UI](/manuals/script_gui.md)
+- [Steam](/manuals/script_steam.md)
+- [Debug draw](/manuals/script_debug_draw.md)
 
 ### Reference
 

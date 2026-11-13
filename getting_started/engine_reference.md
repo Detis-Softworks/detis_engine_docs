@@ -64,6 +64,18 @@ Detis uses metric distances in the 3D world unless a panel labels another unit.
 
 **DCC export**: Author meshes in glTF / GLB with Y up to match the world.
 
+## File names and languages
+
+The editor menus, panels, and messages stay in English.
+
+While files and folders can use most alphabets, it is recommended to stick to English. 
+
+The editor font draws Latin, Greek, Cyrillic, and Vietnamese. Chinese, Japanese, Korean, Arabic, and Hebrew names show as empty boxes. Loading and saving that file still works. Additional alphabets can be supported if you provide fonts. 
+
+In-game text only draws letters that are in the font you assign. The default fonts shipped for gameplay are Latin so it's up to you to add more if you need it. 
+
+Steam cloud save file names should stay in English letters and numbers. A save name in another alphabet is not stored correctly on Windows.
+
 ## Continue reading
 
 **Previous:** [FAQ](faq.md): what Detis is and is not.

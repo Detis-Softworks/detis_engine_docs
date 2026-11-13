@@ -37,6 +37,8 @@
     * [Module scripts](/manuals/script_module.md)
     * [Communication](/manuals/script_communication.md)
     * [In-game UI](/manuals/script_gui.md)
+    * [Steam](/manuals/script_steam.md)
+    * [Debug draw](/manuals/script_debug_draw.md)
   <!-- Manual sections below are hidden in the sidebar until reviewed. Files remain under manuals/. Restore Editor, Lighting, and Art blocks from git history when ready. -->
 
 * **Reference**

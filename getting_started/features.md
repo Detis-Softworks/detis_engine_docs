@@ -1,6 +1,6 @@
 # Features
 
-What Detis Engine includes today. Detis is in **1.0 beta 6**; this list will change as development continues.
+What Detis Engine includes today. This list will change as development continues.
 
 ## License
 
@@ -11,7 +11,7 @@ What Detis Engine includes today. Detis is in **1.0 beta 6**; this list will cha
 
 ## Graphics
 
-- Deferred PBR renderer.
+- Deferred PBR renderer with clustered shading. 
 - Configurable quality for shadows, screen-space effects, and internal render scale.
 - Temporal anti-aliasing (TAA), optional FXAA, bloom, auto exposure.
 - Image-based lighting from equirect sky textures.
@@ -69,6 +69,8 @@ What Detis Engine includes today. Detis is in **1.0 beta 6**; this list will cha
 - Deep Lua gameplay API for physics, animation, audio, input, UI, renderer, and more.
 - Entity, world, and module script attachments with hot reload.
 - In-game UI directly from Lua.
+- Steam achievements, stats, rich presence, and cloud saves from Lua. Opening the Steam overlay pauses the game.
+- World debug wireframes from Lua. Lines and simple shapes last one frame.
 - MCP server for external AI IDE workflows.
 
 ## 3D models

@@ -6,7 +6,9 @@ Light scenes with the world sun and local Point / Spot lights. Balance brightnes
 
 **World sun** — One directional light for the whole scene. Brightness is **Lux**. Angle is **Azimuth (deg)** and **Elevation (deg)**.
 
-**Local lights** — Point and Spot only. There is no local directional light. Brightness is **Lumens**.
+**Local lights**: Point and Spot only. Brightness is **Lumens**.
+
+Opaque surfaces on a perspective view use clustered deferred shading, so a pixel only shades the point and spot lights that can reach it. Orthographic views, water, translucent surfaces, and volumetric fog still consider every local light.
 
 | Type | Use | Shadows |
 |------|-----|---------|

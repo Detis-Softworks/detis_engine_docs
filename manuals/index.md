@@ -22,6 +22,8 @@ You edit and play in the same program. If you have not installed yet or opened a
 - [Module scripts](script_module.md)
 - [Communication](script_communication.md)
 - [In-game UI](script_gui.md)
+- [Steam](script_steam.md)
+- [Debug draw](script_debug_draw.md)
 
 ## Continue reading
 

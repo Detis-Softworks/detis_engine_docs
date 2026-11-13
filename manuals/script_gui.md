@@ -203,4 +203,4 @@ Check **`gui_demo.world`** and press **1-9** to select demo mode.
 
 **Previous:** [Communication](script_communication.md): call other scripts and modules.
 
-**Next:** [Script API](/reference/README.md): generated Lua function reference.
+**Next:** [Steam](script_steam.md): achievements, stats, presence, and cloud saves.
